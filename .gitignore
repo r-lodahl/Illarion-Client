@@ -1,8 +1,10 @@
 /.import/
 /assets/_old/
 /assets/map/*
+/assets/spritesets/items.sprites/*
 /assets/spritesets/*.png
 /assets/spritesets/*.png.import
+/assets/tileset/tiles.sprites/*
 /assets/tileset/tiles.png
 /assets/tileset/tiles.png.import
 !.gitignore

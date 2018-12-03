@@ -1,0 +1,9588 @@
+{
+	"textures": [
+		{
+			"image": "tiles.png",
+			"size": {
+				"w": 1024,
+				"h": 2048
+			},
+			"sprites": [
+				{
+					"filename": "blue_rug",
+					"region": {
+						"x": 1,
+						"y": 1,
+						"w": 78,
+						"h": 38
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "blue_rug_pat",
+					"region": {
+						"x": 81,
+						"y": 1,
+						"w": 78,
+						"h": 38
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "brown_rug",
+					"region": {
+						"x": 161,
+						"y": 1,
+						"w": 78,
+						"h": 38
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "brown_rug_pat",
+					"region": {
+						"x": 241,
+						"y": 1,
+						"w": 78,
+						"h": 38
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "gold_rug",
+					"region": {
+						"x": 321,
+						"y": 1,
+						"w": 78,
+						"h": 38
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "green_rug",
+					"region": {
+						"x": 401,
+						"y": 1,
+						"w": 78,
+						"h": 38
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "green_rug_pat",
+					"region": {
+						"x": 481,
+						"y": 1,
+						"w": 78,
+						"h": 38
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Eis1",
+					"region": {
+						"x": 561,
+						"y": 1,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Eis2",
+					"region": {
+						"x": 639,
+						"y": 1,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Parkett1",
+					"region": {
+						"x": 717,
+						"y": 1,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Parkett2",
+					"region": {
+						"x": 795,
+						"y": 1,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Parkett3",
+					"region": {
+						"x": 873,
+						"y": 1,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Eis1_ovl-6",
+					"region": {
+						"x": 951,
+						"y": 1,
+						"w": 67,
+						"h": 37
+					},
+					"margin": {
+						"x": 9,
+						"y": 0,
+						"w": 9,
+						"h": 0
+					}
+				},
+				{
+					"filename": "invisible",
+					"region": {
+						"x": 1020,
+						"y": 1,
+						"w": 3,
+						"h": 3
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": -2,
+						"h": -2
+					}
+				},
+				{
+					"filename": "Tile_Parkett_Taverne",
+					"region": {
+						"x": 561,
+						"y": 40,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Tile_Pflaster",
+					"region": {
+						"x": 639,
+						"y": 40,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "acker",
+					"region": {
+						"x": 717,
+						"y": 40,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "cob-0",
+					"region": {
+						"x": 795,
+						"y": 40,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "cob-1",
+					"region": {
+						"x": 873,
+						"y": 40,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Eis1_ovl-7",
+					"region": {
+						"x": 951,
+						"y": 40,
+						"w": 65,
+						"h": 31
+					},
+					"margin": {
+						"x": 11,
+						"y": 6,
+						"w": 11,
+						"h": 6
+					}
+				},
+				{
+					"filename": "Eis1_ovl-1",
+					"region": {
+						"x": 951,
+						"y": 73,
+						"w": 65,
+						"h": 29
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 11,
+						"h": 8
+					}
+				},
+				{
+					"filename": "cob-2",
+					"region": {
+						"x": 1,
+						"y": 41,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "cob-3",
+					"region": {
+						"x": 79,
+						"y": 41,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "cob-4",
+					"region": {
+						"x": 157,
+						"y": 41,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "cob_ovl-0",
+					"region": {
+						"x": 235,
+						"y": 41,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "cracked-0",
+					"region": {
+						"x": 313,
+						"y": 41,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "cracked-1",
+					"region": {
+						"x": 391,
+						"y": 41,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "cracked-2",
+					"region": {
+						"x": 469,
+						"y": 41,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "cracked-3",
+					"region": {
+						"x": 547,
+						"y": 79,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "cracked-4",
+					"region": {
+						"x": 625,
+						"y": 79,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "cracked-5",
+					"region": {
+						"x": 703,
+						"y": 79,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "cracked-6",
+					"region": {
+						"x": 781,
+						"y": 79,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "cracked-7",
+					"region": {
+						"x": 859,
+						"y": 79,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "cracked-8",
+					"region": {
+						"x": 937,
+						"y": 104,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "cracked_ovl-0",
+					"region": {
+						"x": 1,
+						"y": 80,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "cracked_ovl",
+					"region": {
+						"x": 79,
+						"y": 80,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dach",
+					"region": {
+						"x": 157,
+						"y": 80,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dach_pflaster",
+					"region": {
+						"x": 235,
+						"y": 80,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dreck",
+					"region": {
+						"x": 313,
+						"y": 80,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dungeonfloor-0",
+					"region": {
+						"x": 391,
+						"y": 80,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dungeonfloor-1",
+					"region": {
+						"x": 469,
+						"y": 80,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dungeonfloor-2",
+					"region": {
+						"x": 547,
+						"y": 118,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dungeonfloor-3",
+					"region": {
+						"x": 625,
+						"y": 118,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "fels1-0",
+					"region": {
+						"x": 703,
+						"y": 118,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "fels1-1",
+					"region": {
+						"x": 781,
+						"y": 118,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "fels1-2",
+					"region": {
+						"x": 859,
+						"y": 118,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "fels1-3",
+					"region": {
+						"x": 937,
+						"y": 143,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grass-0",
+					"region": {
+						"x": 1,
+						"y": 119,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grass-1",
+					"region": {
+						"x": 79,
+						"y": 119,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grass-2",
+					"region": {
+						"x": 157,
+						"y": 119,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grass-3",
+					"region": {
+						"x": 235,
+						"y": 119,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grass-4",
+					"region": {
+						"x": 313,
+						"y": 119,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grass-5",
+					"region": {
+						"x": 391,
+						"y": 119,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grass-6",
+					"region": {
+						"x": 469,
+						"y": 119,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grass-7",
+					"region": {
+						"x": 547,
+						"y": 157,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grass_dry-0",
+					"region": {
+						"x": 625,
+						"y": 157,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grass_dry-1",
+					"region": {
+						"x": 703,
+						"y": 157,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grass_dry-2",
+					"region": {
+						"x": 781,
+						"y": 157,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grass_dry-3",
+					"region": {
+						"x": 859,
+						"y": 157,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grass_dry-4",
+					"region": {
+						"x": 937,
+						"y": 182,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grass_dry_ovl-0",
+					"region": {
+						"x": 1,
+						"y": 158,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grass_ovl-0",
+					"region": {
+						"x": 79,
+						"y": 158,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "lava",
+					"region": {
+						"x": 157,
+						"y": 158,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "marmor-0",
+					"region": {
+						"x": 235,
+						"y": 158,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "marmor-1",
+					"region": {
+						"x": 313,
+						"y": 158,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "marmor-2",
+					"region": {
+						"x": 391,
+						"y": 158,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "marmor-3",
+					"region": {
+						"x": 469,
+						"y": 158,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "mauer",
+					"region": {
+						"x": 547,
+						"y": 196,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "mosaik",
+					"region": {
+						"x": 625,
+						"y": 196,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "mud-0",
+					"region": {
+						"x": 703,
+						"y": 196,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "mud-1",
+					"region": {
+						"x": 781,
+						"y": 196,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "mud-2",
+					"region": {
+						"x": 859,
+						"y": 196,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "mud-3",
+					"region": {
+						"x": 937,
+						"y": 221,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "mud-4",
+					"region": {
+						"x": 1,
+						"y": 197,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "mud_floor",
+					"region": {
+						"x": 79,
+						"y": 197,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "mud_ovl-0",
+					"region": {
+						"x": 157,
+						"y": 197,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "mud_roof",
+					"region": {
+						"x": 235,
+						"y": 197,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "parkett-0",
+					"region": {
+						"x": 313,
+						"y": 197,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "parkett-1",
+					"region": {
+						"x": 391,
+						"y": 197,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "parkett-2",
+					"region": {
+						"x": 469,
+						"y": 197,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "parkett-3",
+					"region": {
+						"x": 547,
+						"y": 235,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "roof1_tile",
+					"region": {
+						"x": 625,
+						"y": 235,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "roof2_tile",
+					"region": {
+						"x": 703,
+						"y": 235,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "roof3_tile",
+					"region": {
+						"x": 781,
+						"y": 235,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sand001",
+					"region": {
+						"x": 859,
+						"y": 235,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy-0",
+					"region": {
+						"x": 937,
+						"y": 260,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy-1",
+					"region": {
+						"x": 1,
+						"y": 236,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy-10",
+					"region": {
+						"x": 79,
+						"y": 236,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy-11",
+					"region": {
+						"x": 157,
+						"y": 236,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy-12",
+					"region": {
+						"x": 235,
+						"y": 236,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy-13",
+					"region": {
+						"x": 313,
+						"y": 236,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy-14",
+					"region": {
+						"x": 391,
+						"y": 236,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy-15",
+					"region": {
+						"x": 469,
+						"y": 236,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy-16",
+					"region": {
+						"x": 547,
+						"y": 274,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy-17",
+					"region": {
+						"x": 625,
+						"y": 274,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy-18",
+					"region": {
+						"x": 703,
+						"y": 274,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy-19",
+					"region": {
+						"x": 781,
+						"y": 274,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy-2",
+					"region": {
+						"x": 859,
+						"y": 274,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy-20",
+					"region": {
+						"x": 937,
+						"y": 299,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy-21",
+					"region": {
+						"x": 1,
+						"y": 275,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy-22",
+					"region": {
+						"x": 79,
+						"y": 275,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy-23",
+					"region": {
+						"x": 157,
+						"y": 275,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy-24",
+					"region": {
+						"x": 235,
+						"y": 275,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy-3",
+					"region": {
+						"x": 313,
+						"y": 275,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy-4",
+					"region": {
+						"x": 391,
+						"y": 275,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy-5",
+					"region": {
+						"x": 469,
+						"y": 275,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy-6",
+					"region": {
+						"x": 547,
+						"y": 313,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy-7",
+					"region": {
+						"x": 625,
+						"y": 313,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy-8",
+					"region": {
+						"x": 703,
+						"y": 313,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy-9",
+					"region": {
+						"x": 781,
+						"y": 313,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy_ovl-0",
+					"region": {
+						"x": 859,
+						"y": 313,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "schindeltile-0",
+					"region": {
+						"x": 937,
+						"y": 338,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "schindeltile-1",
+					"region": {
+						"x": 1,
+						"y": 314,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "schindeltile-2",
+					"region": {
+						"x": 79,
+						"y": 314,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "schindeltile-3",
+					"region": {
+						"x": 157,
+						"y": 314,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "schnee",
+					"region": {
+						"x": 235,
+						"y": 314,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sewertile",
+					"region": {
+						"x": 313,
+						"y": 314,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "str-0",
+					"region": {
+						"x": 391,
+						"y": 314,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "str-1",
+					"region": {
+						"x": 469,
+						"y": 314,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "str-2",
+					"region": {
+						"x": 547,
+						"y": 352,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "str-3",
+					"region": {
+						"x": 625,
+						"y": 352,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "str-4",
+					"region": {
+						"x": 703,
+						"y": 352,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "str_ovl-0",
+					"region": {
+						"x": 781,
+						"y": 352,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "strasse-0",
+					"region": {
+						"x": 859,
+						"y": 352,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "strasse-1",
+					"region": {
+						"x": 937,
+						"y": 377,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "strasse-2",
+					"region": {
+						"x": 1,
+						"y": 353,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "strasse-3",
+					"region": {
+						"x": 79,
+						"y": 353,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "strasse-4",
+					"region": {
+						"x": 157,
+						"y": 353,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "strasse_ovl-0",
+					"region": {
+						"x": 235,
+						"y": 353,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "street3-0",
+					"region": {
+						"x": 313,
+						"y": 353,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "street3-1",
+					"region": {
+						"x": 391,
+						"y": 353,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "street3-2",
+					"region": {
+						"x": 469,
+						"y": 353,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "street3-3",
+					"region": {
+						"x": 547,
+						"y": 391,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "street3-4",
+					"region": {
+						"x": 625,
+						"y": 391,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "street3_ovl-0",
+					"region": {
+						"x": 703,
+						"y": 391,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "teppich_1",
+					"region": {
+						"x": 781,
+						"y": 391,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "teppich_2",
+					"region": {
+						"x": 859,
+						"y": 391,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "teppich_3",
+					"region": {
+						"x": 937,
+						"y": 416,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "teppich_4",
+					"region": {
+						"x": 1,
+						"y": 392,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "teppich_5",
+					"region": {
+						"x": 79,
+						"y": 392,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "teppich_6",
+					"region": {
+						"x": 157,
+						"y": 392,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "teppich_7",
+					"region": {
+						"x": 235,
+						"y": 392,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "teppich_8",
+					"region": {
+						"x": 313,
+						"y": 392,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "teppich_9",
+					"region": {
+						"x": 391,
+						"y": 392,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "wald-0",
+					"region": {
+						"x": 469,
+						"y": 392,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "wald-1",
+					"region": {
+						"x": 547,
+						"y": 430,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "wald-2",
+					"region": {
+						"x": 625,
+						"y": 430,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "wald-3",
+					"region": {
+						"x": 703,
+						"y": 430,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "wald-4",
+					"region": {
+						"x": 781,
+						"y": 430,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "wald-5",
+					"region": {
+						"x": 859,
+						"y": 430,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "wald-6",
+					"region": {
+						"x": 937,
+						"y": 455,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "water-0",
+					"region": {
+						"x": 1,
+						"y": 431,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "water-1",
+					"region": {
+						"x": 79,
+						"y": 431,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "water-2",
+					"region": {
+						"x": 157,
+						"y": 431,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "water-3",
+					"region": {
+						"x": 235,
+						"y": 431,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "water-4",
+					"region": {
+						"x": 313,
+						"y": 431,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "water-5",
+					"region": {
+						"x": 391,
+						"y": 431,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "water-6",
+					"region": {
+						"x": 469,
+						"y": 431,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "water-7",
+					"region": {
+						"x": 547,
+						"y": 469,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "water-8",
+					"region": {
+						"x": 625,
+						"y": 469,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "water-9",
+					"region": {
+						"x": 703,
+						"y": 469,
+						"w": 76,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "acker_ovl-26",
+					"region": {
+						"x": 781,
+						"y": 469,
+						"w": 76,
+						"h": 34
+					},
+					"margin": {
+						"x": 0,
+						"y": 3,
+						"w": 0,
+						"h": 3
+					}
+				},
+				{
+					"filename": "dreck_ovl-26",
+					"region": {
+						"x": 859,
+						"y": 469,
+						"w": 76,
+						"h": 34
+					},
+					"margin": {
+						"x": 0,
+						"y": 3,
+						"w": 0,
+						"h": 3
+					}
+				},
+				{
+					"filename": "dungeonfloor_ovl-26",
+					"region": {
+						"x": 937,
+						"y": 494,
+						"w": 76,
+						"h": 34
+					},
+					"margin": {
+						"x": 0,
+						"y": 3,
+						"w": 0,
+						"h": 3
+					}
+				},
+				{
+					"filename": "fels1_ovl-26",
+					"region": {
+						"x": 781,
+						"y": 505,
+						"w": 76,
+						"h": 34
+					},
+					"margin": {
+						"x": 0,
+						"y": 3,
+						"w": 0,
+						"h": 3
+					}
+				},
+				{
+					"filename": "lava_ovl-26",
+					"region": {
+						"x": 859,
+						"y": 505,
+						"w": 76,
+						"h": 34
+					},
+					"margin": {
+						"x": 0,
+						"y": 3,
+						"w": 0,
+						"h": 3
+					}
+				},
+				{
+					"filename": "sand_ovl-26",
+					"region": {
+						"x": 937,
+						"y": 530,
+						"w": 76,
+						"h": 34
+					},
+					"margin": {
+						"x": 0,
+						"y": 3,
+						"w": 0,
+						"h": 3
+					}
+				},
+				{
+					"filename": "schnee_ovl-26",
+					"region": {
+						"x": 1,
+						"y": 470,
+						"w": 76,
+						"h": 34
+					},
+					"margin": {
+						"x": 0,
+						"y": 3,
+						"w": 0,
+						"h": 3
+					}
+				},
+				{
+					"filename": "wald_ovl-26",
+					"region": {
+						"x": 79,
+						"y": 470,
+						"w": 76,
+						"h": 34
+					},
+					"margin": {
+						"x": 0,
+						"y": 3,
+						"w": 0,
+						"h": 3
+					}
+				},
+				{
+					"filename": "acker_ovl-19",
+					"region": {
+						"x": 157,
+						"y": 470,
+						"w": 76,
+						"h": 33
+					},
+					"margin": {
+						"x": 0,
+						"y": 4,
+						"w": 0,
+						"h": 4
+					}
+				},
+				{
+					"filename": "dreck_ovl-19",
+					"region": {
+						"x": 235,
+						"y": 470,
+						"w": 76,
+						"h": 33
+					},
+					"margin": {
+						"x": 0,
+						"y": 4,
+						"w": 0,
+						"h": 4
+					}
+				},
+				{
+					"filename": "dungeonfloor_ovl-19",
+					"region": {
+						"x": 313,
+						"y": 470,
+						"w": 76,
+						"h": 33
+					},
+					"margin": {
+						"x": 0,
+						"y": 4,
+						"w": 0,
+						"h": 4
+					}
+				},
+				{
+					"filename": "fels1_ovl-19",
+					"region": {
+						"x": 391,
+						"y": 470,
+						"w": 76,
+						"h": 33
+					},
+					"margin": {
+						"x": 0,
+						"y": 4,
+						"w": 0,
+						"h": 4
+					}
+				},
+				{
+					"filename": "lava_ovl-19",
+					"region": {
+						"x": 469,
+						"y": 470,
+						"w": 76,
+						"h": 33
+					},
+					"margin": {
+						"x": 0,
+						"y": 4,
+						"w": 0,
+						"h": 4
+					}
+				},
+				{
+					"filename": "sand_ovl-19",
+					"region": {
+						"x": 157,
+						"y": 505,
+						"w": 76,
+						"h": 33
+					},
+					"margin": {
+						"x": 0,
+						"y": 4,
+						"w": 0,
+						"h": 4
+					}
+				},
+				{
+					"filename": "schnee_ovl-19",
+					"region": {
+						"x": 1,
+						"y": 506,
+						"w": 76,
+						"h": 33
+					},
+					"margin": {
+						"x": 0,
+						"y": 4,
+						"w": 0,
+						"h": 4
+					}
+				},
+				{
+					"filename": "wald_ovl-19",
+					"region": {
+						"x": 79,
+						"y": 506,
+						"w": 76,
+						"h": 33
+					},
+					"margin": {
+						"x": 0,
+						"y": 4,
+						"w": 0,
+						"h": 4
+					}
+				},
+				{
+					"filename": "cob_ovl-21",
+					"region": {
+						"x": 235,
+						"y": 505,
+						"w": 76,
+						"h": 32
+					},
+					"margin": {
+						"x": 0,
+						"y": 5,
+						"w": 0,
+						"h": 5
+					}
+				},
+				{
+					"filename": "cracked_ovl-21",
+					"region": {
+						"x": 313,
+						"y": 505,
+						"w": 76,
+						"h": 32
+					},
+					"margin": {
+						"x": 0,
+						"y": 5,
+						"w": 0,
+						"h": 5
+					}
+				},
+				{
+					"filename": "grass_dry_ovl-21",
+					"region": {
+						"x": 391,
+						"y": 505,
+						"w": 76,
+						"h": 32
+					},
+					"margin": {
+						"x": 0,
+						"y": 5,
+						"w": 0,
+						"h": 5
+					}
+				},
+				{
+					"filename": "grass_ovl-21",
+					"region": {
+						"x": 469,
+						"y": 505,
+						"w": 76,
+						"h": 32
+					},
+					"margin": {
+						"x": 0,
+						"y": 5,
+						"w": 0,
+						"h": 5
+					}
+				},
+				{
+					"filename": "mud_ovl-21",
+					"region": {
+						"x": 547,
+						"y": 508,
+						"w": 76,
+						"h": 32
+					},
+					"margin": {
+						"x": 0,
+						"y": 5,
+						"w": 0,
+						"h": 5
+					}
+				},
+				{
+					"filename": "sandy_ovl-21",
+					"region": {
+						"x": 625,
+						"y": 508,
+						"w": 76,
+						"h": 32
+					},
+					"margin": {
+						"x": 0,
+						"y": 5,
+						"w": 0,
+						"h": 5
+					}
+				},
+				{
+					"filename": "str_ovl-21",
+					"region": {
+						"x": 703,
+						"y": 508,
+						"w": 76,
+						"h": 32
+					},
+					"margin": {
+						"x": 0,
+						"y": 5,
+						"w": 0,
+						"h": 5
+					}
+				},
+				{
+					"filename": "strasse_ovl-21",
+					"region": {
+						"x": 781,
+						"y": 541,
+						"w": 76,
+						"h": 32
+					},
+					"margin": {
+						"x": 0,
+						"y": 5,
+						"w": 0,
+						"h": 5
+					}
+				},
+				{
+					"filename": "street3_ovl-21",
+					"region": {
+						"x": 859,
+						"y": 541,
+						"w": 76,
+						"h": 32
+					},
+					"margin": {
+						"x": 0,
+						"y": 5,
+						"w": 0,
+						"h": 5
+					}
+				},
+				{
+					"filename": "cob_ovl-17",
+					"region": {
+						"x": 937,
+						"y": 566,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "cob_ovl-19",
+					"region": {
+						"x": 235,
+						"y": 539,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 6,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "cob_ovl-25",
+					"region": {
+						"x": 157,
+						"y": 540,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "cob_ovl-26",
+					"region": {
+						"x": 1,
+						"y": 541,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 6,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "cracked_ovl-17",
+					"region": {
+						"x": 79,
+						"y": 541,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "cracked_ovl-19",
+					"region": {
+						"x": 313,
+						"y": 539,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 6,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "cracked_ovl-25",
+					"region": {
+						"x": 391,
+						"y": 539,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "cracked_ovl-26",
+					"region": {
+						"x": 469,
+						"y": 539,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 6,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "grass_dry_ovl-17",
+					"region": {
+						"x": 547,
+						"y": 542,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "grass_dry_ovl-19",
+					"region": {
+						"x": 625,
+						"y": 542,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 6,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "grass_dry_ovl-25",
+					"region": {
+						"x": 703,
+						"y": 542,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "grass_dry_ovl-26",
+					"region": {
+						"x": 235,
+						"y": 572,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 6,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "grass_ovl-17",
+					"region": {
+						"x": 157,
+						"y": 573,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "grass_ovl-19",
+					"region": {
+						"x": 1,
+						"y": 574,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 6,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "grass_ovl-25",
+					"region": {
+						"x": 79,
+						"y": 574,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "grass_ovl-26",
+					"region": {
+						"x": 313,
+						"y": 572,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 6,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "mud_ovl-17",
+					"region": {
+						"x": 391,
+						"y": 572,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "mud_ovl-19",
+					"region": {
+						"x": 469,
+						"y": 572,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 6,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "mud_ovl-25",
+					"region": {
+						"x": 547,
+						"y": 575,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "mud_ovl-26",
+					"region": {
+						"x": 235,
+						"y": 605,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 6,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "sandy_ovl-17",
+					"region": {
+						"x": 157,
+						"y": 606,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "sandy_ovl-19",
+					"region": {
+						"x": 1,
+						"y": 607,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 6,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "sandy_ovl-25",
+					"region": {
+						"x": 79,
+						"y": 607,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "sandy_ovl-26",
+					"region": {
+						"x": 313,
+						"y": 605,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 6,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "str_ovl-17",
+					"region": {
+						"x": 391,
+						"y": 605,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "str_ovl-19",
+					"region": {
+						"x": 469,
+						"y": 605,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 6,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "str_ovl-25",
+					"region": {
+						"x": 625,
+						"y": 575,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "str_ovl-26",
+					"region": {
+						"x": 703,
+						"y": 575,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 6,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "strasse_ovl-17",
+					"region": {
+						"x": 781,
+						"y": 575,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "strasse_ovl-19",
+					"region": {
+						"x": 859,
+						"y": 575,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 6,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "strasse_ovl-25",
+					"region": {
+						"x": 937,
+						"y": 599,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "strasse_ovl-26",
+					"region": {
+						"x": 547,
+						"y": 608,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 6,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "street3_ovl-17",
+					"region": {
+						"x": 235,
+						"y": 638,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "street3_ovl-19",
+					"region": {
+						"x": 157,
+						"y": 639,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 6,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "street3_ovl-25",
+					"region": {
+						"x": 1,
+						"y": 640,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "street3_ovl-26",
+					"region": {
+						"x": 79,
+						"y": 640,
+						"w": 76,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 6,
+						"w": 0,
+						"h": 6
+					}
+				},
+				{
+					"filename": "Eis1_ovl-3",
+					"region": {
+						"x": 313,
+						"y": 638,
+						"w": 76,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 7
+					}
+				},
+				{
+					"filename": "acker_ovl-25",
+					"region": {
+						"x": 391,
+						"y": 638,
+						"w": 76,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 7
+					}
+				},
+				{
+					"filename": "cob_ovl-22",
+					"region": {
+						"x": 469,
+						"y": 638,
+						"w": 76,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 7
+					}
+				},
+				{
+					"filename": "cracked_ovl-22",
+					"region": {
+						"x": 625,
+						"y": 608,
+						"w": 76,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 7
+					}
+				},
+				{
+					"filename": "dreck_ovl-25",
+					"region": {
+						"x": 703,
+						"y": 608,
+						"w": 76,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 7
+					}
+				},
+				{
+					"filename": "dungeonfloor_ovl-25",
+					"region": {
+						"x": 781,
+						"y": 608,
+						"w": 76,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 7
+					}
+				},
+				{
+					"filename": "fels1_ovl-25",
+					"region": {
+						"x": 859,
+						"y": 608,
+						"w": 76,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 7
+					}
+				},
+				{
+					"filename": "grass_dry_ovl-22",
+					"region": {
+						"x": 937,
+						"y": 632,
+						"w": 76,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 7
+					}
+				},
+				{
+					"filename": "grass_ovl-22",
+					"region": {
+						"x": 625,
+						"y": 640,
+						"w": 76,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 7
+					}
+				},
+				{
+					"filename": "lava_ovl-25",
+					"region": {
+						"x": 547,
+						"y": 641,
+						"w": 76,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 7
+					}
+				},
+				{
+					"filename": "mud_ovl-22",
+					"region": {
+						"x": 313,
+						"y": 670,
+						"w": 76,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 7
+					}
+				},
+				{
+					"filename": "sand_ovl-25",
+					"region": {
+						"x": 235,
+						"y": 671,
+						"w": 76,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 7
+					}
+				},
+				{
+					"filename": "sandy_ovl-22",
+					"region": {
+						"x": 157,
+						"y": 672,
+						"w": 76,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 7
+					}
+				},
+				{
+					"filename": "schnee_ovl-25",
+					"region": {
+						"x": 1,
+						"y": 673,
+						"w": 76,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 7
+					}
+				},
+				{
+					"filename": "str_ovl-22",
+					"region": {
+						"x": 79,
+						"y": 673,
+						"w": 76,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 7
+					}
+				},
+				{
+					"filename": "strasse_ovl-22",
+					"region": {
+						"x": 391,
+						"y": 670,
+						"w": 76,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 7
+					}
+				},
+				{
+					"filename": "street3_ovl-22",
+					"region": {
+						"x": 469,
+						"y": 670,
+						"w": 76,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 7
+					}
+				},
+				{
+					"filename": "wald_ovl-25",
+					"region": {
+						"x": 703,
+						"y": 640,
+						"w": 76,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 7
+					}
+				},
+				{
+					"filename": "Eis1_ovl-9",
+					"region": {
+						"x": 781,
+						"y": 640,
+						"w": 76,
+						"h": 29
+					},
+					"margin": {
+						"x": 0,
+						"y": 8,
+						"w": 0,
+						"h": 8
+					}
+				},
+				{
+					"filename": "cob_ovl-14",
+					"region": {
+						"x": 859,
+						"y": 640,
+						"w": 76,
+						"h": 28
+					},
+					"margin": {
+						"x": 0,
+						"y": 9,
+						"w": 0,
+						"h": 9
+					}
+				},
+				{
+					"filename": "cracked_ovl-14",
+					"region": {
+						"x": 937,
+						"y": 664,
+						"w": 76,
+						"h": 28
+					},
+					"margin": {
+						"x": 0,
+						"y": 9,
+						"w": 0,
+						"h": 9
+					}
+				},
+				{
+					"filename": "grass_dry_ovl-14",
+					"region": {
+						"x": 859,
+						"y": 670,
+						"w": 76,
+						"h": 28
+					},
+					"margin": {
+						"x": 0,
+						"y": 9,
+						"w": 0,
+						"h": 9
+					}
+				},
+				{
+					"filename": "grass_ovl-14",
+					"region": {
+						"x": 781,
+						"y": 671,
+						"w": 76,
+						"h": 28
+					},
+					"margin": {
+						"x": 0,
+						"y": 9,
+						"w": 0,
+						"h": 9
+					}
+				},
+				{
+					"filename": "mud_ovl-14",
+					"region": {
+						"x": 937,
+						"y": 694,
+						"w": 76,
+						"h": 28
+					},
+					"margin": {
+						"x": 0,
+						"y": 9,
+						"w": 0,
+						"h": 9
+					}
+				},
+				{
+					"filename": "sandy_ovl-14",
+					"region": {
+						"x": 859,
+						"y": 700,
+						"w": 76,
+						"h": 28
+					},
+					"margin": {
+						"x": 0,
+						"y": 9,
+						"w": 0,
+						"h": 9
+					}
+				},
+				{
+					"filename": "str_ovl-14",
+					"region": {
+						"x": 937,
+						"y": 724,
+						"w": 76,
+						"h": 28
+					},
+					"margin": {
+						"x": 0,
+						"y": 9,
+						"w": 0,
+						"h": 9
+					}
+				},
+				{
+					"filename": "strasse_ovl-14",
+					"region": {
+						"x": 625,
+						"y": 672,
+						"w": 76,
+						"h": 28
+					},
+					"margin": {
+						"x": 0,
+						"y": 9,
+						"w": 0,
+						"h": 9
+					}
+				},
+				{
+					"filename": "street3_ovl-14",
+					"region": {
+						"x": 547,
+						"y": 673,
+						"w": 76,
+						"h": 28
+					},
+					"margin": {
+						"x": 0,
+						"y": 9,
+						"w": 0,
+						"h": 9
+					}
+				},
+				{
+					"filename": "acker_ovl-13",
+					"region": {
+						"x": 703,
+						"y": 672,
+						"w": 76,
+						"h": 27
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 10
+					}
+				},
+				{
+					"filename": "dreck_ovl-13",
+					"region": {
+						"x": 703,
+						"y": 701,
+						"w": 76,
+						"h": 27
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 10
+					}
+				},
+				{
+					"filename": "dungeonfloor_ovl-13",
+					"region": {
+						"x": 625,
+						"y": 702,
+						"w": 76,
+						"h": 27
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 10
+					}
+				},
+				{
+					"filename": "fels1_ovl-13",
+					"region": {
+						"x": 781,
+						"y": 701,
+						"w": 76,
+						"h": 27
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 10
+					}
+				},
+				{
+					"filename": "lava_ovl-13",
+					"region": {
+						"x": 703,
+						"y": 730,
+						"w": 76,
+						"h": 27
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 10
+					}
+				},
+				{
+					"filename": "sand_ovl-13",
+					"region": {
+						"x": 781,
+						"y": 730,
+						"w": 76,
+						"h": 27
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 10
+					}
+				},
+				{
+					"filename": "schnee_ovl-13",
+					"region": {
+						"x": 859,
+						"y": 730,
+						"w": 76,
+						"h": 27
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 10
+					}
+				},
+				{
+					"filename": "wald_ovl-13",
+					"region": {
+						"x": 937,
+						"y": 754,
+						"w": 76,
+						"h": 27
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 10
+					}
+				},
+				{
+					"filename": "acker_ovl-14",
+					"region": {
+						"x": 313,
+						"y": 702,
+						"w": 76,
+						"h": 25
+					},
+					"margin": {
+						"x": 0,
+						"y": 12,
+						"w": 0,
+						"h": 12
+					}
+				},
+				{
+					"filename": "dreck_ovl-14",
+					"region": {
+						"x": 235,
+						"y": 703,
+						"w": 76,
+						"h": 25
+					},
+					"margin": {
+						"x": 0,
+						"y": 12,
+						"w": 0,
+						"h": 12
+					}
+				},
+				{
+					"filename": "dungeonfloor_ovl-14",
+					"region": {
+						"x": 157,
+						"y": 704,
+						"w": 76,
+						"h": 25
+					},
+					"margin": {
+						"x": 0,
+						"y": 12,
+						"w": 0,
+						"h": 12
+					}
+				},
+				{
+					"filename": "fels1_ovl-14",
+					"region": {
+						"x": 1,
+						"y": 705,
+						"w": 76,
+						"h": 25
+					},
+					"margin": {
+						"x": 0,
+						"y": 12,
+						"w": 0,
+						"h": 12
+					}
+				},
+				{
+					"filename": "lava_ovl-14",
+					"region": {
+						"x": 79,
+						"y": 705,
+						"w": 76,
+						"h": 25
+					},
+					"margin": {
+						"x": 0,
+						"y": 12,
+						"w": 0,
+						"h": 12
+					}
+				},
+				{
+					"filename": "sand_ovl-14",
+					"region": {
+						"x": 391,
+						"y": 702,
+						"w": 76,
+						"h": 25
+					},
+					"margin": {
+						"x": 0,
+						"y": 12,
+						"w": 0,
+						"h": 12
+					}
+				},
+				{
+					"filename": "schnee_ovl-14",
+					"region": {
+						"x": 469,
+						"y": 702,
+						"w": 76,
+						"h": 25
+					},
+					"margin": {
+						"x": 0,
+						"y": 12,
+						"w": 0,
+						"h": 12
+					}
+				},
+				{
+					"filename": "wald_ovl-14",
+					"region": {
+						"x": 547,
+						"y": 703,
+						"w": 76,
+						"h": 25
+					},
+					"margin": {
+						"x": 0,
+						"y": 12,
+						"w": 0,
+						"h": 12
+					}
+				},
+				{
+					"filename": "cob_ovl-13",
+					"region": {
+						"x": 313,
+						"y": 729,
+						"w": 76,
+						"h": 23
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 14
+					}
+				},
+				{
+					"filename": "cracked_ovl-13",
+					"region": {
+						"x": 235,
+						"y": 730,
+						"w": 76,
+						"h": 23
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 14
+					}
+				},
+				{
+					"filename": "grass_dry_ovl-13",
+					"region": {
+						"x": 157,
+						"y": 731,
+						"w": 76,
+						"h": 23
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 14
+					}
+				},
+				{
+					"filename": "grass_ovl-13",
+					"region": {
+						"x": 1,
+						"y": 732,
+						"w": 76,
+						"h": 23
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 14
+					}
+				},
+				{
+					"filename": "mud_ovl-13",
+					"region": {
+						"x": 79,
+						"y": 732,
+						"w": 76,
+						"h": 23
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 14
+					}
+				},
+				{
+					"filename": "sandy_ovl-13",
+					"region": {
+						"x": 391,
+						"y": 729,
+						"w": 76,
+						"h": 23
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 14
+					}
+				},
+				{
+					"filename": "str_ovl-13",
+					"region": {
+						"x": 469,
+						"y": 729,
+						"w": 76,
+						"h": 23
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 14
+					}
+				},
+				{
+					"filename": "strasse_ovl-13",
+					"region": {
+						"x": 547,
+						"y": 730,
+						"w": 76,
+						"h": 23
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 14
+					}
+				},
+				{
+					"filename": "street3_ovl-13",
+					"region": {
+						"x": 625,
+						"y": 731,
+						"w": 76,
+						"h": 23
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 14
+					}
+				},
+				{
+					"filename": "acker_ovl-17",
+					"region": {
+						"x": 313,
+						"y": 754,
+						"w": 75,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 1,
+						"h": 7
+					}
+				},
+				{
+					"filename": "acker_ovl-21",
+					"region": {
+						"x": 235,
+						"y": 755,
+						"w": 75,
+						"h": 30
+					},
+					"margin": {
+						"x": 1,
+						"y": 7,
+						"w": 1,
+						"h": 7
+					}
+				},
+				{
+					"filename": "dreck_ovl-17",
+					"region": {
+						"x": 157,
+						"y": 756,
+						"w": 75,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 1,
+						"h": 7
+					}
+				},
+				{
+					"filename": "dreck_ovl-21",
+					"region": {
+						"x": 1,
+						"y": 757,
+						"w": 75,
+						"h": 30
+					},
+					"margin": {
+						"x": 1,
+						"y": 7,
+						"w": 1,
+						"h": 7
+					}
+				},
+				{
+					"filename": "dungeonfloor_ovl-17",
+					"region": {
+						"x": 78,
+						"y": 757,
+						"w": 75,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 1,
+						"h": 7
+					}
+				},
+				{
+					"filename": "dungeonfloor_ovl-21",
+					"region": {
+						"x": 390,
+						"y": 754,
+						"w": 75,
+						"h": 30
+					},
+					"margin": {
+						"x": 1,
+						"y": 7,
+						"w": 1,
+						"h": 7
+					}
+				},
+				{
+					"filename": "fels1_ovl-17",
+					"region": {
+						"x": 467,
+						"y": 754,
+						"w": 75,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 1,
+						"h": 7
+					}
+				},
+				{
+					"filename": "fels1_ovl-21",
+					"region": {
+						"x": 544,
+						"y": 755,
+						"w": 75,
+						"h": 30
+					},
+					"margin": {
+						"x": 1,
+						"y": 7,
+						"w": 1,
+						"h": 7
+					}
+				},
+				{
+					"filename": "lava_ovl-17",
+					"region": {
+						"x": 621,
+						"y": 756,
+						"w": 75,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 1,
+						"h": 7
+					}
+				},
+				{
+					"filename": "lava_ovl-21",
+					"region": {
+						"x": 312,
+						"y": 786,
+						"w": 75,
+						"h": 30
+					},
+					"margin": {
+						"x": 1,
+						"y": 7,
+						"w": 1,
+						"h": 7
+					}
+				},
+				{
+					"filename": "sand_ovl-17",
+					"region": {
+						"x": 234,
+						"y": 787,
+						"w": 75,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 1,
+						"h": 7
+					}
+				},
+				{
+					"filename": "sand_ovl-21",
+					"region": {
+						"x": 155,
+						"y": 788,
+						"w": 75,
+						"h": 30
+					},
+					"margin": {
+						"x": 1,
+						"y": 7,
+						"w": 1,
+						"h": 7
+					}
+				},
+				{
+					"filename": "schnee_ovl-17",
+					"region": {
+						"x": 1,
+						"y": 789,
+						"w": 75,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 1,
+						"h": 7
+					}
+				},
+				{
+					"filename": "schnee_ovl-21",
+					"region": {
+						"x": 78,
+						"y": 789,
+						"w": 75,
+						"h": 30
+					},
+					"margin": {
+						"x": 1,
+						"y": 7,
+						"w": 1,
+						"h": 7
+					}
+				},
+				{
+					"filename": "wald_ovl-17",
+					"region": {
+						"x": 389,
+						"y": 786,
+						"w": 75,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 1,
+						"h": 7
+					}
+				},
+				{
+					"filename": "wald_ovl-21",
+					"region": {
+						"x": 466,
+						"y": 786,
+						"w": 75,
+						"h": 30
+					},
+					"margin": {
+						"x": 1,
+						"y": 7,
+						"w": 1,
+						"h": 7
+					}
+				},
+				{
+					"filename": "Eis1_ovl-4",
+					"region": {
+						"x": 543,
+						"y": 787,
+						"w": 73,
+						"h": 36
+					},
+					"margin": {
+						"x": 3,
+						"y": 0,
+						"w": 3,
+						"h": 1
+					}
+				},
+				{
+					"filename": "acker_ovl-22",
+					"region": {
+						"x": 311,
+						"y": 818,
+						"w": 73,
+						"h": 28
+					},
+					"margin": {
+						"x": 3,
+						"y": 0,
+						"w": 3,
+						"h": 9
+					}
+				},
+				{
+					"filename": "dreck_ovl-22",
+					"region": {
+						"x": 232,
+						"y": 819,
+						"w": 73,
+						"h": 28
+					},
+					"margin": {
+						"x": 3,
+						"y": 0,
+						"w": 3,
+						"h": 9
+					}
+				},
+				{
+					"filename": "dungeonfloor_ovl-22",
+					"region": {
+						"x": 155,
+						"y": 820,
+						"w": 73,
+						"h": 28
+					},
+					"margin": {
+						"x": 3,
+						"y": 0,
+						"w": 3,
+						"h": 9
+					}
+				},
+				{
+					"filename": "fels1_ovl-22",
+					"region": {
+						"x": 1,
+						"y": 821,
+						"w": 73,
+						"h": 28
+					},
+					"margin": {
+						"x": 3,
+						"y": 0,
+						"w": 3,
+						"h": 9
+					}
+				},
+				{
+					"filename": "lava_ovl-22",
+					"region": {
+						"x": 76,
+						"y": 821,
+						"w": 73,
+						"h": 28
+					},
+					"margin": {
+						"x": 3,
+						"y": 0,
+						"w": 3,
+						"h": 9
+					}
+				},
+				{
+					"filename": "sand_ovl-22",
+					"region": {
+						"x": 386,
+						"y": 818,
+						"w": 73,
+						"h": 28
+					},
+					"margin": {
+						"x": 3,
+						"y": 0,
+						"w": 3,
+						"h": 9
+					}
+				},
+				{
+					"filename": "schnee_ovl-22",
+					"region": {
+						"x": 461,
+						"y": 818,
+						"w": 73,
+						"h": 28
+					},
+					"margin": {
+						"x": 3,
+						"y": 0,
+						"w": 3,
+						"h": 9
+					}
+				},
+				{
+					"filename": "wald_ovl-22",
+					"region": {
+						"x": 698,
+						"y": 759,
+						"w": 73,
+						"h": 28
+					},
+					"margin": {
+						"x": 3,
+						"y": 0,
+						"w": 3,
+						"h": 9
+					}
+				},
+				{
+					"filename": "cob_ovl-27",
+					"region": {
+						"x": 618,
+						"y": 788,
+						"w": 64,
+						"h": 37
+					},
+					"margin": {
+						"x": 12,
+						"y": 0,
+						"w": 12,
+						"h": 0
+					}
+				},
+				{
+					"filename": "cracked_ovl-27",
+					"region": {
+						"x": 536,
+						"y": 825,
+						"w": 64,
+						"h": 37
+					},
+					"margin": {
+						"x": 12,
+						"y": 0,
+						"w": 12,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grass_dry_ovl-27",
+					"region": {
+						"x": 773,
+						"y": 759,
+						"w": 64,
+						"h": 37
+					},
+					"margin": {
+						"x": 12,
+						"y": 0,
+						"w": 12,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grass_ovl-27",
+					"region": {
+						"x": 684,
+						"y": 789,
+						"w": 64,
+						"h": 37
+					},
+					"margin": {
+						"x": 12,
+						"y": 0,
+						"w": 12,
+						"h": 0
+					}
+				},
+				{
+					"filename": "mud_ovl-27",
+					"region": {
+						"x": 602,
+						"y": 827,
+						"w": 64,
+						"h": 37
+					},
+					"margin": {
+						"x": 12,
+						"y": 0,
+						"w": 12,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy_ovl-27",
+					"region": {
+						"x": 839,
+						"y": 759,
+						"w": 64,
+						"h": 37
+					},
+					"margin": {
+						"x": 12,
+						"y": 0,
+						"w": 12,
+						"h": 0
+					}
+				},
+				{
+					"filename": "unknownTile",
+					"region": {
+						"x": 905,
+						"y": 759,
+						"w": 27,
+						"h": 23
+					},
+					"margin": {
+						"x": 26,
+						"y": 7,
+						"w": 49,
+						"h": 14
+					}
+				},
+				{
+					"filename": "str_ovl-27",
+					"region": {
+						"x": 934,
+						"y": 783,
+						"w": 64,
+						"h": 37
+					},
+					"margin": {
+						"x": 12,
+						"y": 0,
+						"w": 12,
+						"h": 0
+					}
+				},
+				{
+					"filename": "strasse_ovl-27",
+					"region": {
+						"x": 750,
+						"y": 798,
+						"w": 64,
+						"h": 37
+					},
+					"margin": {
+						"x": 12,
+						"y": 0,
+						"w": 12,
+						"h": 0
+					}
+				},
+				{
+					"filename": "street3_ovl-27",
+					"region": {
+						"x": 668,
+						"y": 828,
+						"w": 64,
+						"h": 37
+					},
+					"margin": {
+						"x": 12,
+						"y": 0,
+						"w": 12,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Eis1_ovl-11",
+					"region": {
+						"x": 816,
+						"y": 798,
+						"w": 64,
+						"h": 33
+					},
+					"margin": {
+						"x": 0,
+						"y": 4,
+						"w": 12,
+						"h": 4
+					}
+				},
+				{
+					"filename": "cob_ovl-15",
+					"region": {
+						"x": 882,
+						"y": 798,
+						"w": 49,
+						"h": 37
+					},
+					"margin": {
+						"x": 27,
+						"y": 0,
+						"w": 27,
+						"h": 0
+					}
+				},
+				{
+					"filename": "cob_ovl-3",
+					"region": {
+						"x": 816,
+						"y": 833,
+						"w": 63,
+						"h": 28
+					},
+					"margin": {
+						"x": 0,
+						"y": 9,
+						"w": 13,
+						"h": 9
+					}
+				},
+				{
+					"filename": "cracked_ovl-3",
+					"region": {
+						"x": 734,
+						"y": 837,
+						"w": 63,
+						"h": 28
+					},
+					"margin": {
+						"x": 0,
+						"y": 9,
+						"w": 13,
+						"h": 9
+					}
+				},
+				{
+					"filename": "grass_dry_ovl-3",
+					"region": {
+						"x": 933,
+						"y": 822,
+						"w": 63,
+						"h": 28
+					},
+					"margin": {
+						"x": 0,
+						"y": 9,
+						"w": 13,
+						"h": 9
+					}
+				},
+				{
+					"filename": "cracked_ovl-15",
+					"region": {
+						"x": 881,
+						"y": 837,
+						"w": 49,
+						"h": 37
+					},
+					"margin": {
+						"x": 27,
+						"y": 0,
+						"w": 27,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grass_ovl-3",
+					"region": {
+						"x": 799,
+						"y": 863,
+						"w": 63,
+						"h": 28
+					},
+					"margin": {
+						"x": 0,
+						"y": 9,
+						"w": 13,
+						"h": 9
+					}
+				},
+				{
+					"filename": "mud_ovl-3",
+					"region": {
+						"x": 932,
+						"y": 852,
+						"w": 63,
+						"h": 28
+					},
+					"margin": {
+						"x": 0,
+						"y": 9,
+						"w": 13,
+						"h": 9
+					}
+				},
+				{
+					"filename": "sandy_ovl-3",
+					"region": {
+						"x": 864,
+						"y": 876,
+						"w": 63,
+						"h": 28
+					},
+					"margin": {
+						"x": 0,
+						"y": 9,
+						"w": 13,
+						"h": 9
+					}
+				},
+				{
+					"filename": "str_ovl-3",
+					"region": {
+						"x": 929,
+						"y": 882,
+						"w": 63,
+						"h": 28
+					},
+					"margin": {
+						"x": 0,
+						"y": 9,
+						"w": 13,
+						"h": 9
+					}
+				},
+				{
+					"filename": "strasse_ovl-3",
+					"region": {
+						"x": 307,
+						"y": 848,
+						"w": 63,
+						"h": 28
+					},
+					"margin": {
+						"x": 0,
+						"y": 9,
+						"w": 13,
+						"h": 9
+					}
+				},
+				{
+					"filename": "street3_ovl-3",
+					"region": {
+						"x": 230,
+						"y": 849,
+						"w": 63,
+						"h": 28
+					},
+					"margin": {
+						"x": 0,
+						"y": 9,
+						"w": 13,
+						"h": 9
+					}
+				},
+				{
+					"filename": "cob_ovl-24",
+					"region": {
+						"x": 151,
+						"y": 850,
+						"w": 62,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 14,
+						"h": 0
+					}
+				},
+				{
+					"filename": "cracked_ovl-24",
+					"region": {
+						"x": 1,
+						"y": 851,
+						"w": 62,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 14,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grass_dry_ovl-24",
+					"region": {
+						"x": 65,
+						"y": 851,
+						"w": 62,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 14,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grass_ovl-24",
+					"region": {
+						"x": 372,
+						"y": 848,
+						"w": 62,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 14,
+						"h": 0
+					}
+				},
+				{
+					"filename": "mud_ovl-24",
+					"region": {
+						"x": 295,
+						"y": 878,
+						"w": 62,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 14,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy_ovl-24",
+					"region": {
+						"x": 215,
+						"y": 879,
+						"w": 62,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 14,
+						"h": 0
+					}
+				},
+				{
+					"filename": "str_ovl-24",
+					"region": {
+						"x": 129,
+						"y": 889,
+						"w": 62,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 14,
+						"h": 0
+					}
+				},
+				{
+					"filename": "strasse_ovl-24",
+					"region": {
+						"x": 436,
+						"y": 848,
+						"w": 62,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 14,
+						"h": 0
+					}
+				},
+				{
+					"filename": "street3_ovl-24",
+					"region": {
+						"x": 500,
+						"y": 864,
+						"w": 62,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 14,
+						"h": 0
+					}
+				},
+				{
+					"filename": "acker_ovl-4",
+					"region": {
+						"x": 564,
+						"y": 866,
+						"w": 62,
+						"h": 23
+					},
+					"margin": {
+						"x": 14,
+						"y": 14,
+						"w": 14,
+						"h": 14
+					}
+				},
+				{
+					"filename": "dreck_ovl-4",
+					"region": {
+						"x": 1,
+						"y": 890,
+						"w": 62,
+						"h": 23
+					},
+					"margin": {
+						"x": 14,
+						"y": 14,
+						"w": 14,
+						"h": 14
+					}
+				},
+				{
+					"filename": "dungeonfloor_ovl-4",
+					"region": {
+						"x": 65,
+						"y": 890,
+						"w": 62,
+						"h": 23
+					},
+					"margin": {
+						"x": 14,
+						"y": 14,
+						"w": 14,
+						"h": 14
+					}
+				},
+				{
+					"filename": "fels1_ovl-4",
+					"region": {
+						"x": 1,
+						"y": 915,
+						"w": 62,
+						"h": 23
+					},
+					"margin": {
+						"x": 14,
+						"y": 14,
+						"w": 14,
+						"h": 14
+					}
+				},
+				{
+					"filename": "lava_ovl-4",
+					"region": {
+						"x": 65,
+						"y": 915,
+						"w": 62,
+						"h": 23
+					},
+					"margin": {
+						"x": 14,
+						"y": 14,
+						"w": 14,
+						"h": 14
+					}
+				},
+				{
+					"filename": "sand_ovl-4",
+					"region": {
+						"x": 359,
+						"y": 887,
+						"w": 62,
+						"h": 23
+					},
+					"margin": {
+						"x": 14,
+						"y": 14,
+						"w": 14,
+						"h": 14
+					}
+				},
+				{
+					"filename": "schnee_ovl-4",
+					"region": {
+						"x": 423,
+						"y": 887,
+						"w": 62,
+						"h": 23
+					},
+					"margin": {
+						"x": 14,
+						"y": 14,
+						"w": 14,
+						"h": 14
+					}
+				},
+				{
+					"filename": "wald_ovl-4",
+					"region": {
+						"x": 628,
+						"y": 867,
+						"w": 62,
+						"h": 23
+					},
+					"margin": {
+						"x": 14,
+						"y": 14,
+						"w": 14,
+						"h": 14
+					}
+				},
+				{
+					"filename": "Eis1_ovl-0",
+					"region": {
+						"x": 564,
+						"y": 891,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "acker_ovl-20",
+					"region": {
+						"x": 487,
+						"y": 903,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 15,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "acker_ovl-24",
+					"region": {
+						"x": 692,
+						"y": 867,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "acker_ovl-5",
+					"region": {
+						"x": 755,
+						"y": 867,
+						"w": 42,
+						"h": 30
+					},
+					"margin": {
+						"x": 34,
+						"y": 7,
+						"w": 34,
+						"h": 7
+					}
+				},
+				{
+					"filename": "acker_ovl-27",
+					"region": {
+						"x": 799,
+						"y": 893,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 15,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dreck_ovl-5",
+					"region": {
+						"x": 755,
+						"y": 899,
+						"w": 42,
+						"h": 30
+					},
+					"margin": {
+						"x": 34,
+						"y": 7,
+						"w": 34,
+						"h": 7
+					}
+				},
+				{
+					"filename": "cob_ovl-16",
+					"region": {
+						"x": 627,
+						"y": 892,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "cob_ovl-18",
+					"region": {
+						"x": 690,
+						"y": 906,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "acker_ovl-12",
+					"region": {
+						"x": 753,
+						"y": 931,
+						"w": 44,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 0
+					}
+				},
+				{
+					"filename": "cob_ovl-20",
+					"region": {
+						"x": 862,
+						"y": 906,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 15,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "cracked_ovl-16",
+					"region": {
+						"x": 799,
+						"y": 932,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "cracked_ovl-18",
+					"region": {
+						"x": 550,
+						"y": 930,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "cracked_ovl-20",
+					"region": {
+						"x": 613,
+						"y": 931,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 15,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dreck_ovl-20",
+					"region": {
+						"x": 676,
+						"y": 945,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 15,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "acker_ovl-23",
+					"region": {
+						"x": 739,
+						"y": 970,
+						"w": 57,
+						"h": 37
+					},
+					"margin": {
+						"x": 19,
+						"y": 0,
+						"w": 19,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dreck_ovl-24",
+					"region": {
+						"x": 925,
+						"y": 912,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dreck_ovl-27",
+					"region": {
+						"x": 862,
+						"y": 945,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 15,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dungeonfloor_ovl-20",
+					"region": {
+						"x": 798,
+						"y": 971,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 15,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dungeonfloor_ovl-24",
+					"region": {
+						"x": 925,
+						"y": 951,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dungeonfloor_ovl-27",
+					"region": {
+						"x": 861,
+						"y": 984,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 15,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "fels1_ovl-20",
+					"region": {
+						"x": 924,
+						"y": 990,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 15,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "fels1_ovl-24",
+					"region": {
+						"x": 359,
+						"y": 912,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "fels1_ovl-27",
+					"region": {
+						"x": 422,
+						"y": 912,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 15,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grass_dry_ovl-16",
+					"region": {
+						"x": 485,
+						"y": 942,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grass_dry_ovl-18",
+					"region": {
+						"x": 548,
+						"y": 969,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grass_dry_ovl-20",
+					"region": {
+						"x": 611,
+						"y": 970,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 15,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grass_ovl-16",
+					"region": {
+						"x": 674,
+						"y": 984,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "acker_ovl-18",
+					"region": {
+						"x": 737,
+						"y": 1009,
+						"w": 59,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 17,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grass_ovl-18",
+					"region": {
+						"x": 798,
+						"y": 1010,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grass_ovl-20",
+					"region": {
+						"x": 861,
+						"y": 1023,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 15,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "lava_ovl-20",
+					"region": {
+						"x": 279,
+						"y": 917,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 15,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "lava_ovl-24",
+					"region": {
+						"x": 193,
+						"y": 918,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "lava_ovl-27",
+					"region": {
+						"x": 129,
+						"y": 928,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 15,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "mud_ovl-16",
+					"region": {
+						"x": 924,
+						"y": 1029,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "mud_ovl-18",
+					"region": {
+						"x": 1,
+						"y": 940,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "mud_ovl-20",
+					"region": {
+						"x": 64,
+						"y": 940,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 15,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sand_ovl-20",
+					"region": {
+						"x": 342,
+						"y": 951,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 15,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sand_ovl-24",
+					"region": {
+						"x": 405,
+						"y": 951,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sand_ovl-27",
+					"region": {
+						"x": 468,
+						"y": 981,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 15,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy_ovl-16",
+					"region": {
+						"x": 531,
+						"y": 1008,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy_ovl-18",
+					"region": {
+						"x": 594,
+						"y": 1009,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy_ovl-20",
+					"region": {
+						"x": 657,
+						"y": 1023,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 15,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "schnee_ovl-20",
+					"region": {
+						"x": 720,
+						"y": 1048,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 15,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "schnee_ovl-24",
+					"region": {
+						"x": 783,
+						"y": 1049,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "schnee_ovl-27",
+					"region": {
+						"x": 846,
+						"y": 1062,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 15,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "str_ovl-16",
+					"region": {
+						"x": 256,
+						"y": 956,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "str_ovl-18",
+					"region": {
+						"x": 192,
+						"y": 957,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "str_ovl-20",
+					"region": {
+						"x": 127,
+						"y": 967,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 15,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "strasse_ovl-16",
+					"region": {
+						"x": 909,
+						"y": 1068,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grass_dry_ovl-15",
+					"region": {
+						"x": 972,
+						"y": 1068,
+						"w": 49,
+						"h": 37
+					},
+					"margin": {
+						"x": 27,
+						"y": 0,
+						"w": 27,
+						"h": 0
+					}
+				},
+				{
+					"filename": "strasse_ovl-18",
+					"region": {
+						"x": 1,
+						"y": 979,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "strasse_ovl-20",
+					"region": {
+						"x": 64,
+						"y": 979,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 15,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "street3_ovl-16",
+					"region": {
+						"x": 319,
+						"y": 990,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "street3_ovl-18",
+					"region": {
+						"x": 255,
+						"y": 995,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "street3_ovl-20",
+					"region": {
+						"x": 190,
+						"y": 996,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 15,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "wald_ovl-20",
+					"region": {
+						"x": 127,
+						"y": 1006,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 15,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "wald_ovl-24",
+					"region": {
+						"x": 382,
+						"y": 990,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "wald_ovl-27",
+					"region": {
+						"x": 445,
+						"y": 1020,
+						"w": 61,
+						"h": 37
+					},
+					"margin": {
+						"x": 15,
+						"y": 0,
+						"w": 15,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Eis1_ovl-5",
+					"region": {
+						"x": 508,
+						"y": 1047,
+						"w": 61,
+						"h": 32
+					},
+					"margin": {
+						"x": 15,
+						"y": 0,
+						"w": 15,
+						"h": 5
+					}
+				},
+				{
+					"filename": "Eis1_ovl-8",
+					"region": {
+						"x": 571,
+						"y": 1048,
+						"w": 61,
+						"h": 32
+					},
+					"margin": {
+						"x": 15,
+						"y": 5,
+						"w": 15,
+						"h": 5
+					}
+				},
+				{
+					"filename": "acker_ovl-10",
+					"region": {
+						"x": 634,
+						"y": 1062,
+						"w": 61,
+						"h": 32
+					},
+					"margin": {
+						"x": 15,
+						"y": 5,
+						"w": 15,
+						"h": 5
+					}
+				},
+				{
+					"filename": "dreck_ovl-10",
+					"region": {
+						"x": 697,
+						"y": 1087,
+						"w": 61,
+						"h": 32
+					},
+					"margin": {
+						"x": 15,
+						"y": 5,
+						"w": 15,
+						"h": 5
+					}
+				},
+				{
+					"filename": "dungeonfloor_ovl-10",
+					"region": {
+						"x": 760,
+						"y": 1088,
+						"w": 61,
+						"h": 32
+					},
+					"margin": {
+						"x": 15,
+						"y": 5,
+						"w": 15,
+						"h": 5
+					}
+				},
+				{
+					"filename": "fels1_ovl-10",
+					"region": {
+						"x": 823,
+						"y": 1101,
+						"w": 61,
+						"h": 32
+					},
+					"margin": {
+						"x": 15,
+						"y": 5,
+						"w": 15,
+						"h": 5
+					}
+				},
+				{
+					"filename": "lava_ovl-10",
+					"region": {
+						"x": 1,
+						"y": 1018,
+						"w": 61,
+						"h": 32
+					},
+					"margin": {
+						"x": 15,
+						"y": 5,
+						"w": 15,
+						"h": 5
+					}
+				},
+				{
+					"filename": "sand_ovl-10",
+					"region": {
+						"x": 64,
+						"y": 1018,
+						"w": 61,
+						"h": 32
+					},
+					"margin": {
+						"x": 15,
+						"y": 5,
+						"w": 15,
+						"h": 5
+					}
+				},
+				{
+					"filename": "schnee_ovl-10",
+					"region": {
+						"x": 318,
+						"y": 1029,
+						"w": 61,
+						"h": 32
+					},
+					"margin": {
+						"x": 15,
+						"y": 5,
+						"w": 15,
+						"h": 5
+					}
+				},
+				{
+					"filename": "wald_ovl-10",
+					"region": {
+						"x": 381,
+						"y": 1029,
+						"w": 61,
+						"h": 32
+					},
+					"margin": {
+						"x": 15,
+						"y": 5,
+						"w": 15,
+						"h": 5
+					}
+				},
+				{
+					"filename": "cob_ovl-8",
+					"region": {
+						"x": 444,
+						"y": 1059,
+						"w": 61,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 6
+					}
+				},
+				{
+					"filename": "cracked_ovl-8",
+					"region": {
+						"x": 507,
+						"y": 1081,
+						"w": 61,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 6
+					}
+				},
+				{
+					"filename": "grass_dry_ovl-8",
+					"region": {
+						"x": 570,
+						"y": 1082,
+						"w": 61,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 6
+					}
+				},
+				{
+					"filename": "grass_ovl-8",
+					"region": {
+						"x": 633,
+						"y": 1096,
+						"w": 61,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 6
+					}
+				},
+				{
+					"filename": "mud_ovl-8",
+					"region": {
+						"x": 696,
+						"y": 1121,
+						"w": 61,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 6
+					}
+				},
+				{
+					"filename": "sandy_ovl-8",
+					"region": {
+						"x": 759,
+						"y": 1122,
+						"w": 61,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 6
+					}
+				},
+				{
+					"filename": "str_ovl-8",
+					"region": {
+						"x": 253,
+						"y": 1034,
+						"w": 61,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 6
+					}
+				},
+				{
+					"filename": "strasse_ovl-8",
+					"region": {
+						"x": 190,
+						"y": 1035,
+						"w": 61,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 6
+					}
+				},
+				{
+					"filename": "street3_ovl-8",
+					"region": {
+						"x": 127,
+						"y": 1045,
+						"w": 61,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 6
+					}
+				},
+				{
+					"filename": "cob_ovl-1",
+					"region": {
+						"x": 1,
+						"y": 1052,
+						"w": 61,
+						"h": 26
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 11
+					}
+				},
+				{
+					"filename": "cracked_ovl-1",
+					"region": {
+						"x": 64,
+						"y": 1052,
+						"w": 61,
+						"h": 26
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 11
+					}
+				},
+				{
+					"filename": "grass_dry_ovl-1",
+					"region": {
+						"x": 316,
+						"y": 1063,
+						"w": 61,
+						"h": 26
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 11
+					}
+				},
+				{
+					"filename": "grass_ovl-1",
+					"region": {
+						"x": 253,
+						"y": 1067,
+						"w": 61,
+						"h": 26
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 11
+					}
+				},
+				{
+					"filename": "mud_ovl-1",
+					"region": {
+						"x": 190,
+						"y": 1068,
+						"w": 61,
+						"h": 26
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 11
+					}
+				},
+				{
+					"filename": "sandy_ovl-1",
+					"region": {
+						"x": 127,
+						"y": 1078,
+						"w": 61,
+						"h": 26
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 11
+					}
+				},
+				{
+					"filename": "str_ovl-1",
+					"region": {
+						"x": 379,
+						"y": 1063,
+						"w": 61,
+						"h": 26
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 11
+					}
+				},
+				{
+					"filename": "strasse_ovl-1",
+					"region": {
+						"x": 1,
+						"y": 1080,
+						"w": 61,
+						"h": 26
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 11
+					}
+				},
+				{
+					"filename": "street3_ovl-1",
+					"region": {
+						"x": 64,
+						"y": 1080,
+						"w": 61,
+						"h": 26
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 15,
+						"h": 11
+					}
+				},
+				{
+					"filename": "cob_ovl-23",
+					"region": {
+						"x": 316,
+						"y": 1091,
+						"w": 60,
+						"h": 37
+					},
+					"margin": {
+						"x": 16,
+						"y": 0,
+						"w": 16,
+						"h": 0
+					}
+				},
+				{
+					"filename": "cracked_ovl-23",
+					"region": {
+						"x": 253,
+						"y": 1095,
+						"w": 60,
+						"h": 37
+					},
+					"margin": {
+						"x": 16,
+						"y": 0,
+						"w": 16,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grass_dry_ovl-23",
+					"region": {
+						"x": 190,
+						"y": 1096,
+						"w": 60,
+						"h": 37
+					},
+					"margin": {
+						"x": 16,
+						"y": 0,
+						"w": 16,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grass_ovl-23",
+					"region": {
+						"x": 127,
+						"y": 1106,
+						"w": 60,
+						"h": 37
+					},
+					"margin": {
+						"x": 16,
+						"y": 0,
+						"w": 16,
+						"h": 0
+					}
+				},
+				{
+					"filename": "mud_ovl-23",
+					"region": {
+						"x": 378,
+						"y": 1091,
+						"w": 60,
+						"h": 37
+					},
+					"margin": {
+						"x": 16,
+						"y": 0,
+						"w": 16,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy_ovl-23",
+					"region": {
+						"x": 440,
+						"y": 1092,
+						"w": 60,
+						"h": 37
+					},
+					"margin": {
+						"x": 16,
+						"y": 0,
+						"w": 16,
+						"h": 0
+					}
+				},
+				{
+					"filename": "str_ovl-23",
+					"region": {
+						"x": 502,
+						"y": 1114,
+						"w": 60,
+						"h": 37
+					},
+					"margin": {
+						"x": 16,
+						"y": 0,
+						"w": 16,
+						"h": 0
+					}
+				},
+				{
+					"filename": "strasse_ovl-23",
+					"region": {
+						"x": 564,
+						"y": 1115,
+						"w": 60,
+						"h": 37
+					},
+					"margin": {
+						"x": 16,
+						"y": 0,
+						"w": 16,
+						"h": 0
+					}
+				},
+				{
+					"filename": "street3_ovl-23",
+					"region": {
+						"x": 626,
+						"y": 1129,
+						"w": 60,
+						"h": 37
+					},
+					"margin": {
+						"x": 16,
+						"y": 0,
+						"w": 16,
+						"h": 0
+					}
+				},
+				{
+					"filename": "acker_ovl-9",
+					"region": {
+						"x": 688,
+						"y": 1154,
+						"w": 60,
+						"h": 33
+					},
+					"margin": {
+						"x": 0,
+						"y": 4,
+						"w": 16,
+						"h": 4
+					}
+				},
+				{
+					"filename": "dreck_ovl-9",
+					"region": {
+						"x": 315,
+						"y": 1130,
+						"w": 60,
+						"h": 33
+					},
+					"margin": {
+						"x": 0,
+						"y": 4,
+						"w": 16,
+						"h": 4
+					}
+				},
+				{
+					"filename": "dungeonfloor_ovl-9",
+					"region": {
+						"x": 252,
+						"y": 1134,
+						"w": 60,
+						"h": 33
+					},
+					"margin": {
+						"x": 0,
+						"y": 4,
+						"w": 16,
+						"h": 4
+					}
+				},
+				{
+					"filename": "fels1_ovl-9",
+					"region": {
+						"x": 189,
+						"y": 1135,
+						"w": 60,
+						"h": 33
+					},
+					"margin": {
+						"x": 0,
+						"y": 4,
+						"w": 16,
+						"h": 4
+					}
+				},
+				{
+					"filename": "lava_ovl-9",
+					"region": {
+						"x": 377,
+						"y": 1130,
+						"w": 60,
+						"h": 33
+					},
+					"margin": {
+						"x": 0,
+						"y": 4,
+						"w": 16,
+						"h": 4
+					}
+				},
+				{
+					"filename": "sand_ovl-9",
+					"region": {
+						"x": 439,
+						"y": 1131,
+						"w": 60,
+						"h": 33
+					},
+					"margin": {
+						"x": 0,
+						"y": 4,
+						"w": 16,
+						"h": 4
+					}
+				},
+				{
+					"filename": "schnee_ovl-9",
+					"region": {
+						"x": 501,
+						"y": 1153,
+						"w": 60,
+						"h": 33
+					},
+					"margin": {
+						"x": 0,
+						"y": 4,
+						"w": 16,
+						"h": 4
+					}
+				},
+				{
+					"filename": "wald_ovl-9",
+					"region": {
+						"x": 563,
+						"y": 1154,
+						"w": 60,
+						"h": 33
+					},
+					"margin": {
+						"x": 0,
+						"y": 4,
+						"w": 16,
+						"h": 4
+					}
+				},
+				{
+					"filename": "cob_ovl-10",
+					"region": {
+						"x": 625,
+						"y": 1168,
+						"w": 60,
+						"h": 30
+					},
+					"margin": {
+						"x": 16,
+						"y": 7,
+						"w": 16,
+						"h": 7
+					}
+				},
+				{
+					"filename": "cracked_ovl-10",
+					"region": {
+						"x": 314,
+						"y": 1165,
+						"w": 60,
+						"h": 30
+					},
+					"margin": {
+						"x": 16,
+						"y": 7,
+						"w": 16,
+						"h": 7
+					}
+				},
+				{
+					"filename": "grass_dry_ovl-10",
+					"region": {
+						"x": 251,
+						"y": 1169,
+						"w": 60,
+						"h": 30
+					},
+					"margin": {
+						"x": 16,
+						"y": 7,
+						"w": 16,
+						"h": 7
+					}
+				},
+				{
+					"filename": "grass_ovl-10",
+					"region": {
+						"x": 376,
+						"y": 1165,
+						"w": 60,
+						"h": 30
+					},
+					"margin": {
+						"x": 16,
+						"y": 7,
+						"w": 16,
+						"h": 7
+					}
+				},
+				{
+					"filename": "mud_ovl-10",
+					"region": {
+						"x": 438,
+						"y": 1166,
+						"w": 60,
+						"h": 30
+					},
+					"margin": {
+						"x": 16,
+						"y": 7,
+						"w": 16,
+						"h": 7
+					}
+				},
+				{
+					"filename": "sandy_ovl-10",
+					"region": {
+						"x": 500,
+						"y": 1188,
+						"w": 60,
+						"h": 30
+					},
+					"margin": {
+						"x": 16,
+						"y": 7,
+						"w": 16,
+						"h": 7
+					}
+				},
+				{
+					"filename": "str_ovl-10",
+					"region": {
+						"x": 562,
+						"y": 1189,
+						"w": 60,
+						"h": 30
+					},
+					"margin": {
+						"x": 16,
+						"y": 7,
+						"w": 16,
+						"h": 7
+					}
+				},
+				{
+					"filename": "strasse_ovl-10",
+					"region": {
+						"x": 313,
+						"y": 1197,
+						"w": 60,
+						"h": 30
+					},
+					"margin": {
+						"x": 16,
+						"y": 7,
+						"w": 16,
+						"h": 7
+					}
+				},
+				{
+					"filename": "street3_ovl-10",
+					"region": {
+						"x": 375,
+						"y": 1197,
+						"w": 60,
+						"h": 30
+					},
+					"margin": {
+						"x": 16,
+						"y": 7,
+						"w": 16,
+						"h": 7
+					}
+				},
+				{
+					"filename": "cob_ovl-11",
+					"region": {
+						"x": 437,
+						"y": 1198,
+						"w": 60,
+						"h": 29
+					},
+					"margin": {
+						"x": 16,
+						"y": 0,
+						"w": 16,
+						"h": 8
+					}
+				},
+				{
+					"filename": "cracked_ovl-11",
+					"region": {
+						"x": 499,
+						"y": 1220,
+						"w": 60,
+						"h": 29
+					},
+					"margin": {
+						"x": 16,
+						"y": 0,
+						"w": 16,
+						"h": 8
+					}
+				},
+				{
+					"filename": "grass_dry_ovl-11",
+					"region": {
+						"x": 1,
+						"y": 1108,
+						"w": 60,
+						"h": 29
+					},
+					"margin": {
+						"x": 16,
+						"y": 0,
+						"w": 16,
+						"h": 8
+					}
+				},
+				{
+					"filename": "grass_ovl-11",
+					"region": {
+						"x": 63,
+						"y": 1108,
+						"w": 60,
+						"h": 29
+					},
+					"margin": {
+						"x": 16,
+						"y": 0,
+						"w": 16,
+						"h": 8
+					}
+				},
+				{
+					"filename": "mud_ovl-11",
+					"region": {
+						"x": 1,
+						"y": 1139,
+						"w": 60,
+						"h": 29
+					},
+					"margin": {
+						"x": 16,
+						"y": 0,
+						"w": 16,
+						"h": 8
+					}
+				},
+				{
+					"filename": "sandy_ovl-11",
+					"region": {
+						"x": 63,
+						"y": 1139,
+						"w": 60,
+						"h": 29
+					},
+					"margin": {
+						"x": 16,
+						"y": 0,
+						"w": 16,
+						"h": 8
+					}
+				},
+				{
+					"filename": "str_ovl-11",
+					"region": {
+						"x": 125,
+						"y": 1145,
+						"w": 60,
+						"h": 29
+					},
+					"margin": {
+						"x": 16,
+						"y": 0,
+						"w": 16,
+						"h": 8
+					}
+				},
+				{
+					"filename": "strasse_ovl-11",
+					"region": {
+						"x": 187,
+						"y": 1170,
+						"w": 60,
+						"h": 29
+					},
+					"margin": {
+						"x": 16,
+						"y": 0,
+						"w": 16,
+						"h": 8
+					}
+				},
+				{
+					"filename": "street3_ovl-11",
+					"region": {
+						"x": 1,
+						"y": 1170,
+						"w": 60,
+						"h": 29
+					},
+					"margin": {
+						"x": 16,
+						"y": 0,
+						"w": 16,
+						"h": 8
+					}
+				},
+				{
+					"filename": "dreck_ovl-18",
+					"region": {
+						"x": 63,
+						"y": 1170,
+						"w": 59,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 17,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dungeonfloor_ovl-18",
+					"region": {
+						"x": 1,
+						"y": 1201,
+						"w": 59,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 17,
+						"h": 0
+					}
+				},
+				{
+					"filename": "fels1_ovl-18",
+					"region": {
+						"x": 124,
+						"y": 1176,
+						"w": 59,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 17,
+						"h": 0
+					}
+				},
+				{
+					"filename": "lava_ovl-18",
+					"region": {
+						"x": 62,
+						"y": 1209,
+						"w": 59,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 17,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sand_ovl-18",
+					"region": {
+						"x": 1,
+						"y": 1240,
+						"w": 59,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 17,
+						"h": 0
+					}
+				},
+				{
+					"filename": "schnee_ovl-18",
+					"region": {
+						"x": 185,
+						"y": 1201,
+						"w": 59,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 17,
+						"h": 0
+					}
+				},
+				{
+					"filename": "wald_ovl-18",
+					"region": {
+						"x": 123,
+						"y": 1215,
+						"w": 59,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 17,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Eis1_ovl-2",
+					"region": {
+						"x": 62,
+						"y": 1248,
+						"w": 59,
+						"h": 32
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 17,
+						"h": 5
+					}
+				},
+				{
+					"filename": "cob_ovl-9",
+					"region": {
+						"x": 1,
+						"y": 1279,
+						"w": 59,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 7,
+						"w": 17,
+						"h": 7
+					}
+				},
+				{
+					"filename": "cracked_ovl-9",
+					"region": {
+						"x": 246,
+						"y": 1201,
+						"w": 59,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 7,
+						"w": 17,
+						"h": 7
+					}
+				},
+				{
+					"filename": "grass_dry_ovl-9",
+					"region": {
+						"x": 886,
+						"y": 1107,
+						"w": 59,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 7,
+						"w": 17,
+						"h": 7
+					}
+				},
+				{
+					"filename": "grass_ovl-9",
+					"region": {
+						"x": 822,
+						"y": 1135,
+						"w": 59,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 7,
+						"w": 17,
+						"h": 7
+					}
+				},
+				{
+					"filename": "mud_ovl-9",
+					"region": {
+						"x": 750,
+						"y": 1155,
+						"w": 59,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 7,
+						"w": 17,
+						"h": 7
+					}
+				},
+				{
+					"filename": "sandy_ovl-9",
+					"region": {
+						"x": 947,
+						"y": 1107,
+						"w": 59,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 7,
+						"w": 17,
+						"h": 7
+					}
+				},
+				{
+					"filename": "str_ovl-9",
+					"region": {
+						"x": 883,
+						"y": 1139,
+						"w": 59,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 7,
+						"w": 17,
+						"h": 7
+					}
+				},
+				{
+					"filename": "strasse_ovl-9",
+					"region": {
+						"x": 811,
+						"y": 1167,
+						"w": 59,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 7,
+						"w": 17,
+						"h": 7
+					}
+				},
+				{
+					"filename": "street3_ovl-9",
+					"region": {
+						"x": 750,
+						"y": 1187,
+						"w": 59,
+						"h": 30
+					},
+					"margin": {
+						"x": 0,
+						"y": 7,
+						"w": 17,
+						"h": 7
+					}
+				},
+				{
+					"filename": "cob_ovl-4",
+					"region": {
+						"x": 687,
+						"y": 1189,
+						"w": 59,
+						"h": 27
+					},
+					"margin": {
+						"x": 17,
+						"y": 10,
+						"w": 17,
+						"h": 10
+					}
+				},
+				{
+					"filename": "cracked_ovl-4",
+					"region": {
+						"x": 624,
+						"y": 1200,
+						"w": 59,
+						"h": 27
+					},
+					"margin": {
+						"x": 17,
+						"y": 10,
+						"w": 17,
+						"h": 10
+					}
+				},
+				{
+					"filename": "grass_dry_ovl-4",
+					"region": {
+						"x": 561,
+						"y": 1221,
+						"w": 59,
+						"h": 27
+					},
+					"margin": {
+						"x": 17,
+						"y": 10,
+						"w": 17,
+						"h": 10
+					}
+				},
+				{
+					"filename": "grass_ovl-4",
+					"region": {
+						"x": 685,
+						"y": 1218,
+						"w": 59,
+						"h": 27
+					},
+					"margin": {
+						"x": 17,
+						"y": 10,
+						"w": 17,
+						"h": 10
+					}
+				},
+				{
+					"filename": "mud_ovl-4",
+					"region": {
+						"x": 622,
+						"y": 1229,
+						"w": 59,
+						"h": 27
+					},
+					"margin": {
+						"x": 17,
+						"y": 10,
+						"w": 17,
+						"h": 10
+					}
+				},
+				{
+					"filename": "sandy_ovl-4",
+					"region": {
+						"x": 561,
+						"y": 1250,
+						"w": 59,
+						"h": 27
+					},
+					"margin": {
+						"x": 17,
+						"y": 10,
+						"w": 17,
+						"h": 10
+					}
+				},
+				{
+					"filename": "str_ovl-4",
+					"region": {
+						"x": 944,
+						"y": 1139,
+						"w": 59,
+						"h": 27
+					},
+					"margin": {
+						"x": 17,
+						"y": 10,
+						"w": 17,
+						"h": 10
+					}
+				},
+				{
+					"filename": "strasse_ovl-4",
+					"region": {
+						"x": 944,
+						"y": 1168,
+						"w": 59,
+						"h": 27
+					},
+					"margin": {
+						"x": 17,
+						"y": 10,
+						"w": 17,
+						"h": 10
+					}
+				},
+				{
+					"filename": "street3_ovl-4",
+					"region": {
+						"x": 872,
+						"y": 1171,
+						"w": 59,
+						"h": 27
+					},
+					"margin": {
+						"x": 17,
+						"y": 10,
+						"w": 17,
+						"h": 10
+					}
+				},
+				{
+					"filename": "acker_ovl-3",
+					"region": {
+						"x": 811,
+						"y": 1199,
+						"w": 59,
+						"h": 26
+					},
+					"margin": {
+						"x": 0,
+						"y": 11,
+						"w": 17,
+						"h": 11
+					}
+				},
+				{
+					"filename": "dreck_ovl-3",
+					"region": {
+						"x": 746,
+						"y": 1219,
+						"w": 59,
+						"h": 26
+					},
+					"margin": {
+						"x": 0,
+						"y": 11,
+						"w": 17,
+						"h": 11
+					}
+				},
+				{
+					"filename": "dungeonfloor_ovl-3",
+					"region": {
+						"x": 933,
+						"y": 1197,
+						"w": 59,
+						"h": 26
+					},
+					"margin": {
+						"x": 0,
+						"y": 11,
+						"w": 17,
+						"h": 11
+					}
+				},
+				{
+					"filename": "fels1_ovl-3",
+					"region": {
+						"x": 872,
+						"y": 1200,
+						"w": 59,
+						"h": 26
+					},
+					"margin": {
+						"x": 0,
+						"y": 11,
+						"w": 17,
+						"h": 11
+					}
+				},
+				{
+					"filename": "lava_ovl-3",
+					"region": {
+						"x": 807,
+						"y": 1227,
+						"w": 59,
+						"h": 26
+					},
+					"margin": {
+						"x": 0,
+						"y": 11,
+						"w": 17,
+						"h": 11
+					}
+				},
+				{
+					"filename": "sand_ovl-3",
+					"region": {
+						"x": 933,
+						"y": 1225,
+						"w": 59,
+						"h": 26
+					},
+					"margin": {
+						"x": 0,
+						"y": 11,
+						"w": 17,
+						"h": 11
+					}
+				},
+				{
+					"filename": "schnee_ovl-3",
+					"region": {
+						"x": 868,
+						"y": 1228,
+						"w": 59,
+						"h": 26
+					},
+					"margin": {
+						"x": 0,
+						"y": 11,
+						"w": 17,
+						"h": 11
+					}
+				},
+				{
+					"filename": "wald_ovl-3",
+					"region": {
+						"x": 929,
+						"y": 1253,
+						"w": 59,
+						"h": 26
+					},
+					"margin": {
+						"x": 0,
+						"y": 11,
+						"w": 17,
+						"h": 11
+					}
+				},
+				{
+					"filename": "cob_ovl-6",
+					"region": {
+						"x": 683,
+						"y": 1247,
+						"w": 59,
+						"h": 25
+					},
+					"margin": {
+						"x": 17,
+						"y": 0,
+						"w": 17,
+						"h": 12
+					}
+				},
+				{
+					"filename": "cracked_ovl-6",
+					"region": {
+						"x": 622,
+						"y": 1258,
+						"w": 59,
+						"h": 25
+					},
+					"margin": {
+						"x": 17,
+						"y": 0,
+						"w": 17,
+						"h": 12
+					}
+				},
+				{
+					"filename": "grass_dry_ovl-6",
+					"region": {
+						"x": 744,
+						"y": 1247,
+						"w": 59,
+						"h": 25
+					},
+					"margin": {
+						"x": 17,
+						"y": 0,
+						"w": 17,
+						"h": 12
+					}
+				},
+				{
+					"filename": "grass_ovl-6",
+					"region": {
+						"x": 805,
+						"y": 1255,
+						"w": 59,
+						"h": 25
+					},
+					"margin": {
+						"x": 17,
+						"y": 0,
+						"w": 17,
+						"h": 12
+					}
+				},
+				{
+					"filename": "mud_ovl-6",
+					"region": {
+						"x": 866,
+						"y": 1256,
+						"w": 59,
+						"h": 25
+					},
+					"margin": {
+						"x": 17,
+						"y": 0,
+						"w": 17,
+						"h": 12
+					}
+				},
+				{
+					"filename": "sandy_ovl-6",
+					"region": {
+						"x": 927,
+						"y": 1281,
+						"w": 59,
+						"h": 25
+					},
+					"margin": {
+						"x": 17,
+						"y": 0,
+						"w": 17,
+						"h": 12
+					}
+				},
+				{
+					"filename": "str_ovl-6",
+					"region": {
+						"x": 683,
+						"y": 1274,
+						"w": 59,
+						"h": 25
+					},
+					"margin": {
+						"x": 17,
+						"y": 0,
+						"w": 17,
+						"h": 12
+					}
+				},
+				{
+					"filename": "strasse_ovl-6",
+					"region": {
+						"x": 744,
+						"y": 1274,
+						"w": 59,
+						"h": 25
+					},
+					"margin": {
+						"x": 17,
+						"y": 0,
+						"w": 17,
+						"h": 12
+					}
+				},
+				{
+					"filename": "street3_ovl-6",
+					"region": {
+						"x": 805,
+						"y": 1282,
+						"w": 59,
+						"h": 25
+					},
+					"margin": {
+						"x": 17,
+						"y": 0,
+						"w": 17,
+						"h": 12
+					}
+				},
+				{
+					"filename": "dreck_ovl-23",
+					"region": {
+						"x": 866,
+						"y": 1283,
+						"w": 57,
+						"h": 37
+					},
+					"margin": {
+						"x": 19,
+						"y": 0,
+						"w": 19,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dungeonfloor_ovl-23",
+					"region": {
+						"x": 925,
+						"y": 1308,
+						"w": 57,
+						"h": 37
+					},
+					"margin": {
+						"x": 19,
+						"y": 0,
+						"w": 19,
+						"h": 0
+					}
+				},
+				{
+					"filename": "fels1_ovl-23",
+					"region": {
+						"x": 307,
+						"y": 1229,
+						"w": 57,
+						"h": 37
+					},
+					"margin": {
+						"x": 19,
+						"y": 0,
+						"w": 19,
+						"h": 0
+					}
+				},
+				{
+					"filename": "lava_ovl-23",
+					"region": {
+						"x": 246,
+						"y": 1233,
+						"w": 57,
+						"h": 37
+					},
+					"margin": {
+						"x": 19,
+						"y": 0,
+						"w": 19,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sand_ovl-23",
+					"region": {
+						"x": 184,
+						"y": 1240,
+						"w": 57,
+						"h": 37
+					},
+					"margin": {
+						"x": 19,
+						"y": 0,
+						"w": 19,
+						"h": 0
+					}
+				},
+				{
+					"filename": "schnee_ovl-23",
+					"region": {
+						"x": 123,
+						"y": 1254,
+						"w": 57,
+						"h": 37
+					},
+					"margin": {
+						"x": 19,
+						"y": 0,
+						"w": 19,
+						"h": 0
+					}
+				},
+				{
+					"filename": "wald_ovl-23",
+					"region": {
+						"x": 62,
+						"y": 1282,
+						"w": 57,
+						"h": 37
+					},
+					"margin": {
+						"x": 19,
+						"y": 0,
+						"w": 19,
+						"h": 0
+					}
+				},
+				{
+					"filename": "acker_ovl-1",
+					"region": {
+						"x": 1,
+						"y": 1311,
+						"w": 57,
+						"h": 23
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 19,
+						"h": 14
+					}
+				},
+				{
+					"filename": "dreck_ovl-1",
+					"region": {
+						"x": 366,
+						"y": 1229,
+						"w": 57,
+						"h": 23
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 19,
+						"h": 14
+					}
+				},
+				{
+					"filename": "dungeonfloor_ovl-1",
+					"region": {
+						"x": 425,
+						"y": 1229,
+						"w": 57,
+						"h": 23
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 19,
+						"h": 14
+					}
+				},
+				{
+					"filename": "fels1_ovl-1",
+					"region": {
+						"x": 484,
+						"y": 1251,
+						"w": 57,
+						"h": 23
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 19,
+						"h": 14
+					}
+				},
+				{
+					"filename": "lava_ovl-1",
+					"region": {
+						"x": 366,
+						"y": 1254,
+						"w": 57,
+						"h": 23
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 19,
+						"h": 14
+					}
+				},
+				{
+					"filename": "sand_ovl-1",
+					"region": {
+						"x": 425,
+						"y": 1254,
+						"w": 57,
+						"h": 23
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 19,
+						"h": 14
+					}
+				},
+				{
+					"filename": "schnee_ovl-1",
+					"region": {
+						"x": 305,
+						"y": 1268,
+						"w": 57,
+						"h": 23
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 19,
+						"h": 14
+					}
+				},
+				{
+					"filename": "wald_ovl-1",
+					"region": {
+						"x": 243,
+						"y": 1272,
+						"w": 57,
+						"h": 23
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 19,
+						"h": 14
+					}
+				},
+				{
+					"filename": "Eis1_ovl-10",
+					"region": {
+						"x": 182,
+						"y": 1279,
+						"w": 56,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 6,
+						"w": 20,
+						"h": 6
+					}
+				},
+				{
+					"filename": "acker_ovl-11",
+					"region": {
+						"x": 121,
+						"y": 1293,
+						"w": 56,
+						"h": 30
+					},
+					"margin": {
+						"x": 20,
+						"y": 0,
+						"w": 20,
+						"h": 7
+					}
+				},
+				{
+					"filename": "dreck_ovl-11",
+					"region": {
+						"x": 60,
+						"y": 1321,
+						"w": 56,
+						"h": 30
+					},
+					"margin": {
+						"x": 20,
+						"y": 0,
+						"w": 20,
+						"h": 7
+					}
+				},
+				{
+					"filename": "dungeonfloor_ovl-11",
+					"region": {
+						"x": 1,
+						"y": 1336,
+						"w": 56,
+						"h": 30
+					},
+					"margin": {
+						"x": 20,
+						"y": 0,
+						"w": 20,
+						"h": 7
+					}
+				},
+				{
+					"filename": "fels1_ovl-11",
+					"region": {
+						"x": 484,
+						"y": 1276,
+						"w": 56,
+						"h": 30
+					},
+					"margin": {
+						"x": 20,
+						"y": 0,
+						"w": 20,
+						"h": 7
+					}
+				},
+				{
+					"filename": "lava_ovl-11",
+					"region": {
+						"x": 542,
+						"y": 1279,
+						"w": 56,
+						"h": 30
+					},
+					"margin": {
+						"x": 20,
+						"y": 0,
+						"w": 20,
+						"h": 7
+					}
+				},
+				{
+					"filename": "sand_ovl-11",
+					"region": {
+						"x": 600,
+						"y": 1285,
+						"w": 56,
+						"h": 30
+					},
+					"margin": {
+						"x": 20,
+						"y": 0,
+						"w": 20,
+						"h": 7
+					}
+				},
+				{
+					"filename": "schnee_ovl-11",
+					"region": {
+						"x": 364,
+						"y": 1279,
+						"w": 56,
+						"h": 30
+					},
+					"margin": {
+						"x": 20,
+						"y": 0,
+						"w": 20,
+						"h": 7
+					}
+				},
+				{
+					"filename": "wald_ovl-11",
+					"region": {
+						"x": 302,
+						"y": 1293,
+						"w": 56,
+						"h": 30
+					},
+					"margin": {
+						"x": 20,
+						"y": 0,
+						"w": 20,
+						"h": 7
+					}
+				},
+				{
+					"filename": "acker_ovl-16",
+					"region": {
+						"x": 240,
+						"y": 1297,
+						"w": 55,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 21,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dreck_ovl-16",
+					"region": {
+						"x": 179,
+						"y": 1312,
+						"w": 55,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 21,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dungeonfloor_ovl-16",
+					"region": {
+						"x": 118,
+						"y": 1325,
+						"w": 55,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 21,
+						"h": 0
+					}
+				},
+				{
+					"filename": "fels1_ovl-16",
+					"region": {
+						"x": 59,
+						"y": 1353,
+						"w": 55,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 21,
+						"h": 0
+					}
+				},
+				{
+					"filename": "lava_ovl-16",
+					"region": {
+						"x": 1,
+						"y": 1368,
+						"w": 55,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 21,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sand_ovl-16",
+					"region": {
+						"x": 422,
+						"y": 1279,
+						"w": 55,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 21,
+						"h": 0
+					}
+				},
+				{
+					"filename": "schnee_ovl-16",
+					"region": {
+						"x": 360,
+						"y": 1311,
+						"w": 55,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 21,
+						"h": 0
+					}
+				},
+				{
+					"filename": "wald_ovl-16",
+					"region": {
+						"x": 297,
+						"y": 1325,
+						"w": 55,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 21,
+						"h": 0
+					}
+				},
+				{
+					"filename": "acker_ovl-8",
+					"region": {
+						"x": 236,
+						"y": 1336,
+						"w": 55,
+						"h": 29
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 21,
+						"h": 8
+					}
+				},
+				{
+					"filename": "dreck_ovl-8",
+					"region": {
+						"x": 175,
+						"y": 1351,
+						"w": 55,
+						"h": 29
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 21,
+						"h": 8
+					}
+				},
+				{
+					"filename": "dungeonfloor_ovl-8",
+					"region": {
+						"x": 116,
+						"y": 1364,
+						"w": 55,
+						"h": 29
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 21,
+						"h": 8
+					}
+				},
+				{
+					"filename": "fels1_ovl-8",
+					"region": {
+						"x": 58,
+						"y": 1392,
+						"w": 55,
+						"h": 29
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 21,
+						"h": 8
+					}
+				},
+				{
+					"filename": "lava_ovl-8",
+					"region": {
+						"x": 1,
+						"y": 1407,
+						"w": 55,
+						"h": 29
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 21,
+						"h": 8
+					}
+				},
+				{
+					"filename": "sand_ovl-8",
+					"region": {
+						"x": 479,
+						"y": 1308,
+						"w": 55,
+						"h": 29
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 21,
+						"h": 8
+					}
+				},
+				{
+					"filename": "schnee_ovl-8",
+					"region": {
+						"x": 417,
+						"y": 1318,
+						"w": 55,
+						"h": 29
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 21,
+						"h": 8
+					}
+				},
+				{
+					"filename": "wald_ovl-8",
+					"region": {
+						"x": 536,
+						"y": 1311,
+						"w": 55,
+						"h": 29
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 21,
+						"h": 8
+					}
+				},
+				{
+					"filename": "acker_ovl-6",
+					"region": {
+						"x": 474,
+						"y": 1339,
+						"w": 55,
+						"h": 23
+					},
+					"margin": {
+						"x": 21,
+						"y": 0,
+						"w": 21,
+						"h": 14
+					}
+				},
+				{
+					"filename": "dreck_ovl-6",
+					"region": {
+						"x": 417,
+						"y": 1349,
+						"w": 55,
+						"h": 23
+					},
+					"margin": {
+						"x": 21,
+						"y": 0,
+						"w": 21,
+						"h": 14
+					}
+				},
+				{
+					"filename": "dungeonfloor_ovl-6",
+					"region": {
+						"x": 354,
+						"y": 1350,
+						"w": 55,
+						"h": 23
+					},
+					"margin": {
+						"x": 21,
+						"y": 0,
+						"w": 21,
+						"h": 14
+					}
+				},
+				{
+					"filename": "fels1_ovl-6",
+					"region": {
+						"x": 293,
+						"y": 1364,
+						"w": 55,
+						"h": 23
+					},
+					"margin": {
+						"x": 21,
+						"y": 0,
+						"w": 21,
+						"h": 14
+					}
+				},
+				{
+					"filename": "lava_ovl-6",
+					"region": {
+						"x": 232,
+						"y": 1367,
+						"w": 55,
+						"h": 23
+					},
+					"margin": {
+						"x": 21,
+						"y": 0,
+						"w": 21,
+						"h": 14
+					}
+				},
+				{
+					"filename": "sand_ovl-6",
+					"region": {
+						"x": 173,
+						"y": 1382,
+						"w": 55,
+						"h": 23
+					},
+					"margin": {
+						"x": 21,
+						"y": 0,
+						"w": 21,
+						"h": 14
+					}
+				},
+				{
+					"filename": "schnee_ovl-6",
+					"region": {
+						"x": 115,
+						"y": 1395,
+						"w": 55,
+						"h": 23
+					},
+					"margin": {
+						"x": 21,
+						"y": 0,
+						"w": 21,
+						"h": 14
+					}
+				},
+				{
+					"filename": "wald_ovl-6",
+					"region": {
+						"x": 658,
+						"y": 1301,
+						"w": 55,
+						"h": 23
+					},
+					"margin": {
+						"x": 21,
+						"y": 0,
+						"w": 21,
+						"h": 14
+					}
+				},
+				{
+					"filename": "grass_ovl-15",
+					"region": {
+						"x": 593,
+						"y": 1317,
+						"w": 49,
+						"h": 37
+					},
+					"margin": {
+						"x": 27,
+						"y": 0,
+						"w": 27,
+						"h": 0
+					}
+				},
+				{
+					"filename": "mud_ovl-15",
+					"region": {
+						"x": 531,
+						"y": 1342,
+						"w": 49,
+						"h": 37
+					},
+					"margin": {
+						"x": 27,
+						"y": 0,
+						"w": 27,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy_ovl-15",
+					"region": {
+						"x": 474,
+						"y": 1364,
+						"w": 49,
+						"h": 37
+					},
+					"margin": {
+						"x": 27,
+						"y": 0,
+						"w": 27,
+						"h": 0
+					}
+				},
+				{
+					"filename": "str_ovl-15",
+					"region": {
+						"x": 411,
+						"y": 1374,
+						"w": 49,
+						"h": 37
+					},
+					"margin": {
+						"x": 27,
+						"y": 0,
+						"w": 27,
+						"h": 0
+					}
+				},
+				{
+					"filename": "strasse_ovl-15",
+					"region": {
+						"x": 350,
+						"y": 1375,
+						"w": 49,
+						"h": 37
+					},
+					"margin": {
+						"x": 27,
+						"y": 0,
+						"w": 27,
+						"h": 0
+					}
+				},
+				{
+					"filename": "street3_ovl-15",
+					"region": {
+						"x": 289,
+						"y": 1389,
+						"w": 49,
+						"h": 37
+					},
+					"margin": {
+						"x": 27,
+						"y": 0,
+						"w": 27,
+						"h": 0
+					}
+				},
+				{
+					"filename": "cob_ovl-7",
+					"region": {
+						"x": 230,
+						"y": 1392,
+						"w": 48,
+						"h": 30
+					},
+					"margin": {
+						"x": 28,
+						"y": 0,
+						"w": 28,
+						"h": 7
+					}
+				},
+				{
+					"filename": "cracked_ovl-7",
+					"region": {
+						"x": 172,
+						"y": 1407,
+						"w": 48,
+						"h": 30
+					},
+					"margin": {
+						"x": 28,
+						"y": 0,
+						"w": 28,
+						"h": 7
+					}
+				},
+				{
+					"filename": "grass_dry_ovl-7",
+					"region": {
+						"x": 115,
+						"y": 1420,
+						"w": 48,
+						"h": 30
+					},
+					"margin": {
+						"x": 28,
+						"y": 0,
+						"w": 28,
+						"h": 7
+					}
+				},
+				{
+					"filename": "grass_ovl-7",
+					"region": {
+						"x": 58,
+						"y": 1423,
+						"w": 48,
+						"h": 30
+					},
+					"margin": {
+						"x": 28,
+						"y": 0,
+						"w": 28,
+						"h": 7
+					}
+				},
+				{
+					"filename": "mud_ovl-7",
+					"region": {
+						"x": 1,
+						"y": 1438,
+						"w": 48,
+						"h": 30
+					},
+					"margin": {
+						"x": 28,
+						"y": 0,
+						"w": 28,
+						"h": 7
+					}
+				},
+				{
+					"filename": "sandy_ovl-7",
+					"region": {
+						"x": 222,
+						"y": 1424,
+						"w": 48,
+						"h": 30
+					},
+					"margin": {
+						"x": 28,
+						"y": 0,
+						"w": 28,
+						"h": 7
+					}
+				},
+				{
+					"filename": "str_ovl-7",
+					"region": {
+						"x": 165,
+						"y": 1439,
+						"w": 48,
+						"h": 30
+					},
+					"margin": {
+						"x": 28,
+						"y": 0,
+						"w": 28,
+						"h": 7
+					}
+				},
+				{
+					"filename": "strasse_ovl-7",
+					"region": {
+						"x": 108,
+						"y": 1452,
+						"w": 48,
+						"h": 30
+					},
+					"margin": {
+						"x": 28,
+						"y": 0,
+						"w": 28,
+						"h": 7
+					}
+				},
+				{
+					"filename": "street3_ovl-7",
+					"region": {
+						"x": 51,
+						"y": 1455,
+						"w": 48,
+						"h": 30
+					},
+					"margin": {
+						"x": 28,
+						"y": 0,
+						"w": 28,
+						"h": 7
+					}
+				},
+				{
+					"filename": "acker_ovl-7",
+					"region": {
+						"x": 1,
+						"y": 1470,
+						"w": 45,
+						"h": 30
+					},
+					"margin": {
+						"x": 31,
+						"y": 0,
+						"w": 31,
+						"h": 7
+					}
+				},
+				{
+					"filename": "dreck_ovl-7",
+					"region": {
+						"x": 715,
+						"y": 1301,
+						"w": 45,
+						"h": 30
+					},
+					"margin": {
+						"x": 31,
+						"y": 0,
+						"w": 31,
+						"h": 7
+					}
+				},
+				{
+					"filename": "acker_ovl-0",
+					"region": {
+						"x": 762,
+						"y": 1301,
+						"w": 40,
+						"h": 29
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 36,
+						"h": 8
+					}
+				},
+				{
+					"filename": "dungeonfloor_ovl-7",
+					"region": {
+						"x": 804,
+						"y": 1309,
+						"w": 45,
+						"h": 30
+					},
+					"margin": {
+						"x": 31,
+						"y": 0,
+						"w": 31,
+						"h": 7
+					}
+				},
+				{
+					"filename": "dreck_ovl-0",
+					"region": {
+						"x": 762,
+						"y": 1332,
+						"w": 40,
+						"h": 29
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 36,
+						"h": 8
+					}
+				},
+				{
+					"filename": "fels1_ovl-7",
+					"region": {
+						"x": 644,
+						"y": 1326,
+						"w": 45,
+						"h": 30
+					},
+					"margin": {
+						"x": 31,
+						"y": 0,
+						"w": 31,
+						"h": 7
+					}
+				},
+				{
+					"filename": "lava_ovl-7",
+					"region": {
+						"x": 582,
+						"y": 1356,
+						"w": 45,
+						"h": 30
+					},
+					"margin": {
+						"x": 31,
+						"y": 0,
+						"w": 31,
+						"h": 7
+					}
+				},
+				{
+					"filename": "sand_ovl-7",
+					"region": {
+						"x": 525,
+						"y": 1381,
+						"w": 45,
+						"h": 30
+					},
+					"margin": {
+						"x": 31,
+						"y": 0,
+						"w": 31,
+						"h": 7
+					}
+				},
+				{
+					"filename": "schnee_ovl-7",
+					"region": {
+						"x": 462,
+						"y": 1403,
+						"w": 45,
+						"h": 30
+					},
+					"margin": {
+						"x": 31,
+						"y": 0,
+						"w": 31,
+						"h": 7
+					}
+				},
+				{
+					"filename": "wald_ovl-7",
+					"region": {
+						"x": 401,
+						"y": 1413,
+						"w": 45,
+						"h": 30
+					},
+					"margin": {
+						"x": 31,
+						"y": 0,
+						"w": 31,
+						"h": 7
+					}
+				},
+				{
+					"filename": "acker_ovl-15",
+					"region": {
+						"x": 340,
+						"y": 1414,
+						"w": 44,
+						"h": 37
+					},
+					"margin": {
+						"x": 32,
+						"y": 0,
+						"w": 32,
+						"h": 0
+					}
+				},
+				{
+					"filename": "cob_ovl-12",
+					"region": {
+						"x": 272,
+						"y": 1428,
+						"w": 44,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 0
+					}
+				},
+				{
+					"filename": "cracked_ovl-12",
+					"region": {
+						"x": 215,
+						"y": 1456,
+						"w": 44,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dreck_ovl-12",
+					"region": {
+						"x": 158,
+						"y": 1471,
+						"w": 44,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dreck_ovl-15",
+					"region": {
+						"x": 101,
+						"y": 1484,
+						"w": 44,
+						"h": 37
+					},
+					"margin": {
+						"x": 32,
+						"y": 0,
+						"w": 32,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dungeonfloor_ovl-12",
+					"region": {
+						"x": 48,
+						"y": 1487,
+						"w": 44,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 0
+					}
+				},
+				{
+					"filename": "dungeonfloor_ovl-15",
+					"region": {
+						"x": 1,
+						"y": 1502,
+						"w": 44,
+						"h": 37
+					},
+					"margin": {
+						"x": 32,
+						"y": 0,
+						"w": 32,
+						"h": 0
+					}
+				},
+				{
+					"filename": "fels1_ovl-12",
+					"region": {
+						"x": 691,
+						"y": 1333,
+						"w": 44,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 0
+					}
+				},
+				{
+					"filename": "fels1_ovl-15",
+					"region": {
+						"x": 629,
+						"y": 1358,
+						"w": 44,
+						"h": 37
+					},
+					"margin": {
+						"x": 32,
+						"y": 0,
+						"w": 32,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grass_dry_ovl-12",
+					"region": {
+						"x": 572,
+						"y": 1388,
+						"w": 44,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 0
+					}
+				},
+				{
+					"filename": "grass_ovl-12",
+					"region": {
+						"x": 509,
+						"y": 1413,
+						"w": 44,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 0
+					}
+				},
+				{
+					"filename": "lava_ovl-12",
+					"region": {
+						"x": 448,
+						"y": 1435,
+						"w": 44,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 0
+					}
+				},
+				{
+					"filename": "lava_ovl-15",
+					"region": {
+						"x": 386,
+						"y": 1445,
+						"w": 44,
+						"h": 37
+					},
+					"margin": {
+						"x": 32,
+						"y": 0,
+						"w": 32,
+						"h": 0
+					}
+				},
+				{
+					"filename": "mud_ovl-12",
+					"region": {
+						"x": 318,
+						"y": 1453,
+						"w": 44,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sand_ovl-12",
+					"region": {
+						"x": 261,
+						"y": 1467,
+						"w": 44,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sand_ovl-15",
+					"region": {
+						"x": 204,
+						"y": 1495,
+						"w": 44,
+						"h": 37
+					},
+					"margin": {
+						"x": 32,
+						"y": 0,
+						"w": 32,
+						"h": 0
+					}
+				},
+				{
+					"filename": "sandy_ovl-12",
+					"region": {
+						"x": 147,
+						"y": 1510,
+						"w": 44,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 0
+					}
+				},
+				{
+					"filename": "schnee_ovl-12",
+					"region": {
+						"x": 94,
+						"y": 1523,
+						"w": 44,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 0
+					}
+				},
+				{
+					"filename": "schnee_ovl-15",
+					"region": {
+						"x": 47,
+						"y": 1526,
+						"w": 44,
+						"h": 37
+					},
+					"margin": {
+						"x": 32,
+						"y": 0,
+						"w": 32,
+						"h": 0
+					}
+				},
+				{
+					"filename": "str_ovl-12",
+					"region": {
+						"x": 1,
+						"y": 1541,
+						"w": 44,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 0
+					}
+				},
+				{
+					"filename": "strasse_ovl-12",
+					"region": {
+						"x": 851,
+						"y": 1322,
+						"w": 44,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 0
+					}
+				},
+				{
+					"filename": "street3_ovl-12",
+					"region": {
+						"x": 804,
+						"y": 1341,
+						"w": 44,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 0
+					}
+				},
+				{
+					"filename": "wald_ovl-12",
+					"region": {
+						"x": 737,
+						"y": 1363,
+						"w": 44,
+						"h": 37
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 0
+					}
+				},
+				{
+					"filename": "wald_ovl-15",
+					"region": {
+						"x": 675,
+						"y": 1372,
+						"w": 44,
+						"h": 37
+					},
+					"margin": {
+						"x": 32,
+						"y": 0,
+						"w": 32,
+						"h": 0
+					}
+				},
+				{
+					"filename": "acker_ovl-2",
+					"region": {
+						"x": 618,
+						"y": 1397,
+						"w": 44,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 6,
+						"w": 32,
+						"h": 6
+					}
+				},
+				{
+					"filename": "dreck_ovl-2",
+					"region": {
+						"x": 555,
+						"y": 1427,
+						"w": 44,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 6,
+						"w": 32,
+						"h": 6
+					}
+				},
+				{
+					"filename": "dungeonfloor_ovl-2",
+					"region": {
+						"x": 494,
+						"y": 1452,
+						"w": 44,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 6,
+						"w": 32,
+						"h": 6
+					}
+				},
+				{
+					"filename": "fels1_ovl-2",
+					"region": {
+						"x": 432,
+						"y": 1474,
+						"w": 44,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 6,
+						"w": 32,
+						"h": 6
+					}
+				},
+				{
+					"filename": "lava_ovl-2",
+					"region": {
+						"x": 364,
+						"y": 1484,
+						"w": 44,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 6,
+						"w": 32,
+						"h": 6
+					}
+				},
+				{
+					"filename": "sand_ovl-2",
+					"region": {
+						"x": 307,
+						"y": 1492,
+						"w": 44,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 6,
+						"w": 32,
+						"h": 6
+					}
+				},
+				{
+					"filename": "schnee_ovl-2",
+					"region": {
+						"x": 250,
+						"y": 1506,
+						"w": 44,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 6,
+						"w": 32,
+						"h": 6
+					}
+				},
+				{
+					"filename": "wald_ovl-2",
+					"region": {
+						"x": 193,
+						"y": 1534,
+						"w": 44,
+						"h": 31
+					},
+					"margin": {
+						"x": 0,
+						"y": 6,
+						"w": 32,
+						"h": 6
+					}
+				},
+				{
+					"filename": "cob_ovl-5",
+					"region": {
+						"x": 140,
+						"y": 1549,
+						"w": 44,
+						"h": 30
+					},
+					"margin": {
+						"x": 32,
+						"y": 7,
+						"w": 32,
+						"h": 7
+					}
+				},
+				{
+					"filename": "cracked_ovl-5",
+					"region": {
+						"x": 93,
+						"y": 1562,
+						"w": 44,
+						"h": 30
+					},
+					"margin": {
+						"x": 32,
+						"y": 7,
+						"w": 32,
+						"h": 7
+					}
+				},
+				{
+					"filename": "grass_dry_ovl-5",
+					"region": {
+						"x": 47,
+						"y": 1565,
+						"w": 44,
+						"h": 30
+					},
+					"margin": {
+						"x": 32,
+						"y": 7,
+						"w": 32,
+						"h": 7
+					}
+				},
+				{
+					"filename": "grass_ovl-5",
+					"region": {
+						"x": 1,
+						"y": 1580,
+						"w": 44,
+						"h": 30
+					},
+					"margin": {
+						"x": 32,
+						"y": 7,
+						"w": 32,
+						"h": 7
+					}
+				},
+				{
+					"filename": "mud_ovl-5",
+					"region": {
+						"x": 897,
+						"y": 1347,
+						"w": 44,
+						"h": 30
+					},
+					"margin": {
+						"x": 32,
+						"y": 7,
+						"w": 32,
+						"h": 7
+					}
+				},
+				{
+					"filename": "sandy_ovl-5",
+					"region": {
+						"x": 850,
+						"y": 1361,
+						"w": 44,
+						"h": 30
+					},
+					"margin": {
+						"x": 32,
+						"y": 7,
+						"w": 32,
+						"h": 7
+					}
+				},
+				{
+					"filename": "str_ovl-5",
+					"region": {
+						"x": 783,
+						"y": 1380,
+						"w": 44,
+						"h": 30
+					},
+					"margin": {
+						"x": 32,
+						"y": 7,
+						"w": 32,
+						"h": 7
+					}
+				},
+				{
+					"filename": "strasse_ovl-5",
+					"region": {
+						"x": 721,
+						"y": 1402,
+						"w": 44,
+						"h": 30
+					},
+					"margin": {
+						"x": 32,
+						"y": 7,
+						"w": 32,
+						"h": 7
+					}
+				},
+				{
+					"filename": "street3_ovl-5",
+					"region": {
+						"x": 664,
+						"y": 1411,
+						"w": 44,
+						"h": 30
+					},
+					"margin": {
+						"x": 32,
+						"y": 7,
+						"w": 32,
+						"h": 7
+					}
+				},
+				{
+					"filename": "cob_ovl-2",
+					"region": {
+						"x": 601,
+						"y": 1430,
+						"w": 43,
+						"h": 29
+					},
+					"margin": {
+						"x": 0,
+						"y": 8,
+						"w": 33,
+						"h": 8
+					}
+				},
+				{
+					"filename": "cracked_ovl-2",
+					"region": {
+						"x": 540,
+						"y": 1460,
+						"w": 43,
+						"h": 29
+					},
+					"margin": {
+						"x": 0,
+						"y": 8,
+						"w": 33,
+						"h": 8
+					}
+				},
+				{
+					"filename": "grass_dry_ovl-2",
+					"region": {
+						"x": 478,
+						"y": 1485,
+						"w": 43,
+						"h": 29
+					},
+					"margin": {
+						"x": 0,
+						"y": 8,
+						"w": 33,
+						"h": 8
+					}
+				},
+				{
+					"filename": "grass_ovl-2",
+					"region": {
+						"x": 410,
+						"y": 1507,
+						"w": 43,
+						"h": 29
+					},
+					"margin": {
+						"x": 0,
+						"y": 8,
+						"w": 33,
+						"h": 8
+					}
+				},
+				{
+					"filename": "mud_ovl-2",
+					"region": {
+						"x": 353,
+						"y": 1517,
+						"w": 43,
+						"h": 29
+					},
+					"margin": {
+						"x": 0,
+						"y": 8,
+						"w": 33,
+						"h": 8
+					}
+				},
+				{
+					"filename": "sandy_ovl-2",
+					"region": {
+						"x": 296,
+						"y": 1525,
+						"w": 43,
+						"h": 29
+					},
+					"margin": {
+						"x": 0,
+						"y": 8,
+						"w": 33,
+						"h": 8
+					}
+				},
+				{
+					"filename": "str_ovl-2",
+					"region": {
+						"x": 239,
+						"y": 1539,
+						"w": 43,
+						"h": 29
+					},
+					"margin": {
+						"x": 0,
+						"y": 8,
+						"w": 33,
+						"h": 8
+					}
+				},
+				{
+					"filename": "strasse_ovl-2",
+					"region": {
+						"x": 186,
+						"y": 1567,
+						"w": 43,
+						"h": 29
+					},
+					"margin": {
+						"x": 0,
+						"y": 8,
+						"w": 33,
+						"h": 8
+					}
+				},
+				{
+					"filename": "street3_ovl-2",
+					"region": {
+						"x": 139,
+						"y": 1581,
+						"w": 43,
+						"h": 29
+					},
+					"margin": {
+						"x": 0,
+						"y": 8,
+						"w": 33,
+						"h": 8
+					}
+				},
+				{
+					"filename": "dungeonfloor_ovl-5",
+					"region": {
+						"x": 93,
+						"y": 1594,
+						"w": 42,
+						"h": 30
+					},
+					"margin": {
+						"x": 34,
+						"y": 7,
+						"w": 34,
+						"h": 7
+					}
+				},
+				{
+					"filename": "fels1_ovl-5",
+					"region": {
+						"x": 47,
+						"y": 1597,
+						"w": 42,
+						"h": 30
+					},
+					"margin": {
+						"x": 34,
+						"y": 7,
+						"w": 34,
+						"h": 7
+					}
+				},
+				{
+					"filename": "lava_ovl-5",
+					"region": {
+						"x": 1,
+						"y": 1612,
+						"w": 42,
+						"h": 30
+					},
+					"margin": {
+						"x": 34,
+						"y": 7,
+						"w": 34,
+						"h": 7
+					}
+				},
+				{
+					"filename": "sand_ovl-5",
+					"region": {
+						"x": 943,
+						"y": 1347,
+						"w": 42,
+						"h": 30
+					},
+					"margin": {
+						"x": 34,
+						"y": 7,
+						"w": 34,
+						"h": 7
+					}
+				},
+				{
+					"filename": "schnee_ovl-5",
+					"region": {
+						"x": 896,
+						"y": 1379,
+						"w": 42,
+						"h": 30
+					},
+					"margin": {
+						"x": 34,
+						"y": 7,
+						"w": 34,
+						"h": 7
+					}
+				},
+				{
+					"filename": "wald_ovl-5",
+					"region": {
+						"x": 829,
+						"y": 1393,
+						"w": 42,
+						"h": 30
+					},
+					"margin": {
+						"x": 34,
+						"y": 7,
+						"w": 34,
+						"h": 7
+					}
+				},
+				{
+					"filename": "dungeonfloor_ovl-0",
+					"region": {
+						"x": 767,
+						"y": 1412,
+						"w": 40,
+						"h": 29
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 36,
+						"h": 8
+					}
+				},
+				{
+					"filename": "fels1_ovl-0",
+					"region": {
+						"x": 710,
+						"y": 1434,
+						"w": 40,
+						"h": 29
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 36,
+						"h": 8
+					}
+				},
+				{
+					"filename": "lava_ovl-0",
+					"region": {
+						"x": 646,
+						"y": 1443,
+						"w": 40,
+						"h": 29
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 36,
+						"h": 8
+					}
+				},
+				{
+					"filename": "sand_ovl-0",
+					"region": {
+						"x": 585,
+						"y": 1461,
+						"w": 40,
+						"h": 29
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 36,
+						"h": 8
+					}
+				},
+				{
+					"filename": "schnee_ovl-0",
+					"region": {
+						"x": 523,
+						"y": 1491,
+						"w": 40,
+						"h": 29
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 36,
+						"h": 8
+					}
+				},
+				{
+					"filename": "wald_ovl-0",
+					"region": {
+						"x": 455,
+						"y": 1516,
+						"w": 40,
+						"h": 29
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 36,
+						"h": 8
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:c2abcf45a09905a3aa28a621e7913992:7c83e610292b75c80ee428c27f4bb93a:fdab4d53920d964eb5daedc87a2b81da$"
+	}
+}
