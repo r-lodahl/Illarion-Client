@@ -1,21 +1,28 @@
 const FILE_OP = preload("file_operations.gd")
+const VISUAL_MAP = preload("res://VisualMap.gd")
 
-static func load_maps():
+static func load_map():
 	var files = FILE_OP.find_files("res://assets/map", ".tiles.txt", "Testmaps")
-
-    var maps = {}
+	
+	var maps = {}
 	for file in files:
 		var mapdic = load_single_map(file)
 		
-		if not maps.has(mapdic.layer):
-			maps[madic.layer] = []
-
-        maps[mapdic.layer].push_back(mapdic)
-    return maps
-
+		if not maps.has(mapdic.layer): maps[mapdic.layer] = []
+		maps[mapdic.layer].push_back(mapdic)
+	
+	var layers = maps.keys().duplicate()
+	layers.sort()
+	
+	var visual_map = VISUAL_MAP.new()
+	visual_map.setup_map_data(maps, layers)
+	
+	return visual_map
+	
 # This function absolutly relies on the correct map scheme
 # This means the sequence is comments LXYWH tiles beginning with 0 0, 0 1, etc.
 static func load_single_map(filepath):
+	print("Loading: " + filepath)
 	var mapfile = File.new()
 	if not mapfile.file_exists(filepath):
 		print("Failed opening " + filepath)

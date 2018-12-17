@@ -12,9 +12,10 @@ static func find_files(path, ends_with, exclude_dir):
 	while (file_name != ""):
 		if dir.current_is_dir():
 			if file_name == exclude_dir:
+				file_name = dir.get_next()
 				continue
 				
-			files += find_files(path+"/"+file_name, ends_with)
+			files += find_files(path+"/"+file_name, ends_with, exclude_dir)
 		elif file_name.ends_with(ends_with):
 			files.push_back(path+"/"+file_name)
 		file_name = dir.get_next()

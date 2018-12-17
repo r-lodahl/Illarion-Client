@@ -1,11 +1,10 @@
-static func create_mapping_table(table_path, name_column, id_column, id_unknown):
+static func create_mapping_table(tileset, table_path, name_column, id_column, id_unknown, out_result_dic):
 	var server_tile_file = File.new()
 	
 	if not server_tile_file.file_exists(table_path):
 		print("Failed opening tile table")
 		return
 	
-	result = {}
 	server_tile_file.open(table_path, File.READ)
 	while not (server_tile_file.eof_reached()):
 		var line = server_tile_file.get_line()
@@ -33,8 +32,6 @@ static func create_mapping_table(table_path, name_column, id_column, id_unknown)
 			local_id = id_unknown
 		
 		var server_id = int(values[id_column])
-		print(values[id_column])
 		
-		result[server_id] = local_id
-    return result
+		out_result_dic[server_id] = local_id
     
