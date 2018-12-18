@@ -49,7 +49,11 @@ func create_tilemaps():
 	add_child(node2)
 
 	map.setup_tile_data(node, node2, tileset, server_tile_id_to_local_id_dic)
-	map.reload_visible_tilemap(0,0,0)
+	map.set_mapcenter(0,0,0)
+	
+	# Distribute events
+	get_child(1).connect("moved_one_tile",map, "_mapcenter_was_moved")
+	
 
 	print("Finished")
 				
