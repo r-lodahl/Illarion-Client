@@ -72,5 +72,40 @@ static func load_single_map(filepath):
 		maparray[int(values[0])][int(values[1])] = int(values[2])
 	
 	mapdic.map = maparray
+	mapdic.items = {}
 	
+	var itemfile = File.new()
+	var itempath = filepath.substr(0, filepath.length()-9)+"items.txt"
+	if not mapfile.file_exists(itempath):
+		print("Failed opening " + itempath)
+		return mapdic
+	
+	itemfile.open(itempath, File.READ)
+	while not (itemfile.eof_reached()):
+		var line = itemfile.get_line()	
+		
+		if line.begins_with("#") || line == "":
+			continue
+		
+		var values = line.split(";",false)
+		
+		# Calculate a single position value
+		var position = int(values[0]) * 100000 + int(values[1])
+		
+		if not mapdic.items.has(position): mapdic.items[position] = []
+		
+		var itemobj = {}
+		itemobj["id"] = int(values[2])
+		
+		#TODO: Respect language setting
+		for i in range(3,values.size()):
+			if values[i].begins_with("descriptionDe"):
+				itemobj["d"] = values[i].substr(14, values[i].length())
+				print(itemobj["d"])
+			elif values[i].begins_with("nameDe"):
+				itemobj["n"] = values[i].substr(7, values[i].length())
+				print(itemobj["n"])
+				
+		mapdic.items[position].push_back(itemobj)
+		
 	return mapdic
