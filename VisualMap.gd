@@ -38,10 +38,9 @@ func setup_map_data(map, layers):
 	_map = map
 	_layers = layers
 	
-func setup_tile_data(tilemap, overlaymap, tileset, server_tile_id_to_local_id_dic):
+func setup_tile_data(tilemap, overlaymap, server_tile_id_to_local_id_dic):
 	_tilemap = tilemap
 	_overlaymap = overlaymap
-	_tileset = tileset
 	_server_tile_id_to_local_id_dic = server_tile_id_to_local_id_dic
 
 func _get_layers_around(limit):
@@ -138,14 +137,14 @@ func _reload_tilemap_tile(ix,iy,shown_layers):
 	var compressed_id = _tile_id_at_xy(ix,iy,shown_layers)
 	var server_ids = get_real_server_ids(compressed_id)
 	
-	var base_id = server_tile_id_to_local_id(server_ids[0])
-	if base_id != TILE_UNKNOWN_TILE:
-		_tilemap.set_cell(ix,iy,base_id)
+	var base_ids = server_tile_id_to_local_id(server_ids[0])
+	if base_ids[0] != TILE_UNKNOWN_TILE:
+		_tilemap.set_cell(iy,-ix,base_ids[randi()%base_ids.size()])
 		
 	if server_ids[1] != -1:
-		var overlay_id = server_tile_id_to_local_id(server_ids[1])
-		if overlay_id != TILE_UNKNOWN_TILE:
-			_overlaymap.set_cell(ix,iy,overlay_id)
+		var overlay_ids = server_tile_id_to_local_id(server_ids[1] * OVERLAY_MULT_FACTOR)
+		if overlay_ids[0] != TILE_UNKNOWN_TILE:
+			_overlaymap.set_cell(iy,-ix,overlay_ids[server_ids[2]-1])
 
 # Move them, see TODOs above
 func server_tile_id_to_local_id(server_id):

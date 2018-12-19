@@ -13,19 +13,19 @@ func _input(event):
 	if Input.is_action_pressed("move_up"):
 		current_position.y -= 18.5
 		current_position.x -= 38
-		emit_signal("moved_one_tile",-1,0)
+		emit_signal("moved_one_tile",0,-1)
 	elif Input.is_action_pressed("move_down"):
 		current_position.y += 18.5
 		current_position.x += 38
-		emit_signal("moved_one_tile",1,0)
+		emit_signal("moved_one_tile",0,1)
 	elif Input.is_action_pressed("move_left"):
 		current_position.x -= 38
 		current_position.y += 18.5
-		emit_signal("moved_one_tile",0,1)
+		emit_signal("moved_one_tile",-1,0)
 	elif Input.is_action_pressed("move_right"):
 		current_position.x += 38
 		current_position.y -= 18.5
-		emit_signal("moved_one_tile",0,-1)
+		emit_signal("moved_one_tile",1,0)
 
 func _process(delta):
 	position = current_position
