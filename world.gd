@@ -9,31 +9,14 @@ func _process(delta):
 # DYNAMICALLY MAP LOADING #
 ###########################
 var map
-var server_tile_id_to_local_id_dic = {}
-var tilemaps = {}
-
-const MAP_LOADER = preload("map_loader.gd")
-const TABLE_LOADER = preload("table_loader.gd")
-
-const TILE_UNKNOWN_TILE = 306
-const ID_COLUMN_TILES = 9 #10
-const ID_COLUMN_OVERLAYS = 2 #3
-const NAME_COLUMN_TILES = 3 #4
-const NAME_COLUMN_OVERLAYS = 3 #4
+const VISUAL_MAP = preload("res://VisualMap.gd")
 
 func _ready():
-	var tileset = load("res://assets/tileset/tiles.res")
-	TABLE_LOADER.create_mapping_table(tileset, "res://assets/tileset/tiles.tbl", NAME_COLUMN_TILES, ID_COLUMN_TILES, TILE_UNKNOWN_TILE, server_tile_id_to_local_id_dic)
-	TABLE_LOADER.create_mapping_table(tileset, "res://assets/tileset/overlays.tbl", NAME_COLUMN_OVERLAYS, ID_COLUMN_OVERLAYS, TILE_UNKNOWN_TILE, server_tile_id_to_local_id_dic)
-	map = MAP_LOADER.load_map()
-	create_tilemaps()
-
-func create_tilemaps():
-	
 	print("Starting creation of world")
 	
 	# Initial map display
-	map.setup_tile_data(get_child(0), get_child(1), server_tile_id_to_local_id_dic)
+	map = VISUAL_MAP.new()
+	map.setup_tile_data(get_child(0), get_child(1))
 	map.set_mapcenter(0,0,0)
 	
 	# Distribute events

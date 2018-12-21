@@ -146,13 +146,3 @@ func _reload_tilemap_tile(ix,iy,shown_layers):
 		if overlay_ids[0] != TILE_UNKNOWN_TILE:
 			_overlaymap.set_cell(iy,-ix,overlay_ids[server_ids[2]-1])
 
-# Move them, see TODOs above
-func server_tile_id_to_local_id(server_id):
-	if _server_tile_id_to_local_id_dic.has(server_id):
-		return _server_tile_id_to_local_id_dic[server_id]
-	return TILE_UNKNOWN_TILE
-						
-func get_real_server_ids(packed_id):
-	if packed_id & SHAPE_ID_MASK == 0:
-		return [packed_id, -1]
-	return [packed_id & BASE_ID_MASK, (packed_id & OVERLAY_ID_MASK) >> 5, (packed_id & SHAPE_ID_MASK) >> 10]

@@ -1,4 +1,4 @@
-static func create_mapping_table(tileset, table_path, name_column, id_column, id_unknown, out_result_dic):
+static func create_mapping_table(tileset, table_path, name_column, id_column, out_result_dic):
 	var server_tile_file = File.new()
 	
 	if not server_tile_file.file_exists(table_path):
@@ -37,7 +37,7 @@ static func create_mapping_table(tileset, table_path, name_column, id_column, id
 			
 		# Handling of unknown tile_ids
 		if local_id.size() == 0:
-			local_id = [id_unknown]
+			local_id = [0]
 		
 		var server_id = int(values[id_column])
 		
