@@ -1,5 +1,7 @@
 extends Control
 
+# TODO: Needs to save string localization values
+
 const FILE_OP = preload("file_operations.gd")
 const TABLE_LOADER = preload("table_loader.gd")
 
@@ -250,7 +252,7 @@ func convert_map():
 						var base_id = base_id_to_local_id(server_ids[0]) # Returns local base id. random id if has variants, 0 if input 0
 						var overlay_id = overlay_id_to_local_id(server_ids[1], server_ids[2])  # Returns local shaped overlay id, 0 if input 0
 						
-						layervalue = base_id * 1000 + overlay_id
+						layervalue = overlay_id * OVERLAY_MULT_FACTOR + base_id
 						
 						tile_ids.push_back(layervalue)
 					

@@ -1,5 +1,7 @@
 extends Node
 
+# TODO: Needs to load chunks now.. do that with file_loader?
+
 # map an layers
 var _map
 var _layers
@@ -20,17 +22,8 @@ var _tileset
 
 # Visible tile radius
 const VIS_RANGE = 20
-
-# Visible layers
 const VIS_LAYER = 10
-
-# TODO : Move us
-var _server_tile_id_to_local_id_dic
-const BASE_ID_MASK = 0x001F
-const OVERLAY_ID_MASK = 0x03E0
-const SHAPE_ID_MASK = 0xFC00
 const OVERLAY_MULT_FACTOR = 1000
-const TILE_UNKNOWN_TILE = 306
 
 func setup_map_data(map, layers):
 	print("Setting up")
