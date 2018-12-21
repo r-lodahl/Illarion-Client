@@ -109,6 +109,7 @@ func load_single_map(filepath):
 	
 	mapdic.map = maparray
 	mapdic.items = {}
+	mapdic.warps = {}
 	
 	# Open the item-file of the map
 	var itemfile = File.new()
@@ -134,18 +135,49 @@ func load_single_map(filepath):
 		var itemobj = {}
 		itemobj["id"] = int(values[2])
 		
-		#TODO: Respect language setting
 		# Check if the item has any description or name
 		# If yes, save their strings into item_strings and save the string_index in the item_object
+		var descriptions = []
+		var names = []
 		for i in range(3,values.size()):
-			if values[i].begins_with("descriptionDe"):
-				itemobj["d"] = item_strings.size()
-				item_strings.push_back(values[i].substr(14, values[i].length()))
+			descriptions.resize(2)
+			names.resize(2)
+			if values[i].begins_with("descriptionEn"):
+				descriptions[0] = values[i].substr(14, values[i].length())
+			elif values[i].begins_with("descriptionDe"):
+				descriptions[1] = values[i].substr(14, values[i].length())
+			elif values[i].begins_with("nameEn"):
+				names[0] = values[i].substr(7, values[i].length())
 			elif values[i].begins_with("nameDe"):
-				itemobj["n"] = item_strings.size()
-				item_strings.push_back(values[i].substr(7, values[i].length()))
-				
+				names[1] = values[i].substr(7, values[i].length())
+		
+		if names[0] != null && names[1] != null:
+			itemobj["n"] = item_strings.size()
+			item_strings.push_back(names)
+		
+		if descriptions[0] != null && descriptions[1] != null:
+			itemobj["d"] = item_strings.size()
+			item_strings.push_back(descriptions)
+			
 		mapdic.items[position].push_back(itemobj)
+		
+	## Save the warps if any
+	var warpfile = File.new()
+	var warppath = filepath.substr(0, filepath.length()-9)+"warps.txt"
+	if not warpfile.file_exists(warppath):
+		print("Failed opening " + warppath)
+		return mapdic
+	
+	warpfile.open(warppath, File.READ)
+	while not (warpfile.eof_reached()):
+		var line = warpfile.get_line()	
+		
+		if line.begins_with("#") || line == "":
+			continue
+		
+		var values = line.split(";",false)
+		
+		mapdic.warps[Vector2(int(values[0]),int(values[1]))] = Vector3(int(values[2]),int(values[3]),int(values[4]))
 		
 	return mapdic
 	
@@ -157,6 +189,7 @@ func convert_map():
 			var used_layers = []
 			var used_maps = []
 			var used_items = {}
+			var used_warps = {}
 			
 			# Find maps which lie within the current block
 			# Also save all layers existing in this block
@@ -202,10 +235,14 @@ func convert_map():
 							if x < 0 || y < 0 || x >= map.width || y >= map.height: continue
 							layervalue = map.map[x][y]
 							
-							# Check if their are also items at this position, if true copy them to the chunk
+							# Check if there are also items at this position, if true copy them to the chunk
 							var map_position = Vector2(x,y)
 							if map.items.has(map_position):
 								used_items[Vector3(ix,iy,map.layer)] = map.items[map_position]
+								
+							# Check if there are also warps at this position, if true copy them to the chunk
+							if map.warps.has(map_position):
+								used_warps[Vector3(ix,iy,map.layer)] = map.warps[map_position]
 						
 						var server_ids = extract_server_ids(layervalue)  # Returns [base_id, overlay_id, shape_id], 0 if input 0
 						
@@ -228,6 +265,7 @@ func convert_map():
 			chunk_save.store_line(to_json(used_layers))
 			chunk_save.store_line(to_json(chunk_map))
 			chunk_save.store_line(to_json(used_items))
+			chunk_save.store_line(to_json(used_warps))
 			
 			chunk_save.close()
 
