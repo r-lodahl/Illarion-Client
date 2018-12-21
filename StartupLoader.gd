@@ -1,7 +1,5 @@
 extends Control
 
-# TODO: Needs to save string localization values
-
 const FILE_OP = preload("file_operations.gd")
 const TABLE_LOADER = preload("table_loader.gd")
 
@@ -20,7 +18,8 @@ var max_y = 0
 var min_x = 0
 var min_y = 0
 var raw_map = {}
-var item_strings = []
+var item_strings_en = []
+var item_strings_de = []
 var server_tile_id_to_local_id_dic = {}
 
 func _ready():
@@ -153,13 +152,20 @@ func load_single_map(filepath):
 			elif values[i].begins_with("nameDe"):
 				names[1] = values[i].substr(7, values[i].length())
 		
-		if names[0] != null && names[1] != null:
+		# We do this do prevent cases where one language is null and the other one isnt
+		if names[0] == null && names[1] != null || names[0] != null && names[1] == null:
+			print("Warning: Missing localized name " + String(names) + " at " + itempath) 
+		elif names[0] == null && names[1] != null:
 			itemobj["n"] = item_strings.size()
-			item_strings.push_back(names)
+			item_strings_en.push_back(names[0])
+			item_strings_de.push_back(names[1])
 		
-		if descriptions[0] != null && descriptions[1] != null:
+		if descriptions[0] == null && descriptions[1] != null || descriptions[0] != null && descriptions[1] == null:
+			print("Warning: Missing localized name " + String(names) + " at " + itempath) 
+		elif descriptions[0] != null && descriptions[1] != null:
 			itemobj["d"] = item_strings.size()
-			item_strings.push_back(descriptions)
+			item_strings_en.push_back(descriptions[0])
+			item_strings_de.push_back(descriptions[1])
 			
 		mapdic.items[position].push_back(itemobj)
 		
@@ -270,7 +276,16 @@ func convert_map():
 			chunk_save.store_line(to_json(used_warps))
 			
 			chunk_save.close()
-
+			
+	# Save item_strings
+	var string_save = File.new()
+	string_save.open("user://map_strings", File.WRITE)
+	
+	string_save.store_line(to_json(item_strings_en))
+	string_save.store_line(to_json(item_strings_de))
+	
+	string_save.close()
+	
 func base_id_to_local_id(base_id):
 	if server_tile_id_to_local_id_dic.has(base_id):
 		var variant_array = server_tile_id_to_local_id_dic[base_id]

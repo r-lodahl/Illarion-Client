@@ -1,0 +1,16 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+
+[deps]
+
+files=[ "res://assets/localization/guiStrings.en.translation", "res://assets/localization/guiStrings.de.translation" ]
+
+source_file="res://assets/localization/guiStrings.csv"
+dest_files=[ "res://assets/localization/guiStrings.en.translation", "res://assets/localization/guiStrings.de.translation" ]
+
+[params]
+
+compress=true
+delimiter=0
