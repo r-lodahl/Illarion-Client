@@ -23,12 +23,15 @@ var item_strings_de = []
 var server_tile_id_to_local_id_dic = {}
 
 func _ready():
-	var tileset = load("res://assets/tileset/tiles.res")
-	TABLE_LOADER.create_mapping_table(tileset, "res://assets/tileset/tiles.tbl", NAME_COLUMN_TILES, ID_COLUMN_TILES, server_tile_id_to_local_id_dic)
-	TABLE_LOADER.create_mapping_table(tileset, "res://assets/tileset/overlays.tbl", NAME_COLUMN_OVERLAYS, ID_COLUMN_OVERLAYS, server_tile_id_to_local_id_dic)
-	load_raw_map()
-	convert_map()
-	#refresh_localization()
+	#TODO: Check if saved commit id is different from current git hash	
+	if true:
+		var tileset = load("res://assets/tileset/tiles.res")
+		TABLE_LOADER.create_mapping_table(tileset, "res://assets/tileset/tiles.tbl", NAME_COLUMN_TILES, ID_COLUMN_TILES, server_tile_id_to_local_id_dic)
+		TABLE_LOADER.create_mapping_table(tileset, "res://assets/tileset/overlays.tbl", NAME_COLUMN_OVERLAYS, ID_COLUMN_OVERLAYS, server_tile_id_to_local_id_dic)
+		load_raw_map()
+		convert_map()
+		#refresh_localization()
+	get_tree().change_scene("res://world.tcsn")
 
 # Loads all raw map files and sorts them into a map-object:
 # raw_map[layer] = [mapdic, mapdic, mapdic, ...]
@@ -270,6 +273,7 @@ func convert_map():
 			var chunk_save = File.new()
 			chunk_save.open("user://chunk_"+String(base_x)+"_"+String(base_y)+".map", File.WRITE)
 			
+			chunk_save.store_line(to_json([base_x,base_y]))
 			chunk_save.store_line(to_json(used_layers))
 			chunk_save.store_line(to_json(chunk_map))
 			chunk_save.store_line(to_json(used_items))
@@ -285,6 +289,12 @@ func convert_map():
 	string_save.store_line(to_json(item_strings_de))
 	
 	string_save.close()
+	
+	#TODO: save the current git repo hash here
+	var commit_save = File.new()
+	commit_save.open("user://map_version", File.WRITE)
+	commit_save.store_line(to_json("06272e67d89c9c14252651d9277b28fbfeb5b2b5"))
+	commit_save.close()
 	
 func base_id_to_local_id(base_id):
 	if server_tile_id_to_local_id_dic.has(base_id):

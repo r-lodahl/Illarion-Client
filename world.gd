@@ -16,7 +16,7 @@ func _ready():
 	
 	# Initial map display
 	map = VISUAL_MAP.new()
-	map.setup_tile_data(get_child(0), get_child(1))
+	map.setup(get_child(0), get_child(1))
 	map.set_mapcenter(0,0,0)
 	
 	# Distribute events
