@@ -31,7 +31,7 @@ func _ready():
 		load_raw_map()
 		convert_map()
 		#refresh_localization()
-	get_tree().change_scene("res://world.tcsn")
+	get_tree().change_scene("res://world.tscn")
 
 # Loads all raw map files and sorts them into a map-object:
 # raw_map[layer] = [mapdic, mapdic, mapdic, ...]
@@ -159,14 +159,14 @@ func load_single_map(filepath):
 		if names[0] == null && names[1] != null || names[0] != null && names[1] == null:
 			print("Warning: Missing localized name " + String(names) + " at " + itempath) 
 		elif names[0] == null && names[1] != null:
-			itemobj["n"] = item_strings.size()
+			itemobj["n"] = item_strings_en.size()
 			item_strings_en.push_back(names[0])
 			item_strings_de.push_back(names[1])
 		
 		if descriptions[0] == null && descriptions[1] != null || descriptions[0] != null && descriptions[1] == null:
 			print("Warning: Missing localized name " + String(names) + " at " + itempath) 
 		elif descriptions[0] != null && descriptions[1] != null:
-			itemobj["d"] = item_strings.size()
+			itemobj["d"] = item_strings_en.size()
 			item_strings_en.push_back(descriptions[0])
 			item_strings_de.push_back(descriptions[1])
 			
@@ -214,12 +214,14 @@ func convert_map():
 					var base_mx = base_x + BLOCKSIZE-1
 					var base_my = base_y + BLOCKSIZE-1
 					
-					if lefttop.x >= base_x && lefttop.x <= base_mx && lefttop.y >= base_y && lefttop.y <= base_my ||\
-					righttop.x >= base_x && righttop.x <= base_mx && righttop.y >= base_y && righttop.y <= base_my ||\
-					leftbtm.x >= base_x && leftbtm.x <= base_mx && leftbtm.y >= base_y && leftbtm.y <= base_my ||\
-					rightbtm.x >= base_x && rightbtm.x <= base_mx && rightbtm.y >= base_y && rightbtm.y <= base_my:
+					if lefttop.x <= base_mx && righttop.x >= base_x && lefttop.y <= base_my && leftbtm.y >= base_y: 
 						used_maps.push_back(map)
 						used_layers.push_back(map.layer)
+					#if lefttop.x >= base_x && lefttop.x <= base_mx && lefttop.y >= base_y && lefttop.y <= base_my ||\
+					#righttop.x >= base_x && righttop.x <= base_mx && righttop.y >= base_y && righttop.y <= base_my ||\
+					#leftbtm.x >= base_x && leftbtm.x <= base_mx && leftbtm.y >= base_y && leftbtm.y <= base_my ||\
+					#rightbtm.x >= base_x && rightbtm.x <= base_mx && rightbtm.y >= base_y && rightbtm.y <= base_my:
+						
 					
 			# Skip non-existent map sections
 			if used_layers.size() == 0: continue
@@ -297,12 +299,14 @@ func convert_map():
 	commit_save.close()
 	
 func base_id_to_local_id(base_id):
+	if base_id == 0: return 0
 	if server_tile_id_to_local_id_dic.has(base_id):
 		var variant_array = server_tile_id_to_local_id_dic[base_id]
 		return variant_array[randi()%variant_array.size()]
 	return 0
 	
 func overlay_id_to_local_id(overlay_id, shape_id):
+	if overlay_id == 0: return 0
 	if server_tile_id_to_local_id_dic.has(overlay_id*OVERLAY_MULT_FACTOR):
 		return server_tile_id_to_local_id_dic[overlay_id*OVERLAY_MULT_FACTOR][shape_id-1]
 	return 0

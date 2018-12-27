@@ -31,7 +31,7 @@ const VIS_LAYER = 10
 const OVERLAY_MULT_FACTOR = 1000
 const BLOCKSIZE = 20
 	
-func setup(tilemap, overlaymap, server_tile_id_to_local_id_dic):
+func setup(tilemap, overlaymap):
 	_tilemap = tilemap
 	_overlaymap = overlaymap
 	
@@ -40,8 +40,9 @@ func setup(tilemap, overlaymap, server_tile_id_to_local_id_dic):
 
 func _calculate_used_layers():
 	_used_layers = []
-	for chunk in map:
-		for layer in map.layers:
+	for chunk in _map:
+		if chunk == null: continue
+		for layer in chunk.layers:
 			if (not _used_layers.has(layer)) && layer <= _layer+VIS_RANGE && layer >= _layer-VIS_RANGE:
 				_used_layers.push_back(layer)
 	_used_layers.sort()
@@ -58,15 +59,15 @@ func _reload_all_chunks():
 	_chunk_x = floor(_x / BLOCKSIZE) * BLOCKSIZE
 	_chunk_y = floor(_y / BLOCKSIZE) * BLOCKSIZE
 	
-	map[0] = _load_map_file("user://chunk_"+String(_chunk_x-BLOCKSIZE)+"_"+String(_chunk_y-BLOCKSIZE)+".map")
-	map[1] = _load_map_file("user://chunk_"+String(_chunk_x)+"_"+String(_chunk_y-BLOCKSIZE)+".map")
-	map[2] = _load_map_file("user://chunk_"+String(_chunk_x+BLOCKSIZE)+"_"+String(_chunk_y-BLOCKSIZE)+".map")
-	map[3] = _load_map_file("user://chunk_"+String(_chunk_x-BLOCKSIZE)+"_"+String(_chunk_y)+".map")
-	map[4] = _load_map_file("user://chunk_"+String(_chunk_x)+"_"+String(_chunk_y)+".map")
-	map[5] = _load_map_file("user://chunk_"+String(_chunk_x+BLOCKSIZE)+"_"+String(_chunk_y)+".map")
-	map[6] = _load_map_file("user://chunk_"+String(_chunk_x-BLOCKSIZE)+"_"+String(_chunk_y+BLOCKSIZE)+".map")
-	map[7] = _load_map_file("user://chunk_"+String(_chunk_x)+"_"+String(_chunk_y+BLOCKSIZE)+".map")
-	map[8] = _load_map_file("user://chunk_"+String(_chunk_x+BLOCKSIZE)+"_"+String(_chunk_y+BLOCKSIZE)+".map")
+	_map[0] = _load_map_file("user://chunk_"+String(_chunk_x-BLOCKSIZE)+"_"+String(_chunk_y-BLOCKSIZE)+".map")
+	_map[1] = _load_map_file("user://chunk_"+String(_chunk_x)+"_"+String(_chunk_y-BLOCKSIZE)+".map")
+	_map[2] = _load_map_file("user://chunk_"+String(_chunk_x+BLOCKSIZE)+"_"+String(_chunk_y-BLOCKSIZE)+".map")
+	_map[3] = _load_map_file("user://chunk_"+String(_chunk_x-BLOCKSIZE)+"_"+String(_chunk_y)+".map")
+	_map[4] = _load_map_file("user://chunk_"+String(_chunk_x)+"_"+String(_chunk_y)+".map")
+	_map[5] = _load_map_file("user://chunk_"+String(_chunk_x+BLOCKSIZE)+"_"+String(_chunk_y)+".map")
+	_map[6] = _load_map_file("user://chunk_"+String(_chunk_x-BLOCKSIZE)+"_"+String(_chunk_y+BLOCKSIZE)+".map")
+	_map[7] = _load_map_file("user://chunk_"+String(_chunk_x)+"_"+String(_chunk_y+BLOCKSIZE)+".map")
+	_map[8] = _load_map_file("user://chunk_"+String(_chunk_x+BLOCKSIZE)+"_"+String(_chunk_y+BLOCKSIZE)+".map")
 
 func _load_map_file(filepath):
 	var mapfile = File.new()
@@ -76,48 +77,89 @@ func _load_map_file(filepath):
 	
 	var chunk = {}
 	mapfile.open(filepath, File.READ)
-	chunk["start"] = from_json(mapfile.get_line())
-	chunk["layers"] = from_json(mapfile.get_line())
-	chunk["tiles"] = from_json(mapfile.get_line())
-	chunk["items"] = from_json(mapfile.get_line())
-	chunk["warps"] = from_json(mapfile.get_line())
+	
+	chunk["start"] = parse_json(mapfile.get_line())
+	chunk["layers"] = parse_json(mapfile.get_line())
+	chunk["tiles"] = parse_json(mapfile.get_line())
+	chunk["items"] = parse_json(mapfile.get_line())
+	chunk["warps"] = parse_json(mapfile.get_line())
+	
 	mapfile.close()
+	return chunk
 	
 func _mapcenter_was_moved(tx, ty):
 	# TODO: If movement changes position mod BLOCKSIZE:
 	# unload no longer needed old maps
 	# load needed new maps 
-	
 	_x += tx
 	_y += ty
 	
-	var layers = _get_layers_around(10)
+	var chunk_x = floor(_x / BLOCKSIZE) * BLOCKSIZE
+	var chunk_y = floor(_y / BLOCKSIZE) * BLOCKSIZE
 	
-	if tx > 0: _load_tilemapstripe_add_x(tx, layers)
-	elif tx < 0: _load_tilemapstripe_sub_x(tx, layers)
+	# Check 8-way-movement
+	if chunk_x != _chunk_x || chunk_y != _chunk_y:
+		if chunk_x < _chunk_x && chunk_y < _chunk_y:
+			_map[8] = _map[4]
+			_map[7] = _map[3]
+			_map[5] = _map[1]
+			_map[4] = _map[0]
+		elif chunk_x < _chunk_x && chunk_y > _chunk_y:
+			_map[2] = _map[4]
+			_map[1] = _map[3]
+			_map[5] = _map[7]
+			_map[4] = _map[6]
+		elif chunk_x > _chunk_x && chunk_y < chunk_y:
+			_map[6] = _map[4]
+			_map[7] = _map[5]
+			_map[3] = _map[1]
+			_map[4] = _map[2]
+		elif chunk_x > _chunk_x && chunk_y > _chunk_y:
+			_map[0] = _map[4]
+			_map[1] = _map[5]
+			_map[3] = _map[7]
+			_map[4] = _map[8]
+		elif chunk_x > _chunk_x:
+			for i in range(0,8,3):
+				_map[i] = _map[i+1]
+				_map[i+1] = _map[i+2]
+		elif chunk_x < _chunk_x:
+			for i in range(0,8,3):
+				_map[i+2] = _map[i+1]
+				_map[i+1] = _map[i] 
+		elif chunk_y > _chunk_y:
+			for i in range(5,-1,-1):
+				_map[i+3] = _map[i]
+		elif chunk_y < _chunk_y:
+			for i in range(3,9):
+				_map[i-3] = _map[i]
 	
-	if ty > 0: _load_tilemapstripe_add_y(ty, layers)
-	elif ty < 0: _load_tilemapstripe_sub_y(ty, layers)
+	
+	if tx > 0: _load_tilemapstripe_add_x(tx)
+	elif tx < 0: _load_tilemapstripe_sub_x(tx)
+	
+	if ty > 0: _load_tilemapstripe_add_y(ty)
+	elif ty < 0: _load_tilemapstripe_sub_y(ty)
 
-func _load_tilemapstripe_add_x(translated_x, layers):
+func _load_tilemapstripe_add_x(translated_x):
 	for ix in range(_x + VIS_RANGE - translated_x + 1, _x + VIS_RANGE+1):
 		for iy in range(_y - VIS_RANGE, _y + VIS_RANGE + 1): 
-			_reload_tilemap_tile(ix,iy,layers)	
+			_reload_tilemap_tile(ix,iy)	
 			
-func _load_tilemapstripe_sub_x(translated_x, layers):
+func _load_tilemapstripe_sub_x(translated_x):
 	for ix in range(_x - VIS_RANGE, _x - VIS_RANGE - translated_x):
 		for iy in range(_y - VIS_RANGE, _y + VIS_RANGE + 1): 
-			_reload_tilemap_tile(ix,iy,layers)	
+			_reload_tilemap_tile(ix,iy)	
 			
-func _load_tilemapstripe_add_y(translated_y, layers):
+func _load_tilemapstripe_add_y(translated_y):
 	for ix in range(_x - VIS_RANGE, _x + VIS_RANGE+1):
 		for iy in range(_y + VIS_RANGE - translated_y + 1, _y + VIS_RANGE+1): 
-			_reload_tilemap_tile(ix,iy,layers)	
+			_reload_tilemap_tile(ix,iy)	
 			
-func _load_tilemapstripe_sub_y(translated_y, layers):
+func _load_tilemapstripe_sub_y(translated_y):
 	for ix in range(_x - VIS_RANGE, _x + VIS_RANGE + 1):
 		for iy in range(_y - VIS_RANGE, _y - VIS_RANGE - translated_y): 
-			_reload_tilemap_tile(ix,iy,layers)	
+			_reload_tilemap_tile(ix,iy)	
 	
 # TODO: use current layer + 10: if NIL: go down until not NIL
 func _reload_visible_tilemap():
@@ -140,16 +182,19 @@ func _reload_tilemap_tile(ix,iy):
 func _tile_ids_at_xy(x,y):
 	for layer in _used_layers:
 		for chunk in _map:
-			if not chunk.layers.has(layer): continue
+			if chunk == null: continue
 			
-			var converted_x = x - _x_per_layer * layer - chunk.start[0]
-			var converted_y = y - _y_per_layer * layer - chunk.start[1]
+			var layer_idx = chunk.layers.find(layer)
+			if layer_idx == -1: continue
+			
+			var converted_x = int(x - _x_per_layer * layer - chunk.start[0])
+			var converted_y = int(y - _y_per_layer * layer - chunk.start[1])
 			
 			if converted_x < 0 || converted_y < 0 || converted_x >= BLOCKSIZE || converted_y >= BLOCKSIZE: continue
 			
-			var id = chunk.map[converted_x + converted_y + BLOCKSIZE]
+			var id = int(chunk.tiles[converted_y + converted_x * BLOCKSIZE][layer_idx])
 			
 			if id == 0: continue
 			
-			return [floor(id/1000), id%1000]
+			return [id%OVERLAY_MULT_FACTOR, floor(id/OVERLAY_MULT_FACTOR)]
 	return [0,0]

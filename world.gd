@@ -17,7 +17,7 @@ func _ready():
 	# Initial map display
 	map = VISUAL_MAP.new()
 	map.setup(get_child(0), get_child(1))
-	map.set_mapcenter(0,0,0)
+	map.reload_map_at(0,0,0)
 	
 	# Distribute events
 	get_child(2).connect("moved_one_tile",map, "_mapcenter_was_moved")
