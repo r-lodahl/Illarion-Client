@@ -29,7 +29,7 @@ var _map
 const VIS_RANGE = 20
 const VIS_LAYER = 10
 const OVERLAY_MULT_FACTOR = 1000
-const BLOCKSIZE = 20
+const BLOCKSIZE = 20.0
 	
 func setup(tilemap, overlaymap):
 	_tilemap = tilemap
@@ -59,15 +59,12 @@ func _reload_all_chunks():
 	_chunk_x = floor(_x / BLOCKSIZE) * BLOCKSIZE
 	_chunk_y = floor(_y / BLOCKSIZE) * BLOCKSIZE
 	
-	_map[0] = _load_map_file("user://chunk_"+String(_chunk_x-BLOCKSIZE)+"_"+String(_chunk_y-BLOCKSIZE)+".map")
-	_map[1] = _load_map_file("user://chunk_"+String(_chunk_x)+"_"+String(_chunk_y-BLOCKSIZE)+".map")
-	_map[2] = _load_map_file("user://chunk_"+String(_chunk_x+BLOCKSIZE)+"_"+String(_chunk_y-BLOCKSIZE)+".map")
-	_map[3] = _load_map_file("user://chunk_"+String(_chunk_x-BLOCKSIZE)+"_"+String(_chunk_y)+".map")
-	_map[4] = _load_map_file("user://chunk_"+String(_chunk_x)+"_"+String(_chunk_y)+".map")
-	_map[5] = _load_map_file("user://chunk_"+String(_chunk_x+BLOCKSIZE)+"_"+String(_chunk_y)+".map")
-	_map[6] = _load_map_file("user://chunk_"+String(_chunk_x-BLOCKSIZE)+"_"+String(_chunk_y+BLOCKSIZE)+".map")
-	_map[7] = _load_map_file("user://chunk_"+String(_chunk_x)+"_"+String(_chunk_y+BLOCKSIZE)+".map")
-	_map[8] = _load_map_file("user://chunk_"+String(_chunk_x+BLOCKSIZE)+"_"+String(_chunk_y+BLOCKSIZE)+".map")
+	_load_chunks_at([0,1,2,3,4,5,6,7,8])
+
+func _load_chunks_at(chunk_array):
+	for i in chunk_array:
+		_map[i] = _load_map_file("user://chunk_"+String(_chunk_x+(((i%3)-1)*BLOCKSIZE))+\
+		"_"+String(_chunk_y+((floor(i/3)-1)*BLOCKSIZE))+".map")
 
 func _load_map_file(filepath):
 	var mapfile = File.new()
@@ -99,42 +96,53 @@ func _mapcenter_was_moved(tx, ty):
 	
 	# Check 8-way-movement
 	if chunk_x != _chunk_x || chunk_y != _chunk_y:
+		var new_chunks
 		if chunk_x < _chunk_x && chunk_y < _chunk_y:
 			_map[8] = _map[4]
 			_map[7] = _map[3]
 			_map[5] = _map[1]
 			_map[4] = _map[0]
+			new_chunks = [0,1,2,3,6]
 		elif chunk_x < _chunk_x && chunk_y > _chunk_y:
 			_map[2] = _map[4]
 			_map[1] = _map[3]
 			_map[5] = _map[7]
 			_map[4] = _map[6]
+			new_chunks = [0,3,6,7,8]
 		elif chunk_x > _chunk_x && chunk_y < chunk_y:
 			_map[6] = _map[4]
 			_map[7] = _map[5]
 			_map[3] = _map[1]
 			_map[4] = _map[2]
+			new_chunks = [0,1,2,5,8]
 		elif chunk_x > _chunk_x && chunk_y > _chunk_y:
 			_map[0] = _map[4]
 			_map[1] = _map[5]
 			_map[3] = _map[7]
 			_map[4] = _map[8]
+			new_chunks = [2,5,6,7,8]
 		elif chunk_x > _chunk_x:
 			for i in range(0,8,3):
 				_map[i] = _map[i+1]
 				_map[i+1] = _map[i+2]
+			new_chunks = [2,5,8]
 		elif chunk_x < _chunk_x:
 			for i in range(0,8,3):
 				_map[i+2] = _map[i+1]
 				_map[i+1] = _map[i] 
-		elif chunk_y > _chunk_y:
+			new_chunks = [0,3,6]
+		elif chunk_y < _chunk_y:
 			for i in range(5,-1,-1):
 				_map[i+3] = _map[i]
-		elif chunk_y < _chunk_y:
+			new_chunks = [0,1,2]
+		elif chunk_y > _chunk_y:
 			for i in range(3,9):
 				_map[i-3] = _map[i]
-	
-	
+			new_chunks = [6,7,8]
+		_chunk_x = chunk_x
+		_chunk_y = chunk_y
+		_load_chunks_at(new_chunks)
+		
 	if tx > 0: _load_tilemapstripe_add_x(tx)
 	elif tx < 0: _load_tilemapstripe_sub_x(tx)
 	

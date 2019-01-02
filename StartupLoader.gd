@@ -24,7 +24,7 @@ var server_tile_id_to_local_id_dic = {}
 
 func _ready():
 	#TODO: Check if saved commit id is different from current git hash	
-	if true:
+	if false:
 		var tileset = load("res://assets/tileset/tiles.res")
 		TABLE_LOADER.create_mapping_table(tileset, "res://assets/tileset/tiles.tbl", NAME_COLUMN_TILES, ID_COLUMN_TILES, server_tile_id_to_local_id_dic)
 		TABLE_LOADER.create_mapping_table(tileset, "res://assets/tileset/overlays.tbl", NAME_COLUMN_OVERLAYS, ID_COLUMN_OVERLAYS, server_tile_id_to_local_id_dic)
