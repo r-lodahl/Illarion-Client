@@ -47,7 +47,7 @@ cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
 cell_half_offset = 2
 cell_tile_origin = 0
-cell_y_sort = false
+cell_y_sort = true
 cell_clip_uv = false
 collision_use_kinematic = false
 collision_friction = 1.0
@@ -61,6 +61,7 @@ _sections_unfolded = [ "Cell", "Transform" ]
 
 [node name="Player" type="KinematicBody2D" parent="." index="2"]
 
+editor/display_folded = true
 input_pickable = false
 collision_layer = 1
 collision_mask = 1

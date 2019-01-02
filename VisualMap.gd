@@ -25,6 +25,9 @@ var _map
 #.6.7.8.#
 #########
 
+# Other data
+var _itemdic
+
 # Visible tile radius
 const VIS_RANGE = 20
 const VIS_LAYER = 10
@@ -153,27 +156,48 @@ func _load_tilemapstripe_add_x(translated_x):
 	for ix in range(_x + VIS_RANGE - translated_x + 1, _x + VIS_RANGE+1):
 		for iy in range(_y - VIS_RANGE, _y + VIS_RANGE + 1): 
 			_reload_tilemap_tile(ix,iy)	
+			_reload_items(ix,iy)
 			
 func _load_tilemapstripe_sub_x(translated_x):
 	for ix in range(_x - VIS_RANGE, _x - VIS_RANGE - translated_x):
 		for iy in range(_y - VIS_RANGE, _y + VIS_RANGE + 1): 
 			_reload_tilemap_tile(ix,iy)	
+			_reload_items(ix,iy)
 			
 func _load_tilemapstripe_add_y(translated_y):
 	for ix in range(_x - VIS_RANGE, _x + VIS_RANGE+1):
 		for iy in range(_y + VIS_RANGE - translated_y + 1, _y + VIS_RANGE+1): 
 			_reload_tilemap_tile(ix,iy)	
+			_reload_items(ix,iy)
 			
 func _load_tilemapstripe_sub_y(translated_y):
 	for ix in range(_x - VIS_RANGE, _x + VIS_RANGE + 1):
 		for iy in range(_y - VIS_RANGE, _y - VIS_RANGE - translated_y): 
 			_reload_tilemap_tile(ix,iy)	
+			_reload_items(ix,iy)
 	
 # TODO: use current layer + 10: if NIL: go down until not NIL
 func _reload_visible_tilemap():
 	for ix in range(_x-VIS_RANGE, _x+VIS_RANGE+1):
 		for iy in range(_y-VIS_RANGE, _y+VIS_RANGE+1):
 			_reload_tilemap_tile(ix,iy)	
+			_reload_items(ix,iy)
+
+func _reload_items(ix,iy):
+	var items = _items_at_xy(ix,iy)
+	
+	# TODO: Find a way to mark a field as already drawn with the node OR make sure that we clear all sprites on a tile
+	# before redrawing them. 
+	
+	for i in range(items.size()):
+		var item  = items[i]
+		var sprite = Sprite.new()
+		sprite.name = iname
+		sprite.texture = item.image
+		sprite.global_position = Vector2(ix + item.offset[0], iy + item.offset[1])
+		sprite.region_enabled = true
+		sprite.region_rect = item.rect[0]
+		_overlaymap.add_child(sprite)
 
 func _reload_tilemap_tile(ix,iy):
 	var ids = _tile_ids_at_xy(ix,iy)
