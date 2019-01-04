@@ -1,4 +1,4 @@
-static func find_files(path, ends_with, exclude_dir):
+static func find_files(path, ends_with, exclude_dir=""):
 	var files = []
 	var dir = Directory.new()
 	

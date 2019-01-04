@@ -34,9 +34,10 @@ const VIS_LAYER = 10
 const OVERLAY_MULT_FACTOR = 1000
 const BLOCKSIZE = 20.0
 	
-func setup(tilemap, overlaymap):
+func setup(tilemap, overlaymap, itemdic):
 	_tilemap = tilemap
 	_overlaymap = overlaymap
+	_itemdic = itemdic
 	
 	_map = []
 	_map.resize(9)
@@ -186,19 +187,46 @@ func _reload_visible_tilemap():
 func _reload_items(ix,iy):
 	var items = _items_at_xy(ix,iy)
 	
+	for item in items:
+		var sprite_base = _itemdic[item]
+		
+		if sprite_base == null:
+			continue
+			
+		var sprite = Sprite.new()
+		sprite.texture = sprite_base.res[0]
+		sprite.global_position(ix + sprite_base.offset[0],iy + sprite_base.offset[1])
+		_overlaymap.add_child(sprite)
+	
 	# TODO: Find a way to mark a field as already drawn with the node OR make sure that we clear all sprites on a tile
 	# before redrawing them. 
 	
-	for i in range(items.size()):
-		var item  = items[i]
-		var sprite = Sprite.new()
-		sprite.name = iname
-		sprite.texture = item.image
-		sprite.global_position = Vector2(ix + item.offset[0], iy + item.offset[1])
-		sprite.region_enabled = true
-		sprite.region_rect = item.rect[0]
-		_overlaymap.add_child(sprite)
+	#for i in range(items.size()):
+	#	var item  = items[i]
+	#	var sprite = Sprite.new()
+	#	sprite.name = iname
+	#	sprite.texture = item.image
+	#	sprite.global_position = Vector2(ix + item.offset[0], iy + item.offset[1])
+	#	sprite.region_enabled = true
+	#	sprite.region_rect = item.rect[0]
+	#	_overlaymap.add_child(sprite)
 
+#TODO: Merge with tile ids at xy
+func _items_at_xy(x,y):
+	for layer in _used_layers:
+		for chunk in _map:
+			if chunk == null: continue
+			
+			var layer_idx = chunk.layers.find(layer)
+			if layer_idx == -1: continue
+			
+			var converted_x = int(x - _x_per_layer * layer - chunk.start[0])
+			var converted_y = int(y - _y_per_layer * layer - chunk.start[1])
+			
+			if converted_x < 0 || converted_y < 0 || converted_x >= BLOCKSIZE || converted_y >= BLOCKSIZE: continue
+			
+			return chunk.items[Vector3(converted_x, converted_y, layer)]
+			
 func _reload_tilemap_tile(ix,iy):
 	var ids = _tile_ids_at_xy(ix,iy)
 	
