@@ -188,7 +188,7 @@ func _reload_items(ix,iy):
 	var items = _items_at_xy(ix,iy)
 	
 	for item in items:
-		var sprite_base = _itemdic[item]
+		var sprite_base = _itemdic[item.id]
 		
 		if sprite_base == null:
 			continue
@@ -225,7 +225,13 @@ func _items_at_xy(x,y):
 			
 			if converted_x < 0 || converted_y < 0 || converted_x >= BLOCKSIZE || converted_y >= BLOCKSIZE: continue
 			
-			return chunk.items[Vector3(converted_x, converted_y, layer)]
+			var layer_sign = -1 if layer < 0 else 1
+			var position = layer * 10000 + layer_sign * converted_x * 100 + layer_sign * converted_y
+			if chunk.items.has(position): 
+				printerr("FOUND")
+				return chunk.items[position]
+			
+	return []
 			
 func _reload_tilemap_tile(ix,iy):
 	var ids = _tile_ids_at_xy(ix,iy)

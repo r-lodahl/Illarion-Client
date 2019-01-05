@@ -24,7 +24,7 @@ var server_tile_id_to_local_id_dic = {}
 
 func _ready():
 	#TODO: Check if saved commit id is different from current git hash	
-	if false:
+	if true:
 		var tileset = load("res://assets/tileset/tiles.res")
 		TABLE_LOADER.create_mapping_table(tileset, "res://assets/tileset/tiles.tbl", NAME_COLUMN_TILES, ID_COLUMN_TILES, server_tile_id_to_local_id_dic)
 		TABLE_LOADER.create_mapping_table(tileset, "res://assets/tileset/overlays.tbl", NAME_COLUMN_OVERLAYS, ID_COLUMN_OVERLAYS, server_tile_id_to_local_id_dic)
@@ -251,12 +251,18 @@ func convert_map():
 							
 							# Check if there are also items at this position, if true copy them to the chunk
 							var map_position = Vector2(x,y)
+							var dic_position = map.layer * 10000
+							if map.layer < 0:
+								dic_position = dic_position - x * 100 - y
+							else:
+								dic_position = dic_position + x * 100 + y
+							
 							if map.items.has(map_position):
-								used_items[Vector3(ix,iy,map.layer)] = map.items[map_position]
+								used_items[dic_position] = map.items[map_position]
 								
 							# Check if there are also warps at this position, if true copy them to the chunk
 							if map.warps.has(map_position):
-								used_warps[Vector3(ix,iy,map.layer)] = map.warps[map_position]
+								used_warps[dic_position] = map.warps[map_position]
 						
 						var server_ids = extract_server_ids(layervalue)  # Returns [base_id, overlay_id, shape_id], 0 if input 0
 						

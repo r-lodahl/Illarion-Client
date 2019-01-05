@@ -66,8 +66,13 @@ static func create_item_table(table_path, local_items):
 			continue
 		
 		var values = line.split(",",false)
-	
-		server_names.push(values[name_column].substr(1, values[name_column].length()-2))
+		var cleaned_name = values[name_column].substr(1, values[name_column].length()-2)
+		var path_idx = cleaned_name.rfind("/")
+		
+		if path_idx > -1:
+			cleaned_name = cleaned_name.substr(path_idx+1, cleaned_name.length() - path_idx)
+		
+		server_names.push_back(cleaned_name)
 	
 	## Second: Get the local names and sprites and sort them according to the server files
 	var local_item_dic = {}
@@ -136,17 +141,19 @@ static func create_item_table(table_path, local_items):
 			continue
 		
 		var values = line.split(",",false)
-		var name_no_quotes = values[name_column].substr(1, values[name_column].length()-2)
+		var cleaned_name = values[name_column].substr(1, values[name_column].length()-2)
+		var path_idx = cleaned_name.rfind("/")
 		
-		var local_item = local_item_dic[name_no_quotes]
+		if path_idx > -1:
+			cleaned_name = cleaned_name.substr(path_idx+1, cleaned_name.length() - path_idx)
 		
-		if local_item == null:
+		if not local_item_dic.has(cleaned_name):
 			unknown_items.push_back(values[id_column])
-			print("Failed finding item " + name_no_quotes)
-			continue
+			print("Failed finding item " + cleaned_name)
+			continue		
 		
 		var item = {}
-		item.res = local_item
+		item.res = local_item_dic[cleaned_name]
 		item.offset = [int(values[offset_x_column]), int(values[offset_y_column])]
 		item.color = Color(float(values[color_r_column])/255,float(values[color_g_column])/255,float(values[color_b_column])/255,float(values[color_a_column])/255)
 
