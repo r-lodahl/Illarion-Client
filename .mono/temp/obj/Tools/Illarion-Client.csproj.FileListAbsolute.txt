@@ -1,0 +1,6 @@
+D:\Git\Illarion-Client\.mono\temp\bin\Tools\Illarion-Client.dll
+D:\Git\Illarion-Client\.mono\temp\bin\Tools\Illarion-Client.pdb
+D:\Git\Illarion-Client\.mono\temp\obj\Tools\Illarion-Client.csprojAssemblyReference.cache
+D:\Git\Illarion-Client\.mono\temp\obj\Tools\Illarion-Client.csproj.CoreCompileInputs.cache
+D:\Git\Illarion-Client\.mono\temp\obj\Tools\Illarion-Client.dll
+D:\Git\Illarion-Client\.mono\temp\obj\Tools\Illarion-Client.pdb

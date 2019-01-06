@@ -2,6 +2,7 @@ extends Control
 
 const FILE_OP = preload("file_operations.gd")
 const TABLE_LOADER = preload("table_loader.gd")
+const GITHUB_FILE_LOADER = preload("GithubFileLoader.cs")
 
 const BLOCKSIZE = 20
 const BASE_ID_MASK = 0x001F
@@ -23,6 +24,8 @@ var item_strings_de = []
 var server_tile_id_to_local_id_dic = {}
 
 func _ready():
+	var gg = preload("GithubFileLoader.cs")
+	GITHUB_FILE_LOADER.MakeRestRequest()
 	#TODO: Check if saved commit id is different from current git hash	
 	if true:
 		var tileset = load("res://assets/tileset/tiles.res")
@@ -140,13 +143,14 @@ func load_single_map(filepath):
 		var itemobj = {}
 		itemobj["id"] = int(values[2])
 		
+		if int(values[0]) == 1 and int(values[1]) == 0 and int(values[2]) == 3092:
+			print("WALL at " + itempath)
+		
 		# Check if the item has any description or name
 		# If yes, save their strings into item_strings and save the string_index in the item_object
-		var descriptions = []
-		var names = []
-		for i in range(3,values.size()):
-			descriptions.resize(2)
-			names.resize(2)
+		var descriptions = [null,null]
+		var names = [null,null]
+		for i in range(4,values.size()):
 			if values[i].begins_with("descriptionEn"):
 				descriptions[0] = values[i].substr(14, values[i].length())
 			elif values[i].begins_with("descriptionDe"):
@@ -157,15 +161,15 @@ func load_single_map(filepath):
 				names[1] = values[i].substr(7, values[i].length())
 		
 		# We do this do prevent cases where one language is null and the other one isnt
-		if names[0] == null && names[1] != null || names[0] != null && names[1] == null:
+		if (names[0] == null && names[1] != null) || (names[0] != null && names[1] == null):
 			print("Warning: Missing localized name " + String(names) + " at " + itempath) 
-		elif names[0] == null && names[1] != null:
+		elif names[0] != null && names[1] != null:
 			itemobj["n"] = item_strings_en.size()
 			item_strings_en.push_back(names[0])
 			item_strings_de.push_back(names[1])
 		
-		if descriptions[0] == null && descriptions[1] != null || descriptions[0] != null && descriptions[1] == null:
-			print("Warning: Missing localized name " + String(names) + " at " + itempath) 
+		if (descriptions[0] == null && descriptions[1] != null) || (descriptions[0] != null && descriptions[1] == null):
+			print("Warning: Missing localized description " + String(descriptions) + " at " + itempath) 
 		elif descriptions[0] != null && descriptions[1] != null:
 			itemobj["d"] = item_strings_en.size()
 			item_strings_en.push_back(descriptions[0])
@@ -217,12 +221,7 @@ func convert_map():
 					
 					if lefttop.x <= base_mx && righttop.x >= base_x && lefttop.y <= base_my && leftbtm.y >= base_y: 
 						used_maps.push_back(map)
-						used_layers.push_back(map.layer)
-					#if lefttop.x >= base_x && lefttop.x <= base_mx && lefttop.y >= base_y && lefttop.y <= base_my ||\
-					#righttop.x >= base_x && righttop.x <= base_mx && righttop.y >= base_y && righttop.y <= base_my ||\
-					#leftbtm.x >= base_x && leftbtm.x <= base_mx && leftbtm.y >= base_y && leftbtm.y <= base_my ||\
-					#rightbtm.x >= base_x && rightbtm.x <= base_mx && rightbtm.y >= base_y && rightbtm.y <= base_my:
-						
+						used_layers.push_back(map.layer)	
 					
 			# Skip non-existent map sections
 			if used_layers.size() == 0: continue
@@ -251,18 +250,12 @@ func convert_map():
 							
 							# Check if there are also items at this position, if true copy them to the chunk
 							var map_position = Vector2(x,y)
-							var dic_position = map.layer * 10000
-							if map.layer < 0:
-								dic_position = dic_position - x * 100 - y
-							else:
-								dic_position = dic_position + x * 100 + y
-							
 							if map.items.has(map_position):
-								used_items[dic_position] = map.items[map_position]
+								used_items[Vector3(x,y,layer)] = map.items[map_position]
 								
 							# Check if there are also warps at this position, if true copy them to the chunk
 							if map.warps.has(map_position):
-								used_warps[dic_position] = map.warps[map_position]
+								used_warps[Vector3(x,y,layer)] = map.warps[map_position]
 						
 						var server_ids = extract_server_ids(layervalue)  # Returns [base_id, overlay_id, shape_id], 0 if input 0
 						
@@ -282,12 +275,12 @@ func convert_map():
 			var chunk_save = File.new()
 			chunk_save.open("user://chunk_"+String(base_x)+"_"+String(base_y)+".map", File.WRITE)
 			
-			chunk_save.store_line(to_json([base_x,base_y]))
-			chunk_save.store_line(to_json(used_layers))
-			chunk_save.store_line(to_json(chunk_map))
-			chunk_save.store_line(to_json(used_items))
-			chunk_save.store_line(to_json(used_warps))
-			
+			chunk_save.store_var([base_x,base_y])
+			chunk_save.store_var(used_layers)
+			chunk_save.store_var(chunk_map)
+			chunk_save.store_var(used_items)
+			chunk_save.store_var(used_warps)
+	
 			chunk_save.close()
 			
 	# Save item_strings

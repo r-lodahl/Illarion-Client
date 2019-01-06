@@ -3,6 +3,8 @@ extends Node
 # visible tile shift per layer upwards
 const _x_per_layer = 1
 const _y_per_layer = 1
+const _tilesize_x = 76
+const _tilesize_y = 38
 
 # Current map-center
 var _x
@@ -79,11 +81,11 @@ func _load_map_file(filepath):
 	var chunk = {}
 	mapfile.open(filepath, File.READ)
 	
-	chunk["start"] = parse_json(mapfile.get_line())
-	chunk["layers"] = parse_json(mapfile.get_line())
-	chunk["tiles"] = parse_json(mapfile.get_line())
-	chunk["items"] = parse_json(mapfile.get_line())
-	chunk["warps"] = parse_json(mapfile.get_line())
+	chunk["start"] = mapfile.get_var()
+	chunk["layers"] = mapfile.get_var()
+	chunk["tiles"] = mapfile.get_var()
+	chunk["items"] = mapfile.get_var()
+	chunk["warps"] = mapfile.get_var()
 	
 	mapfile.close()
 	return chunk
@@ -195,21 +197,16 @@ func _reload_items(ix,iy):
 			
 		var sprite = Sprite.new()
 		sprite.texture = sprite_base.res[0]
-		sprite.global_position(ix + sprite_base.offset[0],iy + sprite_base.offset[1])
+		
+		var position = _overlaymap.map_to_world(Vector2(iy,-ix))
+		position.x = position.x + sprite_base.offset[0]
+		position.y = position.y + sprite_base.offset[1]
+		
+		sprite.global_position = position
 		_overlaymap.add_child(sprite)
 	
 	# TODO: Find a way to mark a field as already drawn with the node OR make sure that we clear all sprites on a tile
 	# before redrawing them. 
-	
-	#for i in range(items.size()):
-	#	var item  = items[i]
-	#	var sprite = Sprite.new()
-	#	sprite.name = iname
-	#	sprite.texture = item.image
-	#	sprite.global_position = Vector2(ix + item.offset[0], iy + item.offset[1])
-	#	sprite.region_enabled = true
-	#	sprite.region_rect = item.rect[0]
-	#	_overlaymap.add_child(sprite)
 
 #TODO: Merge with tile ids at xy
 func _items_at_xy(x,y):
@@ -225,12 +222,14 @@ func _items_at_xy(x,y):
 			
 			if converted_x < 0 || converted_y < 0 || converted_x >= BLOCKSIZE || converted_y >= BLOCKSIZE: continue
 			
-			var layer_sign = -1 if layer < 0 else 1
-			var position = layer * 10000 + layer_sign * converted_x * 100 + layer_sign * converted_y
-			if chunk.items.has(position): 
-				printerr("FOUND")
-				return chunk.items[position]
+			if x == 1 && y == 0 && layer == 0:
+				print("BREAK")
 			
+			
+			var position = Vector3(converted_x, converted_y, layer)
+			if chunk.items.has(position): 
+				return chunk.items[position]
+	
 	return []
 			
 func _reload_tilemap_tile(ix,iy):

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Test.gd" type="Script" id=1]
-[ext_resource path="res://assets/spritesets/items.sprites/bat_axe_copper.tres" type="Texture" id=2]
+[ext_resource path="res://assets/spritesets/items.sprites/invisible_item.tres" type="Texture" id=2]
 
 [node name="Test" type="Node2D"]
 
