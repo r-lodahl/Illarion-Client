@@ -5,7 +5,7 @@ var http = preload("res://addons/rest/http_request.gd")
 func _ready():
 	var request = http.new()
 	
-	var response = request.get("https://api.github.com", "/users/defunkt", 443, true, [])
+	var response = request.sget("https://api.github.com", "/repos/Illarion-ev/Illarion-Map/commits/master", 443, true, [])
 	
 	response.connect("loading", self, "_on_loading")
 	response.connect("loaded", self, "_on_loaded")

@@ -77,7 +77,7 @@ class request:
 		emit_signal("loaded",result)
 		parent.erase_req(self)
 		
-func get(domain,url,port,ssl, header=[]):
+func sget(domain,url,port,ssl, header=[]):
 	var req = request.new(self,{method="get",domain=domain,url=url,port=port,ssl=ssl,header=header})
 	reqlist.push_front(req)
 	return req
