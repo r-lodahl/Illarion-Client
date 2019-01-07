@@ -2,7 +2,6 @@ extends Control
 
 const FILE_OP = preload("file_operations.gd")
 const TABLE_LOADER = preload("table_loader.gd")
-const GITHUB_FILE_LOADER = preload("GithubFileLoader.cs")
 
 const BLOCKSIZE = 20
 const BASE_ID_MASK = 0x001F
@@ -24,8 +23,6 @@ var item_strings_de = []
 var server_tile_id_to_local_id_dic = {}
 
 func _ready():
-	var gg = preload("GithubFileLoader.cs")
-	GITHUB_FILE_LOADER.MakeRestRequest()
 	#TODO: Check if saved commit id is different from current git hash	
 	if true:
 		var tileset = load("res://assets/tileset/tiles.res")

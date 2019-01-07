@@ -3,7 +3,7 @@
 [ext_resource path="res://Test.gd" type="Script" id=1]
 [ext_resource path="res://assets/spritesets/items.sprites/invisible_item.tres" type="Texture" id=2]
 
-[node name="Test" type="Node2D"]
+[node name="Test" type="Node2D" index="0"]
 
 position = Vector2( 913.376, 461.232 )
 script = ExtResource( 1 )
