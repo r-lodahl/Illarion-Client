@@ -2,6 +2,8 @@ extends Control
 
 const FILE_OP = preload("file_operations.gd")
 const TABLE_LOADER = preload("table_loader.gd")
+const HTTP = preload("res://addons/rest/http_request.gd")
+const UNZIP = preload("res://addons/gdunzip/gdunzip.gd")
 
 const BLOCKSIZE = 20
 const BASE_ID_MASK = 0x001F
@@ -13,6 +15,8 @@ const ID_COLUMN_OVERLAYS = 2 #3
 const NAME_COLUMN_TILES = 3 #4
 const NAME_COLUMN_OVERLAYS = 3 #4
 
+const SERVER_ADDRESS = "https://c107-243.cloud.gwdg.de"
+
 var max_x = 0
 var max_y = 0
 var min_x = 0
@@ -23,8 +27,60 @@ var item_strings_de = []
 var server_tile_id_to_local_id_dic = {}
 
 func _ready():
-	#TODO: Check if saved commit id is different from current git hash	
-	if true:
+	var http = HTTP.new()
+	var response = http.sync_get(SERVER_ADDRESS, "/map/version/", 443, true)
+	
+	if response.error != null or not response.is_json:
+		printerr("Getting map version has failed [",response.error,"]. Please retry.")
+		return
+		
+	var version = response.sha1
+	
+	var versionpath = "user://map.version"
+	var versionfile = File.new()
+	var outdated = true
+	if versionfile.file_exists(versionpath):
+		versionfile.open(versionpath, File.READ)
+		var local_version = versionfile.get_as_text()
+		versionfile.close()
+		outdated = version != local_version
+
+	if (outdated):
+		response = http.sync_get(SERVER_ADDRESS, "/map/zipball/", 443, true)
+		
+		if response.error != null:
+			printerr("Getting map version has failed [",response.error,"]. Please retry.")
+			return
+			
+		var zipfile = File.new()
+		zipfile.open("user://maps.zip", File.WRITE)
+		zipfile.store_buffer(zipfile)
+		zipfile.close()
+		
+		var unzip = UNZIP.new()
+		zipfile = unzip.load("user://maps.zip")
+		
+		if zipfile:
+			for file in unzip.files:
+				var uncompressed = unzip.uncompress(file["file_name"])
+				
+				if uncompressed:
+					var mapfile = File.new()
+					var mappath = "user://"+file["file_name"]
+					mapfile.open(mappath, File.WRITE)
+					mapfile.store_string(uncompressed.get_string_from_utf8())
+					mapfile.close()
+				else:
+					printerr("Failed uncompressing the mapfile at user://maps.zip. Please retry.")
+					return
+		else:
+			printerr("Failed uncompressing the mapfile at user://maps.zip. Please retry.")
+			return
+		
+		versionfile.open("user://map.version", File.WRITE)
+		versionfile.store_string(version)
+		versionfile.close()
+		
 		var tileset = load("res://assets/tileset/tiles.res")
 		TABLE_LOADER.create_mapping_table(tileset, "res://assets/tileset/tiles.tbl", NAME_COLUMN_TILES, ID_COLUMN_TILES, server_tile_id_to_local_id_dic)
 		TABLE_LOADER.create_mapping_table(tileset, "res://assets/tileset/overlays.tbl", NAME_COLUMN_OVERLAYS, ID_COLUMN_OVERLAYS, server_tile_id_to_local_id_dic)
@@ -111,6 +167,7 @@ func load_single_map(filepath):
 		
 		var values = line.split(";",false)
 		maparray[int(values[0])][int(values[1])] = int(values[2])
+	mapfile.close()
 	
 	mapdic.map = maparray
 	mapdic.items = {}
@@ -119,7 +176,7 @@ func load_single_map(filepath):
 	# Open the item-file of the map
 	var itemfile = File.new()
 	var itempath = filepath.substr(0, filepath.length()-9)+"items.txt"
-	if not mapfile.file_exists(itempath):
+	if not itemfile.file_exists(itempath):
 		print("Failed opening " + itempath)
 		return mapdic
 	
@@ -173,7 +230,8 @@ func load_single_map(filepath):
 			item_strings_de.push_back(descriptions[1])
 			
 		mapdic.items[position].push_back(itemobj)
-		
+	itemfile.close()
+	
 	## Save the warps if any
 	var warpfile = File.new()
 	var warppath = filepath.substr(0, filepath.length()-9)+"warps.txt"
@@ -191,7 +249,8 @@ func load_single_map(filepath):
 		var values = line.split(";",false)
 		
 		mapdic.warps[Vector2(int(values[0]),int(values[1]))] = Vector3(int(values[2]),int(values[3]),int(values[4]))
-		
+	warpfile.close()
+	
 	return mapdic
 	
 func convert_map():
@@ -288,12 +347,6 @@ func convert_map():
 	string_save.store_line(to_json(item_strings_de))
 	
 	string_save.close()
-	
-	#TODO: save the current git repo hash here
-	var commit_save = File.new()
-	commit_save.open("user://map_version", File.WRITE)
-	commit_save.store_line(to_json("06272e67d89c9c14252651d9277b28fbfeb5b2b5"))
-	commit_save.close()
 	
 func base_id_to_local_id(base_id):
 	if base_id == 0: return 0

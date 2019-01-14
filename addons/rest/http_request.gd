@@ -9,23 +9,31 @@ class request:
 	var params
 	var finished = false
 	var parent
+	var async
 	
+	var response = {}
+		
 	signal loading(s,l)
 	signal loaded(r)
 	
-	func _init(p, param):
+	func _init(p, param, is_async):
 		params = param
 		parent = p
-		t = Thread.new()
+		async = is_async
 		
-		t.start(self,"_load",params)
+		if (async):
+			t = Thread.new()
+			t.start(self,"_load",params)
+		else:
+			response.data = _load(params)
 		
 	func _load(params):
+		response.error = null
 		var err = 0
 		var http = HTTPClient.new()
 		err = http.connect_to_host(params.domain,params.port,params.ssl)
 		if err:
-			print('Connection Err:',err)
+			response.error = {"error": err}
 			return
 			
 		while(http.get_status() == HTTPClient.STATUS_CONNECTING or http.get_status() == HTTPClient.STATUS_RESOLVING):
@@ -42,7 +50,7 @@ class request:
 			err = http.request(HTTPClient.METHOD_POST,params.url,headers,params.data)
 			
 		if err:
-			print('Request Error:',err)
+			response.error = {"error": err}
 			return
 			
 		while (http.get_status() == HTTPClient.STATUS_REQUESTING):
@@ -50,7 +58,7 @@ class request:
 			OS.delay_msec(500)
 			
 		if http.get_status() == http.STATUS_CONNECTION_ERROR:
-			print('Request Error:', http.STATUS_CONNECTION_ERROR )
+			response.error = {"error": http.STATUS_CONNECTION_ERROR}
 			return
 			
 		var rb = PoolByteArray()
@@ -63,27 +71,47 @@ class request:
 					OS.delay_usec(100)
 				else:
 					rb = rb+chunk
-					call_deferred("_send_loading_signal",rb.size(),http.get_response_body_length())
+					if (async): call_deferred("_send_loading_signal",rb.size(),http.get_response_body_length())
 					
-		call_deferred("_send_loaded_signal")
+		if (async): call_deferred("_send_loaded_signal")
+		parent.erase_req(self)
 		http.close()
-		return rb.get_string_from_utf8()
+		
+		response.is_json = headers["Content-Type"].begins_with("application/json")
+		
+		if response.is_json:
+			var json = parse_json(rb.get_string_from_utf8())
+			if (json.has("error")):
+				response.error = json.error
+				return
+			return json
+		else:
+			return rb
 	
 	func _send_loading_signal(size,length):
 		emit_signal("loading",size,length)
 	 
 	func _send_loaded_signal():
-		var result = t.wait_to_finish()
-		emit_signal("loaded",result)
-		parent.erase_req(self)
+		response.data = t.wait_to_finish()
+		emit_signal("loaded",response)
 		
-func sget(domain,url,port,ssl, header=[]):
-	var req = request.new(self,{method="get",domain=domain,url=url,port=port,ssl=ssl,header=header})
+func sync_get(domain,url,port,ssl, header=[]):
+	var req = request.new(self,{method="get",domain=domain,url=url,port=port,ssl=ssl,header=header}, false)
+	reqlist.push_front(req)
+	return req.response
+	
+func async_get(domain,url,port,ssl, header=[]):
+	var req = request.new(self,{method="get",domain=domain,url=url,port=port,ssl=ssl,header=header}, true)
 	reqlist.push_front(req)
 	return req
-	
-func post(domain,url,port,ssl,data, header=[]):
-	var req = request.new(self,{method="post",domain=domain,url=url,port=port,ssl=ssl,data=data,header=header})
+
+func sync_post(domain,url,port,ssl,data, header=[]):
+	var req = request.new(self,{method="post",domain=domain,url=url,port=port,ssl=ssl,data=data,header=header}, false)
+	reqlist.push_front(req)
+	return req.response
+
+func async_post(domain,url,port,ssl,data, header=[]):
+	var req = request.new(self,{method="post",domain=domain,url=url,port=port,ssl=ssl,data=data,header=header}, true)
 	reqlist.push_front(req)
 	return req
 	
