@@ -33,7 +33,7 @@ class request:
 		var http = HTTPClient.new()
 		err = http.connect_to_host(params.domain,params.port,params.ssl)
 		if err:
-			response.error = {"error": err}
+			response.error = err
 			return
 			
 		while(http.get_status() == HTTPClient.STATUS_CONNECTING or http.get_status() == HTTPClient.STATUS_RESOLVING):
@@ -50,7 +50,7 @@ class request:
 			err = http.request(HTTPClient.METHOD_POST,params.url,headers,params.data)
 			
 		if err:
-			response.error = {"error": err}
+			response.error = err
 			return
 			
 		while (http.get_status() == HTTPClient.STATUS_REQUESTING):
@@ -58,7 +58,12 @@ class request:
 			OS.delay_msec(500)
 			
 		if http.get_status() == http.STATUS_CONNECTION_ERROR:
-			response.error = {"error": http.STATUS_CONNECTION_ERROR}
+			response.error = http.STATUS_CONNECTION_ERROR
+			return
+		
+		# 202 ACCEPTED is the last non-error answer we may receive
+		if http.get_response_code() > 202:
+			response.error = http.get_response_code()
 			return
 			
 		var rb = PoolByteArray()
@@ -81,6 +86,9 @@ class request:
 		
 		if response.is_json:
 			var json = parse_json(rb.get_string_from_utf8())
+			if typeof(json) != TYPE_DICTIONARY:
+				response.error = "Answer is JSON but not a dictionary"
+				return
 			if (json.has("error")):
 				response.error = json.error
 				return

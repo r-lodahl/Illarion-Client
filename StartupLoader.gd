@@ -34,7 +34,7 @@ func _ready():
 		printerr("Getting map version has failed [",response.error,"]. Please retry.")
 		return
 		
-	var version = response.sha1
+	var version = response.data.version
 	
 	var versionpath = "user://map.version"
 	var versionfile = File.new()

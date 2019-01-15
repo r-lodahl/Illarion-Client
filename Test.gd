@@ -3,11 +3,15 @@ extends Node2D
 var http = preload("res://addons/rest/http_request.gd")
 
 func _ready():
-	var request = http.new()
+	var string = "{\"version\":\"8a4f22a8124ad61575a22ed9a86a1dedb60313fd\"}"
 	
-	var response = request.sync_get("https://api.github.com", "/repos/Illarion-ev/Illarion-Map/commits/master", 443, true, [])
+	var json = parse_json(string)
 	
-	print(response)
+	printerr(string)
+	printerr(json)
+	printerr(typeof(json))
+	
+	
 	
 #	response.connect("loading", self, "_on_loading")
 #	response.connect("loaded", self, "_on_loaded")
