@@ -58,10 +58,6 @@ move_down={
 
 translations=PoolStringArray( "res://assets/localization/guiStrings.en.translation", "res://assets/localization/guiStrings.de.translation" )
 
-[network]
-
-ssl/certificates="res://certs/ca-certificates.crt"
-
 [rendering]
 
 quality/intended_usage/framebuffer_allocation=1

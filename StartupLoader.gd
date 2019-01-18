@@ -3,7 +3,7 @@ extends Control
 const FILE_OP = preload("file_operations.gd")
 const TABLE_LOADER = preload("table_loader.gd")
 const HTTP = preload("res://addons/rest/http_request.gd")
-const UNZIP = preload("res://addons/gdunzip/gdunzip.gd")
+const UNZIP = preload("res://UnzipHelper.cs")
 
 const BLOCKSIZE = 20
 const BASE_ID_MASK = 0x001F
@@ -28,7 +28,7 @@ var server_tile_id_to_local_id_dic = {}
 
 func _ready():
 	var http = HTTP.new()
-	var response = http.sync_get(SERVER_ADDRESS, "/map/version/", 443, true)
+	var response = http.sync_get(SERVER_ADDRESS, "/api/map/version", 443, true)
 	
 	if response.error != null or not response.is_json:
 		printerr("Getting map version has failed [",response.error,"]. Please retry.")
@@ -46,7 +46,7 @@ func _ready():
 		outdated = version != local_version
 
 	if (outdated):
-		response = http.sync_get(SERVER_ADDRESS, "/map/zipball/", 443, true)
+		response = http.sync_get(SERVER_ADDRESS, "/api/map/zipball", 443, true)
 		
 		if response.error != null:
 			printerr("Getting map version has failed [",response.error,"]. Please retry.")
@@ -54,28 +54,47 @@ func _ready():
 			
 		var zipfile = File.new()
 		zipfile.open("user://maps.zip", File.WRITE)
-		zipfile.store_buffer(zipfile)
+		zipfile.store_buffer(response.data)
 		zipfile.close()
 		
-		var unzip = UNZIP.new()
-		zipfile = unzip.load("user://maps.zip")
+		UNZIP.UnzipFileToFolder(OS.get_user_data_dir() + "/maps.zip", OS.get_user_data_dir())
 		
-		if zipfile:
-			for file in unzip.files:
-				var uncompressed = unzip.uncompress(file["file_name"])
-				
-				if uncompressed:
-					var mapfile = File.new()
-					var mappath = "user://"+file["file_name"]
-					mapfile.open(mappath, File.WRITE)
-					mapfile.store_string(uncompressed.get_string_from_utf8())
-					mapfile.close()
-				else:
-					printerr("Failed uncompressing the mapfile at user://maps.zip. Please retry.")
-					return
-		else:
-			printerr("Failed uncompressing the mapfile at user://maps.zip. Please retry.")
-			return
+		
+		#var unzip = UNZIP.new()
+		#zipfile = unzip.load("user://maps.zip")
+		
+		
+		
+		#if zipfile:
+		#	for file in unzip.files.keys():
+		#		if file.ends_with(".txt"):
+		#			printerr("TXTFILE ", file)
+		#			var uncompressed = unzip.uncompress(file)
+		#			if uncompressed:
+		#				var mapfile = File.new()
+		#				var mappath = "user://"+file
+		#				mapfile.open(mappath, File.WRITE)
+		#				mapfile.store_buffer(uncompressed)
+		#				mapfile.close()
+		#			else:
+		#				printerr("Failed uncompressing the mapfile at user://maps.zip. Please retry.")
+		#				return
+		#		else:
+		#			var dir = Directory.new()
+		#			var idx = file.rfindn("/", file.length()-2)
+		#			
+		#			if idx == -1:
+		#				printerr("FILE ", file, " OPEN user:// CREATE ",file.substr(0, file.length()-1))
+		#				dir.open("user://")
+		#				dir.make_dir(file.substr(0, file.length()-1))
+		#			else:
+		#				printerr("FILE ", file, " OPEN user://", file.substr(0, idx), " CREATE ",file.substr(idx+1, file.length()-3))
+		#				dir.open("user://" + file.substr(0, idx))
+		#				dir.make_dir(file.substr(idx+1, file.length()-3))
+		#				
+		#else:
+		#	printerr("Failed uncompressing the mapfile at user://maps.zip. Please retry.")
+		#	return
 		
 		versionfile.open("user://map.version", File.WRITE)
 		versionfile.store_string(version)
