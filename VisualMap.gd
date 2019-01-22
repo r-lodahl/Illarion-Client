@@ -196,13 +196,24 @@ func _reload_items(ix,iy):
 			continue
 			
 		var sprite = Sprite.new()
+		sprite.centered = false
 		sprite.texture = sprite_base.res[0]
 		
-		var position = _overlaymap.map_to_world(Vector2(iy,-ix))
-		position.x = position.x + sprite_base.offset[0]
-		position.y = position.y + sprite_base.offset[1]
+		var position = _overlaymap.map_to_world(Vector2(iy,-ix)) # RETURNS TOP CORNER
+		position.x = position.x - sprite_base.res[0].region.size.x / 2 - sprite_base.offset[0]
+		
+		#position.x = position.x + sprite_base.res[0].region.size.x / 2# + sprite_base.offset[0]
+		position.y = position.y + 19 - sprite_base.res[0].region.size.y - sprite_base.offset[1]
+		
+		
+		#position.x = position.x + 38
+		#position.y = position.y + 19
+		
+		
 		
 		sprite.global_position = position
+		#sprite.offset = Vector2(sprite_base[]sprite_base.offset[0], sprite_base.offset[1])
+		
 		_overlaymap.add_child(sprite)
 	
 	# TODO: Find a way to mark a field as already drawn with the node OR make sure that we clear all sprites on a tile
@@ -221,10 +232,6 @@ func _items_at_xy(x,y):
 			var converted_y = int(y - _y_per_layer * layer - chunk.start[1])
 			
 			if converted_x < 0 || converted_y < 0 || converted_x >= BLOCKSIZE || converted_y >= BLOCKSIZE: continue
-			
-			if x == 1 && y == 0 && layer == 0:
-				print("BREAK")
-			
 			
 			var position = Vector3(converted_x, converted_y, layer)
 			if chunk.items.has(position): 

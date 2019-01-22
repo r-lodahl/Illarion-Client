@@ -58,44 +58,7 @@ func _ready():
 		zipfile.close()
 		
 		UNZIP.UnzipFileToFolder(OS.get_user_data_dir() + "/maps.zip", OS.get_user_data_dir())
-		
-		
-		#var unzip = UNZIP.new()
-		#zipfile = unzip.load("user://maps.zip")
-		
-		
-		
-		#if zipfile:
-		#	for file in unzip.files.keys():
-		#		if file.ends_with(".txt"):
-		#			printerr("TXTFILE ", file)
-		#			var uncompressed = unzip.uncompress(file)
-		#			if uncompressed:
-		#				var mapfile = File.new()
-		#				var mappath = "user://"+file
-		#				mapfile.open(mappath, File.WRITE)
-		#				mapfile.store_buffer(uncompressed)
-		#				mapfile.close()
-		#			else:
-		#				printerr("Failed uncompressing the mapfile at user://maps.zip. Please retry.")
-		#				return
-		#		else:
-		#			var dir = Directory.new()
-		#			var idx = file.rfindn("/", file.length()-2)
-		#			
-		#			if idx == -1:
-		#				printerr("FILE ", file, " OPEN user:// CREATE ",file.substr(0, file.length()-1))
-		#				dir.open("user://")
-		#				dir.make_dir(file.substr(0, file.length()-1))
-		#			else:
-		#				printerr("FILE ", file, " OPEN user://", file.substr(0, idx), " CREATE ",file.substr(idx+1, file.length()-3))
-		#				dir.open("user://" + file.substr(0, idx))
-		#				dir.make_dir(file.substr(idx+1, file.length()-3))
-		#				
-		#else:
-		#	printerr("Failed uncompressing the mapfile at user://maps.zip. Please retry.")
-		#	return
-		
+			
 		versionfile.open("user://map.version", File.WRITE)
 		versionfile.store_string(version)
 		versionfile.close()
@@ -216,9 +179,6 @@ func load_single_map(filepath):
 		var itemobj = {}
 		itemobj["id"] = int(values[2])
 		
-		if int(values[0]) == 1 and int(values[1]) == 0 and int(values[2]) == 3092:
-			print("WALL at " + itempath)
-		
 		# Check if the item has any description or name
 		# If yes, save their strings into item_strings and save the string_index in the item_object
 		var descriptions = [null,null]
@@ -235,14 +195,16 @@ func load_single_map(filepath):
 		
 		# We do this do prevent cases where one language is null and the other one isnt
 		if (names[0] == null && names[1] != null) || (names[0] != null && names[1] == null):
-			print("Warning: Missing localized name " + String(names) + " at " + itempath) 
+			pass
+			#print("Warning: Missing localized name " + String(names) + " at " + itempath) 
 		elif names[0] != null && names[1] != null:
 			itemobj["n"] = item_strings_en.size()
 			item_strings_en.push_back(names[0])
 			item_strings_de.push_back(names[1])
 		
 		if (descriptions[0] == null && descriptions[1] != null) || (descriptions[0] != null && descriptions[1] == null):
-			print("Warning: Missing localized description " + String(descriptions) + " at " + itempath) 
+			pass
+			#print("Warning: Missing localized description " + String(descriptions) + " at " + itempath) 
 		elif descriptions[0] != null && descriptions[1] != null:
 			itemobj["d"] = item_strings_en.size()
 			item_strings_en.push_back(descriptions[0])
@@ -317,6 +279,8 @@ func convert_map():
 					for layer in used_layers:
 						var layervalue = 0
 						for map in used_maps:
+							if map.layer != layer: continue
+							
 							var x = ix - map.startx
 							var y = iy - map.starty
 							
