@@ -158,60 +158,58 @@ func _mapcenter_was_moved(tx, ty):
 func _load_tilemapstripe_add_x(translated_x):
 	for ix in range(_x + VIS_RANGE - translated_x + 1, _x + VIS_RANGE+1):
 		for iy in range(_y - VIS_RANGE, _y + VIS_RANGE + 1): 
-			_reload_tilemap_tile(ix,iy)	
+			_reload_tilemap_tile(ix,iy)
 			_reload_items(ix,iy)
 			
 func _load_tilemapstripe_sub_x(translated_x):
 	for ix in range(_x - VIS_RANGE, _x - VIS_RANGE - translated_x):
 		for iy in range(_y - VIS_RANGE, _y + VIS_RANGE + 1): 
-			_reload_tilemap_tile(ix,iy)	
+			_reload_tilemap_tile(ix,iy)
 			_reload_items(ix,iy)
 			
 func _load_tilemapstripe_add_y(translated_y):
 	for ix in range(_x - VIS_RANGE, _x + VIS_RANGE+1):
 		for iy in range(_y + VIS_RANGE - translated_y + 1, _y + VIS_RANGE+1): 
-			_reload_tilemap_tile(ix,iy)	
+			_reload_tilemap_tile(ix,iy)
 			_reload_items(ix,iy)
 			
 func _load_tilemapstripe_sub_y(translated_y):
 	for ix in range(_x - VIS_RANGE, _x + VIS_RANGE + 1):
 		for iy in range(_y - VIS_RANGE, _y - VIS_RANGE - translated_y): 
-			_reload_tilemap_tile(ix,iy)	
+			_reload_tilemap_tile(ix,iy)
 			_reload_items(ix,iy)
 	
 # TODO: use current layer + 10: if NIL: go down until not NIL
 func _reload_visible_tilemap():
 	for ix in range(_x-VIS_RANGE, _x+VIS_RANGE+1):
 		for iy in range(_y-VIS_RANGE, _y+VIS_RANGE+1):
-			_reload_tilemap_tile(ix,iy)	
+			_reload_tilemap_tile(ix,iy)
 			_reload_items(ix,iy)
 
 func _reload_items(ix,iy):
 	var items = _items_at_xy(ix,iy)
-	
+	print("TADT")
 	for item in items:
 		var sprite_base = _itemdic[item.id]
 		
 		if sprite_base == null:
+			print("no")
 			continue
+		print("yes")
 			
 		var sprite = Sprite.new()
 		sprite.centered = false
 		sprite.texture = sprite_base.res[0]
 		
-		var position = _overlaymap.map_to_world(Vector2(iy,-ix)) # RETURNS TOP CORNER
-		position.x = round(position.x - (sprite_base.res[0].region.size.x + sprite_base.res[0].margin.size.x) / 2.0 - sprite_base.offset[0])
-		position.y = round(position.y + 19 - sprite_base.res[0].region.size.y - sprite_base.res[0].margin.size.y - sprite_base.offset[1])
+		var position = _overlaymap.map_to_world(Vector2(iy,-ix)) # RETURNS TOP CORNER (y=0, x=1/2)
+
+		var tileW = 76
+		var tileH = 37
 		
-		
-		#position.x = position.x + 38
-		#position.y = position.y + 19
-		
-		
-		
+		position.x = round(position.x + sprite_base.offset[0] - (sprite_base.res[0].region.size.x + sprite_base.res[0].margin.size.x) / 2.0)
+		position.y = round(position.y + tileH/2.0 - sprite_base.offset[1] - sprite_base.res[0].region.size.y - sprite_base.res[0].margin.size.y)
 		sprite.global_position = position
-		#sprite.offset = Vector2(sprite_base[]sprite_base.offset[0], sprite_base.offset[1])
-		
+
 		_overlaymap.add_child(sprite)
 	
 	# TODO: Find a way to mark a field as already drawn with the node OR make sure that we clear all sprites on a tile
@@ -222,9 +220,6 @@ func _items_at_xy(x,y):
 	for layer in _used_layers:
 		for chunk in _map:
 			if chunk == null: continue
-			
-			var layer_idx = chunk.layers.find(layer)
-			if layer_idx == -1: continue
 			
 			var converted_x = int(x - _x_per_layer * layer - chunk.start[0])
 			var converted_y = int(y - _y_per_layer * layer - chunk.start[1])

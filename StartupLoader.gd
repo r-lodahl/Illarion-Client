@@ -290,11 +290,11 @@ func convert_map():
 							# Check if there are also items at this position, if true copy them to the chunk
 							var map_position = Vector2(x,y)
 							if map.items.has(map_position):
-								used_items[Vector3(x,y,layer)] = map.items[map_position]
+								used_items[Vector3(x-base_x,y-base_y,layer)] = map.items[map_position]
 								
 							# Check if there are also warps at this position, if true copy them to the chunk
 							if map.warps.has(map_position):
-								used_warps[Vector3(x,y,layer)] = map.warps[map_position]
+								used_warps[Vector3(x-base_x,y-base_y,layer)] = map.warps[map_position]
 						
 						var server_ids = extract_server_ids(layervalue)  # Returns [base_id, overlay_id, shape_id], 0 if input 0
 						
