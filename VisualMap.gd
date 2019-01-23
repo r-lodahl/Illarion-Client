@@ -200,10 +200,8 @@ func _reload_items(ix,iy):
 		sprite.texture = sprite_base.res[0]
 		
 		var position = _overlaymap.map_to_world(Vector2(iy,-ix)) # RETURNS TOP CORNER
-		position.x = position.x - sprite_base.res[0].region.size.x / 2 - sprite_base.offset[0]
-		
-		#position.x = position.x + sprite_base.res[0].region.size.x / 2# + sprite_base.offset[0]
-		position.y = position.y + 19 - sprite_base.res[0].region.size.y - sprite_base.offset[1]
+		position.x = round(position.x - (sprite_base.res[0].region.size.x + sprite_base.res[0].margin.size.x) / 2.0 - sprite_base.offset[0])
+		position.y = round(position.y + 19 - sprite_base.res[0].region.size.y - sprite_base.res[0].margin.size.y - sprite_base.offset[1])
 		
 		
 		#position.x = position.x + 38

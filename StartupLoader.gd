@@ -75,7 +75,7 @@ func _ready():
 # Loads all raw map files and sorts them into a map-object:
 # raw_map[layer] = [mapdic, mapdic, mapdic, ...]
 func load_raw_map():
-	var files = FILE_OP.find_files("res://assets/map", ".tiles.txt", "Testmaps")
+	var files = FILE_OP.find_files("user://Illarion-Map", ".tiles.txt", "Testmaps")
 	
 	var maps = {}
 	for file in files:
@@ -196,7 +196,7 @@ func load_single_map(filepath):
 		# We do this do prevent cases where one language is null and the other one isnt
 		if (names[0] == null && names[1] != null) || (names[0] != null && names[1] == null):
 			pass
-			#print("Warning: Missing localized name " + String(names) + " at " + itempath) 
+			print("Warning: Missing localized name " + String(names) + " at " + itempath) 
 		elif names[0] != null && names[1] != null:
 			itemobj["n"] = item_strings_en.size()
 			item_strings_en.push_back(names[0])
@@ -204,7 +204,7 @@ func load_single_map(filepath):
 		
 		if (descriptions[0] == null && descriptions[1] != null) || (descriptions[0] != null && descriptions[1] == null):
 			pass
-			#print("Warning: Missing localized description " + String(descriptions) + " at " + itempath) 
+			print("Warning: Missing localized description " + String(descriptions) + " at " + itempath) 
 		elif descriptions[0] != null && descriptions[1] != null:
 			itemobj["d"] = item_strings_en.size()
 			item_strings_en.push_back(descriptions[0])
