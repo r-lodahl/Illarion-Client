@@ -184,7 +184,7 @@ func _reload_visible_tilemap():
 	for ix in range(_x-VIS_RANGE, _x+VIS_RANGE+1):
 		for iy in range(_y-VIS_RANGE, _y+VIS_RANGE+1):
 			_reload_tilemap_tile(ix,iy)
-			_reload_items(ix,iy)
+			#_reload_items(ix,iy)
 
 func _reload_items(ix,iy):
 	var items = _items_at_xy(ix,iy)
