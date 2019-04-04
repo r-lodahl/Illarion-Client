@@ -37,36 +37,34 @@ func generate_texture(thread_data):
 				var ids = _tile_ids_at_xy(x,y,map,used_layers)
 				
 				if ids[0] != 0:
-					tile_set.tile_get_region(ids[0])
+					var rect = tile_set.tile_get_region(ids[0])
 					
 					tile_texture.lock()
 					
 					for w in tile_width:
 						for h in tile_height:
-							texture.set_pixel(....)
 							
-							# TODO
-							# Berechne converted_x, converted_y die von 0 bis chunk_size-1 gehen
-							# nehme pixel mit (w,h) + rect_offset aus tile_textur
-							# male pixel an position
-							# x = converted_x * (1/2*tile_width) + converted_y * (1/2 * tile_width) + w
-							# y = 1/2*texture_height + (1/2*tile_height)*converted_x - (1/2*tile_height)*converted_y + h
+							var converted_x = x - chunk.start[0]
+							var converted_y = y - chunk.start[1]
 							
+							texture.set_pixel(\
+								converted_x * (tile_width/2.0) + converted_y * (tile_width/2.0) + w,\
+								(texture.get_height()/2.0) + (tile_height/2.0) * converted_x - (tile_height/2.0) * converted_y + h,\
+								tile_texture.get_data().get_pixel(rect.position.x + w, rect.position.y + h)\
+							)
 							
-					
 					tile_texture.unlock()
-					
-				
+	return texture
 	
 func _calculate_used_layers(map, layer):
-	used_layers = []
+	var used_layers = []
 	for chunk in map:
 		if chunk == null: continue
 		for layer in chunk.layers:
 			if (not used_layers.has(layer)) && layer <= layer+vis_range && layer >= layer-vis_range:
 				used_layers.push_back(layer)
 	used_layers.sort()
-	return used.layers
+	return used_layers
 	
 # For given x,y ON the tilemap returns the tile-id at the shifted layer-xy (aka the xy
 # that is actually visibile on the tilemap xy) for a given layerbase
