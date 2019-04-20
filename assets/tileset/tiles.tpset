@@ -533,21 +533,6 @@
 					}
 				},
 				{
-					"filename": "cracked_ovl",
-					"region": {
-						"x": 79,
-						"y": 80,
-						"w": 76,
-						"h": 37
-					},
-					"margin": {
-						"x": 0,
-						"y": 0,
-						"w": 0,
-						"h": 0
-					}
-				},
-				{
 					"filename": "dach",
 					"region": {
 						"x": 157,

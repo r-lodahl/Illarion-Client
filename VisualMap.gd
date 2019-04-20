@@ -16,7 +16,6 @@ var _layer
 # tilemap
 var _tilemap
 var _overlaymap
-var _tileset
 
 # datamap
 var _used_layers
@@ -60,6 +59,7 @@ func reload_map_at(x,y,layer):
 	_reload_all_chunks()
 	_calculate_used_layers()
 	_reload_visible_tilemap()
+	#_tilemap.reload_cells()
 
 func _reload_all_chunks():
 	_chunk_x = floor(_x / BLOCKSIZE) * BLOCKSIZE
@@ -184,7 +184,7 @@ func _reload_visible_tilemap():
 	for ix in range(_x-VIS_RANGE, _x+VIS_RANGE+1):
 		for iy in range(_y-VIS_RANGE, _y+VIS_RANGE+1):
 			_reload_tilemap_tile(ix,iy)
-			_reload_items(ix,iy)
+			#_reload_items(ix,iy)
 
 func _reload_items(ix,iy):
 	var items = _items_at_xy(ix,iy)
@@ -201,6 +201,7 @@ func _reload_items(ix,iy):
 		sprite.centered = false
 		sprite.texture = sprite_base.res[0]
 		
+		# TODO
 		var position = _overlaymap.map_to_world(Vector2(iy,-ix)) # RETURNS TOP CORNER (y=0, x=1/2)
 
 		var tileW = 76

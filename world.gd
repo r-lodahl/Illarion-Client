@@ -29,4 +29,3 @@ func _ready():
 	get_child(2).connect("moved_one_tile", map, "_mapcenter_was_moved")
 	
 	print("Finished")
-				

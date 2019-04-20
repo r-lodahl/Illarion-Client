@@ -17,7 +17,6 @@ _global_script_class_icons={
 
 config/name="Illarion-Client"
 run/main_scene="res://LoadingView.tscn"
-run/low_processor_mode=true
 config/icon="res://icon.png"
 
 [autoload]
