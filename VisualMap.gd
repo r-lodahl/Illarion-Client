@@ -184,40 +184,43 @@ func _reload_visible_tilemap():
 	for ix in range(_x-VIS_RANGE, _x+VIS_RANGE+1):
 		for iy in range(_y-VIS_RANGE, _y+VIS_RANGE+1):
 			_reload_tilemap_tile(ix,iy)
-			#_reload_items(ix,iy)
+			_reload_items(ix,iy)
 
 func _reload_items(ix,iy):
-	var items = _items_at_xy(ix,iy)
+	var items_per_layer = _items_at_xy(ix,iy)
 	print("TADT")
-	for item in items:
-		var sprite_base = _itemdic[item.id]
-		
-		if sprite_base == null:
-			print("no")
-			continue
-		print("yes")
+	for item_layer in items_per_layer:
+		for item in items_per_layer[item_layer]:
+			var sprite_base = _itemdic[item.id]
 			
-		var sprite = Sprite.new()
-		sprite.centered = false
-		sprite.texture = sprite_base.res[0]
+			if sprite_base == null:
+				print("no")
+				continue
+			print("yes")
+				
+			var sprite = Sprite.new()
+			sprite.centered = false
+			sprite.texture = sprite_base.res[0]
+			
+			# TODO
+			var position = _overlaymap.map_to_world(Vector2(iy,-ix)) # RETURNS TOP CORNER (y=0, x=1/2)
 		
-		# TODO
-		var position = _overlaymap.map_to_world(Vector2(iy,-ix)) # RETURNS TOP CORNER (y=0, x=1/2)
-
-		var tileW = 76
-		var tileH = 37
+			var tileW = 76
+			var tileH = 37
+			
+			position.x = round(position.x + sprite_base.offset[0] - (sprite_base.res[0].region.size.x + sprite_base.res[0].margin.size.x) / 2.0)
+			position.y = round(position.y + tileH/2.0 - sprite_base.offset[1] - sprite_base.res[0].region.size.y - sprite_base.res[0].margin.size.y)
+			sprite.global_position = position
+			sprite.z_index = 1000*item_layer - iy
 		
-		position.x = round(position.x + sprite_base.offset[0] - (sprite_base.res[0].region.size.x + sprite_base.res[0].margin.size.x) / 2.0)
-		position.y = round(position.y + tileH/2.0 - sprite_base.offset[1] - sprite_base.res[0].region.size.y - sprite_base.res[0].margin.size.y)
-		sprite.global_position = position
+			_overlaymap.add_child(sprite)
 
-		_overlaymap.add_child(sprite)
-	
 	# TODO: Find a way to mark a field as already drawn with the node OR make sure that we clear all sprites on a tile
 	# before redrawing them. 
 
 #TODO: Merge with tile ids at xy
 func _items_at_xy(x,y):
+	var items = {}
 	for layer in _used_layers:
 		for chunk in _map:
 			if chunk == null: continue
@@ -229,15 +232,16 @@ func _items_at_xy(x,y):
 			
 			var position = Vector3(converted_x, converted_y, layer)
 			if chunk.items.has(position): 
-				return chunk.items[position]
+				items[layer] = chunk.items[position]
 	
-	return []
+	return items
 			
 func _reload_tilemap_tile(ix,iy):
 	var ids = _tile_ids_at_xy(ix,iy)
 	
 	if ids[0] != 0:
 		_tilemap.set_cell(iy,-ix,ids[0])
+		_tilemap.get_cell(i).
 		
 	if ids[1] != 0:
 		_overlaymap.set_cell(iy,-ix,ids[1])
@@ -262,5 +266,5 @@ func _tile_ids_at_xy(x,y):
 			
 			if id == 0: continue
 			
-			return [id%OVERLAY_MULT_FACTOR, floor(id/OVERLAY_MULT_FACTOR)]
+			return [id%OVERLAY_MULT_FACTOR, floor(id/OVERLAY_MULT_FACTOR), layer]
 	return [0,0]
