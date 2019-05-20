@@ -51,6 +51,8 @@
   <ItemGroup>
     <Compile Include="Chunk.cs" />
     <Compile Include="ChunkLoader.cs" />
+    <Compile Include="ChunkManager.cs" />
+    <Compile Include="ClientUpdater.cs" />
     <Compile Include="IsometricLayeredTilemap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnzipHelper.cs" />
