@@ -2,6 +2,7 @@ using Godot;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 using File = Godot.File;
 
 public class TableConverter {
@@ -18,7 +19,8 @@ public class TableConverter {
         CreateTileMapping(
             Constants.UserData.TileTablePath,
             Constants.TableData.TileNameColumn,
-            Constants.TableData.TileIdColumn
+            Constants.TableData.TileIdColumn,
+            Constants.UserData.TileFileName
         );
     }
 
@@ -27,11 +29,12 @@ public class TableConverter {
         CreateTileMapping(
             Constants.UserData.OverlayTablePath,
             Constants.TableData.OverlayNameColumn,
-            Constants.TableData.OverlayIdColumn
+            Constants.TableData.OverlayIdColumn,
+            Constants.UserData.OverlayFileName
         );
     }
 
-    private Dictionary<int,int[]> CreateTileMapping(string tablePath, int nameColumn, int idColumn) {
+    private void CreateTileMapping(string tablePath, int nameColumn, int idColumn, string fileName) {
         File serverTileFile = new File();
 
         if (!serverTileFile.FileExists(tablePath))
@@ -47,10 +50,10 @@ public class TableConverter {
             string line = serverTileFile.GetLine();
 
             if (line.Equals("")) break;
-            if (line.BeginsWith("#")) continue;
+            if (line.StartsWith("#")) continue;
 
             string[] rowValues = line.Split(",", false);
-            string tileName = rowValues[nameColumn].Substr(1, rowValues[nameColumn].Length-2);
+            string tileName = rowValues[nameColumn].Substring(1, rowValues[nameColumn].Length-2);
 
             int[] localIds = new int[1];
             int localId = tileSet.FindTileByName(tileName);
@@ -77,8 +80,13 @@ public class TableConverter {
             resultDic.Add(serverId, localIds);
         }
 
-        return resultDic;
+        BinaryFormatter binaryFormatter = new BinaryFormatter();
+        FileInfo tileFileInfo = new FileInfo(String.Concat(OS.GetUserDataDir(), fileName));
+
+        using (var file = tileFileInfo.Create())
+        {
+            binaryFormatter.Serialize(file, resultDic);
+            file.Flush();
+        }
     }
-
-
 }

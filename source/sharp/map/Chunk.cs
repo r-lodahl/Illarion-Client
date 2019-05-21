@@ -1,6 +1,6 @@
 using System;
 
-public struct Chunk
+public class Chunk
 {
 	public int baseX;
 	public int baseY;

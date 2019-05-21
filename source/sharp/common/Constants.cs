@@ -1,5 +1,3 @@
-using System;
-
 public static class Constants {
     public static class Tile {
          public const int OverlayFactor = 1000;
@@ -16,6 +14,8 @@ public static class Constants {
         public const string OverlayTablePath = "res://assets/tileset/overlays.tbl";
         public const string MapPath = "user://Illarion-Map";
         public const string MainScene = "res://world.tscn";
+        public const string TileFileName = "tilelist.bin";
+        public const string OverlayFileName = "overlaylist.bin";
     }
 
     public static class Server {
