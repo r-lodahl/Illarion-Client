@@ -1,3 +1,6 @@
+using Godot;
+using System.Collections.Generic;
+
 public class RawMap
 {
     public int Layer {get;set;}
@@ -7,4 +10,7 @@ public class RawMap
     public int Height {get;set;}
 
     public int[,] MapArray {get;set;}
+
+    public Dictionary<Vector2, MapObject[]> Items {get;set;}
+    public Dictionary<Vector2, Vector3> Warps {get;set;}
 }

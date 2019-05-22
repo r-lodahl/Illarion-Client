@@ -12,10 +12,11 @@ public static class Constants {
         public const string TilesetPath = "res://assets/tileset/tiles.res";
         public const string TileTablePath = "res://assets/tileset/tiles.tbl";
         public const string OverlayTablePath = "res://assets/tileset/overlays.tbl";
-        public const string MapPath = "user://Illarion-Map";
+        public const string MapPath = "/Illarion-Map";
         public const string MainScene = "res://world.tscn";
         public const string TileFileName = "tilelist.bin";
         public const string OverlayFileName = "overlaylist.bin";
+        public const string ConfigPath = "user://illarion.cfg";
     }
 
     public static class Server {

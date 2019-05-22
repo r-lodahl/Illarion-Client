@@ -14,9 +14,9 @@ public class TableConverter {
         tileSet = GD.Load<TileSet>(tilesetPath);
     }
 
-    public void CreateTileMapping()
+    public Dictionary<int,int[]> CreateTileMapping()
     {
-        CreateTileMapping(
+        return CreateTileMapping(
             Constants.UserData.TileTablePath,
             Constants.TableData.TileNameColumn,
             Constants.TableData.TileIdColumn,
@@ -24,9 +24,15 @@ public class TableConverter {
         );
     }
 
-    public void CreateOverlayMapping()
+    /* Using the provided Tileset this function will create 
+     * a mapping Dictionary from the Server Table Overlay Ids
+     * to the Tileset Overlay Ids. 
+     *
+     * This mapping will be return and saved to disk
+     */
+    public Dictionary<int,int[]> CreateOverlayMapping()
     {
-        CreateTileMapping(
+        return CreateTileMapping(
             Constants.UserData.OverlayTablePath,
             Constants.TableData.OverlayNameColumn,
             Constants.TableData.OverlayIdColumn,
@@ -34,7 +40,13 @@ public class TableConverter {
         );
     }
 
-    private void CreateTileMapping(string tablePath, int nameColumn, int idColumn, string fileName) {
+    /* Using the provided Tileset this function will create 
+     * a mapping Dictionary from the Server Table Tile Ids
+     * to the Tileset Tile Ids. 
+     *
+     * This mapping will be return and saved to disk
+     */
+    private Dictionary<int,int[]> CreateTileMapping(string tablePath, int nameColumn, int idColumn, string fileName) {
         File serverTileFile = new File();
 
         if (!serverTileFile.FileExists(tablePath))
@@ -88,5 +100,7 @@ public class TableConverter {
             binaryFormatter.Serialize(file, resultDic);
             file.Flush();
         }
+
+        return resultDic;
     }
 }

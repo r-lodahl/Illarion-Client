@@ -61,10 +61,12 @@ public class ClientUpdater : Node
         versionFile.Close();
 
         TableConverter tableConverter = new TableConverter(Constants.UserData.TilesetPath);
-        tableConverter.CreateTileMapping();
-        tableConverter.CreateOverlayMapping();
+        var tileDictionary = tableConverter.CreateTileMapping();
+        var overlayDictionary = tableConverter.CreateOverlayMapping();
 
-        MapConverter mapConverter = new MapConverter(Constants.UserData.MapPath);
-        mapConverter.CreateMapChunks(); 
+        MapConverter mapConverter = new MapConverter(tileDictionary, overlayDictionary);
+        mapConverter.CreateMapChunks(String.Concat(OS.GetUserDataDir(),Constants.UserData.MapPath)); 
+
+        GetTree().ChangeScene(Constants.UserData.MainScene);
     }
 }
