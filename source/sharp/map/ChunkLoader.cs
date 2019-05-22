@@ -1,17 +1,97 @@
-using Godot;
+using System.Runtime.Serialization.Formatters.Binary;
 using System;
+using System.Collections.Generic;
+using Godot;
 
 public class ChunkLoader
 {
-	private int x,y,z;
-	
-	public ChunkLoader(x,y,z) 
+	private int x, y;
+	private int chunkX, chunkY;
+	private Chunk[] activeChunks;
+
+	public ChunkLoader(int x, int y, IMovementSupplier movementSupplier) 
 	{
+		movementSupplier.movementDone += OnMovementDone;
+
 		this.x = x;
 		this.y = y;
-		this.z = z;	
+
+		chunkX = x / Constants.Map.Chunksize * Constants.Map.Chunksize;
+		chunkY = y / Constants.Map.Chunksize * Constants.Map.Chunksize;
+
+		ReloadChunks(new int[]{0,1,2,3,4,5,6,7,8});
+	}
+
+	private void OnMovementDone(object e, Vector2i movement)
+	{
+		x += movement.x;
+		y += movement.y;
+
+		HashSet<int> reloadChunks = new HashSet<int>();
+
+		if (movement.x == -1 && x%Constants.Map.Chunksize == 0) 
+		{
+			chunkX -= Constants.Map.Chunksize;
+
+			for (int i = 1; i < 9; i+=3)
+			{
+				activeChunks[i+1] = activeChunks[i];
+				activeChunks[i] = activeChunks[i-1];
+			}
+
+			reloadChunks.Add(0);
+			reloadChunks.Add(3);
+			reloadChunks.Add(6);
+		}
+		else if (movement.x == 1 && x%Constants.Map.Chunksize == 0) 
+		{
+			chunkX += Constants.Map.Chunksize;
+			
+			for (int i = 1; i < 9; i+=3)
+			{
+				activeChunks[i-1] = activeChunks[i];
+				activeChunks[i] = activeChunks[i+1];
+			}
+
+			reloadChunks.Add(2);
+			reloadChunks.Add(5);
+			reloadChunks.Add(8);
+		}
+
+		if (movement.y == -1 && y%Constants.Map.Chunksize == 0)
+		{
+			chunkY -= Constants.Map.Chunksize;
+			
+			for (int i = 3; i < 6; i++)
+			{
+				activeChunks[i+3] = activeChunks[i];
+				activeChunks[i] = activeChunks[i-3];
+			}
+
+			reloadChunks.Add(0);
+			reloadChunks.Add(1);
+			reloadChunks.Add(2);
+		}
+		else if (movement.y == 1 && y%Constants.Map.Chunksize == 0)
+		{chunkY -= Constants.Map.Chunksize;
+			
+			for (int i = 3; i < 6; i++)
+			{
+				activeChunks[i-3] = activeChunks[i];
+				activeChunks[i] = activeChunks[i+3];
+			}
+
+			reloadChunks.Add(6);
+			reloadChunks.Add(7);
+			reloadChunks.Add(8);
+		}
+
+		ReloadChunks(reloadChunks);
 	}
 	
+
+
+
 	private void LoadChunk(string chunkPath) {
 		File mapFile = new File();
 		
