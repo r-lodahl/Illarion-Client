@@ -1,4 +1,5 @@
 using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 using System;
 using System.Collections.Generic;
 using Godot;
@@ -11,6 +12,7 @@ namespace Illarion.Client.Map
 		private int x, y;
 		private int chunkX, chunkY;
 		private Chunk[] activeChunks;
+		private BinaryFormatter binaryFormatter;
 
 		public ChunkLoader(int x, int y, IMovementSupplier movementSupplier) 
 		{
@@ -19,8 +21,10 @@ namespace Illarion.Client.Map
 			this.x = x;
 			this.y = y;
 
-			chunkX = x / Constants.Map.Chunksize * Constants.Map.Chunksize;
-			chunkY = y / Constants.Map.Chunksize * Constants.Map.Chunksize;
+			chunkX = x / Constants.Map.Chunksize;
+			chunkY = y / Constants.Map.Chunksize;
+
+			binaryFormatter = new BinaryFormatter();
 
 			ReloadChunks(new int[]{0,1,2,3,4,5,6,7,8});
 		}
@@ -34,7 +38,7 @@ namespace Illarion.Client.Map
 
 			if (movement.x == -1 && x%Constants.Map.Chunksize == 0) 
 			{
-				chunkX -= Constants.Map.Chunksize;
+				chunkX--;
 
 				for (int i = 1; i < 9; i+=3)
 				{
@@ -48,7 +52,7 @@ namespace Illarion.Client.Map
 			}
 			else if (movement.x == 1 && x%Constants.Map.Chunksize == 0) 
 			{
-				chunkX += Constants.Map.Chunksize;
+				chunkX++;
 				
 				for (int i = 1; i < 9; i+=3)
 				{
@@ -63,7 +67,7 @@ namespace Illarion.Client.Map
 
 			if (movement.y == -1 && y%Constants.Map.Chunksize == 0)
 			{
-				chunkY -= Constants.Map.Chunksize;
+				chunkY--;
 				
 				for (int i = 3; i < 6; i++)
 				{
@@ -76,7 +80,8 @@ namespace Illarion.Client.Map
 				reloadChunks.Add(2);
 			}
 			else if (movement.y == 1 && y%Constants.Map.Chunksize == 0)
-			{chunkY -= Constants.Map.Chunksize;
+			{
+				chunkY++;
 				
 				for (int i = 3; i < 6; i++)
 				{
@@ -94,51 +99,37 @@ namespace Illarion.Client.Map
 
 		public void ReloadChunks(IEnumerable<int> chunkList) 
 		{
-
-		}
-		
-
-
-
-		private void LoadChunk(string chunkPath) {
-			File mapFile = new File();
-			
-			if (!mapFile.FileExists(chunkPath)) {
-				print("Failed opening " + chunkPath);
-				return null;
+			foreach (int chunkId in chunkList)
+			{
+				activeChunks[chunkId] = LoadChunk(chunkId);
 			}
-			
-			Dictionary<string, Variant> chunk = new Dictionary<string, Variant>();
-			
-			mapFile.Open(chunkPath);
-			chunk["start"] = mapFile.Get
-			
-			
-			
-			var mapfile = File.new()
-		if not mapfile.file_exists(filepath):
-			print("Failed opening " + filepath)
-			return null
-		
-		var chunk = {}
-		mapfile.open(filepath, File.READ)
-		
-		chunk["start"] = mapfile.get_var()
-		chunk["layers"] = mapfile.get_var()
-		chunk["tiles"] = mapfile.get_var()
-		chunk["items"] = mapfile.get_var()
-		chunk["warps"] = mapfile.get_var()
-		
-		mapfile.close()
-		return chunk
 		}
 		
-		
-		
-		
-		
-		_map[i] = _load_map_file("user://chunk_"+String(_chunk_x+(((i%3)-1)*BLOCKSIZE))+\
-			"_"+String(_chunk_y+((floor(i/3)-1)*BLOCKSIZE))+".map")
-		
+		public Chunk LoadChunk(int chunkId) 
+		{
+			string chunkPath = String.Concat(
+					OS.GetUserDataDir(),
+					"/maps/chunk_",
+					chunkX + (chunkId % 3 - 1),
+					"_",
+					chunkY + (chunkId / 3 - 1),
+					".bin"); 
+
+			FileInfo mapFile = new FileInfo(chunkPath);
+			if (!mapFile.Exists) return null;
+
+			object rawChunk;
+			using(var file = mapFile.OpenRead())
+			{
+				rawChunk = binaryFormatter.Deserialize(file);
+				file.Flush();
+			}
+
+			Chunk chunk = rawChunk as Chunk;
+			if (chunk != null) return chunk;
+
+			GD.PrintErr($"Malformed chunk at x: {chunkX + (chunkId % 3 - 1)} and y: {chunkY + (chunkId / 3 - 1)}!");
+			return null;
+		}	
 	}
 }

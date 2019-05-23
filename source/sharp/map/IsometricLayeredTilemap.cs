@@ -1,54 +1,88 @@
 using Godot;
 using System;
+using Illarion.Client.Common;
+using System.Collections.Generic;
 
 namespace Illarion.Client.Map
 {
-	public class IsometricLayeredTilemap : Node
+	public class IsometricLayeredTilemap
 	{
-		const int tileSizeX = 76;
-		const int tileSizeY = 37;
-		
-		const int offScreenTileThreshold = 2;
-		
-		private int centerX, centerY, centerLayer;
-		
+		private int x, y, layer;
+		private int mapSizeX, mapSizeY;
+		private Node root;
 		private ChunkLoader chunkLoader;
-		
-		
-			// Declare member variables here. Examples:
-			// private int a = 2;
-			// private string b = "text";
+		private Dictionary<int, Sprite> map;
 
-			// Called when the node enters the scene tree for the first time.
-			public override void _Ready()
-			{
-			// Placeholder for now
-			centerX = 0;
-			centerY = 0;
-			centerLayer = 0;
-			
-			chunkLoader = new ChunkLoader(centerX, centerY, centerLayer);
-			
-			CreateTiles();
-			}
-		
-		private void CreateTiles()
+		public IsometricLayeredTilemap(int x, int y, int layer, IMovementSupplier movementSupplier, Node root)
 		{
-			int mapSizeXHalf = ((int)Mathf.Ceil(OS.GetWindowSize().x / tileSizeX))/2 + offScreenTileThreshold;
-			int mapSizeYHalf = ((int)Mathf.Ceil(OS.GetWindowSize().y / tileSizeY))/2 + offScreenTileThreshold;
+			this.x = x;
+			this.y = y;
+			this.layer = layer;
+			this.root = root;
+
+			movementSupplier.layerChanged += OnMapLayerChanged;
+			movementSupplier.movementDone += OnMapCenterChanged;
+
+			chunkLoader = new ChunkLoader(x, y, movementSupplier);
+
+			CreateTileMap();
+		}
+
+		private void CreateTileMap()
+		{
+			mapSizeX = ((int)Mathf.Ceil(OS.GetWindowSize().x / Constants.Tile.SizeX)) + Constants.Map.OffscreenTileThreshold;
+			mapSizeY = ((int)Mathf.Ceil(OS.GetWindowSize().y / Constants.Tile.SizeY)) + Constants.Map.OffscreenTileThreshold;
 			
-			for (int x = centerX-mapSizeXHalf; x < centerX+mapSizeXHalf; x++) {
-				for (int y = centerY-mapSizeYHalf; y < centerY+mapSizeYHalf; y++) {
+			int mapSizeXHalf = mapSizeX/2;
+			int mapSizeYHalf = mapSizeY/2;
+			
+			map = new Dictionary<int,Sprite>(mapSizeXHalf*2*mapSizeYHalf*2*2);
+
+			// TODO: This is uneven. Its even if we work until <= mapSizeHalf but SKIP the tileX+1 tiles in this row
+			for (int ix = x-mapSizeXHalf; ix < x+mapSizeXHalf; ix++) {
+				for (int iy = y-mapSizeYHalf; iy < y+mapSizeYHalf; iy++) {
+					int tileX = ix+iy;
+					int tileY = ix-iy;
+
 					Sprite tile = new Sprite();
-					tile.GlobalPosition = new Vector2(x * tileSizeX, y * tileSizeY);
-					AddChild(tile);
+					tile.GlobalPosition = new Vector2(
+						ix * Constants.Tile.SizeX,
+						iy * Constants.Tile.SizeY);
+					root.AddChild(tile);
+					map.Add(ToTileIndex(tileX, tileY), tile);
 					
 					tile = new Sprite();
-					tile.GlobalPosition = new Vector2(x * tileSizeX + 0.5f * tileSizeX, y * tileSizeY + 0.5f * tileSizeY);
-					AddChild(tile);
+					tile.GlobalPosition = new Vector2(
+						ix * Constants.Tile.SizeX + 0.5f * Constants.Tile.SizeX,
+						iy * Constants.Tile.SizeY + 0.5f * Constants.Tile.SizeY);
+					root.AddChild(tile);
+					map.Add(ToTileIndex(tileX+1, tileY), tile);
 				}
 			}
-			
 		}
+
+		private void OnMapCenterChanged(object e, Vector2i change)
+		{
+			// For every change direction: translate and reload the specific map stripe.
+
+			if (change.x == -1)
+			{
+				
+			}
+		}
+
+		private void OnMapLayerChanged(object e, int newLayer)
+		{
+			//TODO: Reload all tiles
+		}
+
+		// Translates a tile-node so that it will be on the other side of the screen
+		// => Mirrored around the center
+		private void MirrorTilePosition()
+		{
+
+		}
+
+		private int ToTileIndex(int tx, int ty) => tx * mapSizeY + ty;
 	}
 }

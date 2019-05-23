@@ -148,7 +148,7 @@ namespace Illarion.Client.Update
             Chunk chunk = new Chunk(chunkMapData, usedLayers.ToArray(), new int[]{baseX,baseY}, usedItems, usedWarps);
 
             BinaryFormatter binaryFormatter = new BinaryFormatter();
-            FileInfo chunkFileInfo = new FileInfo(String.Concat(OS.GetUserDataDir(),"/map/chunk_",baseX,"_",baseY,".bin"));
+            FileInfo chunkFileInfo = new FileInfo(String.Concat(OS.GetUserDataDir(),"/map/chunk_",baseX/Constants.Map.Chunksize,"_",baseY/Constants.Map.Chunksize,".bin"));
 
             using(var file = chunkFileInfo.Create()) 
             {

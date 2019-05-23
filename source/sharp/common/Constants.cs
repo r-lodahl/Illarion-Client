@@ -2,10 +2,13 @@ namespace Illarion.Client.Common {
     public static class Constants {
         public static class Tile {
             public const int OverlayFactor = 1000;
+            public const int SizeX = 76;
+            public const int SizeY = 37;
         }
 
         public static class Map {
             public const int Chunksize = 20;
+            public const int OffscreenTileThreshold = 1;
         }
 
         public static class UserData {
