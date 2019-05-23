@@ -1,39 +1,41 @@
 using Godot;
 using System;
 
-public class UserConfig
+namespace Illarion.Client.Common
 {
-    private static UserConfig _instance;
-    public static UserConfig Instance 
+    public class UserConfig
     {
-        get {
-            if (_instance == null) _instance = new UserConfig();
-            return _instance;
+        private static UserConfig _instance;
+        public static UserConfig Instance 
+        {
+            get {
+                if (_instance == null) _instance = new UserConfig();
+                return _instance;
+            }
+        }
+
+        private ConfigFile configFile;
+
+        public Language Language {get; private set;}
+
+        private UserConfig()
+        {
+            configFile = new ConfigFile();
+            configFile.Load(Constants.UserData.ConfigPath);
+
+            int langVal = (int)configFile.GetValue("interface", "language", Language.English);
+
+            if (Enum.IsDefined(typeof(Language), langVal)) 
+            {
+                Language = (Language) langVal;
+            }
+            else 
+            {
+                Language = Language.English;
+            }
+
+
+
         }
     }
-
-    private ConfigFile configFile;
-
-    public Language Language {get; private set;};
-
-    private UserConfig()
-    {
-        configFile = new ConfigFile();
-        configFile.Load(Constants.UserData.ConfigPath);
-
-        int langVal = (int)configFile.GetValue("interface", "language", Language.English);
-
-        if (Enum.IsDefined(typeof(Language), langVal)) 
-        {
-            language = (Language) langVal;
-        }
-        else 
-        {
-            language = Language.English;
-        }
-
-
-
-    }
-
 }

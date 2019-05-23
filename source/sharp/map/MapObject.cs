@@ -1,6 +1,9 @@
-public class MapObject
+namespace Illarion.Client.Map
 {
-    public string Description {get;set;}
-    public string Name {get;set;}
-    public int ObjectId {get;set;}
+    public class MapObject
+    {
+        public string Description {get;set;}
+        public string Name {get;set;}
+        public int ObjectId {get;set;}
+    }
 }

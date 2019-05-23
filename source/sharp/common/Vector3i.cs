@@ -1,15 +1,18 @@
-public class Vector3i
+namespace Illarion.Client.Common
 {
-    public int x;
-    public int y;
-    public int z;
-
-    public Vector3i() {}
-    
-    public Vector3i(int x, int y, int z)
+    public class Vector3i
     {
-        this.x = x;
-        this.y = y;
-        this.z = z;
+        public int x;
+        public int y;
+        public int z;
+
+        public Vector3i() {}
+        
+        public Vector3i(int x, int y, int z)
+        {
+            this.x = x;
+            this.y = y;
+            this.z = z;
+        }
     }
 }
