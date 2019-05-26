@@ -9,14 +9,18 @@ namespace Illarion.Client.Map
 {
 	public class ChunkLoader
 	{
-		private int x, y;
+		private int x, y, z;
 		private int chunkX, chunkY;
 		private Chunk[] activeChunks;
 		private BinaryFormatter binaryFormatter;
+		private int[] usedLayers;
+
+		public int WorldSizeY {get; private set;}
 
 		public ChunkLoader(int x, int y, IMovementSupplier movementSupplier) 
 		{
 			movementSupplier.movementDone += OnMovementDone;
+			movementSupplier.layerChanged += OnReferenceLayerChanged;
 
 			this.x = x;
 			this.y = y;
@@ -27,6 +31,18 @@ namespace Illarion.Client.Map
 			binaryFormatter = new BinaryFormatter();
 
 			ReloadChunks(new int[]{0,1,2,3,4,5,6,7,8});
+			SetUsedLayers();
+		}
+
+		private int GetTileIdAt(TileIndex tileIndex) 
+		{
+
+		}
+
+		private void OnReferenceLayerChanged(object e, int layer)
+		{
+			z = layer;
+			SetUsedLayers();
 		}
 
 		private void OnMovementDone(object e, Vector2i movement)
@@ -94,10 +110,30 @@ namespace Illarion.Client.Map
 				reloadChunks.Add(8);
 			}
 
+			if (reloadChunks.Count == 0) return;
+
 			ReloadChunks(reloadChunks);
+			SetUsedLayers();
 		}
 
-		public void ReloadChunks(IEnumerable<int> chunkList) 
+		private void SetUsedLayers() 
+		{
+			HashSet<int> layers = new HashSet<int>();
+			foreach(var chunk in activeChunks)
+			{
+				layers.UnionWith(
+					chunk.usedLayers.Select(
+						x => x > z-Constants.Map.VisibleLayers && x < z+Constants.Map.VisibleLayers
+					)
+				);
+			}
+			
+			usedLayers = new int[layers.Count];
+			layers.CopyTo(usedLayers);
+			Array.Sort(usedLayers);
+		}
+
+		private void ReloadChunks(IEnumerable<int> chunkList) 
 		{
 			foreach (int chunkId in chunkList)
 			{
@@ -105,7 +141,7 @@ namespace Illarion.Client.Map
 			}
 		}
 		
-		public Chunk LoadChunk(int chunkId) 
+		private Chunk LoadChunk(int chunkId) 
 		{
 			string chunkPath = String.Concat(
 					OS.GetUserDataDir(),
