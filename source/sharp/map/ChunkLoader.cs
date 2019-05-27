@@ -63,7 +63,7 @@ namespace Illarion.Client.Map
 					return new TileData(
 						layerTileId % Constants.Tile.OverlayFactor,
 						layerTileId / Constants.Tile.OverlayFactor,
-						layer);
+						testedLayer);
 				}
 			}
 
