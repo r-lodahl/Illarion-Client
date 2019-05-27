@@ -180,10 +180,7 @@ namespace Illarion.Client.Map
 
 		private void ReloadMap()
 		{
-			foreach (var element in map)
-			{
-				
-			}
+			foreach (var tileIndex in map.Keys) SetTileSprite(tileIndex);
 		}
 	}
 }

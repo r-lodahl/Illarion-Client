@@ -18,6 +18,7 @@ namespace Illarion.Client.Common
 
         public Language Language {get; private set;}
 
+
         private UserConfig()
         {
             configFile = new ConfigFile();
@@ -33,9 +34,6 @@ namespace Illarion.Client.Common
             {
                 Language = Language.English;
             }
-
-
-
         }
     }
 }

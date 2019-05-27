@@ -10,6 +10,8 @@ namespace Illarion.Client.Common {
             public const int Chunksize = 20;
             public const int VisibleLayers = 10;
             public const int OffscreenTileThreshold = 1;
+            public const int LayerTileOffsetY = -1;
+            public const int LayerTileOffsetX = 1;
         }
 
         public static class UserData {

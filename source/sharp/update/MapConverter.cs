@@ -17,6 +17,8 @@ namespace Illarion.Client.Update
         private Dictionary<int, int[]> overlayIdToLocalId;
         private Random random;
 
+        private int WorldSizeY {get;set;}
+
         public MapConverter(Dictionary<int,int[]> baseIdToLocalId, Dictionary<int,int[]> overlayIdToLocalId)
         {
             this.baseIdToLocalId = baseIdToLocalId;
@@ -61,12 +63,23 @@ namespace Illarion.Client.Update
                 if (map.StartY+map.Height > worldMaxY) worldMaxY = map.StartY + map.Height;
             }
 
+            WorldSizeY = worldMaxY - worldMinY + 1;
+
             for (int baseX = worldMinX; baseX < worldMaxX; baseX += Constants.Map.Chunksize) 
             {
                 for (int baseY = worldMinY; baseY < worldMaxY; baseY += Constants.Map.Chunksize)
                 {
                     CreateSingleChunk(baseX, baseY);
                 }
+            }
+
+            BinaryFormatter binaryFormatter = new BinaryFormatter();
+            FileInfo worldFileInfo = new FileInfo(String.Concat(OS.GetUserDataDir(),"/map/worldInfo.bin"));
+
+            using(var file = worldFileInfo.Create()) 
+            {
+                binaryFormatter.Serialize(file, WorldSizeY);
+                file.Flush();
             }
         }
 
@@ -141,7 +154,7 @@ namespace Illarion.Client.Update
                         tileIds.Add(layerValue);
                     }
 
-                    chunkMapData[ix * Constants.Map.Chunksize + iy] = tileIds.ToArray();
+                    chunkMapData[ix * WorldSizeY + iy] = tileIds.ToArray();
                 }
             }
 
@@ -155,7 +168,6 @@ namespace Illarion.Client.Update
                 binaryFormatter.Serialize(file, chunk);
                 file.Flush();
             }
-
         }
 
         private int GetBaseIdFromServerBaseId(int serverBaseId)

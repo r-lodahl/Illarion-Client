@@ -1,6 +1,7 @@
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System;
+using System.Linq;
 using System.Collections.Generic;
 using Godot;
 using Illarion.Client.Common;
@@ -9,11 +10,12 @@ namespace Illarion.Client.Map
 {
 	public class ChunkLoader
 	{
-		private int x, y, z;
+		private int x, y;
 		private int chunkX, chunkY;
 		private Chunk[] activeChunks;
 		private BinaryFormatter binaryFormatter;
 		private int[] usedLayers;
+		private int referenceLayer;
 
 		public int WorldSizeY {get; private set;}
 
@@ -30,18 +32,43 @@ namespace Illarion.Client.Map
 
 			binaryFormatter = new BinaryFormatter();
 
+			LoadWorldSize();
 			ReloadChunks(new int[]{0,1,2,3,4,5,6,7,8});
 			SetUsedLayers();
 		}
 
-		private int GetTileIdAt(TileIndex tileIndex) 
+		public int GetTileIdAt(TileIndex tileIndex) 
 		{
+			// explicit fors are used here to ensure that we go through the IEnumerables in order
 
+			for (int l = 0; l < usedLayers.Length; l++)
+			{
+				int testedLayer = usedLayers[l];
+				
+				int xy = tileIndex.x * Constants.Map.LayerTileOffsetX * WorldSizeY
+					+ tileIndex.y * Constants.Map.LayerTileOffsetY;
+
+				foreach(var map in activeChunks)
+				{
+					if (map.Map.Length < xy) continue;
+
+					int layerIndex = Array.IndexOf(map.Map[xy], testedLayer);
+					if (layerIndex == -1) continue;
+
+					int layerTileId = map.Map[xy][layerIndex];
+					if (layerTileId == 0) continue;
+
+					return layerTileId;
+				}
+			}
+
+			GD.PrintErr($"No tile data for tile at ({tileIndex.x},{tileIndex.y},{referenceLayer})!");
+			return 0;
 		}
 
 		private void OnReferenceLayerChanged(object e, int layer)
 		{
-			z = layer;
+			referenceLayer = layer;
 			SetUsedLayers();
 		}
 
@@ -166,6 +193,33 @@ namespace Illarion.Client.Map
 
 			GD.PrintErr($"Malformed chunk at x: {chunkX + (chunkId % 3 - 1)} and y: {chunkY + (chunkId / 3 - 1)}!");
 			return null;
-		}	
+		}
+
+		private void LoadWorldSize() 
+		{
+			FileInfo worldInfoFile = new FileInfo(String.Concat(OS.GetUserDataDir(), "/map/worldInfo.bin"));
+			if (!worldInfoFile.Exists) throw new FileNotFoundException("WorldInfo file not found! Please repair your installation!");
+
+			object rawWorldSize;
+			using(var file = worldInfoFile.OpenRead())
+			{
+				rawWorldSize = binaryFormatter.Deserialize(file);
+				file.Flush();
+			}
+
+			int worldSize;
+			try
+			{
+				worldSize = Convert.ToInt32(rawWorldSize);
+			}
+			catch (OverflowException)
+			{
+				throw new InvalidCastException("WorldInfo file is malformed. Please repair your installation.");
+			}
+			
+			if (worldSize == 0) throw new InvalidCastException("WorldInfo file is malformed. Please repair your installation.");
+
+			WorldSizeY = worldSize;
+		}
 	}
 }
