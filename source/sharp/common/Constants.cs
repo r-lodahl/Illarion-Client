@@ -2,6 +2,8 @@ namespace Illarion.Client.Common {
     public static class Constants {
         public static class Tile {
             public const int OverlayFactor = 1000;
+            public const int OverlayZScore = 1;
+            public const int ObjectZScore = 2;
             public const int SizeX = 76;
             public const int SizeY = 37;
         }

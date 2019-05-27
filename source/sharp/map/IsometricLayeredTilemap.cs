@@ -12,8 +12,8 @@ namespace Illarion.Client.Map
 		private int mapSizeHalfX, mapSizeHalfY;
 				
 		private Node root;
-		private Dictionary<TileIndex, Sprite> map;
-
+		private Dictionary<TileIndex, Sprite[]> map;
+		
 		private ChunkLoader chunkLoader;
 		private TileSet tileset;
 
@@ -45,7 +45,7 @@ namespace Illarion.Client.Map
 			mapSizeHalfX = (((int)Mathf.Ceil(windowX / Constants.Tile.SizeX)) + Constants.Map.OffscreenTileThreshold)/2;
 			mapSizeHalfY = (((int)Mathf.Ceil(windowY / Constants.Tile.SizeY)) + Constants.Map.OffscreenTileThreshold)/2;
 			
-			map = new Dictionary<TileIndex, Sprite>(mapSizeHalfX*2*mapSizeHalfY*2*2);
+			map = new Dictionary<TileIndex, Sprite[]>(mapSizeHalfX*2*mapSizeHalfY*2*2);
 
 			// TODO: This is uneven. Its even if we work until <= mapSizeHalf but SKIP the tileX+1 tiles in this row
 			for (int ix = x-mapSizeHalfX; ix < x+mapSizeHalfX; ix++) {
@@ -53,22 +53,37 @@ namespace Illarion.Client.Map
 					int tileX = x+ix+iy;
 					int tileY = y+ix-iy;
 
-					Sprite tile = new Sprite();
-					tile.GlobalPosition = new Vector2(
+					Vector2 position = new Vector2(
 						ix * Constants.Tile.SizeX,
-						iy * Constants.Tile.SizeY);
-					root.AddChild(tile);
-					map.Add(new TileIndex(tileX, tileY), tile);
+						iy * Constants.Tile.SizeY
+					);
 
-					tile = new Sprite();
-					tile.GlobalPosition = new Vector2(
+					map.Add(
+						new TileIndex(tileX, tileY),
+						new Sprite[]{AddSpriteToTree(position), AddSpriteToTree(position)}
+					);
+
+					position = new Vector2(
 						ix * Constants.Tile.SizeX + 0.5f * Constants.Tile.SizeX,
-						iy * Constants.Tile.SizeY + 0.5f * Constants.Tile.SizeY);
-					root.AddChild(tile);
-					map.Add(new TileIndex(tileX+1, tileY), tile);
+						iy * Constants.Tile.SizeY + 0.5f * Constants.Tile.SizeY
+					);
+
+					map.Add(
+						new TileIndex(tileX+1, tileY),
+						new Sprite[]{AddSpriteToTree(position), AddSpriteToTree(position)}
+					);
 				}
 			}
 		}
+
+		private Sprite AddSpriteToTree(Vector2 screenPosition)
+		{
+			Sprite sprite = new Sprite();
+			sprite.GlobalPosition = screenPosition;
+			root.AddChild(sprite);
+			return sprite;
+		}
+
 
 		private void OnWindowSizeChanged(object e) 
 		{
@@ -84,7 +99,8 @@ namespace Illarion.Client.Map
 		{
 			foreach (var tile in map.Values)
 			{
-				root.RemoveChild(tile);
+				root.RemoveChild(tile[0]);
+				root.RemoveChild(tile[1]);
 			}
 
 			map.Clear();
@@ -167,7 +183,14 @@ namespace Illarion.Client.Map
 			TileIndex movedIndex = new TileIndex(-tileIndex.x, -tileIndex.y);
 
 			map[movedIndex] = tileSprite;
-			tileSprite.GlobalPosition = new Vector2(windowX - tileSprite.GlobalPosition.x, windowY - tileSprite.GlobalPosition.y); 
+
+			Vector2 movedPosition = new Vector2(
+				windowX - tileSprite[0].GlobalPosition.x,
+				windowY - tileSprite[0].GlobalPosition.y
+			); 
+
+			tileSprite[0].GlobalPosition = movedPosition;
+			tileSprite[1].GlobalPosition = movedPosition;
 
 			return movedIndex;
 		}
@@ -180,9 +203,12 @@ namespace Illarion.Client.Map
 
 			var tile = map[tileIndex];
 
-			tile.Texture = tileset.TileGetTexture(data.tileId);
+			tile[0].Texture = tileset.TileGetTexture(data.tileId);
+			tile[1].Texture = tileset.TileGetTexture(data.overlayId);
 
-			tile.ZIndex = GetZScore(tileIndex.x, tileIndex.y, data.layer);
+			int zScore = GetZScore(tileIndex.x, tileIndex.y, data.layer);
+			tile[0].ZIndex = zScore;
+			tile[1].ZIndex = zScore + Constants.Tile.OverlayZScore;
 		}
 
 
