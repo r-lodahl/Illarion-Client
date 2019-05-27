@@ -12,6 +12,7 @@ namespace Illarion.Client.Common {
             public const int OffscreenTileThreshold = 1;
             public const int LayerTileOffsetY = -1;
             public const int LayerTileOffsetX = 1;
+            public const int LayerZScoreFactor = 10000;
         }
 
         public static class UserData {

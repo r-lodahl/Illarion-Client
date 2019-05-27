@@ -35,6 +35,11 @@ namespace Illarion.Client.Map
 			ReloadMap();
 		}
 
+		public int GetZScore(int x, int y, int layer)
+		{
+			return layer * Constants.Map.LayerZScoreFactor + x - y;
+		}
+
 		private void CreateTileMap()
 		{
 			mapSizeHalfX = (((int)Mathf.Ceil(windowX / Constants.Tile.SizeX)) + Constants.Map.OffscreenTileThreshold)/2;
@@ -53,14 +58,14 @@ namespace Illarion.Client.Map
 						ix * Constants.Tile.SizeX,
 						iy * Constants.Tile.SizeY);
 					root.AddChild(tile);
-					map.Add(new TileIndex {x = tileX, y = tileY}, tile);
+					map.Add(new TileIndex(tileX, tileY), tile);
 
 					tile = new Sprite();
 					tile.GlobalPosition = new Vector2(
 						ix * Constants.Tile.SizeX + 0.5f * Constants.Tile.SizeX,
 						iy * Constants.Tile.SizeY + 0.5f * Constants.Tile.SizeY);
 					root.AddChild(tile);
-					map.Add(new TileIndex {x = tileX+1, y= tileY}, tile);
+					map.Add(new TileIndex(tileX+1, tileY), tile);
 				}
 			}
 		}
@@ -101,7 +106,7 @@ namespace Illarion.Client.Map
 
 				while (ix >= 0)
 				{
-					translationTiles.Add(new TileIndex {x = ix, y= iy});
+					translationTiles.Add(new TileIndex(ix, iy));
 					ix--;
 					iy++;
 				}
@@ -114,7 +119,7 @@ namespace Illarion.Client.Map
 
 				while (ix <= 0)
 				{
-					translationTiles.Add(new TileIndex {x = ix, y= iy});
+					translationTiles.Add(new TileIndex(ix, iy));
 					ix++;
 					iy--;
 				}
@@ -128,7 +133,7 @@ namespace Illarion.Client.Map
 
 				while (ix <= 0)
 				{
-					translationTiles.Add(new TileIndex {x = ix, y= iy});
+					translationTiles.Add(new TileIndex(ix, iy));
 					ix++;
 					iy++;
 				}
@@ -141,7 +146,7 @@ namespace Illarion.Client.Map
 
 				while (ix >= 0)
 				{
-					translationTiles.Add(new TileIndex {x = ix, y= iy});
+					translationTiles.Add(new TileIndex(ix, iy));
 					ix--;
 					iy--;
 				}
@@ -150,7 +155,7 @@ namespace Illarion.Client.Map
 			foreach (var tileIndex in translationTiles)
 			{
 				var movedIndex = MoveTileToOpposedDirection(tileIndex);
-				SetTileSprite(movedIndex);	
+				SetTileAppearanceAt(movedIndex);	
 			}
 		}
 
@@ -159,7 +164,7 @@ namespace Illarion.Client.Map
 			var tileSprite = map[tileIndex];
 			map.Remove(tileIndex);
 
-			TileIndex movedIndex = new TileIndex {x = -tileIndex.x, y = -tileIndex.y};
+			TileIndex movedIndex = new TileIndex(-tileIndex.x, -tileIndex.y);
 
 			map[movedIndex] = tileSprite;
 			tileSprite.GlobalPosition = new Vector2(windowX - tileSprite.GlobalPosition.x, windowY - tileSprite.GlobalPosition.y); 
@@ -167,9 +172,17 @@ namespace Illarion.Client.Map
 			return movedIndex;
 		}
 
-		private void SetTileSprite(TileIndex tileIndex)
+		private void SetTileAppearanceAt(TileIndex tileIndex)
 		{
-			map[tileIndex].Texture = tileset.TileGetTexture(chunkLoader.GetTileIdAt(tileIndex, layer));
+			TileData data = chunkLoader.GetTileDataAt(tileIndex);
+			
+			if (data.tileId == 0) return;
+
+			var tile = map[tileIndex];
+
+			tile.Texture = tileset.TileGetTexture(data.tileId);
+
+			tile.ZIndex = GetZScore(tileIndex.x, tileIndex.y, data.layer);
 		}
 
 
@@ -180,7 +193,7 @@ namespace Illarion.Client.Map
 
 		private void ReloadMap()
 		{
-			foreach (var tileIndex in map.Keys) SetTileSprite(tileIndex);
+			foreach (var tileIndex in map.Keys) SetTileAppearanceAt(tileIndex);
 		}
 	}
 }

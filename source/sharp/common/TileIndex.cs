@@ -1,4 +1,10 @@
 public struct TileIndex {
-    public int x;
-    public int y;
+    public readonly int x;
+    public readonly int y;
+
+    public TileIndex(int x, int y) 
+    {
+        this.x = x;
+        this.y = y;
+    }
 }

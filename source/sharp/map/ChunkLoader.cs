@@ -37,16 +37,18 @@ namespace Illarion.Client.Map
 			SetUsedLayers();
 		}
 
-		public int GetTileIdAt(TileIndex tileIndex) 
+		public TileData GetTileDataAt(TileIndex tileIndex) 
 		{
-			// explicit fors are used here to ensure that we go through the IEnumerables in order
-
+			// Explicit for to ensure ordered enumeration
 			for (int l = 0; l < usedLayers.Length; l++)
 			{
 				int testedLayer = usedLayers[l];
-				
-				int xy = tileIndex.x * Constants.Map.LayerTileOffsetX * WorldSizeY
-					+ tileIndex.y * Constants.Map.LayerTileOffsetY;
+				int layerDifference = testedLayer - referenceLayer;
+
+				int xy = (tileIndex.x +	layerDifference * Constants.Map.LayerTileOffsetX)
+					* WorldSizeY
+					+ (tileIndex.y + layerDifference * Constants.Map.LayerTileOffsetY);
+
 
 				foreach(var map in activeChunks)
 				{
@@ -58,12 +60,15 @@ namespace Illarion.Client.Map
 					int layerTileId = map.Map[xy][layerIndex];
 					if (layerTileId == 0) continue;
 
-					return layerTileId;
+					return new TileData(
+						layerTileId % Constants.Tile.OverlayFactor,
+						layerTileId / Constants.Tile.OverlayFactor,
+						layer);
 				}
 			}
 
 			GD.PrintErr($"No tile data for tile at ({tileIndex.x},{tileIndex.y},{referenceLayer})!");
-			return 0;
+			return new TileData();
 		}
 
 		private void OnReferenceLayerChanged(object e, int layer)
@@ -149,8 +154,9 @@ namespace Illarion.Client.Map
 			foreach(var chunk in activeChunks)
 			{
 				layers.UnionWith(
-					chunk.usedLayers.Select(
-						x => x > z-Constants.Map.VisibleLayers && x < z+Constants.Map.VisibleLayers
+					chunk.Layers.Where(
+						x => x > referenceLayer-Constants.Map.VisibleLayers
+						&& x < referenceLayer+Constants.Map.VisibleLayers
 					)
 				);
 			}
