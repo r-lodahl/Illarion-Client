@@ -30,6 +30,8 @@ namespace Illarion.Client.Map
 			chunkX = x / Constants.Map.Chunksize;
 			chunkY = y / Constants.Map.Chunksize;
 
+			activeChunks = new Chunk[9];
+
 			binaryFormatter = new BinaryFormatter();
 
 			LoadWorldSize();

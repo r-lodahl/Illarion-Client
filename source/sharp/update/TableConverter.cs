@@ -65,7 +65,7 @@ namespace Illarion.Client.Update
                 string line = serverTileFile.GetLine();
 
                 if (line.Equals("")) break;
-                if (line.StartsWith("#")) continue;
+                if (line.StartsWith("#") || line.StartsWith("/") continue;
 
                 string[] rowValues = line.Split(",", false);
                 string tileName = rowValues[nameColumn].Substring(1, rowValues[nameColumn].Length-2);

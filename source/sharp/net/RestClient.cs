@@ -7,7 +7,6 @@ using Godot;
 namespace Illarion.Client.Net 
 {
     public class RestClient {
-        private List<Request> RequestList;
 
         public Response GetSynchronized(string domain, string url, int port, bool ssl) {
             Request request = new Request(domain, url, port, ssl, false, Method.Get);

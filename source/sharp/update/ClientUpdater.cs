@@ -10,9 +10,57 @@ namespace Illarion.Client.Update
 {
     public class ClientUpdater : Node
     {
+		private RestClient rest;
+		
         public override void _Ready()
         {
-            RestClient rest = new RestClient();
+			rest = new RestClient();
+			
+			string localVersion = GetLocalVersion();
+			string serverVersion = GetServerVersion();
+			
+			if (serverVersion.Equals(localVersion)) 
+			{
+				GD.Print("No Update needed!");
+				//GetTree().ChangeScene(Constants.UserData.MainScene);
+				return;
+			}
+			GD.Print("Updated is needed!");
+			
+			if (!DownloadMapFiles())
+			{
+				GD.Print("Update was not successfull.");
+				return;
+			}
+			GD.Print("Map Download successfull.");
+			
+			TableConverter tableConverter = new TableConverter(Constants.UserData.TilesetPath);
+            var tileDictionary = tableConverter.CreateTileMapping();
+            var overlayDictionary = tableConverter.CreateOverlayMapping();
+
+            MapConverter mapConverter = new MapConverter(tileDictionary, overlayDictionary);
+            mapConverter.CreateMapChunks(String.Concat(OS.GetUserDataDir(),Constants.UserData.MapPath)); 
+
+			UpdateVersion(serverVersion);
+
+            GD.Print("Update finished!");
+			//GetTree().ChangeScene(Constants.UserData.MainScene);
+        }
+		
+		private string GetLocalVersion()
+		{
+			 File versionFile = new File();
+		     if (!versionFile.FileExists(Constants.UserData.VersionPath)) return "";
+			 
+			 versionFile.Open(Constants.UserData.VersionPath, (int) File.ModeFlags.Read);
+			 string version = versionFile.GetAsText();
+			 versionFile.Close();
+			 
+			 return version;
+		}
+		
+		private string GetServerVersion() 
+		{
             RestClient.Response response = rest.GetSynchronized(
                 Constants.Server.UpdateServerAddress,
                 Constants.Server.MapVersionEndpoint,
@@ -21,26 +69,16 @@ namespace Illarion.Client.Update
 
             if (response.Error != Error.Ok || !response.IsDictionary)
             {
-                GD.PrintErr($"Getting map version has failed [{response.Error}]! Please retry.");
-                return;
+                GD.PrintErr($"Getting map version has failed [{response.Error}]!");
+                return "";
             }
 
-            string version = (string)((Godot.Collections.Dictionary)response.Data)["version"];
-
-            bool outdated = true;
-            File versionFile = new File();
-
-            if (versionFile.FileExists(Constants.UserData.VersionPath))
-            {
-                versionFile.Open(Constants.UserData.VersionPath, (int) File.ModeFlags.Read);
-                string localVersion = versionFile.GetAsText();
-                versionFile.Close();
-                outdated = !version.Equals(localVersion);
-            }
-
-            if (!outdated) GetTree().ChangeScene(Constants.UserData.MainScene);
-
-            response = rest.GetSynchronized(
+            return (string)((Godot.Collections.Dictionary)response.Data)["version"];
+		}
+		
+		private bool DownloadMapFiles()
+		{
+			RestClient.Response response = rest.GetSynchronized(
                 Constants.Server.UpdateServerAddress,
                 Constants.Server.ZippedMapEndpoint,
                 Constants.Server.UpdateServerPort,
@@ -48,8 +86,8 @@ namespace Illarion.Client.Update
 
             if (response.Error != Error.Ok)
             {
-                GD.PrintErr($"Getting map version has failed! [{response.Error}]");
-                return;
+                GD.PrintErr($"Downloading map files has failed! [{response.Error}]");
+                return false;
             }
 
             using (Stream stream = new MemoryStream(((List<byte>)response.Data).ToArray()))
@@ -60,18 +98,15 @@ namespace Illarion.Client.Update
                 }
             }
 
-            versionFile.Open(Constants.UserData.VersionPath, (int)File.ModeFlags.Write);
+            return true;
+		}
+		
+		private void UpdateVersion(string version)
+		{
+			File versionFile = new File();
+			versionFile.Open(Constants.UserData.VersionPath, (int)File.ModeFlags.Write);
             versionFile.StoreString(version);
             versionFile.Close();
-
-            TableConverter tableConverter = new TableConverter(Constants.UserData.TilesetPath);
-            var tileDictionary = tableConverter.CreateTileMapping();
-            var overlayDictionary = tableConverter.CreateOverlayMapping();
-
-            MapConverter mapConverter = new MapConverter(tileDictionary, overlayDictionary);
-            mapConverter.CreateMapChunks(String.Concat(OS.GetUserDataDir(),Constants.UserData.MapPath)); 
-
-            GetTree().ChangeScene(Constants.UserData.MainScene);
-        }
+		}
     }
 }

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://StartupLoader.gd" type="Script" id=1]
+[ext_resource path="res://source/sharp/update/ClientUpdater.cs" type="Script" id=1]
 [ext_resource path="res://assets/gui/logo.png" type="Texture" id=2]
 [ext_resource path="res://assets/gui/fonts/Ubuntu-Regular.ttf" type="DynamicFontData" id=3]
 

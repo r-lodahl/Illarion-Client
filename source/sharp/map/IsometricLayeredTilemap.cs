@@ -25,6 +25,7 @@ namespace Illarion.Client.Map
 			this.root = root;
 			this.windowX = (int) OS.GetWindowSize().x;
 			this.windowY = (int) OS.GetWindowSize().y;
+			this.tileset = tileset;
 
 			movementSupplier.layerChanged += OnMapLayerChanged;
 			movementSupplier.movementDone += OnMapCenterChanged;
