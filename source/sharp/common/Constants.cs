@@ -20,8 +20,8 @@ namespace Illarion.Client.Common {
         public static class UserData {
             public const string VersionPath = "user://map.version";
             public const string TilesetPath = "res://assets/tileset/tiles.res";
-            public const string TileTablePath = "res://assets/tileset/tiles.tbl";
-            public const string OverlayTablePath = "res://assets/tileset/overlays.tbl";
+            public const string TileTablePath = "res://assets/tileset/Tiles.tbl";
+            public const string OverlayTablePath = "res://assets/tileset/Overlays.tbl";
             public const string MapPath = "/Illarion-Map";
             public const string MainScene = "res://world.tscn";
             public const string TileFileName = "tilelist.bin";
