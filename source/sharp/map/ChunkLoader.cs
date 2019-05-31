@@ -16,13 +16,13 @@ namespace Illarion.Client.Map
 		private BinaryFormatter binaryFormatter;
 		private int[] usedLayers;
 		private int referenceLayer;
-
+		
 		public int WorldSizeY {get; private set;}
 
 		public ChunkLoader(int x, int y, IMovementSupplier movementSupplier) 
 		{
-			movementSupplier.movementDone += OnMovementDone;
-			movementSupplier.layerChanged += OnReferenceLayerChanged;
+			movementSupplier.MovementDone += OnMovementDone;
+			movementSupplier.LayerChanged += OnReferenceLayerChanged;
 
 			this.x = x;
 			this.y = y;
@@ -153,14 +153,18 @@ namespace Illarion.Client.Map
 		private void SetUsedLayers() 
 		{
 			HashSet<int> layers = new HashSet<int>();
+			
+			int maxLayer = referenceLayer + Constants.Map.VisibleLayers;
+			int minLayer = referenceLayer - Constants.Map.VisibleLayers;
+			
 			foreach(var chunk in activeChunks)
 			{
-				layers.UnionWith(
-					chunk.Layers.Where(
-						x => x > referenceLayer-Constants.Map.VisibleLayers
-						&& x < referenceLayer+Constants.Map.VisibleLayers
-					)
-				);
+				if (chunk == null) continue;
+
+				foreach(var layer in chunk.Layers) 
+				{
+					if (layer > minLayer && layer < maxLayer) layers.Add(layer);
+				}
 			}
 			
 			usedLayers = new int[layers.Count];

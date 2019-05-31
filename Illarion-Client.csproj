@@ -54,6 +54,7 @@
     <Compile Include="source\sharp\map\*.*"/>
     <Compile Include="source\sharp\net\*.*"/>
     <Compile Include="source\sharp\update\*.*"/>
+    <Compile Include="source\sharp\character\*.*"/>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets"/>
 </Project>

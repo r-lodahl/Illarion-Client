@@ -23,17 +23,17 @@ namespace Illarion.Client.Map
 			this.y = y;
 			this.layer = layer;
 			this.root = root;
-			this.windowX = (int) OS.GetWindowSize().x;
-			this.windowY = (int) OS.GetWindowSize().y;
+			this.windowX = 1140;//(int) OS.GetWindowSize().x; DBG
+			this.windowY = 740;//(int) OS.GetWindowSize().y; DBG
 			this.tileset = tileset;
 
-			movementSupplier.layerChanged += OnMapLayerChanged;
-			movementSupplier.movementDone += OnMapCenterChanged;
+			movementSupplier.LayerChanged += OnMapLayerChanged;
+			movementSupplier.MovementDone += OnMapCenterChanged;
 
 			chunkLoader = new ChunkLoader(x, y, movementSupplier);
 
 			CreateTileMap();
-			ReloadMap();
+			//ReloadMap();
 		}
 
 		public int GetZScore(int x, int y, int layer)
@@ -81,6 +81,7 @@ namespace Illarion.Client.Map
 		{
 			Sprite sprite = new Sprite();
 			sprite.GlobalPosition = screenPosition;
+			sprite.Texture = tileset.TileGetTexture(tileset.FindTileByName("water-0")); //DBG
 			root.AddChild(sprite);
 			return sprite;
 		}
@@ -88,12 +89,12 @@ namespace Illarion.Client.Map
 
 		private void OnWindowSizeChanged(object e) 
 		{
-			windowX = (int) OS.GetWindowSize().x;
+			/*windowX = (int) OS.GetWindowSize().x;
 			windowY = (int) OS.GetWindowSize().y;
 
 			DeleteTileMap();
 			CreateTileMap();
-			ReloadMap();
+			ReloadMap(); DBG*/
 		}
 
 		private void DeleteTileMap()
