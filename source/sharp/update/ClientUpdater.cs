@@ -3,6 +3,7 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 using File = Godot.File;
+using Directory = System.IO.Directory;
 using Illarion.Client.Common;
 using Illarion.Client.Net;
 
@@ -14,6 +15,8 @@ namespace Illarion.Client.Update
 		
         public override void _Ready()
         {
+			GD.PrintErr("---------------------------------------");
+			
 			rest = new RestClient();
 			
 			string localVersion = GetLocalVersion();
@@ -22,10 +25,12 @@ namespace Illarion.Client.Update
 			if (serverVersion.Equals(localVersion)) 
 			{
 				GD.Print("No Update needed!");
-				//GetTree().ChangeScene(Constants.UserData.MainScene);
+				GetTree().ChangeScene(Constants.UserData.MainScene);
 				return;
 			}
 			GD.Print("Updated is needed!");
+			
+			ClearMapFolder();
 			
 			if (!DownloadMapFiles())
 			{
@@ -39,13 +44,29 @@ namespace Illarion.Client.Update
             var overlayDictionary = tableConverter.CreateOverlayMapping();
 
             MapConverter mapConverter = new MapConverter(tileDictionary, overlayDictionary);
-            mapConverter.CreateMapChunks(String.Concat(OS.GetUserDataDir(),Constants.UserData.MapPath)); 
+            mapConverter.CreateMapChunks(String.Concat(OS.GetUserDataDir(), Constants.UserData.ServerMapPath)); 
 
 			UpdateVersion(serverVersion);
 
+			RemoveDownloadsFolder();
+
             GD.Print("Update finished!");
-			//GetTree().ChangeScene(Constants.UserData.MainScene);
+			GetTree().ChangeScene(Constants.UserData.MainScene);
         }
+		
+		private void RemoveDownloadsFolder()
+		{
+			Directory.Delete(String.Concat(OS.GetUserDataDir(), Constants.UserData.ServerMapPath), true);
+		}
+		
+		private void ClearMapFolder()
+		{
+			string mapDataPath = String.Concat(OS.GetUserDataDir(), Constants.UserData.MapPath);
+			
+			if (Directory.Exists(mapDataPath)) Directory.Delete(mapDataPath, true);
+			
+			Directory.CreateDirectory(mapDataPath);
+		}
 		
 		private string GetLocalVersion()
 		{

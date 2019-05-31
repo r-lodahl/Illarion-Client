@@ -39,8 +39,8 @@ namespace Illarion.Client.Update
         */
         public void CreateMapChunks(string mapPath) 
         {
-            string[] mapFiles = System.IO.Directory.GetFiles(mapPath, ".tiles.txt", SearchOption.AllDirectories);
-            
+            string[] mapFiles = System.IO.Directory.GetFiles(mapPath, "*.tiles.txt", SearchOption.AllDirectories);
+			
             int worldMinX = int.MaxValue;
             int worldMinY = int.MaxValue;
             int worldMaxX = int.MinValue;
@@ -48,6 +48,7 @@ namespace Illarion.Client.Update
 
             foreach (var mapFile in mapFiles)
             {
+                //GD.PrintErr(mapFile);
                 RawMap map = LoadSingleMap(mapFile);
 
                 if (!worldMapInLayers.ContainsKey(map.Layer)) 
@@ -87,8 +88,8 @@ namespace Illarion.Client.Update
         {
             List<int> usedLayers = new List<int>();
             List<RawMap> usedMaps = new List<RawMap>();
-            Dictionary<Vector3, MapObject[]> usedItems = new Dictionary<Vector3, MapObject[]>();
-            Dictionary<Vector3, Vector3> usedWarps = new Dictionary<Vector3, Vector3>();
+            Dictionary<Vector3i, MapObject[]> usedItems = new Dictionary<Vector3i, MapObject[]>();
+            Dictionary<Vector3i, Vector3i> usedWarps = new Dictionary<Vector3i, Vector3i>();
 
             foreach (var layerMaps in worldMapInLayers) 
             {
@@ -99,7 +100,7 @@ namespace Illarion.Client.Update
 
                     if (chunkRect.Intersects(mapRect))
                     {
-                        usedLayers.Add(singleMap.Layer);
+                        if (!usedLayers.Contains(singleMap.Layer)) usedLayers.Add(singleMap.Layer);
                         usedMaps.Add(singleMap);
                     }
                 }
@@ -108,7 +109,7 @@ namespace Illarion.Client.Update
             if (usedLayers.Count == 0) return;
             
             usedLayers.Sort();
-            
+
             int[][] chunkMapData = new int[Constants.Map.Chunksize*Constants.Map.Chunksize][];
 
             for (int ix = baseX; ix < baseX + Constants.Map.Chunksize; ix++)
@@ -123,10 +124,12 @@ namespace Illarion.Client.Update
 
                         foreach (RawMap map in usedMaps) 
                         {
+                            if (map.Layer != layer) continue;
+
                             int x = ix - map.StartX;
                             int y = iy - map.StartY;
 
-                            if (x < 0 || y < 0 || x >= map.Width || x >= map.Height) continue;
+                            if (x < 0 || y < 0 || x >= map.Width || y >= map.Height) continue;
 
                             layerValue = map.MapArray[x,y];
 
@@ -134,12 +137,33 @@ namespace Illarion.Client.Update
 
                             if (map.Items.ContainsKey(mapPosition))
                             {
-                                usedItems.Add(new Vector3(x - baseX, y - baseY, layer), map.Items[mapPosition]);
+								var absolutePosition = new Vector3i(ix, iy, layer);
+								if (usedItems.ContainsKey(absolutePosition))
+								{
+                                    GD.PrintErr("Adding an item-array to an tile already having items!");
+									var joinedItems = usedItems[absolutePosition].ToList();
+									joinedItems.AddRange(map.Items[mapPosition]);
+									usedItems[absolutePosition] = joinedItems.ToArray();
+								}
+								else
+								{
+                                	usedItems.Add(absolutePosition, map.Items[mapPosition]);
+								}
                             }
 
                             if (map.Warps.ContainsKey(mapPosition))
                             {
-                                usedWarps.Add(new Vector3(x - baseX, y - baseY, layer), map.Warps[mapPosition]);
+                                Vector3 warpTarget = map.Warps[mapPosition];
+                                Vector3i absolutePosition = new Vector3i(ix, iy, layer);
+
+                                if (usedWarps.ContainsKey(absolutePosition))
+                                {
+                                    GD.PrintErr("Tried adding a warp to a location that already contains a warp!");
+                                }
+                                else 
+                                {
+                                    usedWarps.Add(absolutePosition, new Vector3i((int)warpTarget.x, (int)warpTarget.y, (int)warpTarget.z));
+                                }
                             }
                         }
 
@@ -154,7 +178,7 @@ namespace Illarion.Client.Update
                         tileIds.Add(layerValue);
                     }
 
-                    chunkMapData[ix * WorldSizeY + iy] = tileIds.ToArray();
+                    chunkMapData[(ix-baseX) * Constants.Map.Chunksize + (iy-baseY)] = tileIds.ToArray();
                 }
             }
 
@@ -181,7 +205,7 @@ namespace Illarion.Client.Update
         private int GetOverlayIdFromServerOverlayId(int serverOverlayId, int serverOverlayShapeId)
         {
             if (serverOverlayId == 0 || !overlayIdToLocalId.ContainsKey(serverOverlayId*Constants.Tile.OverlayFactor)) return 0;
-            return overlayIdToLocalId[serverOverlayId*Constants.Tile.OverlayFactor][serverOverlayShapeId];
+            return overlayIdToLocalId[serverOverlayId*Constants.Tile.OverlayFactor][serverOverlayShapeId-1];
         }
 
         private int[] DeserializeServerIds(int serializedServerIds) 
@@ -201,6 +225,8 @@ namespace Illarion.Client.Update
             string line;
             bool read = true;
             RawMap map = new RawMap();
+
+            map.Name = mapFile;
 
             while (read && (line = fileReader.ReadLine()) != null) 
             {
@@ -263,13 +289,13 @@ namespace Illarion.Client.Update
                 string description = null;
                 if (UserConfig.Instance.Language == Language.German)
                 {
-                    name = rowValues.First(x => x.StartsWith("nameDe"));
-                    description = rowValues.First(x => x.StartsWith("descriptionDe"));
+                    name = rowValues.FirstOrDefault(x => x.StartsWith("nameDe"));
+                    description = rowValues.FirstOrDefault(x => x.StartsWith("descriptionDe"));
                 }
                 else 
                 {
-                    name = rowValues.First(x => x.StartsWith("nameEn"));
-                    description = rowValues.First(x => x.StartsWith("descriptionEn"));
+                    name = rowValues.FirstOrDefault(x => x.StartsWith("nameEn"));
+                    description = rowValues.FirstOrDefault(x => x.StartsWith("descriptionEn"));
                 }
 
                 if (name != null) item.Name = name.Substring(7);

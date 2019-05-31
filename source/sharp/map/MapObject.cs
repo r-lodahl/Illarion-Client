@@ -1,5 +1,8 @@
+using System;
+
 namespace Illarion.Client.Map
 {
+    [Serializable]
     public class MapObject
     {
         public string Description {get;set;}

@@ -62,6 +62,11 @@ move_down={
 
 translations=PoolStringArray( "res://assets/localization/guiStrings.en.translation", "res://assets/localization/guiStrings.de.translation" )
 
+[mono]
+
+debugger_agent/wait_for_debugger=true
+debugger_agent/wait_timeout=5000
+
 [rendering]
 
 quality/intended_usage/framebuffer_allocation=1
