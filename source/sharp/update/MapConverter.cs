@@ -226,8 +226,6 @@ namespace Illarion.Client.Update
             bool read = true;
             RawMap map = new RawMap();
 
-            map.Name = mapFile;
-
             while (read && (line = fileReader.ReadLine()) != null) 
             {
                 switch (line[0])

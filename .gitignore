@@ -1,5 +1,6 @@
 /.mono/
 /.import/
+/.vscode/
 /assets/_old/
 /assets/map/*
 /assets/spritesets/items.sprites/*

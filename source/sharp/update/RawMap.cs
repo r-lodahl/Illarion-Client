@@ -12,8 +12,6 @@ namespace Illarion.Client.Update
         public int Width {get;set;}
         public int Height {get;set;}
 
-        public string Name {get;set;}
-
         public int[,] MapArray {get;set;}
 
         public Dictionary<Vector2, MapObject[]> Items {get;set;}
