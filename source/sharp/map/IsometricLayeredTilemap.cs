@@ -121,10 +121,14 @@ namespace Illarion.Client.Map
 			// Left: Remove Rights
 			if (change.x != 1 && change.y != 1)
 			{
-				int ix = x + mapSizeHalfX + y + mapSizeHalfY;
-				int iy = 0;
+				// TopRight Tile Coordinate
+				int ix = x - y + (x + mapSizeHalfX-1) - (y-mapSizeHalfY);
+				int iy = x + y + (x + mapSizeHalfX-1) + (y-mapSizeHalfY);
+				
+				//Goal: Bottom Right
+				int goalY = x + y + (x + mapSizeHalfX-1) + (y + mapSizeHalfY);
 
-				while (ix >= 0)
+				while (iy < goalY)
 				{
 					translationTiles.Add(new TileIndex(ix, iy));
 					ix--;
@@ -134,24 +138,32 @@ namespace Illarion.Client.Map
 			// Right: Remove Lefts
 			else if (change.x != -1 && change.y != -1)
 			{
-				int ix = x - mapSizeHalfX + y - mapSizeHalfY; 
-				int iy = 0;
+				// TopLeft Tile Coordinate
+				int ix = x - y + (x - mapSizeHalfX) - (y-mapSizeHalfY);
+				int iy = x + y + (x - mapSizeHalfX) + (y-mapSizeHalfY);
+				
+				// Goal: Bottom Left
+				int goalY = x + y + (x - mapSizeHalfX) + (y + mapSizeHalfY);
 
-				while (ix <= 0)
+				while (iy < goalY)
 				{
 					translationTiles.Add(new TileIndex(ix, iy));
-					ix++;
-					iy--;
+					ix--;
+					iy++;
 				}
 			}
 
 			// Down: Remove Ups
 			if (change.x != -1 && change.y != 1)
 			{
-				int ix = x - mapSizeHalfX + y - mapSizeHalfY;
-				int iy = 0;
+				// TopLeft Tile Coordinate
+				int ix = x - y + (x - mapSizeHalfX) - (y-mapSizeHalfY);
+				int iy = x + y + (x - mapSizeHalfX) + (y-mapSizeHalfY);
 
-				while (ix <= 0)
+				// Goal: Top Right
+				int goalX = x - y + (x + mapSizeHalfX) - (y - mapSizeHalfY);
+
+				while (ix < goalX)
 				{
 					translationTiles.Add(new TileIndex(ix, iy));
 					ix++;
@@ -161,14 +173,19 @@ namespace Illarion.Client.Map
 			// Up: Remove Downs
 			else if (change.x != 1 && change.y != -1)
 			{
-				int ix = x + mapSizeHalfX + y + mapSizeHalfY;
-				int iy = 0;
+				// BottomLeft Tile Coordinate
+				int ix = x - y + (x - mapSizeHalfX) - (y+mapSizeHalfY-1);
+				int iy = x + y + (x - mapSizeHalfX) + (y+mapSizeHalfY-1);
+				
+				// Goal: Bottom Right
+				int goalX = x - y + (x + mapSizeHalfX) - (y+mapSizeHalfY-1);
 
-				while (ix >= 0)
+
+				while (ix < goalX)
 				{
 					translationTiles.Add(new TileIndex(ix, iy));
-					ix--;
-					iy--;
+					ix++;
+					iy++;
 				}
 			}
 
@@ -179,10 +196,13 @@ namespace Illarion.Client.Map
 			}
 		}
 
-		private TileIndex MoveTileToOpposedDirection(TileIndex tileIndex) 
+		private TileIndex MirrorTilePositionAroundCenter(TileIndex tileIndex, Vector2i direction) 
 		{
 			var tileSprite = map[tileIndex];
 			map.Remove(tileIndex);
+
+			int movedTilePositionX = tileIndex.x + (direction.x * 2 * mapSizeHalfX);
+			int movedTilePositionY = tileIndex.y + (direction.y * 2 * mapSizeHalfY);
 
 			TileIndex movedIndex = new TileIndex(-tileIndex.x, -tileIndex.y);
 
