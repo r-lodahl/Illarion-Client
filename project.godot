@@ -56,6 +56,7 @@ translations=PoolStringArray( "res://assets/localization/guiStrings.en.translati
 
 [mono]
 
+debugger_agent/wait_for_debugger=true
 debugger_agent/wait_timeout=5000
 
 [rendering]

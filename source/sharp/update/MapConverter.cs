@@ -223,31 +223,39 @@ namespace Illarion.Client.Update
             StreamReader fileReader = new StreamReader(mapFile);
             
             string line;
+            int next;
             bool read = true;
             RawMap map = new RawMap();
 
-            while (read && (line = fileReader.ReadLine()) != null) 
+            while (read && (next = fileReader.Peek()) != -1) 
             {
-                switch (line[0])
+                switch (next)
                 {
                     case 'L':
+                        line = fileReader.ReadLine();
                         map.Layer = int.Parse(line.Substring(3, line.Length-3));
                         break;
                     case 'X':
+                        line = fileReader.ReadLine();
                         map.StartX = int.Parse(line.Substring(3, line.Length-3));
                         break;
                     case 'Y':
+                        line = fileReader.ReadLine();
                         map.StartY = int.Parse(line.Substring(3, line.Length-3));
                         break;
                     case 'W':
+                        line = fileReader.ReadLine();
                         map.Width = int.Parse(line.Substring(3, line.Length-3));
                         break;
                     case 'H':
+                        line = fileReader.ReadLine();
                         map.Height = int.Parse(line.Substring(3, line.Length-3));
                         break;
                     case '#':
+                        line = fileReader.ReadLine();
                         break;
                     case 'V':
+                        line = fileReader.ReadLine();
                         break;
                     default:
                         read = false;

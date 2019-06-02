@@ -33,12 +33,12 @@ namespace Illarion.Client.Map
 			chunkLoader = new ChunkLoader(x, y, movementSupplier);
 
 			CreateTileMap();
-			//ReloadMap();
+			ReloadMap();
 		}
 
 		public int GetZScore(int x, int y, int layer)
 		{
-			return layer * Constants.Map.LayerZScoreFactor + x - y;
+			return layer * Constants.Map.LayerZScoreFactor + y - x;
 		}
 
 		private void CreateTileMap()
@@ -51,12 +51,12 @@ namespace Illarion.Client.Map
 			// TODO: This is uneven. Its even if we work until <= mapSizeHalf but SKIP the tileX+1 tiles in this row
 			for (int ix = x-mapSizeHalfX; ix < x+mapSizeHalfX; ix++) {
 				for (int iy = y-mapSizeHalfY; iy < y+mapSizeHalfY; iy++) {
-					int tileX = x+ix+iy;
-					int tileY = y+ix-iy;
+					int tileX = x-y+ix-iy;
+					int tileY = x+y+ix+iy;
 
 					Vector2 position = new Vector2(
 						ix * Constants.Tile.SizeX,
-						iy * Constants.Tile.SizeY
+						iy * (Constants.Tile.SizeY+1)
 					);
 
 					map.Add(
@@ -65,12 +65,12 @@ namespace Illarion.Client.Map
 					);
 
 					position = new Vector2(
-						ix * Constants.Tile.SizeX + 0.5f * Constants.Tile.SizeX,
-						iy * Constants.Tile.SizeY + 0.5f * Constants.Tile.SizeY
+						ix * Constants.Tile.SizeX + Constants.Tile.SizeX * 0.5f,
+						iy * (Constants.Tile.SizeY+1) + (Constants.Tile.SizeY + 1) * 0.5f
 					);
 
 					map.Add(
-						new TileIndex(tileX+1, tileY),
+						new TileIndex(tileX, tileY+1),
 						new Sprite[]{AddSpriteToTree(position), AddSpriteToTree(position)}
 					);
 				}
@@ -81,7 +81,9 @@ namespace Illarion.Client.Map
 		{
 			Sprite sprite = new Sprite();
 			sprite.GlobalPosition = screenPosition;
-			sprite.Texture = tileset.TileGetTexture(tileset.FindTileByName("water-0")); //DBG
+			sprite.RegionEnabled = true;
+			sprite.Texture = tileset.TileGetTexture(0);
+			sprite.ZAsRelative = false;
 			root.AddChild(sprite);
 			return sprite;
 		}
@@ -205,8 +207,8 @@ namespace Illarion.Client.Map
 
 			var tile = map[tileIndex];
 
-			tile[0].Texture = tileset.TileGetTexture(data.tileId);
-			tile[1].Texture = tileset.TileGetTexture(data.overlayId);
+			tile[0].RegionRect = tileset.TileGetRegion(data.tileId);
+			tile[1].RegionRect = tileset.TileGetRegion(data.overlayId);
 
 			int zScore = GetZScore(tileIndex.x, tileIndex.y, data.layer);
 			tile[0].ZIndex = zScore;

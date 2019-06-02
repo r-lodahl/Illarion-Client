@@ -1,14 +1,14 @@
 {
 	"textures": [
 		{
-			"image": "tiles-0.png",
+			"image": "tiles.png",
 			"size": {
 				"w": 2048,
 				"h": 745
 			},
 			"sprites": [
 				{
-					"filename": "invisible.png",
+					"filename": "invisible",
 					"region": {
 						"x": 1,
 						"y": 1,
@@ -23,7 +23,7 @@
 					}
 				},
 				{
-					"filename": "acker_ovl-1.png",
+					"filename": "acker_ovl-1",
 					"region": {
 						"x": 6,
 						"y": 1,
@@ -38,7 +38,7 @@
 					}
 				},
 				{
-					"filename": "acker_ovl-4.png",
+					"filename": "acker_ovl-4",
 					"region": {
 						"x": 65,
 						"y": 1,
@@ -53,7 +53,7 @@
 					}
 				},
 				{
-					"filename": "acker_ovl-6.png",
+					"filename": "acker_ovl-6",
 					"region": {
 						"x": 129,
 						"y": 1,
@@ -68,7 +68,7 @@
 					}
 				},
 				{
-					"filename": "cob_ovl-13.png",
+					"filename": "cob_ovl-13",
 					"region": {
 						"x": 186,
 						"y": 1,
@@ -83,7 +83,7 @@
 					}
 				},
 				{
-					"filename": "cracked_ovl-13.png",
+					"filename": "cracked_ovl-13",
 					"region": {
 						"x": 264,
 						"y": 1,
@@ -98,7 +98,7 @@
 					}
 				},
 				{
-					"filename": "dreck_ovl-1.png",
+					"filename": "dreck_ovl-1",
 					"region": {
 						"x": 342,
 						"y": 1,
@@ -113,7 +113,7 @@
 					}
 				},
 				{
-					"filename": "dreck_ovl-4.png",
+					"filename": "dreck_ovl-4",
 					"region": {
 						"x": 401,
 						"y": 1,
@@ -128,7 +128,7 @@
 					}
 				},
 				{
-					"filename": "dreck_ovl-6.png",
+					"filename": "dreck_ovl-6",
 					"region": {
 						"x": 465,
 						"y": 1,
@@ -143,7 +143,7 @@
 					}
 				},
 				{
-					"filename": "dungeonfloor_ovl-1.png",
+					"filename": "dungeonfloor_ovl-1",
 					"region": {
 						"x": 522,
 						"y": 1,
@@ -158,7 +158,7 @@
 					}
 				},
 				{
-					"filename": "dungeonfloor_ovl-4.png",
+					"filename": "dungeonfloor_ovl-4",
 					"region": {
 						"x": 581,
 						"y": 1,
@@ -173,7 +173,7 @@
 					}
 				},
 				{
-					"filename": "dungeonfloor_ovl-6.png",
+					"filename": "dungeonfloor_ovl-6",
 					"region": {
 						"x": 645,
 						"y": 1,
@@ -188,7 +188,7 @@
 					}
 				},
 				{
-					"filename": "fels1_ovl-1.png",
+					"filename": "fels1_ovl-1",
 					"region": {
 						"x": 702,
 						"y": 1,
@@ -203,7 +203,7 @@
 					}
 				},
 				{
-					"filename": "fels1_ovl-4.png",
+					"filename": "fels1_ovl-4",
 					"region": {
 						"x": 761,
 						"y": 1,
@@ -218,7 +218,7 @@
 					}
 				},
 				{
-					"filename": "fels1_ovl-6.png",
+					"filename": "fels1_ovl-6",
 					"region": {
 						"x": 825,
 						"y": 1,
@@ -233,7 +233,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry_ovl-13.png",
+					"filename": "grass_dry_ovl-13",
 					"region": {
 						"x": 882,
 						"y": 1,
@@ -248,7 +248,7 @@
 					}
 				},
 				{
-					"filename": "grass_ovl-13.png",
+					"filename": "grass_ovl-13",
 					"region": {
 						"x": 960,
 						"y": 1,
@@ -263,7 +263,7 @@
 					}
 				},
 				{
-					"filename": "lava_ovl-1.png",
+					"filename": "lava_ovl-1",
 					"region": {
 						"x": 1038,
 						"y": 1,
@@ -278,7 +278,7 @@
 					}
 				},
 				{
-					"filename": "lava_ovl-4.png",
+					"filename": "lava_ovl-4",
 					"region": {
 						"x": 1097,
 						"y": 1,
@@ -293,7 +293,7 @@
 					}
 				},
 				{
-					"filename": "lava_ovl-6.png",
+					"filename": "lava_ovl-6",
 					"region": {
 						"x": 1161,
 						"y": 1,
@@ -308,7 +308,7 @@
 					}
 				},
 				{
-					"filename": "mud_ovl-13.png",
+					"filename": "mud_ovl-13",
 					"region": {
 						"x": 1218,
 						"y": 1,
@@ -323,7 +323,7 @@
 					}
 				},
 				{
-					"filename": "sand_ovl-1.png",
+					"filename": "sand_ovl-1",
 					"region": {
 						"x": 1296,
 						"y": 1,
@@ -338,7 +338,7 @@
 					}
 				},
 				{
-					"filename": "sand_ovl-4.png",
+					"filename": "sand_ovl-4",
 					"region": {
 						"x": 1355,
 						"y": 1,
@@ -353,7 +353,7 @@
 					}
 				},
 				{
-					"filename": "sand_ovl-6.png",
+					"filename": "sand_ovl-6",
 					"region": {
 						"x": 1419,
 						"y": 1,
@@ -368,7 +368,7 @@
 					}
 				},
 				{
-					"filename": "sandy_ovl-13.png",
+					"filename": "sandy_ovl-13",
 					"region": {
 						"x": 1476,
 						"y": 1,
@@ -383,7 +383,7 @@
 					}
 				},
 				{
-					"filename": "schnee_ovl-1.png",
+					"filename": "schnee_ovl-1",
 					"region": {
 						"x": 1554,
 						"y": 1,
@@ -398,7 +398,7 @@
 					}
 				},
 				{
-					"filename": "schnee_ovl-4.png",
+					"filename": "schnee_ovl-4",
 					"region": {
 						"x": 1613,
 						"y": 1,
@@ -413,7 +413,7 @@
 					}
 				},
 				{
-					"filename": "schnee_ovl-6.png",
+					"filename": "schnee_ovl-6",
 					"region": {
 						"x": 1677,
 						"y": 1,
@@ -428,7 +428,7 @@
 					}
 				},
 				{
-					"filename": "str_ovl-13.png",
+					"filename": "str_ovl-13",
 					"region": {
 						"x": 1734,
 						"y": 1,
@@ -443,7 +443,7 @@
 					}
 				},
 				{
-					"filename": "strasse_ovl-13.png",
+					"filename": "strasse_ovl-13",
 					"region": {
 						"x": 1812,
 						"y": 1,
@@ -458,7 +458,7 @@
 					}
 				},
 				{
-					"filename": "street3_ovl-13.png",
+					"filename": "street3_ovl-13",
 					"region": {
 						"x": 1890,
 						"y": 1,
@@ -473,7 +473,7 @@
 					}
 				},
 				{
-					"filename": "unknownTile.png",
+					"filename": "unknownTile",
 					"region": {
 						"x": 1968,
 						"y": 1,
@@ -488,7 +488,7 @@
 					}
 				},
 				{
-					"filename": "acker_ovl-0.png",
+					"filename": "acker_ovl-0",
 					"region": {
 						"x": 1997,
 						"y": 1,
@@ -503,7 +503,7 @@
 					}
 				},
 				{
-					"filename": "wald_ovl-1.png",
+					"filename": "wald_ovl-1",
 					"region": {
 						"x": 1,
 						"y": 26,
@@ -518,7 +518,7 @@
 					}
 				},
 				{
-					"filename": "wald_ovl-4.png",
+					"filename": "wald_ovl-4",
 					"region": {
 						"x": 60,
 						"y": 26,
@@ -533,7 +533,7 @@
 					}
 				},
 				{
-					"filename": "wald_ovl-6.png",
+					"filename": "wald_ovl-6",
 					"region": {
 						"x": 124,
 						"y": 26,
@@ -548,7 +548,7 @@
 					}
 				},
 				{
-					"filename": "acker_ovl-14.png",
+					"filename": "acker_ovl-14",
 					"region": {
 						"x": 181,
 						"y": 26,
@@ -563,7 +563,7 @@
 					}
 				},
 				{
-					"filename": "cob_ovl-6.png",
+					"filename": "cob_ovl-6",
 					"region": {
 						"x": 259,
 						"y": 26,
@@ -578,7 +578,7 @@
 					}
 				},
 				{
-					"filename": "cracked_ovl-6.png",
+					"filename": "cracked_ovl-6",
 					"region": {
 						"x": 320,
 						"y": 26,
@@ -593,7 +593,7 @@
 					}
 				},
 				{
-					"filename": "dreck_ovl-14.png",
+					"filename": "dreck_ovl-14",
 					"region": {
 						"x": 381,
 						"y": 26,
@@ -608,7 +608,7 @@
 					}
 				},
 				{
-					"filename": "dungeonfloor_ovl-14.png",
+					"filename": "dungeonfloor_ovl-14",
 					"region": {
 						"x": 459,
 						"y": 26,
@@ -623,7 +623,7 @@
 					}
 				},
 				{
-					"filename": "fels1_ovl-14.png",
+					"filename": "fels1_ovl-14",
 					"region": {
 						"x": 537,
 						"y": 26,
@@ -638,7 +638,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry_ovl-6.png",
+					"filename": "grass_dry_ovl-6",
 					"region": {
 						"x": 615,
 						"y": 26,
@@ -653,7 +653,7 @@
 					}
 				},
 				{
-					"filename": "grass_ovl-6.png",
+					"filename": "grass_ovl-6",
 					"region": {
 						"x": 676,
 						"y": 26,
@@ -668,7 +668,7 @@
 					}
 				},
 				{
-					"filename": "lava_ovl-14.png",
+					"filename": "lava_ovl-14",
 					"region": {
 						"x": 737,
 						"y": 26,
@@ -683,7 +683,7 @@
 					}
 				},
 				{
-					"filename": "mud_ovl-6.png",
+					"filename": "mud_ovl-6",
 					"region": {
 						"x": 815,
 						"y": 26,
@@ -698,7 +698,7 @@
 					}
 				},
 				{
-					"filename": "sand_ovl-14.png",
+					"filename": "sand_ovl-14",
 					"region": {
 						"x": 876,
 						"y": 26,
@@ -713,7 +713,7 @@
 					}
 				},
 				{
-					"filename": "sandy_ovl-6.png",
+					"filename": "sandy_ovl-6",
 					"region": {
 						"x": 954,
 						"y": 26,
@@ -728,7 +728,7 @@
 					}
 				},
 				{
-					"filename": "schnee_ovl-14.png",
+					"filename": "schnee_ovl-14",
 					"region": {
 						"x": 1015,
 						"y": 26,
@@ -743,7 +743,7 @@
 					}
 				},
 				{
-					"filename": "str_ovl-6.png",
+					"filename": "str_ovl-6",
 					"region": {
 						"x": 1093,
 						"y": 26,
@@ -758,7 +758,7 @@
 					}
 				},
 				{
-					"filename": "strasse_ovl-6.png",
+					"filename": "strasse_ovl-6",
 					"region": {
 						"x": 1154,
 						"y": 26,
@@ -773,7 +773,7 @@
 					}
 				},
 				{
-					"filename": "street3_ovl-6.png",
+					"filename": "street3_ovl-6",
 					"region": {
 						"x": 1215,
 						"y": 26,
@@ -788,7 +788,7 @@
 					}
 				},
 				{
-					"filename": "wald_ovl-14.png",
+					"filename": "wald_ovl-14",
 					"region": {
 						"x": 1276,
 						"y": 26,
@@ -803,7 +803,7 @@
 					}
 				},
 				{
-					"filename": "acker_ovl-3.png",
+					"filename": "acker_ovl-3",
 					"region": {
 						"x": 1354,
 						"y": 26,
@@ -818,7 +818,7 @@
 					}
 				},
 				{
-					"filename": "cob_ovl-1.png",
+					"filename": "cob_ovl-1",
 					"region": {
 						"x": 1415,
 						"y": 26,
@@ -833,7 +833,7 @@
 					}
 				},
 				{
-					"filename": "cracked_ovl-1.png",
+					"filename": "cracked_ovl-1",
 					"region": {
 						"x": 1478,
 						"y": 26,
@@ -848,7 +848,7 @@
 					}
 				},
 				{
-					"filename": "dreck_ovl-3.png",
+					"filename": "dreck_ovl-3",
 					"region": {
 						"x": 1541,
 						"y": 26,
@@ -863,7 +863,7 @@
 					}
 				},
 				{
-					"filename": "dungeonfloor_ovl-3.png",
+					"filename": "dungeonfloor_ovl-3",
 					"region": {
 						"x": 1602,
 						"y": 26,
@@ -878,7 +878,7 @@
 					}
 				},
 				{
-					"filename": "fels1_ovl-3.png",
+					"filename": "fels1_ovl-3",
 					"region": {
 						"x": 1663,
 						"y": 26,
@@ -893,7 +893,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry_ovl-1.png",
+					"filename": "grass_dry_ovl-1",
 					"region": {
 						"x": 1724,
 						"y": 26,
@@ -908,7 +908,7 @@
 					}
 				},
 				{
-					"filename": "grass_ovl-1.png",
+					"filename": "grass_ovl-1",
 					"region": {
 						"x": 1787,
 						"y": 26,
@@ -923,7 +923,7 @@
 					}
 				},
 				{
-					"filename": "lava_ovl-3.png",
+					"filename": "lava_ovl-3",
 					"region": {
 						"x": 1850,
 						"y": 26,
@@ -938,7 +938,7 @@
 					}
 				},
 				{
-					"filename": "mud_ovl-1.png",
+					"filename": "mud_ovl-1",
 					"region": {
 						"x": 1911,
 						"y": 26,
@@ -953,7 +953,7 @@
 					}
 				},
 				{
-					"filename": "sand_ovl-3.png",
+					"filename": "sand_ovl-3",
 					"region": {
 						"x": 1974,
 						"y": 32,
@@ -968,7 +968,7 @@
 					}
 				},
 				{
-					"filename": "sandy_ovl-1.png",
+					"filename": "sandy_ovl-1",
 					"region": {
 						"x": 1,
 						"y": 51,
@@ -983,7 +983,7 @@
 					}
 				},
 				{
-					"filename": "schnee_ovl-3.png",
+					"filename": "schnee_ovl-3",
 					"region": {
 						"x": 64,
 						"y": 51,
@@ -998,7 +998,7 @@
 					}
 				},
 				{
-					"filename": "str_ovl-1.png",
+					"filename": "str_ovl-1",
 					"region": {
 						"x": 125,
 						"y": 53,
@@ -1013,7 +1013,7 @@
 					}
 				},
 				{
-					"filename": "strasse_ovl-1.png",
+					"filename": "strasse_ovl-1",
 					"region": {
 						"x": 188,
 						"y": 53,
@@ -1028,7 +1028,7 @@
 					}
 				},
 				{
-					"filename": "street3_ovl-1.png",
+					"filename": "street3_ovl-1",
 					"region": {
 						"x": 251,
 						"y": 53,
@@ -1043,7 +1043,7 @@
 					}
 				},
 				{
-					"filename": "wald_ovl-3.png",
+					"filename": "wald_ovl-3",
 					"region": {
 						"x": 314,
 						"y": 53,
@@ -1058,7 +1058,7 @@
 					}
 				},
 				{
-					"filename": "acker_ovl-13.png",
+					"filename": "acker_ovl-13",
 					"region": {
 						"x": 375,
 						"y": 53,
@@ -1073,7 +1073,7 @@
 					}
 				},
 				{
-					"filename": "cob_ovl-4.png",
+					"filename": "cob_ovl-4",
 					"region": {
 						"x": 453,
 						"y": 53,
@@ -1088,7 +1088,7 @@
 					}
 				},
 				{
-					"filename": "cracked_ovl-4.png",
+					"filename": "cracked_ovl-4",
 					"region": {
 						"x": 514,
 						"y": 53,
@@ -1103,7 +1103,7 @@
 					}
 				},
 				{
-					"filename": "dreck_ovl-13.png",
+					"filename": "dreck_ovl-13",
 					"region": {
 						"x": 575,
 						"y": 53,
@@ -1118,7 +1118,7 @@
 					}
 				},
 				{
-					"filename": "dungeonfloor_ovl-13.png",
+					"filename": "dungeonfloor_ovl-13",
 					"region": {
 						"x": 653,
 						"y": 53,
@@ -1133,7 +1133,7 @@
 					}
 				},
 				{
-					"filename": "fels1_ovl-13.png",
+					"filename": "fels1_ovl-13",
 					"region": {
 						"x": 731,
 						"y": 53,
@@ -1148,7 +1148,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry_ovl-4.png",
+					"filename": "grass_dry_ovl-4",
 					"region": {
 						"x": 809,
 						"y": 53,
@@ -1163,7 +1163,7 @@
 					}
 				},
 				{
-					"filename": "grass_ovl-4.png",
+					"filename": "grass_ovl-4",
 					"region": {
 						"x": 870,
 						"y": 53,
@@ -1178,7 +1178,7 @@
 					}
 				},
 				{
-					"filename": "lava_ovl-13.png",
+					"filename": "lava_ovl-13",
 					"region": {
 						"x": 931,
 						"y": 53,
@@ -1193,7 +1193,7 @@
 					}
 				},
 				{
-					"filename": "mud_ovl-4.png",
+					"filename": "mud_ovl-4",
 					"region": {
 						"x": 1009,
 						"y": 53,
@@ -1208,7 +1208,7 @@
 					}
 				},
 				{
-					"filename": "sand_ovl-13.png",
+					"filename": "sand_ovl-13",
 					"region": {
 						"x": 1070,
 						"y": 53,
@@ -1223,7 +1223,7 @@
 					}
 				},
 				{
-					"filename": "sandy_ovl-4.png",
+					"filename": "sandy_ovl-4",
 					"region": {
 						"x": 1148,
 						"y": 53,
@@ -1238,7 +1238,7 @@
 					}
 				},
 				{
-					"filename": "schnee_ovl-13.png",
+					"filename": "schnee_ovl-13",
 					"region": {
 						"x": 1209,
 						"y": 53,
@@ -1253,7 +1253,7 @@
 					}
 				},
 				{
-					"filename": "str_ovl-4.png",
+					"filename": "str_ovl-4",
 					"region": {
 						"x": 1287,
 						"y": 53,
@@ -1268,7 +1268,7 @@
 					}
 				},
 				{
-					"filename": "strasse_ovl-4.png",
+					"filename": "strasse_ovl-4",
 					"region": {
 						"x": 1348,
 						"y": 54,
@@ -1283,7 +1283,7 @@
 					}
 				},
 				{
-					"filename": "street3_ovl-4.png",
+					"filename": "street3_ovl-4",
 					"region": {
 						"x": 1409,
 						"y": 54,
@@ -1298,7 +1298,7 @@
 					}
 				},
 				{
-					"filename": "wald_ovl-13.png",
+					"filename": "wald_ovl-13",
 					"region": {
 						"x": 1470,
 						"y": 54,
@@ -1313,7 +1313,7 @@
 					}
 				},
 				{
-					"filename": "acker_ovl-22.png",
+					"filename": "acker_ovl-22",
 					"region": {
 						"x": 1548,
 						"y": 54,
@@ -1328,7 +1328,7 @@
 					}
 				},
 				{
-					"filename": "cob_ovl-14.png",
+					"filename": "cob_ovl-14",
 					"region": {
 						"x": 1623,
 						"y": 54,
@@ -1343,7 +1343,7 @@
 					}
 				},
 				{
-					"filename": "cob_ovl-3.png",
+					"filename": "cob_ovl-3",
 					"region": {
 						"x": 1701,
 						"y": 54,
@@ -1358,7 +1358,7 @@
 					}
 				},
 				{
-					"filename": "cracked_ovl-14.png",
+					"filename": "cracked_ovl-14",
 					"region": {
 						"x": 1766,
 						"y": 54,
@@ -1373,7 +1373,7 @@
 					}
 				},
 				{
-					"filename": "cracked_ovl-3.png",
+					"filename": "cracked_ovl-3",
 					"region": {
 						"x": 1844,
 						"y": 54,
@@ -1388,7 +1388,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry_ovl-3.png",
+					"filename": "grass_dry_ovl-3",
 					"region": {
 						"x": 1909,
 						"y": 54,
@@ -1403,7 +1403,7 @@
 					}
 				},
 				{
-					"filename": "dreck_ovl-22.png",
+					"filename": "dreck_ovl-22",
 					"region": {
 						"x": 1974,
 						"y": 60,
@@ -1418,7 +1418,7 @@
 					}
 				},
 				{
-					"filename": "dungeonfloor_ovl-22.png",
+					"filename": "dungeonfloor_ovl-22",
 					"region": {
 						"x": 1,
 						"y": 79,
@@ -1433,7 +1433,7 @@
 					}
 				},
 				{
-					"filename": "cob_ovl-2.png",
+					"filename": "cob_ovl-2",
 					"region": {
 						"x": 76,
 						"y": 79,
@@ -1448,7 +1448,7 @@
 					}
 				},
 				{
-					"filename": "fels1_ovl-22.png",
+					"filename": "fels1_ovl-22",
 					"region": {
 						"x": 121,
 						"y": 81,
@@ -1463,7 +1463,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry_ovl-14.png",
+					"filename": "grass_dry_ovl-14",
 					"region": {
 						"x": 196,
 						"y": 81,
@@ -1478,7 +1478,7 @@
 					}
 				},
 				{
-					"filename": "grass_ovl-14.png",
+					"filename": "grass_ovl-14",
 					"region": {
 						"x": 274,
 						"y": 81,
@@ -1493,7 +1493,7 @@
 					}
 				},
 				{
-					"filename": "grass_ovl-3.png",
+					"filename": "grass_ovl-3",
 					"region": {
 						"x": 352,
 						"y": 82,
@@ -1508,7 +1508,7 @@
 					}
 				},
 				{
-					"filename": "lava_ovl-22.png",
+					"filename": "lava_ovl-22",
 					"region": {
 						"x": 417,
 						"y": 82,
@@ -1523,7 +1523,7 @@
 					}
 				},
 				{
-					"filename": "mud_ovl-14.png",
+					"filename": "mud_ovl-14",
 					"region": {
 						"x": 492,
 						"y": 82,
@@ -1538,7 +1538,7 @@
 					}
 				},
 				{
-					"filename": "mud_ovl-3.png",
+					"filename": "mud_ovl-3",
 					"region": {
 						"x": 570,
 						"y": 82,
@@ -1553,7 +1553,7 @@
 					}
 				},
 				{
-					"filename": "sand_ovl-22.png",
+					"filename": "sand_ovl-22",
 					"region": {
 						"x": 635,
 						"y": 82,
@@ -1568,7 +1568,7 @@
 					}
 				},
 				{
-					"filename": "sandy_ovl-14.png",
+					"filename": "sandy_ovl-14",
 					"region": {
 						"x": 710,
 						"y": 82,
@@ -1583,7 +1583,7 @@
 					}
 				},
 				{
-					"filename": "sandy_ovl-3.png",
+					"filename": "sandy_ovl-3",
 					"region": {
 						"x": 788,
 						"y": 82,
@@ -1598,7 +1598,7 @@
 					}
 				},
 				{
-					"filename": "schnee_ovl-22.png",
+					"filename": "schnee_ovl-22",
 					"region": {
 						"x": 853,
 						"y": 82,
@@ -1613,7 +1613,7 @@
 					}
 				},
 				{
-					"filename": "str_ovl-14.png",
+					"filename": "str_ovl-14",
 					"region": {
 						"x": 928,
 						"y": 82,
@@ -1628,7 +1628,7 @@
 					}
 				},
 				{
-					"filename": "str_ovl-3.png",
+					"filename": "str_ovl-3",
 					"region": {
 						"x": 1006,
 						"y": 82,
@@ -1643,7 +1643,7 @@
 					}
 				},
 				{
-					"filename": "strasse_ovl-14.png",
+					"filename": "strasse_ovl-14",
 					"region": {
 						"x": 1071,
 						"y": 82,
@@ -1658,7 +1658,7 @@
 					}
 				},
 				{
-					"filename": "strasse_ovl-3.png",
+					"filename": "strasse_ovl-3",
 					"region": {
 						"x": 1149,
 						"y": 82,
@@ -1673,7 +1673,7 @@
 					}
 				},
 				{
-					"filename": "street3_ovl-14.png",
+					"filename": "street3_ovl-14",
 					"region": {
 						"x": 1214,
 						"y": 82,
@@ -1688,7 +1688,7 @@
 					}
 				},
 				{
-					"filename": "cracked_ovl-2.png",
+					"filename": "cracked_ovl-2",
 					"region": {
 						"x": 1292,
 						"y": 82,
@@ -1703,7 +1703,7 @@
 					}
 				},
 				{
-					"filename": "street3_ovl-3.png",
+					"filename": "street3_ovl-3",
 					"region": {
 						"x": 1337,
 						"y": 83,
@@ -1718,7 +1718,7 @@
 					}
 				},
 				{
-					"filename": "wald_ovl-22.png",
+					"filename": "wald_ovl-22",
 					"region": {
 						"x": 1402,
 						"y": 83,
@@ -1733,7 +1733,7 @@
 					}
 				},
 				{
-					"filename": "Eis1_ovl-1.png",
+					"filename": "Eis1_ovl-1",
 					"region": {
 						"x": 1477,
 						"y": 83,
@@ -1748,7 +1748,7 @@
 					}
 				},
 				{
-					"filename": "Eis1_ovl-9.png",
+					"filename": "Eis1_ovl-9",
 					"region": {
 						"x": 1544,
 						"y": 84,
@@ -1763,7 +1763,7 @@
 					}
 				},
 				{
-					"filename": "acker_ovl-8.png",
+					"filename": "acker_ovl-8",
 					"region": {
 						"x": 1622,
 						"y": 84,
@@ -1778,7 +1778,7 @@
 					}
 				},
 				{
-					"filename": "cob_ovl-11.png",
+					"filename": "cob_ovl-11",
 					"region": {
 						"x": 1679,
 						"y": 84,
@@ -1793,7 +1793,7 @@
 					}
 				},
 				{
-					"filename": "cracked_ovl-11.png",
+					"filename": "cracked_ovl-11",
 					"region": {
 						"x": 1741,
 						"y": 84,
@@ -1808,7 +1808,7 @@
 					}
 				},
 				{
-					"filename": "dreck_ovl-0.png",
+					"filename": "dreck_ovl-0",
 					"region": {
 						"x": 1803,
 						"y": 84,
@@ -1823,7 +1823,7 @@
 					}
 				},
 				{
-					"filename": "dreck_ovl-8.png",
+					"filename": "dreck_ovl-8",
 					"region": {
 						"x": 1845,
 						"y": 84,
@@ -1838,7 +1838,7 @@
 					}
 				},
 				{
-					"filename": "dungeonfloor_ovl-0.png",
+					"filename": "dungeonfloor_ovl-0",
 					"region": {
 						"x": 1902,
 						"y": 84,
@@ -1853,7 +1853,7 @@
 					}
 				},
 				{
-					"filename": "dungeonfloor_ovl-8.png",
+					"filename": "dungeonfloor_ovl-8",
 					"region": {
 						"x": 1944,
 						"y": 90,
@@ -1868,7 +1868,7 @@
 					}
 				},
 				{
-					"filename": "fels1_ovl-0.png",
+					"filename": "fels1_ovl-0",
 					"region": {
 						"x": 2001,
 						"y": 90,
@@ -1883,7 +1883,7 @@
 					}
 				},
 				{
-					"filename": "fels1_ovl-8.png",
+					"filename": "fels1_ovl-8",
 					"region": {
 						"x": 1,
 						"y": 109,
@@ -1898,7 +1898,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry_ovl-11.png",
+					"filename": "grass_dry_ovl-11",
 					"region": {
 						"x": 58,
 						"y": 110,
@@ -1913,7 +1913,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry_ovl-2.png",
+					"filename": "grass_dry_ovl-2",
 					"region": {
 						"x": 120,
 						"y": 111,
@@ -1928,7 +1928,7 @@
 					}
 				},
 				{
-					"filename": "grass_ovl-11.png",
+					"filename": "grass_ovl-11",
 					"region": {
 						"x": 165,
 						"y": 111,
@@ -1943,7 +1943,7 @@
 					}
 				},
 				{
-					"filename": "grass_ovl-2.png",
+					"filename": "grass_ovl-2",
 					"region": {
 						"x": 227,
 						"y": 111,
@@ -1958,7 +1958,7 @@
 					}
 				},
 				{
-					"filename": "lava_ovl-0.png",
+					"filename": "lava_ovl-0",
 					"region": {
 						"x": 272,
 						"y": 111,
@@ -1973,7 +1973,7 @@
 					}
 				},
 				{
-					"filename": "lava_ovl-8.png",
+					"filename": "lava_ovl-8",
 					"region": {
 						"x": 314,
 						"y": 112,
@@ -1988,7 +1988,7 @@
 					}
 				},
 				{
-					"filename": "mud_ovl-11.png",
+					"filename": "mud_ovl-11",
 					"region": {
 						"x": 371,
 						"y": 112,
@@ -2003,7 +2003,7 @@
 					}
 				},
 				{
-					"filename": "mud_ovl-2.png",
+					"filename": "mud_ovl-2",
 					"region": {
 						"x": 433,
 						"y": 112,
@@ -2018,7 +2018,7 @@
 					}
 				},
 				{
-					"filename": "sand_ovl-0.png",
+					"filename": "sand_ovl-0",
 					"region": {
 						"x": 478,
 						"y": 112,
@@ -2033,7 +2033,7 @@
 					}
 				},
 				{
-					"filename": "sand_ovl-8.png",
+					"filename": "sand_ovl-8",
 					"region": {
 						"x": 520,
 						"y": 112,
@@ -2048,7 +2048,7 @@
 					}
 				},
 				{
-					"filename": "sandy_ovl-11.png",
+					"filename": "sandy_ovl-11",
 					"region": {
 						"x": 577,
 						"y": 112,
@@ -2063,7 +2063,7 @@
 					}
 				},
 				{
-					"filename": "sandy_ovl-2.png",
+					"filename": "sandy_ovl-2",
 					"region": {
 						"x": 639,
 						"y": 112,
@@ -2078,7 +2078,7 @@
 					}
 				},
 				{
-					"filename": "schnee_ovl-0.png",
+					"filename": "schnee_ovl-0",
 					"region": {
 						"x": 684,
 						"y": 112,
@@ -2093,7 +2093,7 @@
 					}
 				},
 				{
-					"filename": "schnee_ovl-8.png",
+					"filename": "schnee_ovl-8",
 					"region": {
 						"x": 726,
 						"y": 112,
@@ -2108,7 +2108,7 @@
 					}
 				},
 				{
-					"filename": "str_ovl-11.png",
+					"filename": "str_ovl-11",
 					"region": {
 						"x": 783,
 						"y": 112,
@@ -2123,7 +2123,7 @@
 					}
 				},
 				{
-					"filename": "str_ovl-2.png",
+					"filename": "str_ovl-2",
 					"region": {
 						"x": 845,
 						"y": 112,
@@ -2138,7 +2138,7 @@
 					}
 				},
 				{
-					"filename": "strasse_ovl-11.png",
+					"filename": "strasse_ovl-11",
 					"region": {
 						"x": 890,
 						"y": 112,
@@ -2153,7 +2153,7 @@
 					}
 				},
 				{
-					"filename": "strasse_ovl-2.png",
+					"filename": "strasse_ovl-2",
 					"region": {
 						"x": 952,
 						"y": 112,
@@ -2168,7 +2168,7 @@
 					}
 				},
 				{
-					"filename": "street3_ovl-11.png",
+					"filename": "street3_ovl-11",
 					"region": {
 						"x": 997,
 						"y": 112,
@@ -2183,7 +2183,7 @@
 					}
 				},
 				{
-					"filename": "street3_ovl-2.png",
+					"filename": "street3_ovl-2",
 					"region": {
 						"x": 1059,
 						"y": 112,
@@ -2198,7 +2198,7 @@
 					}
 				},
 				{
-					"filename": "wald_ovl-0.png",
+					"filename": "wald_ovl-0",
 					"region": {
 						"x": 1104,
 						"y": 112,
@@ -2213,7 +2213,7 @@
 					}
 				},
 				{
-					"filename": "wald_ovl-8.png",
+					"filename": "wald_ovl-8",
 					"region": {
 						"x": 1146,
 						"y": 112,
@@ -2228,7 +2228,7 @@
 					}
 				},
 				{
-					"filename": "Eis1_ovl-3.png",
+					"filename": "Eis1_ovl-3",
 					"region": {
 						"x": 1203,
 						"y": 112,
@@ -2243,7 +2243,7 @@
 					}
 				},
 				{
-					"filename": "acker_ovl-11.png",
+					"filename": "acker_ovl-11",
 					"region": {
 						"x": 1281,
 						"y": 113,
@@ -2258,7 +2258,7 @@
 					}
 				},
 				{
-					"filename": "acker_ovl-17.png",
+					"filename": "acker_ovl-17",
 					"region": {
 						"x": 1339,
 						"y": 113,
@@ -2273,7 +2273,7 @@
 					}
 				},
 				{
-					"filename": "acker_ovl-5.png",
+					"filename": "acker_ovl-5",
 					"region": {
 						"x": 1416,
 						"y": 113,
@@ -2288,7 +2288,7 @@
 					}
 				},
 				{
-					"filename": "acker_ovl-21.png",
+					"filename": "acker_ovl-21",
 					"region": {
 						"x": 1460,
 						"y": 114,
@@ -2303,7 +2303,7 @@
 					}
 				},
 				{
-					"filename": "acker_ovl-25.png",
+					"filename": "acker_ovl-25",
 					"region": {
 						"x": 1537,
 						"y": 115,
@@ -2318,7 +2318,7 @@
 					}
 				},
 				{
-					"filename": "acker_ovl-7.png",
+					"filename": "acker_ovl-7",
 					"region": {
 						"x": 1615,
 						"y": 115,
@@ -2333,7 +2333,7 @@
 					}
 				},
 				{
-					"filename": "cob_ovl-10.png",
+					"filename": "cob_ovl-10",
 					"region": {
 						"x": 1662,
 						"y": 115,
@@ -2348,7 +2348,7 @@
 					}
 				},
 				{
-					"filename": "cob_ovl-22.png",
+					"filename": "cob_ovl-22",
 					"region": {
 						"x": 1724,
 						"y": 115,
@@ -2363,7 +2363,7 @@
 					}
 				},
 				{
-					"filename": "cob_ovl-5.png",
+					"filename": "cob_ovl-5",
 					"region": {
 						"x": 1802,
 						"y": 115,
@@ -2378,7 +2378,7 @@
 					}
 				},
 				{
-					"filename": "cob_ovl-7.png",
+					"filename": "cob_ovl-7",
 					"region": {
 						"x": 1848,
 						"y": 115,
@@ -2393,7 +2393,7 @@
 					}
 				},
 				{
-					"filename": "cracked_ovl-5.png",
+					"filename": "cracked_ovl-5",
 					"region": {
 						"x": 1898,
 						"y": 115,
@@ -2408,7 +2408,7 @@
 					}
 				},
 				{
-					"filename": "cob_ovl-9.png",
+					"filename": "cob_ovl-9",
 					"region": {
 						"x": 1944,
 						"y": 121,
@@ -2423,7 +2423,7 @@
 					}
 				},
 				{
-					"filename": "dreck_ovl-5.png",
+					"filename": "dreck_ovl-5",
 					"region": {
 						"x": 2005,
 						"y": 121,
@@ -2438,7 +2438,7 @@
 					}
 				},
 				{
-					"filename": "cracked_ovl-7.png",
+					"filename": "cracked_ovl-7",
 					"region": {
 						"x": 1,
 						"y": 140,
@@ -2453,7 +2453,7 @@
 					}
 				},
 				{
-					"filename": "cracked_ovl-10.png",
+					"filename": "cracked_ovl-10",
 					"region": {
 						"x": 51,
 						"y": 141,
@@ -2468,7 +2468,7 @@
 					}
 				},
 				{
-					"filename": "cracked_ovl-22.png",
+					"filename": "cracked_ovl-22",
 					"region": {
 						"x": 113,
 						"y": 142,
@@ -2483,7 +2483,7 @@
 					}
 				},
 				{
-					"filename": "cracked_ovl-9.png",
+					"filename": "cracked_ovl-9",
 					"region": {
 						"x": 191,
 						"y": 142,
@@ -2498,7 +2498,7 @@
 					}
 				},
 				{
-					"filename": "dreck_ovl-11.png",
+					"filename": "dreck_ovl-11",
 					"region": {
 						"x": 252,
 						"y": 142,
@@ -2513,7 +2513,7 @@
 					}
 				},
 				{
-					"filename": "dreck_ovl-17.png",
+					"filename": "dreck_ovl-17",
 					"region": {
 						"x": 310,
 						"y": 143,
@@ -2528,7 +2528,7 @@
 					}
 				},
 				{
-					"filename": "dreck_ovl-21.png",
+					"filename": "dreck_ovl-21",
 					"region": {
 						"x": 387,
 						"y": 143,
@@ -2543,7 +2543,7 @@
 					}
 				},
 				{
-					"filename": "dreck_ovl-25.png",
+					"filename": "dreck_ovl-25",
 					"region": {
 						"x": 464,
 						"y": 143,
@@ -2558,7 +2558,7 @@
 					}
 				},
 				{
-					"filename": "dreck_ovl-7.png",
+					"filename": "dreck_ovl-7",
 					"region": {
 						"x": 542,
 						"y": 143,
@@ -2573,7 +2573,7 @@
 					}
 				},
 				{
-					"filename": "dungeonfloor_ovl-11.png",
+					"filename": "dungeonfloor_ovl-11",
 					"region": {
 						"x": 589,
 						"y": 143,
@@ -2588,7 +2588,7 @@
 					}
 				},
 				{
-					"filename": "dungeonfloor_ovl-17.png",
+					"filename": "dungeonfloor_ovl-17",
 					"region": {
 						"x": 647,
 						"y": 143,
@@ -2603,7 +2603,7 @@
 					}
 				},
 				{
-					"filename": "dungeonfloor_ovl-21.png",
+					"filename": "dungeonfloor_ovl-21",
 					"region": {
 						"x": 724,
 						"y": 143,
@@ -2618,7 +2618,7 @@
 					}
 				},
 				{
-					"filename": "dungeonfloor_ovl-25.png",
+					"filename": "dungeonfloor_ovl-25",
 					"region": {
 						"x": 801,
 						"y": 143,
@@ -2633,7 +2633,7 @@
 					}
 				},
 				{
-					"filename": "dungeonfloor_ovl-5.png",
+					"filename": "dungeonfloor_ovl-5",
 					"region": {
 						"x": 879,
 						"y": 143,
@@ -2648,7 +2648,7 @@
 					}
 				},
 				{
-					"filename": "dungeonfloor_ovl-7.png",
+					"filename": "dungeonfloor_ovl-7",
 					"region": {
 						"x": 923,
 						"y": 143,
@@ -2663,7 +2663,7 @@
 					}
 				},
 				{
-					"filename": "fels1_ovl-11.png",
+					"filename": "fels1_ovl-11",
 					"region": {
 						"x": 970,
 						"y": 143,
@@ -2678,7 +2678,7 @@
 					}
 				},
 				{
-					"filename": "fels1_ovl-17.png",
+					"filename": "fels1_ovl-17",
 					"region": {
 						"x": 1028,
 						"y": 143,
@@ -2693,7 +2693,7 @@
 					}
 				},
 				{
-					"filename": "fels1_ovl-21.png",
+					"filename": "fels1_ovl-21",
 					"region": {
 						"x": 1105,
 						"y": 143,
@@ -2708,7 +2708,7 @@
 					}
 				},
 				{
-					"filename": "fels1_ovl-25.png",
+					"filename": "fels1_ovl-25",
 					"region": {
 						"x": 1182,
 						"y": 144,
@@ -2723,7 +2723,7 @@
 					}
 				},
 				{
-					"filename": "fels1_ovl-5.png",
+					"filename": "fels1_ovl-5",
 					"region": {
 						"x": 1260,
 						"y": 145,
@@ -2738,7 +2738,7 @@
 					}
 				},
 				{
-					"filename": "fels1_ovl-7.png",
+					"filename": "fels1_ovl-7",
 					"region": {
 						"x": 1304,
 						"y": 145,
@@ -2753,7 +2753,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry_ovl-10.png",
+					"filename": "grass_dry_ovl-10",
 					"region": {
 						"x": 1351,
 						"y": 145,
@@ -2768,7 +2768,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry_ovl-5.png",
+					"filename": "grass_dry_ovl-5",
 					"region": {
 						"x": 1413,
 						"y": 145,
@@ -2783,7 +2783,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry_ovl-22.png",
+					"filename": "grass_dry_ovl-22",
 					"region": {
 						"x": 1459,
 						"y": 146,
@@ -2798,7 +2798,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry_ovl-7.png",
+					"filename": "grass_dry_ovl-7",
 					"region": {
 						"x": 1537,
 						"y": 147,
@@ -2813,7 +2813,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry_ovl-9.png",
+					"filename": "grass_dry_ovl-9",
 					"region": {
 						"x": 1587,
 						"y": 147,
@@ -2828,7 +2828,7 @@
 					}
 				},
 				{
-					"filename": "grass_ovl-10.png",
+					"filename": "grass_ovl-10",
 					"region": {
 						"x": 1648,
 						"y": 147,
@@ -2843,7 +2843,7 @@
 					}
 				},
 				{
-					"filename": "grass_ovl-22.png",
+					"filename": "grass_ovl-22",
 					"region": {
 						"x": 1710,
 						"y": 147,
@@ -2858,7 +2858,7 @@
 					}
 				},
 				{
-					"filename": "grass_ovl-5.png",
+					"filename": "grass_ovl-5",
 					"region": {
 						"x": 1788,
 						"y": 147,
@@ -2873,7 +2873,7 @@
 					}
 				},
 				{
-					"filename": "grass_ovl-7.png",
+					"filename": "grass_ovl-7",
 					"region": {
 						"x": 1834,
 						"y": 147,
@@ -2888,7 +2888,7 @@
 					}
 				},
 				{
-					"filename": "lava_ovl-11.png",
+					"filename": "lava_ovl-11",
 					"region": {
 						"x": 1884,
 						"y": 147,
@@ -2903,7 +2903,7 @@
 					}
 				},
 				{
-					"filename": "grass_ovl-9.png",
+					"filename": "grass_ovl-9",
 					"region": {
 						"x": 1942,
 						"y": 153,
@@ -2918,7 +2918,7 @@
 					}
 				},
 				{
-					"filename": "lava_ovl-5.png",
+					"filename": "lava_ovl-5",
 					"region": {
 						"x": 2003,
 						"y": 153,
@@ -2933,7 +2933,7 @@
 					}
 				},
 				{
-					"filename": "lava_ovl-7.png",
+					"filename": "lava_ovl-7",
 					"region": {
 						"x": 1,
 						"y": 172,
@@ -2948,7 +2948,7 @@
 					}
 				},
 				{
-					"filename": "mud_ovl-10.png",
+					"filename": "mud_ovl-10",
 					"region": {
 						"x": 48,
 						"y": 173,
@@ -2963,7 +2963,7 @@
 					}
 				},
 				{
-					"filename": "lava_ovl-17.png",
+					"filename": "lava_ovl-17",
 					"region": {
 						"x": 110,
 						"y": 174,
@@ -2978,7 +2978,7 @@
 					}
 				},
 				{
-					"filename": "lava_ovl-21.png",
+					"filename": "lava_ovl-21",
 					"region": {
 						"x": 187,
 						"y": 174,
@@ -2993,7 +2993,7 @@
 					}
 				},
 				{
-					"filename": "mud_ovl-5.png",
+					"filename": "mud_ovl-5",
 					"region": {
 						"x": 264,
 						"y": 174,
@@ -3008,7 +3008,7 @@
 					}
 				},
 				{
-					"filename": "lava_ovl-25.png",
+					"filename": "lava_ovl-25",
 					"region": {
 						"x": 310,
 						"y": 175,
@@ -3023,7 +3023,7 @@
 					}
 				},
 				{
-					"filename": "mud_ovl-22.png",
+					"filename": "mud_ovl-22",
 					"region": {
 						"x": 388,
 						"y": 175,
@@ -3038,7 +3038,7 @@
 					}
 				},
 				{
-					"filename": "mud_ovl-7.png",
+					"filename": "mud_ovl-7",
 					"region": {
 						"x": 466,
 						"y": 175,
@@ -3053,7 +3053,7 @@
 					}
 				},
 				{
-					"filename": "mud_ovl-9.png",
+					"filename": "mud_ovl-9",
 					"region": {
 						"x": 516,
 						"y": 175,
@@ -3068,7 +3068,7 @@
 					}
 				},
 				{
-					"filename": "sand_ovl-11.png",
+					"filename": "sand_ovl-11",
 					"region": {
 						"x": 577,
 						"y": 175,
@@ -3083,7 +3083,7 @@
 					}
 				},
 				{
-					"filename": "sand_ovl-17.png",
+					"filename": "sand_ovl-17",
 					"region": {
 						"x": 635,
 						"y": 175,
@@ -3098,7 +3098,7 @@
 					}
 				},
 				{
-					"filename": "sand_ovl-21.png",
+					"filename": "sand_ovl-21",
 					"region": {
 						"x": 712,
 						"y": 175,
@@ -3113,7 +3113,7 @@
 					}
 				},
 				{
-					"filename": "sand_ovl-25.png",
+					"filename": "sand_ovl-25",
 					"region": {
 						"x": 789,
 						"y": 175,
@@ -3128,7 +3128,7 @@
 					}
 				},
 				{
-					"filename": "sand_ovl-5.png",
+					"filename": "sand_ovl-5",
 					"region": {
 						"x": 867,
 						"y": 175,
@@ -3143,7 +3143,7 @@
 					}
 				},
 				{
-					"filename": "sand_ovl-7.png",
+					"filename": "sand_ovl-7",
 					"region": {
 						"x": 911,
 						"y": 175,
@@ -3158,7 +3158,7 @@
 					}
 				},
 				{
-					"filename": "sandy_ovl-10.png",
+					"filename": "sandy_ovl-10",
 					"region": {
 						"x": 958,
 						"y": 175,
@@ -3173,7 +3173,7 @@
 					}
 				},
 				{
-					"filename": "sandy_ovl-22.png",
+					"filename": "sandy_ovl-22",
 					"region": {
 						"x": 1020,
 						"y": 175,
@@ -3188,7 +3188,7 @@
 					}
 				},
 				{
-					"filename": "sandy_ovl-5.png",
+					"filename": "sandy_ovl-5",
 					"region": {
 						"x": 1098,
 						"y": 175,
@@ -3203,7 +3203,7 @@
 					}
 				},
 				{
-					"filename": "sandy_ovl-7.png",
+					"filename": "sandy_ovl-7",
 					"region": {
 						"x": 1144,
 						"y": 176,
@@ -3218,7 +3218,7 @@
 					}
 				},
 				{
-					"filename": "sandy_ovl-9.png",
+					"filename": "sandy_ovl-9",
 					"region": {
 						"x": 1194,
 						"y": 176,
@@ -3233,7 +3233,7 @@
 					}
 				},
 				{
-					"filename": "schnee_ovl-11.png",
+					"filename": "schnee_ovl-11",
 					"region": {
 						"x": 1255,
 						"y": 177,
@@ -3248,7 +3248,7 @@
 					}
 				},
 				{
-					"filename": "schnee_ovl-17.png",
+					"filename": "schnee_ovl-17",
 					"region": {
 						"x": 1313,
 						"y": 177,
@@ -3263,7 +3263,7 @@
 					}
 				},
 				{
-					"filename": "schnee_ovl-5.png",
+					"filename": "schnee_ovl-5",
 					"region": {
 						"x": 1390,
 						"y": 177,
@@ -3278,7 +3278,7 @@
 					}
 				},
 				{
-					"filename": "schnee_ovl-21.png",
+					"filename": "schnee_ovl-21",
 					"region": {
 						"x": 1434,
 						"y": 178,
@@ -3293,7 +3293,7 @@
 					}
 				},
 				{
-					"filename": "schnee_ovl-25.png",
+					"filename": "schnee_ovl-25",
 					"region": {
 						"x": 1511,
 						"y": 179,
@@ -3308,7 +3308,7 @@
 					}
 				},
 				{
-					"filename": "schnee_ovl-7.png",
+					"filename": "schnee_ovl-7",
 					"region": {
 						"x": 1589,
 						"y": 179,
@@ -3323,7 +3323,7 @@
 					}
 				},
 				{
-					"filename": "str_ovl-10.png",
+					"filename": "str_ovl-10",
 					"region": {
 						"x": 1636,
 						"y": 179,
@@ -3338,7 +3338,7 @@
 					}
 				},
 				{
-					"filename": "str_ovl-22.png",
+					"filename": "str_ovl-22",
 					"region": {
 						"x": 1698,
 						"y": 179,
@@ -3353,7 +3353,7 @@
 					}
 				},
 				{
-					"filename": "str_ovl-5.png",
+					"filename": "str_ovl-5",
 					"region": {
 						"x": 1776,
 						"y": 179,
@@ -3368,7 +3368,7 @@
 					}
 				},
 				{
-					"filename": "str_ovl-7.png",
+					"filename": "str_ovl-7",
 					"region": {
 						"x": 1822,
 						"y": 179,
@@ -3383,7 +3383,7 @@
 					}
 				},
 				{
-					"filename": "str_ovl-9.png",
+					"filename": "str_ovl-9",
 					"region": {
 						"x": 1872,
 						"y": 179,
@@ -3398,7 +3398,7 @@
 					}
 				},
 				{
-					"filename": "strasse_ovl-10.png",
+					"filename": "strasse_ovl-10",
 					"region": {
 						"x": 1933,
 						"y": 185,
@@ -3413,7 +3413,7 @@
 					}
 				},
 				{
-					"filename": "strasse_ovl-5.png",
+					"filename": "strasse_ovl-5",
 					"region": {
 						"x": 1995,
 						"y": 185,
@@ -3428,7 +3428,7 @@
 					}
 				},
 				{
-					"filename": "street3_ovl-5.png",
+					"filename": "street3_ovl-5",
 					"region": {
 						"x": 1,
 						"y": 204,
@@ -3443,7 +3443,7 @@
 					}
 				},
 				{
-					"filename": "strasse_ovl-7.png",
+					"filename": "strasse_ovl-7",
 					"region": {
 						"x": 47,
 						"y": 205,
@@ -3458,7 +3458,7 @@
 					}
 				},
 				{
-					"filename": "strasse_ovl-22.png",
+					"filename": "strasse_ovl-22",
 					"region": {
 						"x": 97,
 						"y": 206,
@@ -3473,7 +3473,7 @@
 					}
 				},
 				{
-					"filename": "strasse_ovl-9.png",
+					"filename": "strasse_ovl-9",
 					"region": {
 						"x": 175,
 						"y": 206,
@@ -3488,7 +3488,7 @@
 					}
 				},
 				{
-					"filename": "street3_ovl-10.png",
+					"filename": "street3_ovl-10",
 					"region": {
 						"x": 236,
 						"y": 206,
@@ -3503,7 +3503,7 @@
 					}
 				},
 				{
-					"filename": "street3_ovl-22.png",
+					"filename": "street3_ovl-22",
 					"region": {
 						"x": 298,
 						"y": 207,
@@ -3518,7 +3518,7 @@
 					}
 				},
 				{
-					"filename": "street3_ovl-7.png",
+					"filename": "street3_ovl-7",
 					"region": {
 						"x": 376,
 						"y": 207,
@@ -3533,7 +3533,7 @@
 					}
 				},
 				{
-					"filename": "street3_ovl-9.png",
+					"filename": "street3_ovl-9",
 					"region": {
 						"x": 426,
 						"y": 207,
@@ -3548,7 +3548,7 @@
 					}
 				},
 				{
-					"filename": "wald_ovl-11.png",
+					"filename": "wald_ovl-11",
 					"region": {
 						"x": 487,
 						"y": 207,
@@ -3563,7 +3563,7 @@
 					}
 				},
 				{
-					"filename": "wald_ovl-17.png",
+					"filename": "wald_ovl-17",
 					"region": {
 						"x": 545,
 						"y": 207,
@@ -3578,7 +3578,7 @@
 					}
 				},
 				{
-					"filename": "wald_ovl-21.png",
+					"filename": "wald_ovl-21",
 					"region": {
 						"x": 622,
 						"y": 207,
@@ -3593,7 +3593,7 @@
 					}
 				},
 				{
-					"filename": "wald_ovl-25.png",
+					"filename": "wald_ovl-25",
 					"region": {
 						"x": 699,
 						"y": 207,
@@ -3608,7 +3608,7 @@
 					}
 				},
 				{
-					"filename": "wald_ovl-5.png",
+					"filename": "wald_ovl-5",
 					"region": {
 						"x": 777,
 						"y": 207,
@@ -3623,7 +3623,7 @@
 					}
 				},
 				{
-					"filename": "wald_ovl-7.png",
+					"filename": "wald_ovl-7",
 					"region": {
 						"x": 821,
 						"y": 207,
@@ -3638,7 +3638,7 @@
 					}
 				},
 				{
-					"filename": "Eis1_ovl-10.png",
+					"filename": "Eis1_ovl-10",
 					"region": {
 						"x": 868,
 						"y": 207,
@@ -3653,7 +3653,7 @@
 					}
 				},
 				{
-					"filename": "Eis1_ovl-7.png",
+					"filename": "Eis1_ovl-7",
 					"region": {
 						"x": 926,
 						"y": 207,
@@ -3668,7 +3668,7 @@
 					}
 				},
 				{
-					"filename": "acker_ovl-2.png",
+					"filename": "acker_ovl-2",
 					"region": {
 						"x": 993,
 						"y": 207,
@@ -3683,7 +3683,7 @@
 					}
 				},
 				{
-					"filename": "cob_ovl-17.png",
+					"filename": "cob_ovl-17",
 					"region": {
 						"x": 1039,
 						"y": 207,
@@ -3698,7 +3698,7 @@
 					}
 				},
 				{
-					"filename": "cob_ovl-19.png",
+					"filename": "cob_ovl-19",
 					"region": {
 						"x": 1117,
 						"y": 208,
@@ -3713,7 +3713,7 @@
 					}
 				},
 				{
-					"filename": "dreck_ovl-2.png",
+					"filename": "dreck_ovl-2",
 					"region": {
 						"x": 1195,
 						"y": 208,
@@ -3728,7 +3728,7 @@
 					}
 				},
 				{
-					"filename": "cob_ovl-25.png",
+					"filename": "cob_ovl-25",
 					"region": {
 						"x": 1241,
 						"y": 209,
@@ -3743,7 +3743,7 @@
 					}
 				},
 				{
-					"filename": "cob_ovl-26.png",
+					"filename": "cob_ovl-26",
 					"region": {
 						"x": 1319,
 						"y": 209,
@@ -3758,7 +3758,7 @@
 					}
 				},
 				{
-					"filename": "cob_ovl-8.png",
+					"filename": "cob_ovl-8",
 					"region": {
 						"x": 1397,
 						"y": 210,
@@ -3773,7 +3773,7 @@
 					}
 				},
 				{
-					"filename": "dungeonfloor_ovl-2.png",
+					"filename": "dungeonfloor_ovl-2",
 					"region": {
 						"x": 1460,
 						"y": 210,
@@ -3788,7 +3788,7 @@
 					}
 				},
 				{
-					"filename": "cracked_ovl-17.png",
+					"filename": "cracked_ovl-17",
 					"region": {
 						"x": 1506,
 						"y": 211,
@@ -3803,7 +3803,7 @@
 					}
 				},
 				{
-					"filename": "cracked_ovl-19.png",
+					"filename": "cracked_ovl-19",
 					"region": {
 						"x": 1584,
 						"y": 211,
@@ -3818,7 +3818,7 @@
 					}
 				},
 				{
-					"filename": "cracked_ovl-25.png",
+					"filename": "cracked_ovl-25",
 					"region": {
 						"x": 1662,
 						"y": 211,
@@ -3833,7 +3833,7 @@
 					}
 				},
 				{
-					"filename": "cracked_ovl-26.png",
+					"filename": "cracked_ovl-26",
 					"region": {
 						"x": 1740,
 						"y": 211,
@@ -3848,7 +3848,7 @@
 					}
 				},
 				{
-					"filename": "cracked_ovl-8.png",
+					"filename": "cracked_ovl-8",
 					"region": {
 						"x": 1818,
 						"y": 211,
@@ -3863,7 +3863,7 @@
 					}
 				},
 				{
-					"filename": "fels1_ovl-2.png",
+					"filename": "fels1_ovl-2",
 					"region": {
 						"x": 1881,
 						"y": 211,
@@ -3878,7 +3878,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry_ovl-17.png",
+					"filename": "grass_dry_ovl-17",
 					"region": {
 						"x": 1927,
 						"y": 217,
@@ -3893,7 +3893,7 @@
 					}
 				},
 				{
-					"filename": "lava_ovl-2.png",
+					"filename": "lava_ovl-2",
 					"region": {
 						"x": 1,
 						"y": 236,
@@ -3908,7 +3908,7 @@
 					}
 				},
 				{
-					"filename": "sand_ovl-2.png",
+					"filename": "sand_ovl-2",
 					"region": {
 						"x": 47,
 						"y": 237,
@@ -3923,7 +3923,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry_ovl-19.png",
+					"filename": "grass_dry_ovl-19",
 					"region": {
 						"x": 93,
 						"y": 238,
@@ -3938,7 +3938,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry_ovl-25.png",
+					"filename": "grass_dry_ovl-25",
 					"region": {
 						"x": 171,
 						"y": 238,
@@ -3953,7 +3953,7 @@
 					}
 				},
 				{
-					"filename": "schnee_ovl-2.png",
+					"filename": "schnee_ovl-2",
 					"region": {
 						"x": 249,
 						"y": 238,
@@ -3968,7 +3968,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry_ovl-26.png",
+					"filename": "grass_dry_ovl-26",
 					"region": {
 						"x": 295,
 						"y": 239,
@@ -3983,7 +3983,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry_ovl-8.png",
+					"filename": "grass_dry_ovl-8",
 					"region": {
 						"x": 373,
 						"y": 239,
@@ -3998,7 +3998,7 @@
 					}
 				},
 				{
-					"filename": "grass_ovl-17.png",
+					"filename": "grass_ovl-17",
 					"region": {
 						"x": 436,
 						"y": 239,
@@ -4013,7 +4013,7 @@
 					}
 				},
 				{
-					"filename": "grass_ovl-19.png",
+					"filename": "grass_ovl-19",
 					"region": {
 						"x": 514,
 						"y": 239,
@@ -4028,7 +4028,7 @@
 					}
 				},
 				{
-					"filename": "grass_ovl-25.png",
+					"filename": "grass_ovl-25",
 					"region": {
 						"x": 592,
 						"y": 239,
@@ -4043,7 +4043,7 @@
 					}
 				},
 				{
-					"filename": "grass_ovl-26.png",
+					"filename": "grass_ovl-26",
 					"region": {
 						"x": 670,
 						"y": 239,
@@ -4058,7 +4058,7 @@
 					}
 				},
 				{
-					"filename": "grass_ovl-8.png",
+					"filename": "grass_ovl-8",
 					"region": {
 						"x": 748,
 						"y": 239,
@@ -4073,7 +4073,7 @@
 					}
 				},
 				{
-					"filename": "wald_ovl-2.png",
+					"filename": "wald_ovl-2",
 					"region": {
 						"x": 811,
 						"y": 239,
@@ -4088,7 +4088,7 @@
 					}
 				},
 				{
-					"filename": "mud_ovl-17.png",
+					"filename": "mud_ovl-17",
 					"region": {
 						"x": 857,
 						"y": 240,
@@ -4103,7 +4103,7 @@
 					}
 				},
 				{
-					"filename": "mud_ovl-19.png",
+					"filename": "mud_ovl-19",
 					"region": {
 						"x": 935,
 						"y": 240,
@@ -4118,7 +4118,7 @@
 					}
 				},
 				{
-					"filename": "mud_ovl-25.png",
+					"filename": "mud_ovl-25",
 					"region": {
 						"x": 1013,
 						"y": 240,
@@ -4133,7 +4133,7 @@
 					}
 				},
 				{
-					"filename": "mud_ovl-26.png",
+					"filename": "mud_ovl-26",
 					"region": {
 						"x": 1091,
 						"y": 241,
@@ -4148,7 +4148,7 @@
 					}
 				},
 				{
-					"filename": "mud_ovl-8.png",
+					"filename": "mud_ovl-8",
 					"region": {
 						"x": 1169,
 						"y": 241,
@@ -4163,7 +4163,7 @@
 					}
 				},
 				{
-					"filename": "sandy_ovl-17.png",
+					"filename": "sandy_ovl-17",
 					"region": {
 						"x": 1232,
 						"y": 242,
@@ -4178,7 +4178,7 @@
 					}
 				},
 				{
-					"filename": "sandy_ovl-19.png",
+					"filename": "sandy_ovl-19",
 					"region": {
 						"x": 1310,
 						"y": 242,
@@ -4193,7 +4193,7 @@
 					}
 				},
 				{
-					"filename": "sandy_ovl-25.png",
+					"filename": "sandy_ovl-25",
 					"region": {
 						"x": 1388,
 						"y": 243,
@@ -4208,7 +4208,7 @@
 					}
 				},
 				{
-					"filename": "sandy_ovl-26.png",
+					"filename": "sandy_ovl-26",
 					"region": {
 						"x": 1466,
 						"y": 244,
@@ -4223,7 +4223,7 @@
 					}
 				},
 				{
-					"filename": "sandy_ovl-8.png",
+					"filename": "sandy_ovl-8",
 					"region": {
 						"x": 1544,
 						"y": 244,
@@ -4238,7 +4238,7 @@
 					}
 				},
 				{
-					"filename": "str_ovl-17.png",
+					"filename": "str_ovl-17",
 					"region": {
 						"x": 1607,
 						"y": 244,
@@ -4253,7 +4253,7 @@
 					}
 				},
 				{
-					"filename": "str_ovl-19.png",
+					"filename": "str_ovl-19",
 					"region": {
 						"x": 1685,
 						"y": 244,
@@ -4268,7 +4268,7 @@
 					}
 				},
 				{
-					"filename": "str_ovl-25.png",
+					"filename": "str_ovl-25",
 					"region": {
 						"x": 1763,
 						"y": 244,
@@ -4283,7 +4283,7 @@
 					}
 				},
 				{
-					"filename": "str_ovl-26.png",
+					"filename": "str_ovl-26",
 					"region": {
 						"x": 1841,
 						"y": 244,
@@ -4298,7 +4298,7 @@
 					}
 				},
 				{
-					"filename": "str_ovl-8.png",
+					"filename": "str_ovl-8",
 					"region": {
 						"x": 1919,
 						"y": 250,
@@ -4313,7 +4313,7 @@
 					}
 				},
 				{
-					"filename": "strasse_ovl-8.png",
+					"filename": "strasse_ovl-8",
 					"region": {
 						"x": 1982,
 						"y": 250,
@@ -4328,7 +4328,7 @@
 					}
 				},
 				{
-					"filename": "strasse_ovl-17.png",
+					"filename": "strasse_ovl-17",
 					"region": {
 						"x": 1,
 						"y": 270,
@@ -4343,7 +4343,7 @@
 					}
 				},
 				{
-					"filename": "strasse_ovl-19.png",
+					"filename": "strasse_ovl-19",
 					"region": {
 						"x": 79,
 						"y": 271,
@@ -4358,7 +4358,7 @@
 					}
 				},
 				{
-					"filename": "strasse_ovl-25.png",
+					"filename": "strasse_ovl-25",
 					"region": {
 						"x": 157,
 						"y": 271,
@@ -4373,7 +4373,7 @@
 					}
 				},
 				{
-					"filename": "strasse_ovl-26.png",
+					"filename": "strasse_ovl-26",
 					"region": {
 						"x": 235,
 						"y": 272,
@@ -4388,7 +4388,7 @@
 					}
 				},
 				{
-					"filename": "street3_ovl-17.png",
+					"filename": "street3_ovl-17",
 					"region": {
 						"x": 313,
 						"y": 272,
@@ -4403,7 +4403,7 @@
 					}
 				},
 				{
-					"filename": "street3_ovl-19.png",
+					"filename": "street3_ovl-19",
 					"region": {
 						"x": 391,
 						"y": 272,
@@ -4418,7 +4418,7 @@
 					}
 				},
 				{
-					"filename": "street3_ovl-25.png",
+					"filename": "street3_ovl-25",
 					"region": {
 						"x": 469,
 						"y": 272,
@@ -4433,7 +4433,7 @@
 					}
 				},
 				{
-					"filename": "street3_ovl-26.png",
+					"filename": "street3_ovl-26",
 					"region": {
 						"x": 547,
 						"y": 272,
@@ -4448,7 +4448,7 @@
 					}
 				},
 				{
-					"filename": "street3_ovl-8.png",
+					"filename": "street3_ovl-8",
 					"region": {
 						"x": 625,
 						"y": 272,
@@ -4463,7 +4463,7 @@
 					}
 				},
 				{
-					"filename": "Eis1_ovl-2.png",
+					"filename": "Eis1_ovl-2",
 					"region": {
 						"x": 688,
 						"y": 272,
@@ -4478,7 +4478,7 @@
 					}
 				},
 				{
-					"filename": "Eis1_ovl-5.png",
+					"filename": "Eis1_ovl-5",
 					"region": {
 						"x": 749,
 						"y": 272,
@@ -4493,7 +4493,7 @@
 					}
 				},
 				{
-					"filename": "Eis1_ovl-8.png",
+					"filename": "Eis1_ovl-8",
 					"region": {
 						"x": 812,
 						"y": 273,
@@ -4508,7 +4508,7 @@
 					}
 				},
 				{
-					"filename": "acker_ovl-10.png",
+					"filename": "acker_ovl-10",
 					"region": {
 						"x": 875,
 						"y": 273,
@@ -4523,7 +4523,7 @@
 					}
 				},
 				{
-					"filename": "cob_ovl-21.png",
+					"filename": "cob_ovl-21",
 					"region": {
 						"x": 938,
 						"y": 273,
@@ -4538,7 +4538,7 @@
 					}
 				},
 				{
-					"filename": "dreck_ovl-10.png",
+					"filename": "dreck_ovl-10",
 					"region": {
 						"x": 1016,
 						"y": 273,
@@ -4553,7 +4553,7 @@
 					}
 				},
 				{
-					"filename": "cracked_ovl-21.png",
+					"filename": "cracked_ovl-21",
 					"region": {
 						"x": 1079,
 						"y": 274,
@@ -4568,7 +4568,7 @@
 					}
 				},
 				{
-					"filename": "dungeonfloor_ovl-10.png",
+					"filename": "dungeonfloor_ovl-10",
 					"region": {
 						"x": 1157,
 						"y": 274,
@@ -4583,7 +4583,7 @@
 					}
 				},
 				{
-					"filename": "fels1_ovl-10.png",
+					"filename": "fels1_ovl-10",
 					"region": {
 						"x": 1220,
 						"y": 275,
@@ -4598,7 +4598,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry_ovl-21.png",
+					"filename": "grass_dry_ovl-21",
 					"region": {
 						"x": 1283,
 						"y": 275,
@@ -4613,7 +4613,7 @@
 					}
 				},
 				{
-					"filename": "grass_ovl-21.png",
+					"filename": "grass_ovl-21",
 					"region": {
 						"x": 1361,
 						"y": 276,
@@ -4628,7 +4628,7 @@
 					}
 				},
 				{
-					"filename": "lava_ovl-10.png",
+					"filename": "lava_ovl-10",
 					"region": {
 						"x": 1439,
 						"y": 277,
@@ -4643,7 +4643,7 @@
 					}
 				},
 				{
-					"filename": "mud_ovl-21.png",
+					"filename": "mud_ovl-21",
 					"region": {
 						"x": 1502,
 						"y": 277,
@@ -4658,7 +4658,7 @@
 					}
 				},
 				{
-					"filename": "sand_ovl-10.png",
+					"filename": "sand_ovl-10",
 					"region": {
 						"x": 1580,
 						"y": 277,
@@ -4673,7 +4673,7 @@
 					}
 				},
 				{
-					"filename": "sandy_ovl-21.png",
+					"filename": "sandy_ovl-21",
 					"region": {
 						"x": 1643,
 						"y": 277,
@@ -4688,7 +4688,7 @@
 					}
 				},
 				{
-					"filename": "schnee_ovl-10.png",
+					"filename": "schnee_ovl-10",
 					"region": {
 						"x": 1721,
 						"y": 277,
@@ -4703,7 +4703,7 @@
 					}
 				},
 				{
-					"filename": "str_ovl-21.png",
+					"filename": "str_ovl-21",
 					"region": {
 						"x": 1784,
 						"y": 277,
@@ -4718,7 +4718,7 @@
 					}
 				},
 				{
-					"filename": "acker_ovl-12.png",
+					"filename": "acker_ovl-12",
 					"region": {
 						"x": 1862,
 						"y": 277,
@@ -4733,7 +4733,7 @@
 					}
 				},
 				{
-					"filename": "strasse_ovl-21.png",
+					"filename": "strasse_ovl-21",
 					"region": {
 						"x": 1908,
 						"y": 283,
@@ -4748,7 +4748,7 @@
 					}
 				},
 				{
-					"filename": "wald_ovl-10.png",
+					"filename": "wald_ovl-10",
 					"region": {
 						"x": 1986,
 						"y": 283,
@@ -4763,7 +4763,7 @@
 					}
 				},
 				{
-					"filename": "street3_ovl-21.png",
+					"filename": "street3_ovl-21",
 					"region": {
 						"x": 1,
 						"y": 303,
@@ -4778,7 +4778,7 @@
 					}
 				},
 				{
-					"filename": "Eis1_ovl-11.png",
+					"filename": "Eis1_ovl-11",
 					"region": {
 						"x": 79,
 						"y": 304,
@@ -4793,7 +4793,7 @@
 					}
 				},
 				{
-					"filename": "acker_ovl-19.png",
+					"filename": "acker_ovl-19",
 					"region": {
 						"x": 145,
 						"y": 304,
@@ -4808,7 +4808,7 @@
 					}
 				},
 				{
-					"filename": "acker_ovl-9.png",
+					"filename": "acker_ovl-9",
 					"region": {
 						"x": 223,
 						"y": 305,
@@ -4823,7 +4823,7 @@
 					}
 				},
 				{
-					"filename": "dreck_ovl-19.png",
+					"filename": "dreck_ovl-19",
 					"region": {
 						"x": 285,
 						"y": 305,
@@ -4838,7 +4838,7 @@
 					}
 				},
 				{
-					"filename": "dreck_ovl-9.png",
+					"filename": "dreck_ovl-9",
 					"region": {
 						"x": 363,
 						"y": 305,
@@ -4853,7 +4853,7 @@
 					}
 				},
 				{
-					"filename": "dungeonfloor_ovl-19.png",
+					"filename": "dungeonfloor_ovl-19",
 					"region": {
 						"x": 425,
 						"y": 305,
@@ -4868,7 +4868,7 @@
 					}
 				},
 				{
-					"filename": "dungeonfloor_ovl-9.png",
+					"filename": "dungeonfloor_ovl-9",
 					"region": {
 						"x": 503,
 						"y": 305,
@@ -4883,7 +4883,7 @@
 					}
 				},
 				{
-					"filename": "fels1_ovl-19.png",
+					"filename": "fels1_ovl-19",
 					"region": {
 						"x": 565,
 						"y": 305,
@@ -4898,7 +4898,7 @@
 					}
 				},
 				{
-					"filename": "fels1_ovl-9.png",
+					"filename": "fels1_ovl-9",
 					"region": {
 						"x": 643,
 						"y": 306,
@@ -4913,7 +4913,7 @@
 					}
 				},
 				{
-					"filename": "lava_ovl-19.png",
+					"filename": "lava_ovl-19",
 					"region": {
 						"x": 705,
 						"y": 306,
@@ -4928,7 +4928,7 @@
 					}
 				},
 				{
-					"filename": "lava_ovl-9.png",
+					"filename": "lava_ovl-9",
 					"region": {
 						"x": 783,
 						"y": 307,
@@ -4943,7 +4943,7 @@
 					}
 				},
 				{
-					"filename": "sand_ovl-19.png",
+					"filename": "sand_ovl-19",
 					"region": {
 						"x": 845,
 						"y": 307,
@@ -4958,7 +4958,7 @@
 					}
 				},
 				{
-					"filename": "sand_ovl-9.png",
+					"filename": "sand_ovl-9",
 					"region": {
 						"x": 923,
 						"y": 307,
@@ -4973,7 +4973,7 @@
 					}
 				},
 				{
-					"filename": "schnee_ovl-19.png",
+					"filename": "schnee_ovl-19",
 					"region": {
 						"x": 985,
 						"y": 307,
@@ -4988,7 +4988,7 @@
 					}
 				},
 				{
-					"filename": "schnee_ovl-9.png",
+					"filename": "schnee_ovl-9",
 					"region": {
 						"x": 1063,
 						"y": 308,
@@ -5003,7 +5003,7 @@
 					}
 				},
 				{
-					"filename": "wald_ovl-19.png",
+					"filename": "wald_ovl-19",
 					"region": {
 						"x": 1125,
 						"y": 308,
@@ -5018,7 +5018,7 @@
 					}
 				},
 				{
-					"filename": "wald_ovl-9.png",
+					"filename": "wald_ovl-9",
 					"region": {
 						"x": 1203,
 						"y": 309,
@@ -5033,7 +5033,7 @@
 					}
 				},
 				{
-					"filename": "acker_ovl-26.png",
+					"filename": "acker_ovl-26",
 					"region": {
 						"x": 1265,
 						"y": 309,
@@ -5048,7 +5048,7 @@
 					}
 				},
 				{
-					"filename": "dreck_ovl-26.png",
+					"filename": "dreck_ovl-26",
 					"region": {
 						"x": 1343,
 						"y": 310,
@@ -5063,7 +5063,7 @@
 					}
 				},
 				{
-					"filename": "dungeonfloor_ovl-26.png",
+					"filename": "dungeonfloor_ovl-26",
 					"region": {
 						"x": 1421,
 						"y": 311,
@@ -5078,7 +5078,7 @@
 					}
 				},
 				{
-					"filename": "fels1_ovl-26.png",
+					"filename": "fels1_ovl-26",
 					"region": {
 						"x": 1499,
 						"y": 311,
@@ -5093,7 +5093,7 @@
 					}
 				},
 				{
-					"filename": "lava_ovl-26.png",
+					"filename": "lava_ovl-26",
 					"region": {
 						"x": 1577,
 						"y": 311,
@@ -5108,7 +5108,7 @@
 					}
 				},
 				{
-					"filename": "sand_ovl-26.png",
+					"filename": "sand_ovl-26",
 					"region": {
 						"x": 1655,
 						"y": 311,
@@ -5123,7 +5123,7 @@
 					}
 				},
 				{
-					"filename": "schnee_ovl-26.png",
+					"filename": "schnee_ovl-26",
 					"region": {
 						"x": 1733,
 						"y": 311,
@@ -5138,7 +5138,7 @@
 					}
 				},
 				{
-					"filename": "acker_ovl-15.png",
+					"filename": "acker_ovl-15",
 					"region": {
 						"x": 1811,
 						"y": 311,
@@ -5153,7 +5153,7 @@
 					}
 				},
 				{
-					"filename": "wald_ovl-26.png",
+					"filename": "wald_ovl-26",
 					"region": {
 						"x": 1857,
 						"y": 317,
@@ -5168,7 +5168,7 @@
 					}
 				},
 				{
-					"filename": "Eis1_ovl-4.png",
+					"filename": "Eis1_ovl-4",
 					"region": {
 						"x": 1935,
 						"y": 317,
@@ -5183,7 +5183,7 @@
 					}
 				},
 				{
-					"filename": "Eis1.png",
+					"filename": "Eis1",
 					"region": {
 						"x": 1,
 						"y": 337,
@@ -5198,7 +5198,7 @@
 					}
 				},
 				{
-					"filename": "Eis1_ovl-0.png",
+					"filename": "Eis1_ovl-0",
 					"region": {
 						"x": 79,
 						"y": 339,
@@ -5213,7 +5213,7 @@
 					}
 				},
 				{
-					"filename": "Eis1_ovl-6.png",
+					"filename": "Eis1_ovl-6",
 					"region": {
 						"x": 142,
 						"y": 339,
@@ -5228,7 +5228,7 @@
 					}
 				},
 				{
-					"filename": "Eis2.png",
+					"filename": "Eis2",
 					"region": {
 						"x": 211,
 						"y": 340,
@@ -5243,7 +5243,7 @@
 					}
 				},
 				{
-					"filename": "Parkett1.png",
+					"filename": "Parkett1",
 					"region": {
 						"x": 289,
 						"y": 340,
@@ -5258,7 +5258,7 @@
 					}
 				},
 				{
-					"filename": "Parkett2.png",
+					"filename": "Parkett2",
 					"region": {
 						"x": 367,
 						"y": 340,
@@ -5273,7 +5273,7 @@
 					}
 				},
 				{
-					"filename": "Parkett3.png",
+					"filename": "Parkett3",
 					"region": {
 						"x": 445,
 						"y": 340,
@@ -5288,7 +5288,7 @@
 					}
 				},
 				{
-					"filename": "Tile_Parkett_Taverne.png",
+					"filename": "Tile_Parkett_Taverne",
 					"region": {
 						"x": 523,
 						"y": 340,
@@ -5303,7 +5303,7 @@
 					}
 				},
 				{
-					"filename": "Tile_Pflaster.png",
+					"filename": "Tile_Pflaster",
 					"region": {
 						"x": 601,
 						"y": 341,
@@ -5318,7 +5318,7 @@
 					}
 				},
 				{
-					"filename": "acker.png",
+					"filename": "acker",
 					"region": {
 						"x": 679,
 						"y": 341,
@@ -5333,7 +5333,7 @@
 					}
 				},
 				{
-					"filename": "acker_ovl-16.png",
+					"filename": "acker_ovl-16",
 					"region": {
 						"x": 757,
 						"y": 342,
@@ -5348,7 +5348,7 @@
 					}
 				},
 				{
-					"filename": "acker_ovl-18.png",
+					"filename": "acker_ovl-18",
 					"region": {
 						"x": 814,
 						"y": 342,
@@ -5363,7 +5363,7 @@
 					}
 				},
 				{
-					"filename": "acker_ovl-20.png",
+					"filename": "acker_ovl-20",
 					"region": {
 						"x": 875,
 						"y": 342,
@@ -5378,7 +5378,7 @@
 					}
 				},
 				{
-					"filename": "acker_ovl-23.png",
+					"filename": "acker_ovl-23",
 					"region": {
 						"x": 938,
 						"y": 342,
@@ -5393,7 +5393,7 @@
 					}
 				},
 				{
-					"filename": "acker_ovl-24.png",
+					"filename": "acker_ovl-24",
 					"region": {
 						"x": 997,
 						"y": 342,
@@ -5408,7 +5408,7 @@
 					}
 				},
 				{
-					"filename": "acker_ovl-27.png",
+					"filename": "acker_ovl-27",
 					"region": {
 						"x": 1060,
 						"y": 343,
@@ -5423,7 +5423,7 @@
 					}
 				},
 				{
-					"filename": "cob-0.png",
+					"filename": "cob-0",
 					"region": {
 						"x": 1123,
 						"y": 343,
@@ -5438,7 +5438,7 @@
 					}
 				},
 				{
-					"filename": "cob_ovl-12.png",
+					"filename": "cob_ovl-12",
 					"region": {
 						"x": 1201,
 						"y": 344,
@@ -5453,7 +5453,7 @@
 					}
 				},
 				{
-					"filename": "cob-1.png",
+					"filename": "cob-1",
 					"region": {
 						"x": 1247,
 						"y": 345,
@@ -5468,7 +5468,7 @@
 					}
 				},
 				{
-					"filename": "cob-2.png",
+					"filename": "cob-2",
 					"region": {
 						"x": 1325,
 						"y": 346,
@@ -5483,7 +5483,7 @@
 					}
 				},
 				{
-					"filename": "cob-3.png",
+					"filename": "cob-3",
 					"region": {
 						"x": 1403,
 						"y": 347,
@@ -5498,7 +5498,7 @@
 					}
 				},
 				{
-					"filename": "cob-4.png",
+					"filename": "cob-4",
 					"region": {
 						"x": 1481,
 						"y": 347,
@@ -5513,7 +5513,7 @@
 					}
 				},
 				{
-					"filename": "cob_ovl-0.png",
+					"filename": "cob_ovl-0",
 					"region": {
 						"x": 1559,
 						"y": 347,
@@ -5528,7 +5528,7 @@
 					}
 				},
 				{
-					"filename": "cob_ovl-15.png",
+					"filename": "cob_ovl-15",
 					"region": {
 						"x": 1637,
 						"y": 347,
@@ -5543,7 +5543,7 @@
 					}
 				},
 				{
-					"filename": "cob_ovl-16.png",
+					"filename": "cob_ovl-16",
 					"region": {
 						"x": 1688,
 						"y": 347,
@@ -5558,7 +5558,7 @@
 					}
 				},
 				{
-					"filename": "cracked_ovl-12.png",
+					"filename": "cracked_ovl-12",
 					"region": {
 						"x": 1751,
 						"y": 347,
@@ -5573,7 +5573,7 @@
 					}
 				},
 				{
-					"filename": "cracked_ovl-15.png",
+					"filename": "cracked_ovl-15",
 					"region": {
 						"x": 1797,
 						"y": 350,
@@ -5588,7 +5588,7 @@
 					}
 				},
 				{
-					"filename": "cob_ovl-18.png",
+					"filename": "cob_ovl-18",
 					"region": {
 						"x": 1848,
 						"y": 353,
@@ -5603,7 +5603,7 @@
 					}
 				},
 				{
-					"filename": "cob_ovl-20.png",
+					"filename": "cob_ovl-20",
 					"region": {
 						"x": 1911,
 						"y": 355,
@@ -5618,7 +5618,7 @@
 					}
 				},
 				{
-					"filename": "cob_ovl-23.png",
+					"filename": "cob_ovl-23",
 					"region": {
 						"x": 1974,
 						"y": 355,
@@ -5633,7 +5633,7 @@
 					}
 				},
 				{
-					"filename": "cob_ovl-24.png",
+					"filename": "cob_ovl-24",
 					"region": {
 						"x": 1,
 						"y": 376,
@@ -5648,7 +5648,7 @@
 					}
 				},
 				{
-					"filename": "cob_ovl-27.png",
+					"filename": "cob_ovl-27",
 					"region": {
 						"x": 65,
 						"y": 378,
@@ -5663,7 +5663,7 @@
 					}
 				},
 				{
-					"filename": "cracked-0.png",
+					"filename": "cracked-0",
 					"region": {
 						"x": 131,
 						"y": 378,
@@ -5678,7 +5678,7 @@
 					}
 				},
 				{
-					"filename": "cracked-1.png",
+					"filename": "cracked-1",
 					"region": {
 						"x": 209,
 						"y": 379,
@@ -5693,7 +5693,7 @@
 					}
 				},
 				{
-					"filename": "cracked-2.png",
+					"filename": "cracked-2",
 					"region": {
 						"x": 287,
 						"y": 379,
@@ -5708,7 +5708,7 @@
 					}
 				},
 				{
-					"filename": "cracked-3.png",
+					"filename": "cracked-3",
 					"region": {
 						"x": 365,
 						"y": 379,
@@ -5723,7 +5723,7 @@
 					}
 				},
 				{
-					"filename": "cracked-4.png",
+					"filename": "cracked-4",
 					"region": {
 						"x": 443,
 						"y": 379,
@@ -5738,7 +5738,7 @@
 					}
 				},
 				{
-					"filename": "cracked-5.png",
+					"filename": "cracked-5",
 					"region": {
 						"x": 521,
 						"y": 379,
@@ -5753,7 +5753,7 @@
 					}
 				},
 				{
-					"filename": "cracked-6.png",
+					"filename": "cracked-6",
 					"region": {
 						"x": 599,
 						"y": 380,
@@ -5768,7 +5768,7 @@
 					}
 				},
 				{
-					"filename": "cracked-7.png",
+					"filename": "cracked-7",
 					"region": {
 						"x": 677,
 						"y": 380,
@@ -5783,7 +5783,7 @@
 					}
 				},
 				{
-					"filename": "cracked-8.png",
+					"filename": "cracked-8",
 					"region": {
 						"x": 755,
 						"y": 381,
@@ -5798,7 +5798,7 @@
 					}
 				},
 				{
-					"filename": "cracked_ovl-0.png",
+					"filename": "cracked_ovl-0",
 					"region": {
 						"x": 833,
 						"y": 381,
@@ -5813,7 +5813,7 @@
 					}
 				},
 				{
-					"filename": "cracked_ovl-16.png",
+					"filename": "cracked_ovl-16",
 					"region": {
 						"x": 911,
 						"y": 381,
@@ -5828,7 +5828,7 @@
 					}
 				},
 				{
-					"filename": "cracked_ovl-18.png",
+					"filename": "cracked_ovl-18",
 					"region": {
 						"x": 974,
 						"y": 381,
@@ -5843,7 +5843,7 @@
 					}
 				},
 				{
-					"filename": "cracked_ovl-20.png",
+					"filename": "cracked_ovl-20",
 					"region": {
 						"x": 1037,
 						"y": 382,
@@ -5858,7 +5858,7 @@
 					}
 				},
 				{
-					"filename": "cracked_ovl-23.png",
+					"filename": "cracked_ovl-23",
 					"region": {
 						"x": 1100,
 						"y": 382,
@@ -5873,7 +5873,7 @@
 					}
 				},
 				{
-					"filename": "cracked_ovl-24.png",
+					"filename": "cracked_ovl-24",
 					"region": {
 						"x": 1162,
 						"y": 383,
@@ -5888,7 +5888,7 @@
 					}
 				},
 				{
-					"filename": "cracked_ovl-27.png",
+					"filename": "cracked_ovl-27",
 					"region": {
 						"x": 1226,
 						"y": 384,
@@ -5903,7 +5903,7 @@
 					}
 				},
 				{
-					"filename": "dach.png",
+					"filename": "dach",
 					"region": {
 						"x": 1292,
 						"y": 385,
@@ -5918,7 +5918,7 @@
 					}
 				},
 				{
-					"filename": "dach_pflaster.png",
+					"filename": "dach_pflaster",
 					"region": {
 						"x": 1370,
 						"y": 386,
@@ -5933,7 +5933,7 @@
 					}
 				},
 				{
-					"filename": "dreck.png",
+					"filename": "dreck",
 					"region": {
 						"x": 1448,
 						"y": 386,
@@ -5948,7 +5948,7 @@
 					}
 				},
 				{
-					"filename": "dreck_ovl-12.png",
+					"filename": "dreck_ovl-12",
 					"region": {
 						"x": 1526,
 						"y": 386,
@@ -5963,7 +5963,7 @@
 					}
 				},
 				{
-					"filename": "dreck_ovl-15.png",
+					"filename": "dreck_ovl-15",
 					"region": {
 						"x": 1572,
 						"y": 386,
@@ -5978,7 +5978,7 @@
 					}
 				},
 				{
-					"filename": "dreck_ovl-16.png",
+					"filename": "dreck_ovl-16",
 					"region": {
 						"x": 1618,
 						"y": 386,
@@ -5993,7 +5993,7 @@
 					}
 				},
 				{
-					"filename": "dreck_ovl-18.png",
+					"filename": "dreck_ovl-18",
 					"region": {
 						"x": 1675,
 						"y": 386,
@@ -6008,7 +6008,7 @@
 					}
 				},
 				{
-					"filename": "dreck_ovl-23.png",
+					"filename": "dreck_ovl-23",
 					"region": {
 						"x": 1736,
 						"y": 386,
@@ -6023,7 +6023,7 @@
 					}
 				},
 				{
-					"filename": "dungeonfloor_ovl-12.png",
+					"filename": "dungeonfloor_ovl-12",
 					"region": {
 						"x": 1795,
 						"y": 389,
@@ -6038,7 +6038,7 @@
 					}
 				},
 				{
-					"filename": "dreck_ovl-20.png",
+					"filename": "dreck_ovl-20",
 					"region": {
 						"x": 1841,
 						"y": 392,
@@ -6053,7 +6053,7 @@
 					}
 				},
 				{
-					"filename": "dreck_ovl-24.png",
+					"filename": "dreck_ovl-24",
 					"region": {
 						"x": 1904,
 						"y": 394,
@@ -6068,7 +6068,7 @@
 					}
 				},
 				{
-					"filename": "dreck_ovl-27.png",
+					"filename": "dreck_ovl-27",
 					"region": {
 						"x": 1967,
 						"y": 394,
@@ -6083,7 +6083,7 @@
 					}
 				},
 				{
-					"filename": "dungeonfloor_ovl-15.png",
+					"filename": "dungeonfloor_ovl-15",
 					"region": {
 						"x": 1,
 						"y": 415,
@@ -6098,7 +6098,7 @@
 					}
 				},
 				{
-					"filename": "dungeonfloor-0.png",
+					"filename": "dungeonfloor-0",
 					"region": {
 						"x": 47,
 						"y": 417,
@@ -6113,7 +6113,7 @@
 					}
 				},
 				{
-					"filename": "dungeonfloor-1.png",
+					"filename": "dungeonfloor-1",
 					"region": {
 						"x": 125,
 						"y": 417,
@@ -6128,7 +6128,7 @@
 					}
 				},
 				{
-					"filename": "dungeonfloor-2.png",
+					"filename": "dungeonfloor-2",
 					"region": {
 						"x": 203,
 						"y": 418,
@@ -6143,7 +6143,7 @@
 					}
 				},
 				{
-					"filename": "dungeonfloor-3.png",
+					"filename": "dungeonfloor-3",
 					"region": {
 						"x": 281,
 						"y": 418,
@@ -6158,7 +6158,7 @@
 					}
 				},
 				{
-					"filename": "dungeonfloor_ovl-16.png",
+					"filename": "dungeonfloor_ovl-16",
 					"region": {
 						"x": 359,
 						"y": 418,
@@ -6173,7 +6173,7 @@
 					}
 				},
 				{
-					"filename": "dungeonfloor_ovl-18.png",
+					"filename": "dungeonfloor_ovl-18",
 					"region": {
 						"x": 416,
 						"y": 418,
@@ -6188,7 +6188,7 @@
 					}
 				},
 				{
-					"filename": "dungeonfloor_ovl-20.png",
+					"filename": "dungeonfloor_ovl-20",
 					"region": {
 						"x": 477,
 						"y": 418,
@@ -6203,7 +6203,7 @@
 					}
 				},
 				{
-					"filename": "dungeonfloor_ovl-23.png",
+					"filename": "dungeonfloor_ovl-23",
 					"region": {
 						"x": 540,
 						"y": 418,
@@ -6218,7 +6218,7 @@
 					}
 				},
 				{
-					"filename": "dungeonfloor_ovl-24.png",
+					"filename": "dungeonfloor_ovl-24",
 					"region": {
 						"x": 599,
 						"y": 419,
@@ -6233,7 +6233,7 @@
 					}
 				},
 				{
-					"filename": "dungeonfloor_ovl-27.png",
+					"filename": "dungeonfloor_ovl-27",
 					"region": {
 						"x": 662,
 						"y": 419,
@@ -6248,7 +6248,7 @@
 					}
 				},
 				{
-					"filename": "fels1-0.png",
+					"filename": "fels1-0",
 					"region": {
 						"x": 725,
 						"y": 420,
@@ -6263,7 +6263,7 @@
 					}
 				},
 				{
-					"filename": "fels1-1.png",
+					"filename": "fels1-1",
 					"region": {
 						"x": 803,
 						"y": 420,
@@ -6278,7 +6278,7 @@
 					}
 				},
 				{
-					"filename": "fels1-2.png",
+					"filename": "fels1-2",
 					"region": {
 						"x": 881,
 						"y": 420,
@@ -6293,7 +6293,7 @@
 					}
 				},
 				{
-					"filename": "fels1-3.png",
+					"filename": "fels1-3",
 					"region": {
 						"x": 959,
 						"y": 420,
@@ -6308,7 +6308,7 @@
 					}
 				},
 				{
-					"filename": "fels1_ovl-12.png",
+					"filename": "fels1_ovl-12",
 					"region": {
 						"x": 1037,
 						"y": 421,
@@ -6323,7 +6323,7 @@
 					}
 				},
 				{
-					"filename": "fels1_ovl-15.png",
+					"filename": "fels1_ovl-15",
 					"region": {
 						"x": 1083,
 						"y": 421,
@@ -6338,7 +6338,7 @@
 					}
 				},
 				{
-					"filename": "fels1_ovl-16.png",
+					"filename": "fels1_ovl-16",
 					"region": {
 						"x": 1129,
 						"y": 422,
@@ -6353,7 +6353,7 @@
 					}
 				},
 				{
-					"filename": "fels1_ovl-18.png",
+					"filename": "fels1_ovl-18",
 					"region": {
 						"x": 1186,
 						"y": 423,
@@ -6368,7 +6368,7 @@
 					}
 				},
 				{
-					"filename": "fels1_ovl-20.png",
+					"filename": "fels1_ovl-20",
 					"region": {
 						"x": 1247,
 						"y": 424,
@@ -6383,7 +6383,7 @@
 					}
 				},
 				{
-					"filename": "fels1_ovl-23.png",
+					"filename": "fels1_ovl-23",
 					"region": {
 						"x": 1310,
 						"y": 424,
@@ -6398,7 +6398,7 @@
 					}
 				},
 				{
-					"filename": "fels1_ovl-24.png",
+					"filename": "fels1_ovl-24",
 					"region": {
 						"x": 1369,
 						"y": 425,
@@ -6413,7 +6413,7 @@
 					}
 				},
 				{
-					"filename": "fels1_ovl-27.png",
+					"filename": "fels1_ovl-27",
 					"region": {
 						"x": 1432,
 						"y": 425,
@@ -6428,7 +6428,7 @@
 					}
 				},
 				{
-					"filename": "grass-0.png",
+					"filename": "grass-0",
 					"region": {
 						"x": 1495,
 						"y": 425,
@@ -6443,7 +6443,7 @@
 					}
 				},
 				{
-					"filename": "grass-1.png",
+					"filename": "grass-1",
 					"region": {
 						"x": 1573,
 						"y": 425,
@@ -6458,7 +6458,7 @@
 					}
 				},
 				{
-					"filename": "grass-2.png",
+					"filename": "grass-2",
 					"region": {
 						"x": 1651,
 						"y": 425,
@@ -6473,7 +6473,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry_ovl-12.png",
+					"filename": "grass_dry_ovl-12",
 					"region": {
 						"x": 1729,
 						"y": 425,
@@ -6488,7 +6488,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry_ovl-15.png",
+					"filename": "grass_dry_ovl-15",
 					"region": {
 						"x": 1775,
 						"y": 428,
@@ -6503,7 +6503,7 @@
 					}
 				},
 				{
-					"filename": "grass-3.png",
+					"filename": "grass-3",
 					"region": {
 						"x": 1826,
 						"y": 431,
@@ -6518,7 +6518,7 @@
 					}
 				},
 				{
-					"filename": "grass-4.png",
+					"filename": "grass-4",
 					"region": {
 						"x": 1904,
 						"y": 433,
@@ -6533,7 +6533,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry_ovl-16.png",
+					"filename": "grass_dry_ovl-16",
 					"region": {
 						"x": 1982,
 						"y": 433,
@@ -6548,7 +6548,7 @@
 					}
 				},
 				{
-					"filename": "grass_ovl-12.png",
+					"filename": "grass_ovl-12",
 					"region": {
 						"x": 1,
 						"y": 454,
@@ -6563,7 +6563,7 @@
 					}
 				},
 				{
-					"filename": "grass-5.png",
+					"filename": "grass-5",
 					"region": {
 						"x": 47,
 						"y": 456,
@@ -6578,7 +6578,7 @@
 					}
 				},
 				{
-					"filename": "grass-6.png",
+					"filename": "grass-6",
 					"region": {
 						"x": 125,
 						"y": 456,
@@ -6593,7 +6593,7 @@
 					}
 				},
 				{
-					"filename": "grass-7.png",
+					"filename": "grass-7",
 					"region": {
 						"x": 203,
 						"y": 457,
@@ -6608,7 +6608,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry-0.png",
+					"filename": "grass_dry-0",
 					"region": {
 						"x": 281,
 						"y": 457,
@@ -6623,7 +6623,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry-1.png",
+					"filename": "grass_dry-1",
 					"region": {
 						"x": 359,
 						"y": 457,
@@ -6638,7 +6638,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry-2.png",
+					"filename": "grass_dry-2",
 					"region": {
 						"x": 437,
 						"y": 457,
@@ -6653,7 +6653,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry-3.png",
+					"filename": "grass_dry-3",
 					"region": {
 						"x": 515,
 						"y": 457,
@@ -6668,7 +6668,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry-4.png",
+					"filename": "grass_dry-4",
 					"region": {
 						"x": 593,
 						"y": 458,
@@ -6683,7 +6683,7 @@
 					}
 				},
 				{
-					"filename": "grass_ovl-15.png",
+					"filename": "grass_ovl-15",
 					"region": {
 						"x": 671,
 						"y": 458,
@@ -6698,7 +6698,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry_ovl-0.png",
+					"filename": "grass_dry_ovl-0",
 					"region": {
 						"x": 722,
 						"y": 459,
@@ -6713,7 +6713,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry_ovl-18.png",
+					"filename": "grass_dry_ovl-18",
 					"region": {
 						"x": 800,
 						"y": 459,
@@ -6728,7 +6728,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry_ovl-20.png",
+					"filename": "grass_dry_ovl-20",
 					"region": {
 						"x": 863,
 						"y": 459,
@@ -6743,7 +6743,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry_ovl-23.png",
+					"filename": "grass_dry_ovl-23",
 					"region": {
 						"x": 926,
 						"y": 459,
@@ -6758,7 +6758,7 @@
 					}
 				},
 				{
-					"filename": "lava_ovl-12.png",
+					"filename": "lava_ovl-12",
 					"region": {
 						"x": 988,
 						"y": 459,
@@ -6773,7 +6773,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry_ovl-24.png",
+					"filename": "grass_dry_ovl-24",
 					"region": {
 						"x": 1034,
 						"y": 460,
@@ -6788,7 +6788,7 @@
 					}
 				},
 				{
-					"filename": "grass_dry_ovl-27.png",
+					"filename": "grass_dry_ovl-27",
 					"region": {
 						"x": 1098,
 						"y": 461,
@@ -6803,7 +6803,7 @@
 					}
 				},
 				{
-					"filename": "grass_ovl-0.png",
+					"filename": "grass_ovl-0",
 					"region": {
 						"x": 1164,
 						"y": 462,
@@ -6818,7 +6818,7 @@
 					}
 				},
 				{
-					"filename": "grass_ovl-16.png",
+					"filename": "grass_ovl-16",
 					"region": {
 						"x": 1242,
 						"y": 463,
@@ -6833,7 +6833,7 @@
 					}
 				},
 				{
-					"filename": "grass_ovl-18.png",
+					"filename": "grass_ovl-18",
 					"region": {
 						"x": 1305,
 						"y": 463,
@@ -6848,7 +6848,7 @@
 					}
 				},
 				{
-					"filename": "grass_ovl-20.png",
+					"filename": "grass_ovl-20",
 					"region": {
 						"x": 1368,
 						"y": 464,
@@ -6863,7 +6863,7 @@
 					}
 				},
 				{
-					"filename": "grass_ovl-23.png",
+					"filename": "grass_ovl-23",
 					"region": {
 						"x": 1431,
 						"y": 464,
@@ -6878,7 +6878,7 @@
 					}
 				},
 				{
-					"filename": "grass_ovl-24.png",
+					"filename": "grass_ovl-24",
 					"region": {
 						"x": 1493,
 						"y": 464,
@@ -6893,7 +6893,7 @@
 					}
 				},
 				{
-					"filename": "grass_ovl-27.png",
+					"filename": "grass_ovl-27",
 					"region": {
 						"x": 1557,
 						"y": 464,
@@ -6908,7 +6908,7 @@
 					}
 				},
 				{
-					"filename": "lava.png",
+					"filename": "lava",
 					"region": {
 						"x": 1623,
 						"y": 464,
@@ -6923,7 +6923,7 @@
 					}
 				},
 				{
-					"filename": "lava_ovl-15.png",
+					"filename": "lava_ovl-15",
 					"region": {
 						"x": 1701,
 						"y": 464,
@@ -6938,7 +6938,7 @@
 					}
 				},
 				{
-					"filename": "lava_ovl-16.png",
+					"filename": "lava_ovl-16",
 					"region": {
 						"x": 1747,
 						"y": 467,
@@ -6953,7 +6953,7 @@
 					}
 				},
 				{
-					"filename": "lava_ovl-18.png",
+					"filename": "lava_ovl-18",
 					"region": {
 						"x": 1804,
 						"y": 470,
@@ -6968,7 +6968,7 @@
 					}
 				},
 				{
-					"filename": "lava_ovl-20.png",
+					"filename": "lava_ovl-20",
 					"region": {
 						"x": 1865,
 						"y": 472,
@@ -6983,7 +6983,7 @@
 					}
 				},
 				{
-					"filename": "lava_ovl-23.png",
+					"filename": "lava_ovl-23",
 					"region": {
 						"x": 1928,
 						"y": 472,
@@ -6998,7 +6998,7 @@
 					}
 				},
 				{
-					"filename": "mud_ovl-12.png",
+					"filename": "mud_ovl-12",
 					"region": {
 						"x": 1987,
 						"y": 472,
@@ -7013,7 +7013,7 @@
 					}
 				},
 				{
-					"filename": "sand_ovl-12.png",
+					"filename": "sand_ovl-12",
 					"region": {
 						"x": 1,
 						"y": 493,
@@ -7028,7 +7028,7 @@
 					}
 				},
 				{
-					"filename": "lava_ovl-24.png",
+					"filename": "lava_ovl-24",
 					"region": {
 						"x": 47,
 						"y": 495,
@@ -7043,7 +7043,7 @@
 					}
 				},
 				{
-					"filename": "lava_ovl-27.png",
+					"filename": "lava_ovl-27",
 					"region": {
 						"x": 110,
 						"y": 495,
@@ -7058,7 +7058,7 @@
 					}
 				},
 				{
-					"filename": "marmor-0.png",
+					"filename": "marmor-0",
 					"region": {
 						"x": 173,
 						"y": 496,
@@ -7073,7 +7073,7 @@
 					}
 				},
 				{
-					"filename": "marmor-1.png",
+					"filename": "marmor-1",
 					"region": {
 						"x": 251,
 						"y": 496,
@@ -7088,7 +7088,7 @@
 					}
 				},
 				{
-					"filename": "marmor-2.png",
+					"filename": "marmor-2",
 					"region": {
 						"x": 329,
 						"y": 496,
@@ -7103,7 +7103,7 @@
 					}
 				},
 				{
-					"filename": "marmor-3.png",
+					"filename": "marmor-3",
 					"region": {
 						"x": 407,
 						"y": 496,
@@ -7118,7 +7118,7 @@
 					}
 				},
 				{
-					"filename": "mauer.png",
+					"filename": "mauer",
 					"region": {
 						"x": 485,
 						"y": 496,
@@ -7133,7 +7133,7 @@
 					}
 				},
 				{
-					"filename": "mosaik.png",
+					"filename": "mosaik",
 					"region": {
 						"x": 563,
 						"y": 497,
@@ -7148,7 +7148,7 @@
 					}
 				},
 				{
-					"filename": "mud-0.png",
+					"filename": "mud-0",
 					"region": {
 						"x": 641,
 						"y": 497,
@@ -7163,7 +7163,7 @@
 					}
 				},
 				{
-					"filename": "mud-1.png",
+					"filename": "mud-1",
 					"region": {
 						"x": 719,
 						"y": 498,
@@ -7178,7 +7178,7 @@
 					}
 				},
 				{
-					"filename": "mud-2.png",
+					"filename": "mud-2",
 					"region": {
 						"x": 797,
 						"y": 498,
@@ -7193,7 +7193,7 @@
 					}
 				},
 				{
-					"filename": "mud-3.png",
+					"filename": "mud-3",
 					"region": {
 						"x": 875,
 						"y": 498,
@@ -7208,7 +7208,7 @@
 					}
 				},
 				{
-					"filename": "mud-4.png",
+					"filename": "mud-4",
 					"region": {
 						"x": 953,
 						"y": 498,
@@ -7223,7 +7223,7 @@
 					}
 				},
 				{
-					"filename": "mud_ovl-15.png",
+					"filename": "mud_ovl-15",
 					"region": {
 						"x": 1031,
 						"y": 499,
@@ -7238,7 +7238,7 @@
 					}
 				},
 				{
-					"filename": "mud_floor.png",
+					"filename": "mud_floor",
 					"region": {
 						"x": 1082,
 						"y": 500,
@@ -7253,7 +7253,7 @@
 					}
 				},
 				{
-					"filename": "mud_ovl-0.png",
+					"filename": "mud_ovl-0",
 					"region": {
 						"x": 1160,
 						"y": 501,
@@ -7268,7 +7268,7 @@
 					}
 				},
 				{
-					"filename": "mud_ovl-16.png",
+					"filename": "mud_ovl-16",
 					"region": {
 						"x": 1238,
 						"y": 502,
@@ -7283,7 +7283,7 @@
 					}
 				},
 				{
-					"filename": "mud_ovl-18.png",
+					"filename": "mud_ovl-18",
 					"region": {
 						"x": 1301,
 						"y": 502,
@@ -7298,7 +7298,7 @@
 					}
 				},
 				{
-					"filename": "mud_ovl-20.png",
+					"filename": "mud_ovl-20",
 					"region": {
 						"x": 1364,
 						"y": 503,
@@ -7313,7 +7313,7 @@
 					}
 				},
 				{
-					"filename": "mud_ovl-23.png",
+					"filename": "mud_ovl-23",
 					"region": {
 						"x": 1427,
 						"y": 503,
@@ -7328,7 +7328,7 @@
 					}
 				},
 				{
-					"filename": "mud_ovl-24.png",
+					"filename": "mud_ovl-24",
 					"region": {
 						"x": 1489,
 						"y": 503,
@@ -7343,7 +7343,7 @@
 					}
 				},
 				{
-					"filename": "mud_ovl-27.png",
+					"filename": "mud_ovl-27",
 					"region": {
 						"x": 1553,
 						"y": 503,
@@ -7358,7 +7358,7 @@
 					}
 				},
 				{
-					"filename": "mud_roof.png",
+					"filename": "mud_roof",
 					"region": {
 						"x": 1619,
 						"y": 503,
@@ -7373,7 +7373,7 @@
 					}
 				},
 				{
-					"filename": "sand_ovl-15.png",
+					"filename": "sand_ovl-15",
 					"region": {
 						"x": 1697,
 						"y": 503,
@@ -7388,7 +7388,7 @@
 					}
 				},
 				{
-					"filename": "sand_ovl-16.png",
+					"filename": "sand_ovl-16",
 					"region": {
 						"x": 1743,
 						"y": 506,
@@ -7403,7 +7403,7 @@
 					}
 				},
 				{
-					"filename": "sand_ovl-18.png",
+					"filename": "sand_ovl-18",
 					"region": {
 						"x": 1800,
 						"y": 509,
@@ -7418,7 +7418,7 @@
 					}
 				},
 				{
-					"filename": "parkett-0.png",
+					"filename": "parkett-0",
 					"region": {
 						"x": 1861,
 						"y": 511,
@@ -7433,7 +7433,7 @@
 					}
 				},
 				{
-					"filename": "parkett-1.png",
+					"filename": "parkett-1",
 					"region": {
 						"x": 1939,
 						"y": 511,
@@ -7448,7 +7448,7 @@
 					}
 				},
 				{
-					"filename": "sandy_ovl-12.png",
+					"filename": "sandy_ovl-12",
 					"region": {
 						"x": 1,
 						"y": 532,
@@ -7463,7 +7463,7 @@
 					}
 				},
 				{
-					"filename": "parkett-2.png",
+					"filename": "parkett-2",
 					"region": {
 						"x": 47,
 						"y": 534,
@@ -7478,7 +7478,7 @@
 					}
 				},
 				{
-					"filename": "schnee_ovl-12.png",
+					"filename": "schnee_ovl-12",
 					"region": {
 						"x": 125,
 						"y": 534,
@@ -7493,7 +7493,7 @@
 					}
 				},
 				{
-					"filename": "parkett-3.png",
+					"filename": "parkett-3",
 					"region": {
 						"x": 171,
 						"y": 535,
@@ -7508,7 +7508,7 @@
 					}
 				},
 				{
-					"filename": "roof1_tile.png",
+					"filename": "roof1_tile",
 					"region": {
 						"x": 249,
 						"y": 535,
@@ -7523,7 +7523,7 @@
 					}
 				},
 				{
-					"filename": "roof2_tile.png",
+					"filename": "roof2_tile",
 					"region": {
 						"x": 327,
 						"y": 535,
@@ -7538,7 +7538,7 @@
 					}
 				},
 				{
-					"filename": "roof3_tile.png",
+					"filename": "roof3_tile",
 					"region": {
 						"x": 405,
 						"y": 535,
@@ -7553,7 +7553,7 @@
 					}
 				},
 				{
-					"filename": "sand001.png",
+					"filename": "sand001",
 					"region": {
 						"x": 483,
 						"y": 535,
@@ -7568,7 +7568,7 @@
 					}
 				},
 				{
-					"filename": "sand_ovl-20.png",
+					"filename": "sand_ovl-20",
 					"region": {
 						"x": 561,
 						"y": 536,
@@ -7583,7 +7583,7 @@
 					}
 				},
 				{
-					"filename": "sand_ovl-23.png",
+					"filename": "sand_ovl-23",
 					"region": {
 						"x": 624,
 						"y": 536,
@@ -7598,7 +7598,7 @@
 					}
 				},
 				{
-					"filename": "sand_ovl-24.png",
+					"filename": "sand_ovl-24",
 					"region": {
 						"x": 683,
 						"y": 537,
@@ -7613,7 +7613,7 @@
 					}
 				},
 				{
-					"filename": "sand_ovl-27.png",
+					"filename": "sand_ovl-27",
 					"region": {
 						"x": 746,
 						"y": 537,
@@ -7628,7 +7628,7 @@
 					}
 				},
 				{
-					"filename": "sandy-0.png",
+					"filename": "sandy-0",
 					"region": {
 						"x": 809,
 						"y": 537,
@@ -7643,7 +7643,7 @@
 					}
 				},
 				{
-					"filename": "sandy-1.png",
+					"filename": "sandy-1",
 					"region": {
 						"x": 887,
 						"y": 537,
@@ -7658,7 +7658,7 @@
 					}
 				},
 				{
-					"filename": "sandy_ovl-15.png",
+					"filename": "sandy_ovl-15",
 					"region": {
 						"x": 965,
 						"y": 537,
@@ -7673,7 +7673,7 @@
 					}
 				},
 				{
-					"filename": "sandy_ovl-16.png",
+					"filename": "sandy_ovl-16",
 					"region": {
 						"x": 1016,
 						"y": 538,
@@ -7688,7 +7688,7 @@
 					}
 				},
 				{
-					"filename": "sandy-10.png",
+					"filename": "sandy-10",
 					"region": {
 						"x": 1079,
 						"y": 539,
@@ -7703,7 +7703,7 @@
 					}
 				},
 				{
-					"filename": "sandy-11.png",
+					"filename": "sandy-11",
 					"region": {
 						"x": 1157,
 						"y": 540,
@@ -7718,7 +7718,7 @@
 					}
 				},
 				{
-					"filename": "sandy-12.png",
+					"filename": "sandy-12",
 					"region": {
 						"x": 1235,
 						"y": 541,
@@ -7733,7 +7733,7 @@
 					}
 				},
 				{
-					"filename": "schnee_ovl-15.png",
+					"filename": "schnee_ovl-15",
 					"region": {
 						"x": 1313,
 						"y": 541,
@@ -7748,7 +7748,7 @@
 					}
 				},
 				{
-					"filename": "sandy-13.png",
+					"filename": "sandy-13",
 					"region": {
 						"x": 1359,
 						"y": 542,
@@ -7763,7 +7763,7 @@
 					}
 				},
 				{
-					"filename": "sandy-14.png",
+					"filename": "sandy-14",
 					"region": {
 						"x": 1437,
 						"y": 542,
@@ -7778,7 +7778,7 @@
 					}
 				},
 				{
-					"filename": "sandy-15.png",
+					"filename": "sandy-15",
 					"region": {
 						"x": 1515,
 						"y": 542,
@@ -7793,7 +7793,7 @@
 					}
 				},
 				{
-					"filename": "sandy-16.png",
+					"filename": "sandy-16",
 					"region": {
 						"x": 1593,
 						"y": 542,
@@ -7808,7 +7808,7 @@
 					}
 				},
 				{
-					"filename": "sandy_ovl-18.png",
+					"filename": "sandy_ovl-18",
 					"region": {
 						"x": 1671,
 						"y": 542,
@@ -7823,7 +7823,7 @@
 					}
 				},
 				{
-					"filename": "sandy_ovl-20.png",
+					"filename": "sandy_ovl-20",
 					"region": {
 						"x": 1734,
 						"y": 545,
@@ -7838,7 +7838,7 @@
 					}
 				},
 				{
-					"filename": "sandy_ovl-23.png",
+					"filename": "sandy_ovl-23",
 					"region": {
 						"x": 1797,
 						"y": 548,
@@ -7853,7 +7853,7 @@
 					}
 				},
 				{
-					"filename": "sandy-17.png",
+					"filename": "sandy-17",
 					"region": {
 						"x": 1859,
 						"y": 550,
@@ -7868,7 +7868,7 @@
 					}
 				},
 				{
-					"filename": "sandy-18.png",
+					"filename": "sandy-18",
 					"region": {
 						"x": 1937,
 						"y": 550,
@@ -7883,7 +7883,7 @@
 					}
 				},
 				{
-					"filename": "str_ovl-12.png",
+					"filename": "str_ovl-12",
 					"region": {
 						"x": 1,
 						"y": 571,
@@ -7898,7 +7898,7 @@
 					}
 				},
 				{
-					"filename": "sandy-19.png",
+					"filename": "sandy-19",
 					"region": {
 						"x": 47,
 						"y": 573,
@@ -7913,7 +7913,7 @@
 					}
 				},
 				{
-					"filename": "strasse_ovl-12.png",
+					"filename": "strasse_ovl-12",
 					"region": {
 						"x": 125,
 						"y": 573,
@@ -7928,7 +7928,7 @@
 					}
 				},
 				{
-					"filename": "sandy-2.png",
+					"filename": "sandy-2",
 					"region": {
 						"x": 171,
 						"y": 574,
@@ -7943,7 +7943,7 @@
 					}
 				},
 				{
-					"filename": "sandy-20.png",
+					"filename": "sandy-20",
 					"region": {
 						"x": 249,
 						"y": 574,
@@ -7958,7 +7958,7 @@
 					}
 				},
 				{
-					"filename": "sandy-21.png",
+					"filename": "sandy-21",
 					"region": {
 						"x": 327,
 						"y": 574,
@@ -7973,7 +7973,7 @@
 					}
 				},
 				{
-					"filename": "sandy-22.png",
+					"filename": "sandy-22",
 					"region": {
 						"x": 405,
 						"y": 574,
@@ -7988,7 +7988,7 @@
 					}
 				},
 				{
-					"filename": "sandy-23.png",
+					"filename": "sandy-23",
 					"region": {
 						"x": 483,
 						"y": 574,
@@ -8003,7 +8003,7 @@
 					}
 				},
 				{
-					"filename": "sandy-24.png",
+					"filename": "sandy-24",
 					"region": {
 						"x": 561,
 						"y": 575,
@@ -8018,7 +8018,7 @@
 					}
 				},
 				{
-					"filename": "sandy-3.png",
+					"filename": "sandy-3",
 					"region": {
 						"x": 639,
 						"y": 576,
@@ -8033,7 +8033,7 @@
 					}
 				},
 				{
-					"filename": "sandy-4.png",
+					"filename": "sandy-4",
 					"region": {
 						"x": 717,
 						"y": 576,
@@ -8048,7 +8048,7 @@
 					}
 				},
 				{
-					"filename": "sandy-5.png",
+					"filename": "sandy-5",
 					"region": {
 						"x": 795,
 						"y": 576,
@@ -8063,7 +8063,7 @@
 					}
 				},
 				{
-					"filename": "sandy-6.png",
+					"filename": "sandy-6",
 					"region": {
 						"x": 873,
 						"y": 576,
@@ -8078,7 +8078,7 @@
 					}
 				},
 				{
-					"filename": "sandy_ovl-24.png",
+					"filename": "sandy_ovl-24",
 					"region": {
 						"x": 951,
 						"y": 576,
@@ -8093,7 +8093,7 @@
 					}
 				},
 				{
-					"filename": "schnee_ovl-16.png",
+					"filename": "schnee_ovl-16",
 					"region": {
 						"x": 1015,
 						"y": 577,
@@ -8108,7 +8108,7 @@
 					}
 				},
 				{
-					"filename": "sandy-7.png",
+					"filename": "sandy-7",
 					"region": {
 						"x": 1072,
 						"y": 578,
@@ -8123,7 +8123,7 @@
 					}
 				},
 				{
-					"filename": "sandy-8.png",
+					"filename": "sandy-8",
 					"region": {
 						"x": 1150,
 						"y": 579,
@@ -8138,7 +8138,7 @@
 					}
 				},
 				{
-					"filename": "sandy-9.png",
+					"filename": "sandy-9",
 					"region": {
 						"x": 1228,
 						"y": 580,
@@ -8153,7 +8153,7 @@
 					}
 				},
 				{
-					"filename": "str_ovl-15.png",
+					"filename": "str_ovl-15",
 					"region": {
 						"x": 1306,
 						"y": 580,
@@ -8168,7 +8168,7 @@
 					}
 				},
 				{
-					"filename": "sandy_ovl-0.png",
+					"filename": "sandy_ovl-0",
 					"region": {
 						"x": 1357,
 						"y": 581,
@@ -8183,7 +8183,7 @@
 					}
 				},
 				{
-					"filename": "sandy_ovl-27.png",
+					"filename": "sandy_ovl-27",
 					"region": {
 						"x": 1435,
 						"y": 581,
@@ -8198,7 +8198,7 @@
 					}
 				},
 				{
-					"filename": "schindeltile-0.png",
+					"filename": "schindeltile-0",
 					"region": {
 						"x": 1501,
 						"y": 581,
@@ -8213,7 +8213,7 @@
 					}
 				},
 				{
-					"filename": "schindeltile-1.png",
+					"filename": "schindeltile-1",
 					"region": {
 						"x": 1579,
 						"y": 581,
@@ -8228,7 +8228,7 @@
 					}
 				},
 				{
-					"filename": "schnee_ovl-18.png",
+					"filename": "schnee_ovl-18",
 					"region": {
 						"x": 1657,
 						"y": 581,
@@ -8243,7 +8243,7 @@
 					}
 				},
 				{
-					"filename": "schindeltile-2.png",
+					"filename": "schindeltile-2",
 					"region": {
 						"x": 1718,
 						"y": 584,
@@ -8258,7 +8258,7 @@
 					}
 				},
 				{
-					"filename": "schnee_ovl-20.png",
+					"filename": "schnee_ovl-20",
 					"region": {
 						"x": 1796,
 						"y": 587,
@@ -8273,7 +8273,7 @@
 					}
 				},
 				{
-					"filename": "schindeltile-3.png",
+					"filename": "schindeltile-3",
 					"region": {
 						"x": 1859,
 						"y": 589,
@@ -8288,7 +8288,7 @@
 					}
 				},
 				{
-					"filename": "schnee.png",
+					"filename": "schnee",
 					"region": {
 						"x": 1937,
 						"y": 589,
@@ -8303,7 +8303,7 @@
 					}
 				},
 				{
-					"filename": "street3_ovl-12.png",
+					"filename": "street3_ovl-12",
 					"region": {
 						"x": 1,
 						"y": 610,
@@ -8318,7 +8318,7 @@
 					}
 				},
 				{
-					"filename": "schnee_ovl-23.png",
+					"filename": "schnee_ovl-23",
 					"region": {
 						"x": 47,
 						"y": 612,
@@ -8333,7 +8333,7 @@
 					}
 				},
 				{
-					"filename": "schnee_ovl-24.png",
+					"filename": "schnee_ovl-24",
 					"region": {
 						"x": 106,
 						"y": 612,
@@ -8348,7 +8348,7 @@
 					}
 				},
 				{
-					"filename": "schnee_ovl-27.png",
+					"filename": "schnee_ovl-27",
 					"region": {
 						"x": 169,
 						"y": 613,
@@ -8363,7 +8363,7 @@
 					}
 				},
 				{
-					"filename": "sewertile.png",
+					"filename": "sewertile",
 					"region": {
 						"x": 232,
 						"y": 613,
@@ -8378,7 +8378,7 @@
 					}
 				},
 				{
-					"filename": "str-0.png",
+					"filename": "str-0",
 					"region": {
 						"x": 310,
 						"y": 613,
@@ -8393,7 +8393,7 @@
 					}
 				},
 				{
-					"filename": "str-1.png",
+					"filename": "str-1",
 					"region": {
 						"x": 388,
 						"y": 613,
@@ -8408,7 +8408,7 @@
 					}
 				},
 				{
-					"filename": "str-2.png",
+					"filename": "str-2",
 					"region": {
 						"x": 466,
 						"y": 613,
@@ -8423,7 +8423,7 @@
 					}
 				},
 				{
-					"filename": "str-3.png",
+					"filename": "str-3",
 					"region": {
 						"x": 544,
 						"y": 614,
@@ -8438,7 +8438,7 @@
 					}
 				},
 				{
-					"filename": "str-4.png",
+					"filename": "str-4",
 					"region": {
 						"x": 622,
 						"y": 615,
@@ -8453,7 +8453,7 @@
 					}
 				},
 				{
-					"filename": "str_ovl-0.png",
+					"filename": "str_ovl-0",
 					"region": {
 						"x": 700,
 						"y": 615,
@@ -8468,7 +8468,7 @@
 					}
 				},
 				{
-					"filename": "str_ovl-16.png",
+					"filename": "str_ovl-16",
 					"region": {
 						"x": 778,
 						"y": 615,
@@ -8483,7 +8483,7 @@
 					}
 				},
 				{
-					"filename": "str_ovl-18.png",
+					"filename": "str_ovl-18",
 					"region": {
 						"x": 841,
 						"y": 615,
@@ -8498,7 +8498,7 @@
 					}
 				},
 				{
-					"filename": "str_ovl-20.png",
+					"filename": "str_ovl-20",
 					"region": {
 						"x": 904,
 						"y": 615,
@@ -8513,7 +8513,7 @@
 					}
 				},
 				{
-					"filename": "wald_ovl-12.png",
+					"filename": "wald_ovl-12",
 					"region": {
 						"x": 967,
 						"y": 615,
@@ -8528,7 +8528,7 @@
 					}
 				},
 				{
-					"filename": "strasse_ovl-15.png",
+					"filename": "strasse_ovl-15",
 					"region": {
 						"x": 1013,
 						"y": 616,
@@ -8543,7 +8543,7 @@
 					}
 				},
 				{
-					"filename": "str_ovl-23.png",
+					"filename": "str_ovl-23",
 					"region": {
 						"x": 1064,
 						"y": 617,
@@ -8558,7 +8558,7 @@
 					}
 				},
 				{
-					"filename": "str_ovl-24.png",
+					"filename": "str_ovl-24",
 					"region": {
 						"x": 1126,
 						"y": 618,
@@ -8573,7 +8573,7 @@
 					}
 				},
 				{
-					"filename": "str_ovl-27.png",
+					"filename": "str_ovl-27",
 					"region": {
 						"x": 1190,
 						"y": 619,
@@ -8588,7 +8588,7 @@
 					}
 				},
 				{
-					"filename": "strasse-0.png",
+					"filename": "strasse-0",
 					"region": {
 						"x": 1256,
 						"y": 619,
@@ -8603,7 +8603,7 @@
 					}
 				},
 				{
-					"filename": "strasse-1.png",
+					"filename": "strasse-1",
 					"region": {
 						"x": 1334,
 						"y": 620,
@@ -8618,7 +8618,7 @@
 					}
 				},
 				{
-					"filename": "strasse-2.png",
+					"filename": "strasse-2",
 					"region": {
 						"x": 1412,
 						"y": 620,
@@ -8633,7 +8633,7 @@
 					}
 				},
 				{
-					"filename": "strasse-3.png",
+					"filename": "strasse-3",
 					"region": {
 						"x": 1490,
 						"y": 620,
@@ -8648,7 +8648,7 @@
 					}
 				},
 				{
-					"filename": "strasse-4.png",
+					"filename": "strasse-4",
 					"region": {
 						"x": 1568,
 						"y": 620,
@@ -8663,7 +8663,7 @@
 					}
 				},
 				{
-					"filename": "strasse_ovl-16.png",
+					"filename": "strasse_ovl-16",
 					"region": {
 						"x": 1646,
 						"y": 620,
@@ -8678,7 +8678,7 @@
 					}
 				},
 				{
-					"filename": "strasse_ovl-0.png",
+					"filename": "strasse_ovl-0",
 					"region": {
 						"x": 1709,
 						"y": 623,
@@ -8693,7 +8693,7 @@
 					}
 				},
 				{
-					"filename": "strasse_ovl-18.png",
+					"filename": "strasse_ovl-18",
 					"region": {
 						"x": 1787,
 						"y": 626,
@@ -8708,7 +8708,7 @@
 					}
 				},
 				{
-					"filename": "strasse_ovl-20.png",
+					"filename": "strasse_ovl-20",
 					"region": {
 						"x": 1850,
 						"y": 628,
@@ -8723,7 +8723,7 @@
 					}
 				},
 				{
-					"filename": "strasse_ovl-23.png",
+					"filename": "strasse_ovl-23",
 					"region": {
 						"x": 1913,
 						"y": 628,
@@ -8738,7 +8738,7 @@
 					}
 				},
 				{
-					"filename": "strasse_ovl-24.png",
+					"filename": "strasse_ovl-24",
 					"region": {
 						"x": 1975,
 						"y": 628,
@@ -8753,7 +8753,7 @@
 					}
 				},
 				{
-					"filename": "wald_ovl-15.png",
+					"filename": "wald_ovl-15",
 					"region": {
 						"x": 1,
 						"y": 649,
@@ -8768,7 +8768,7 @@
 					}
 				},
 				{
-					"filename": "strasse_ovl-27.png",
+					"filename": "strasse_ovl-27",
 					"region": {
 						"x": 47,
 						"y": 651,
@@ -8783,7 +8783,7 @@
 					}
 				},
 				{
-					"filename": "street3_ovl-15.png",
+					"filename": "street3_ovl-15",
 					"region": {
 						"x": 113,
 						"y": 651,
@@ -8798,7 +8798,7 @@
 					}
 				},
 				{
-					"filename": "street3-0.png",
+					"filename": "street3-0",
 					"region": {
 						"x": 164,
 						"y": 652,
@@ -8813,7 +8813,7 @@
 					}
 				},
 				{
-					"filename": "street3-1.png",
+					"filename": "street3-1",
 					"region": {
 						"x": 242,
 						"y": 652,
@@ -8828,7 +8828,7 @@
 					}
 				},
 				{
-					"filename": "street3-2.png",
+					"filename": "street3-2",
 					"region": {
 						"x": 320,
 						"y": 652,
@@ -8843,7 +8843,7 @@
 					}
 				},
 				{
-					"filename": "street3-3.png",
+					"filename": "street3-3",
 					"region": {
 						"x": 398,
 						"y": 652,
@@ -8858,7 +8858,7 @@
 					}
 				},
 				{
-					"filename": "street3_ovl-16.png",
+					"filename": "street3_ovl-16",
 					"region": {
 						"x": 476,
 						"y": 652,
@@ -8873,7 +8873,7 @@
 					}
 				},
 				{
-					"filename": "street3-4.png",
+					"filename": "street3-4",
 					"region": {
 						"x": 539,
 						"y": 653,
@@ -8888,7 +8888,7 @@
 					}
 				},
 				{
-					"filename": "street3_ovl-0.png",
+					"filename": "street3_ovl-0",
 					"region": {
 						"x": 617,
 						"y": 654,
@@ -8903,7 +8903,7 @@
 					}
 				},
 				{
-					"filename": "street3_ovl-18.png",
+					"filename": "street3_ovl-18",
 					"region": {
 						"x": 695,
 						"y": 654,
@@ -8918,7 +8918,7 @@
 					}
 				},
 				{
-					"filename": "street3_ovl-20.png",
+					"filename": "street3_ovl-20",
 					"region": {
 						"x": 758,
 						"y": 654,
@@ -8933,7 +8933,7 @@
 					}
 				},
 				{
-					"filename": "street3_ovl-23.png",
+					"filename": "street3_ovl-23",
 					"region": {
 						"x": 821,
 						"y": 654,
@@ -8948,7 +8948,7 @@
 					}
 				},
 				{
-					"filename": "street3_ovl-24.png",
+					"filename": "street3_ovl-24",
 					"region": {
 						"x": 883,
 						"y": 654,
@@ -8963,7 +8963,7 @@
 					}
 				},
 				{
-					"filename": "street3_ovl-27.png",
+					"filename": "street3_ovl-27",
 					"region": {
 						"x": 947,
 						"y": 654,
@@ -8978,7 +8978,7 @@
 					}
 				},
 				{
-					"filename": "teppich_1.png",
+					"filename": "teppich_1",
 					"region": {
 						"x": 1013,
 						"y": 656,
@@ -8993,7 +8993,7 @@
 					}
 				},
 				{
-					"filename": "teppich_2.png",
+					"filename": "teppich_2",
 					"region": {
 						"x": 1091,
 						"y": 657,
@@ -9008,7 +9008,7 @@
 					}
 				},
 				{
-					"filename": "teppich_3.png",
+					"filename": "teppich_3",
 					"region": {
 						"x": 1169,
 						"y": 658,
@@ -9023,7 +9023,7 @@
 					}
 				},
 				{
-					"filename": "teppich_4.png",
+					"filename": "teppich_4",
 					"region": {
 						"x": 1247,
 						"y": 658,
@@ -9038,7 +9038,7 @@
 					}
 				},
 				{
-					"filename": "teppich_5.png",
+					"filename": "teppich_5",
 					"region": {
 						"x": 1325,
 						"y": 659,
@@ -9053,7 +9053,7 @@
 					}
 				},
 				{
-					"filename": "teppich_6.png",
+					"filename": "teppich_6",
 					"region": {
 						"x": 1403,
 						"y": 659,
@@ -9068,7 +9068,7 @@
 					}
 				},
 				{
-					"filename": "teppich_7.png",
+					"filename": "teppich_7",
 					"region": {
 						"x": 1481,
 						"y": 659,
@@ -9083,7 +9083,7 @@
 					}
 				},
 				{
-					"filename": "teppich_8.png",
+					"filename": "teppich_8",
 					"region": {
 						"x": 1559,
 						"y": 659,
@@ -9098,7 +9098,7 @@
 					}
 				},
 				{
-					"filename": "wald_ovl-16.png",
+					"filename": "wald_ovl-16",
 					"region": {
 						"x": 1637,
 						"y": 659,
@@ -9113,7 +9113,7 @@
 					}
 				},
 				{
-					"filename": "teppich_9.png",
+					"filename": "teppich_9",
 					"region": {
 						"x": 1694,
 						"y": 662,
@@ -9128,7 +9128,7 @@
 					}
 				},
 				{
-					"filename": "wald-0.png",
+					"filename": "wald-0",
 					"region": {
 						"x": 1772,
 						"y": 665,
@@ -9143,7 +9143,7 @@
 					}
 				},
 				{
-					"filename": "wald-1.png",
+					"filename": "wald-1",
 					"region": {
 						"x": 1850,
 						"y": 667,
@@ -9158,7 +9158,7 @@
 					}
 				},
 				{
-					"filename": "wald-2.png",
+					"filename": "wald-2",
 					"region": {
 						"x": 1928,
 						"y": 667,
@@ -9173,7 +9173,7 @@
 					}
 				},
 				{
-					"filename": "wald-3.png",
+					"filename": "wald-3",
 					"region": {
 						"x": 1,
 						"y": 690,
@@ -9188,7 +9188,7 @@
 					}
 				},
 				{
-					"filename": "wald-4.png",
+					"filename": "wald-4",
 					"region": {
 						"x": 79,
 						"y": 690,
@@ -9203,7 +9203,7 @@
 					}
 				},
 				{
-					"filename": "wald-5.png",
+					"filename": "wald-5",
 					"region": {
 						"x": 157,
 						"y": 691,
@@ -9218,7 +9218,7 @@
 					}
 				},
 				{
-					"filename": "wald-6.png",
+					"filename": "wald-6",
 					"region": {
 						"x": 235,
 						"y": 691,
@@ -9233,7 +9233,7 @@
 					}
 				},
 				{
-					"filename": "wald_ovl-18.png",
+					"filename": "wald_ovl-18",
 					"region": {
 						"x": 313,
 						"y": 691,
@@ -9248,7 +9248,7 @@
 					}
 				},
 				{
-					"filename": "wald_ovl-20.png",
+					"filename": "wald_ovl-20",
 					"region": {
 						"x": 374,
 						"y": 691,
@@ -9263,7 +9263,7 @@
 					}
 				},
 				{
-					"filename": "wald_ovl-23.png",
+					"filename": "wald_ovl-23",
 					"region": {
 						"x": 437,
 						"y": 691,
@@ -9278,7 +9278,7 @@
 					}
 				},
 				{
-					"filename": "wald_ovl-24.png",
+					"filename": "wald_ovl-24",
 					"region": {
 						"x": 496,
 						"y": 692,
@@ -9293,7 +9293,7 @@
 					}
 				},
 				{
-					"filename": "wald_ovl-27.png",
+					"filename": "wald_ovl-27",
 					"region": {
 						"x": 559,
 						"y": 693,
@@ -9308,7 +9308,7 @@
 					}
 				},
 				{
-					"filename": "water-0.png",
+					"filename": "water-0",
 					"region": {
 						"x": 622,
 						"y": 693,
@@ -9323,7 +9323,7 @@
 					}
 				},
 				{
-					"filename": "water-1.png",
+					"filename": "water-1",
 					"region": {
 						"x": 700,
 						"y": 693,
@@ -9338,7 +9338,7 @@
 					}
 				},
 				{
-					"filename": "water-2.png",
+					"filename": "water-2",
 					"region": {
 						"x": 778,
 						"y": 693,
@@ -9353,7 +9353,7 @@
 					}
 				},
 				{
-					"filename": "water-3.png",
+					"filename": "water-3",
 					"region": {
 						"x": 856,
 						"y": 693,
@@ -9368,7 +9368,7 @@
 					}
 				},
 				{
-					"filename": "water-4.png",
+					"filename": "water-4",
 					"region": {
 						"x": 934,
 						"y": 693,
@@ -9383,7 +9383,7 @@
 					}
 				},
 				{
-					"filename": "water-5.png",
+					"filename": "water-5",
 					"region": {
 						"x": 1012,
 						"y": 695,
@@ -9398,7 +9398,7 @@
 					}
 				},
 				{
-					"filename": "water-6.png",
+					"filename": "water-6",
 					"region": {
 						"x": 1090,
 						"y": 696,
@@ -9413,7 +9413,7 @@
 					}
 				},
 				{
-					"filename": "water-7.png",
+					"filename": "water-7",
 					"region": {
 						"x": 1168,
 						"y": 697,
@@ -9428,7 +9428,7 @@
 					}
 				},
 				{
-					"filename": "water-8.png",
+					"filename": "water-8",
 					"region": {
 						"x": 1246,
 						"y": 697,
@@ -9443,7 +9443,7 @@
 					}
 				},
 				{
-					"filename": "water-9.png",
+					"filename": "water-9",
 					"region": {
 						"x": 1324,
 						"y": 698,
@@ -9458,7 +9458,7 @@
 					}
 				},
 				{
-					"filename": "blue_rug.png",
+					"filename": "blue_rug",
 					"region": {
 						"x": 1402,
 						"y": 698,
@@ -9473,7 +9473,7 @@
 					}
 				},
 				{
-					"filename": "blue_rug_pat.png",
+					"filename": "blue_rug_pat",
 					"region": {
 						"x": 1482,
 						"y": 698,
@@ -9488,7 +9488,7 @@
 					}
 				},
 				{
-					"filename": "brown_rug.png",
+					"filename": "brown_rug",
 					"region": {
 						"x": 1562,
 						"y": 698,
@@ -9503,7 +9503,7 @@
 					}
 				},
 				{
-					"filename": "brown_rug_pat.png",
+					"filename": "brown_rug_pat",
 					"region": {
 						"x": 1642,
 						"y": 701,
@@ -9518,7 +9518,7 @@
 					}
 				},
 				{
-					"filename": "gold_rug.png",
+					"filename": "gold_rug",
 					"region": {
 						"x": 1722,
 						"y": 704,
@@ -9533,7 +9533,7 @@
 					}
 				},
 				{
-					"filename": "green_rug.png",
+					"filename": "green_rug",
 					"region": {
 						"x": 1802,
 						"y": 706,
@@ -9548,7 +9548,7 @@
 					}
 				},
 				{
-					"filename": "green_rug_pat.png",
+					"filename": "green_rug_pat",
 					"region": {
 						"x": 1882,
 						"y": 706,
@@ -9568,6 +9568,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "1.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:f385964909ef743d85d70418318ca3d7:956a839e4044b2079e58abdfc3b85fee:61acdeee263b8e14109b50ef2460129e$"
+		"smartupdate": "$TexturePacker:SmartUpdate:0108707e711bed53ef94af186cf554b6:956a839e4044b2079e58abdfc3b85fee:fdab4d53920d964eb5daedc87a2b81da$"
 	}
 }

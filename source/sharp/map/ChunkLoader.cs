@@ -47,19 +47,19 @@ namespace Illarion.Client.Map
 				int testedLayer = usedLayers[l];
 				int layerDifference = testedLayer - referenceLayer;
 
-				int xy = (tileIndex.x +	layerDifference * Constants.Map.LayerTileOffsetX)
-					* WorldSizeY
-					+ (tileIndex.y + layerDifference * Constants.Map.LayerTileOffsetY);
-
+				int movedX = tileIndex.x + (layerDifference * Constants.Map.LayerTileOffsetX);
+				int movedY = tileIndex.y + (layerDifference * Constants.Map.LayerTileOffsetY);
 
 				foreach(var map in activeChunks)
 				{
-					if (map.Map.Length < xy) continue;
+					int chunkLayerIndex = Array.IndexOf(map.Layers, testedLayer);
+					if (chunkLayerIndex == -1) continue;
 
-					int layerIndex = Array.IndexOf(map.Map[xy], testedLayer);
-					if (layerIndex == -1) continue;
+					int chunkX = movedX - map.Origin[0];
+					int chunkY = movedY - map.Origin[1];
+					if (chunkX < 0 || chunkY < 0 || chunkX >= Constants.Map.Chunksize || chunkY >= Constants.Map.Chunksize) continue;
 
-					int layerTileId = map.Map[xy][layerIndex];
+					int layerTileId = map.Map[chunkX * Constants.Map.Chunksize + chunkY][chunkLayerIndex];
 					if (layerTileId == 0) continue;
 
 					return new TileData(
@@ -69,7 +69,6 @@ namespace Illarion.Client.Map
 				}
 			}
 
-			GD.PrintErr($"No tile data for tile at ({tileIndex.x},{tileIndex.y},{referenceLayer})!");
 			return new TileData();
 		}
 
@@ -184,14 +183,17 @@ namespace Illarion.Client.Map
 		{
 			string chunkPath = String.Concat(
 					OS.GetUserDataDir(),
-					"/maps/chunk_",
+					"/map/chunk_",
 					chunkX + (chunkId % 3 - 1),
 					"_",
 					chunkY + (chunkId / 3 - 1),
 					".bin"); 
 
 			FileInfo mapFile = new FileInfo(chunkPath);
-			if (!mapFile.Exists) return null;
+			if (!mapFile.Exists) {
+				GD.PrintErr($"does not exits {chunkPath}");
+				return null;
+			}
 
 			object rawChunk;
 			using(var file = mapFile.OpenRead())
