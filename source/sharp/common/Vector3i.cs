@@ -5,9 +5,9 @@ namespace Illarion.Client.Common
     [Serializable]
     public struct Vector3i
     {
-        public int x;
-        public int y;
-        public int z;
+        public readonly int x;
+        public readonly int y;
+        public readonly int z;
 
         public Vector3i(int x, int y, int z)
         {
