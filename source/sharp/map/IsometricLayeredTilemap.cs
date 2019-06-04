@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Linq;
 using Illarion.Client.Common;
 using System.Collections.Generic;
 
@@ -11,6 +12,15 @@ namespace Illarion.Client.Map
 		private int windowX, windowY;
 		private int mapSizeHalfX, mapSizeHalfY;
 				
+		private TileIndex[] topRow;
+		private TileIndex[] bottomRow;
+		private TileIndex[] leftRow;
+		private TileIndex[] rightRow;
+		private TileIndex[] leftRowNoFirst;
+		private TileIndex[] leftRowNoLast;
+		private TileIndex[] rightRowNoFirst;
+		private TileIndex[] rightRowNoLast;
+
 		private Node root;
 		private Dictionary<TileIndex, Sprite[]> map;
 		
@@ -48,9 +58,13 @@ namespace Illarion.Client.Map
 			
 			map = new Dictionary<TileIndex, Sprite[]>(mapSizeHalfX*2*mapSizeHalfY*2*2);
 
-			// TODO: This is uneven. Its even if we work until <= mapSizeHalf but SKIP the tileX+1 tiles in this row
-			for (int ix = x-mapSizeHalfX; ix < x+mapSizeHalfX; ix++) {
-				for (int iy = y-mapSizeHalfY; iy < y+mapSizeHalfY; iy++) {
+			List<TileIndex> bottomTiles = new List<TileIndex>();
+			List<TileIndex> topTiles = new List<TileIndex>();
+			List<TileIndex> leftTiles = new List<TileIndex>();
+			List<TileIndex> rightTiles = new List<TileIndex>();
+
+			for (int ix = x-mapSizeHalfX; ix <= x+mapSizeHalfX; ix++) {
+				for (int iy = y-mapSizeHalfY; iy <= y+mapSizeHalfY; iy++) {
 					int tileX = x-y+ix-iy;
 					int tileY = x+y+ix+iy;
 
@@ -64,17 +78,36 @@ namespace Illarion.Client.Map
 						new Sprite[]{AddSpriteToTree(position), AddSpriteToTree(position)}
 					);
 
-					position = new Vector2(
-						ix * Constants.Tile.SizeX + Constants.Tile.SizeX * 0.5f,
-						iy * (Constants.Tile.SizeY+1) + (Constants.Tile.SizeY + 1) * 0.5f
-					);
+					if (ix < x + mapSizeHalfX || iy < y + mapSizeHalfY)
+					{
+						position = new Vector2(
+							ix * Constants.Tile.SizeX + Constants.Tile.SizeX * 0.5f,
+							iy * (Constants.Tile.SizeY+1) + (Constants.Tile.SizeY + 1) * 0.5f
+						);
 
-					map.Add(
-						new TileIndex(tileX, tileY+1),
-						new Sprite[]{AddSpriteToTree(position), AddSpriteToTree(position)}
-					);
+						map.Add(
+							new TileIndex(tileX, tileY+1),
+							new Sprite[]{AddSpriteToTree(position), AddSpriteToTree(position)}
+						);
+					}
+
+					if (ix == x - mapSizeHalfX) topTiles.Add(new TileIndex(ix - x, iy - y));
+					if (ix == x + mapSizeHalfX) bottomTiles.Add(new TileIndex(ix - x, iy - y));
+					if (iy == y - mapSizeHalfY) rightTiles.Add(new TileIndex(ix - x, iy - y));
+					if (iy == y + mapSizeHalfY) rightTiles.Add(new TileIndex(ix - x, iy - y));
 				}
 			}
+
+			topRow = topTiles.ToArray();
+			bottomRow = bottomTiles.ToArray();
+			leftRow = leftTiles.ToArray();
+			rightRow = rightTiles.ToArray();
+
+			rightRowNoFirst = rightTiles.Skip(1).ToArray();
+			leftRowNoFirst = leftTiles.Skip(1).ToArray();
+			
+			rightRowNoLast = rightTiles.Take(rightTiles.Count - 1).ToArray();
+			leftRowNoLast = leftTiles.Take(leftTiles.Count - 1).ToArray();
 		}
 
 		private Sprite AddSpriteToTree(Vector2 screenPosition)
@@ -115,117 +148,135 @@ namespace Illarion.Client.Map
 
 		private void OnMapCenterChanged(object e, Vector2i change)
 		{
-			// For every change direction: translate and reload the specific map stripe.
-			HashSet<TileIndex> translationTiles = new HashSet<TileIndex>();
-
-			// Left: Remove Rights
-			if (change.x != 1 && change.y != 1)
+			if (change.Equals(Direction.Up))
 			{
-				// TopRight Tile Coordinate
-				int ix = x - y + (x + mapSizeHalfX-1) - (y-mapSizeHalfY);
-				int iy = x + y + (x + mapSizeHalfX-1) + (y-mapSizeHalfY);
-				
-				//Goal: Bottom Right
-				int goalY = x + y + (x + mapSizeHalfX-1) + (y + mapSizeHalfY);
-
-				while (iy < goalY)
-				{
-					translationTiles.Add(new TileIndex(ix, iy));
-					ix--;
-					iy++;
-				}
+				MoveTilesUp(bottomRow);
 			}
-			// Right: Remove Lefts
-			else if (change.x != -1 && change.y != -1)
+			else if (change.Equals(Direction.Down))
 			{
-				// TopLeft Tile Coordinate
-				int ix = x - y + (x - mapSizeHalfX) - (y-mapSizeHalfY);
-				int iy = x + y + (x - mapSizeHalfX) + (y-mapSizeHalfY);
-				
-				// Goal: Bottom Left
-				int goalY = x + y + (x - mapSizeHalfX) + (y + mapSizeHalfY);
-
-				while (iy < goalY)
-				{
-					translationTiles.Add(new TileIndex(ix, iy));
-					ix--;
-					iy++;
-				}
+				MoveTilesDown(topRow);
 			}
-
-			// Down: Remove Ups
-			if (change.x != -1 && change.y != 1)
+			else if (change.Equals(Direction.Left))
 			{
-				// TopLeft Tile Coordinate
-				int ix = x - y + (x - mapSizeHalfX) - (y-mapSizeHalfY);
-				int iy = x + y + (x - mapSizeHalfX) + (y-mapSizeHalfY);
-
-				// Goal: Top Right
-				int goalX = x - y + (x + mapSizeHalfX) - (y - mapSizeHalfY);
-
-				while (ix < goalX)
-				{
-					translationTiles.Add(new TileIndex(ix, iy));
-					ix++;
-					iy++;
-				}
+				MoveTilesLeft(rightRow);
 			}
-			// Up: Remove Downs
-			else if (change.x != 1 && change.y != -1)
+			else if (change.Equals(Direction.Right))
 			{
-				// BottomLeft Tile Coordinate
-				int ix = x - y + (x - mapSizeHalfX) - (y+mapSizeHalfY-1);
-				int iy = x + y + (x - mapSizeHalfX) + (y+mapSizeHalfY-1);
-				
-				// Goal: Bottom Right
-				int goalX = x - y + (x + mapSizeHalfX) - (y+mapSizeHalfY-1);
-
-
-				while (ix < goalX)
-				{
-					translationTiles.Add(new TileIndex(ix, iy));
-					ix++;
-					iy++;
-				}
+				MoveTilesRight(leftRow);
 			}
-
-			foreach (var tileIndex in translationTiles)
+			else if (change.Equals(Direction.DownLeft))
 			{
-				var movedIndex = MoveTileToOpposedDirection(tileIndex);
-				SetTileAppearanceAt(movedIndex);	
+				MoveTilesDown(topRow);
+				MoveTilesLeft(rightRowNoFirst);
+			}
+			else if (change.Equals(Direction.DownRight))
+			{
+				MoveTilesDown(topRow);
+				MoveTilesRight(leftRowNoFirst);
+			}
+			else if (change.Equals(Direction.UpRight))
+			{
+				MoveTilesUp(bottomRow);
+				MoveTilesRight(leftRowNoLast);
+			}
+			else if (change.Equals(Direction.UpLeft))
+			{
+				MoveTilesUp(bottomRow);
+				MoveTilesLeft(rightRowNoLast);
 			}
 		}
 
-		private TileIndex MirrorTilePositionAroundCenter(TileIndex tileIndex, Vector2i direction) 
+		private void MoveTilesUp(TileIndex[] bottomTiles)
 		{
-			var tileSprite = map[tileIndex];
-			map.Remove(tileIndex);
+			var direction = Direction.Up;
 
-			int movedTilePositionX = tileIndex.x + (direction.x * 2 * mapSizeHalfX);
-			int movedTilePositionY = tileIndex.y + (direction.y * 2 * mapSizeHalfY);
+			foreach (var tileIndex in bottomTiles) 
+			{
+				var currentIndex = new TileIndex(tileIndex.x + x, tileIndex.y + y);
+				var tile = RemoveFromMap(currentIndex);
 
-			TileIndex movedIndex = new TileIndex(-tileIndex.x, -tileIndex.y);
+				MoveTile(tile, 0, 2 * mapSizeHalfY * Constants.Tile.SizeY);
+				
+				InsertAsNewAt(tile, new TileIndex(currentIndex.y + direction.x, currentIndex.x + direction.y));
+			}
+		}
 
-			map[movedIndex] = tileSprite;
+		private void MoveTilesDown(TileIndex[] topTiles)
+		{
+			var direction = Direction.Down;
 
-			Vector2 movedPosition = new Vector2(
-				windowX - tileSprite[0].GlobalPosition.x,
-				windowY - tileSprite[0].GlobalPosition.y
-			); 
+			foreach (var tileIndex in topTiles) 
+			{
+				var currentIndex = new TileIndex(tileIndex.x + x, tileIndex.y + y);
+				var tile = RemoveFromMap(currentIndex);
 
-			tileSprite[0].GlobalPosition = movedPosition;
-			tileSprite[1].GlobalPosition = movedPosition;
+				MoveTile(tile, 0, -2 * mapSizeHalfY * Constants.Tile.SizeY);
+				
+				InsertAsNewAt(tile, new TileIndex(currentIndex.y + direction.x, currentIndex.x + direction.y));
+			}
+		}
 
-			return movedIndex;
+		private void MoveTilesLeft(TileIndex[] rightTiles)
+		{
+			var direction = Direction.Left;
+
+			foreach (var tileIndex in rightTiles) 
+			{
+				var currentIndex = new TileIndex(tileIndex.x + x, tileIndex.y + y);
+				var tile = RemoveFromMap(currentIndex);
+
+				MoveTile(tile, 0, -2 * mapSizeHalfX * Constants.Tile.SizeX);
+
+				InsertAsNewAt(tile, new TileIndex(-currentIndex.y + direction.x, -currentIndex.x + direction.y));
+			}
+		}
+
+		private void MoveTilesRight(TileIndex[] leftTiles)
+		{
+			var direction = Direction.Right;
+
+			foreach (var tileIndex in leftTiles) 
+			{
+				var currentIndex = new TileIndex(tileIndex.x + x, tileIndex.y + y);
+				var tile = RemoveFromMap(currentIndex);
+
+				MoveTile(tile, 0, 2 * mapSizeHalfX * Constants.Tile.SizeX);
+				
+				InsertAsNewAt(tile, new TileIndex(-currentIndex.y + direction.x, -currentIndex.x + direction.y));
+			}
+		}
+
+		private void InsertAsNewAt(Sprite[] tile, TileIndex index)
+		{
+			SetTileAppearanceOf(tile, index);
+			map.Add(index, tile);
+		}
+
+		private Sprite[] RemoveFromMap(TileIndex index)
+		{
+			var tile = map[index];
+			map.Remove(index);
+			return tile;
+		}
+
+		private void MoveTile(Sprite[] tile, int movementX, int movementY)
+		{
+			var currentPosition = tile[0].GlobalPosition;
+			var movedPostion = new Vector2(currentPosition.x + movementX, currentPosition.y + movementY);
+			tile[0].GlobalPosition = movedPostion;
+			tile[1].GlobalPosition = movedPostion;
 		}
 
 		private void SetTileAppearanceAt(TileIndex tileIndex)
 		{
+			SetTileAppearanceOf(map[tileIndex], tileIndex);
+		}
+
+		private void SetTileAppearanceOf(Sprite[] tile, TileIndex tileIndex)
+		{
 			TileData data = chunkLoader.GetTileDataAt(tileIndex);
 			
 			if (data.tileId == 0) return;
-
-			var tile = map[tileIndex];
 
 			tile[0].RegionRect = tileset.TileGetRegion(data.tileId);
 			tile[1].RegionRect = tileset.TileGetRegion(data.overlayId);
