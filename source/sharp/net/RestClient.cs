@@ -96,7 +96,7 @@ namespace Illarion.Client.Net
                     http.Wait(100);
                 }
 
-                string[] headers = {"User-Agent: Pirulo/1.0 (Godot)", "Accept:*/*"};
+                string[] headers = {"User-Agent: Illarion/1.0 (Update)", "Accept:*/*"};
 
                 if (method == Method.Get) {
                     status = http.Request(Method.Get, url, headers);

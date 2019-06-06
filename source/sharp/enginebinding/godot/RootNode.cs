@@ -23,8 +23,9 @@ namespace Illarion.Client.EngineBinding.Godot
             IGraphics graphics = new Graphics(tileSet);
             ILogging logger = new Logging();
             IMath math = new MathWrapper();
+            IUserConfig userConfig = new UserConfig();
 
-            Game.Initialize(fileSystem, logger, math, graphics, httpFactory);
+            Game.Initialize(fileSystem, logger, math, graphics, httpFactory, userConfig);
 
             IMovementSupplier player = GetChild(0) as IMovementSupplier;   
             tilemap = new IsometricLayeredTilemap(0, 0, 0, player, this);
