@@ -48,6 +48,7 @@
     <Reference Include="System"/>
     <Reference Include="System.Runtime"/>
     <Reference Include="System.Runtime.Serialization"/>
+    <Reference Include="System.Web.Extensions"/>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="source\sharp\common\*.*"/>
@@ -55,6 +56,9 @@
     <Compile Include="source\sharp\net\*.*"/>
     <Compile Include="source\sharp\update\*.*"/>
     <Compile Include="source\sharp\character\*.*"/>
+    <Compile Include="source\sharp\enginebinding\interface\*.*"/>
+    <Compile Include="source\sharp\enginebinding\interface\net\*.*"/>
+    <Compile Include="source\sharp\enginebinding\godot\*.*"/>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets"/>
 </Project>

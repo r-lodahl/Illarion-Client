@@ -3,8 +3,8 @@ using System.IO;
 using System;
 using System.Linq;
 using System.Collections.Generic;
-using Godot;
 using Illarion.Client.Common;
+using Illarion.Client.EngineBinding.Interface;
 
 namespace Illarion.Client.Map
 {
@@ -16,7 +16,7 @@ namespace Illarion.Client.Map
 		private BinaryFormatter binaryFormatter;
 		private int[] usedLayers;
 		private int referenceLayer;
-		
+
 		public int WorldSizeY {get; private set;}
 
 		public ChunkLoader(int x, int y, IMovementSupplier movementSupplier) 
@@ -182,7 +182,7 @@ namespace Illarion.Client.Map
 		private Chunk LoadChunk(int chunkId) 
 		{
 			string chunkPath = String.Concat(
-					OS.GetUserDataDir(),
+					Game.FileSystem.GetUserDirectory(),
 					"/map/chunk_",
 					chunkX + (chunkId % 3 - 1),
 					"_",
@@ -190,8 +190,9 @@ namespace Illarion.Client.Map
 					".bin"); 
 
 			FileInfo mapFile = new FileInfo(chunkPath);
+
 			if (!mapFile.Exists) {
-				GD.PrintErr($"does not exits {chunkPath}");
+				Game.Logger.LogError($"does not exits {chunkPath}");
 				return null;
 			}
 
@@ -205,13 +206,13 @@ namespace Illarion.Client.Map
 			Chunk chunk = rawChunk as Chunk;
 			if (chunk != null) return chunk;
 
-			GD.PrintErr($"Malformed chunk at x: {chunkX + (chunkId % 3 - 1)} and y: {chunkY + (chunkId / 3 - 1)}!");
+			Game.Logger.LogError($"Malformed chunk at x: {chunkX + (chunkId % 3 - 1)} and y: {chunkY + (chunkId / 3 - 1)}!");
 			return null;
 		}
 
 		private void LoadWorldSize() 
 		{
-			FileInfo worldInfoFile = new FileInfo(String.Concat(OS.GetUserDataDir(), "/map/worldInfo.bin"));
+			FileInfo worldInfoFile = new FileInfo(String.Concat(Game.FileSystem.GetUserDirectory(), "/map/worldInfo.bin"));
 			if (!worldInfoFile.Exists) throw new FileNotFoundException("WorldInfo file not found! Please repair your installation!");
 
 			object rawWorldSize;

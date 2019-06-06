@@ -2,12 +2,13 @@ using System.Collections.Generic;
 using System;
 using System.Text;
 using System.Threading;
-using Godot;
+using System.Web.Script.Serialization;
+using Illarion.Client.EngineBinding.Interface;
+using Illarion.Client.EngineBinding.Interface.Net;
 
 namespace Illarion.Client.Net 
 {
     public class RestClient {
-
         public Response GetSynchronized(string domain, string url, int port, bool ssl) {
             Request request = new Request(domain, url, port, ssl, false, Method.Get);
             request.Run();
@@ -32,16 +33,17 @@ namespace Illarion.Client.Net
             return request;
         }
 
-        public enum Method {
-            Get,
-            Post
-        }
-
         public class Response {
-            public object Data {get;set;}
-            public Error Error {get;set;}
+            public Status Status {get;set;}
+            
+            public bool IsSuccessful {get;set;}
             public bool IsDictionary {get;set;}
             public bool IsArray {get;set;}
+            public bool IsByteArray {get;set;}
+
+            public Dictionary<string, string> Dictionary;
+            public string[] Array;
+            public byte[] ByteArray;
         }
 
         public class Request {
@@ -81,58 +83,54 @@ namespace Illarion.Client.Net
             }
 
             public void Run() {
-                
-                HTTPClient http = new HTTPClient();
-                Error error = http.ConnectToHost(host, port, ssl);
+                IHttpClient http = Game.HttpFactory.CreateHttpClient();
+                Status status = http.ConnectToHost(host, port, ssl);
 
-                if (error != Error.Ok) {
-                    Response.Error = error; 
+                if (status != Status.Ok) {
+                    Response.Status = status; 
                     return;
                 }
 
-                while (http.GetStatus() == HTTPClient.Status.Connecting || http.GetStatus() == HTTPClient.Status.Resolving) {
+                while (http.GetStatus() == Status.Connecting || http.GetStatus() == Status.Resolving) {
                     http.Poll();
-                    OS.DelayMsec(100);
+                    http.Wait(100);
                 }
 
                 string[] headers = {"User-Agent: Pirulo/1.0 (Godot)", "Accept:*/*"};
 
                 if (method == Method.Get) {
-                    error = http.Request(HTTPClient.Method.Get, url, headers);
+                    status = http.Request(Method.Get, url, headers);
                 } else {
-                    error = http.Request(HTTPClient.Method.Get, url, headers, data);
+                    status = http.Request(Method.Post, url, headers, data);
                 }
 
-                if (error != Error.Ok) {
-                    Response.Error = error;
+                if (status != Status.Ok) {
+                    Response.Status = status;
                     return;
                 }
 
-                while (http.GetStatus() == HTTPClient.Status.Requesting) {
+                while (http.GetStatus() == Status.Requesting) {
                     http.Poll();
-                    OS.DelayMsec(100);
+                    http.Wait(100);
                 }
 
-                if (http.GetStatus() == HTTPClient.Status.ConnectionError) {
-                    Response.Error = Error.Unavailable;
+                if (http.GetStatus() == Status.ConnectionError) {
+                    Response.Status = Status.Unavailable;
                     return;
                 }
 
-                if (http.GetResponseCode() > 202) {
-                    Response.Error = Error.Failed;
+                if (http.GetHttpResponseCode() > 202) {
+                    Response.Status = Status.Failed;
                     return;
                 }
 
                 List<byte> responseData = new List<byte>();
-                Godot.Collections.Dictionary responseHeaders = new Godot.Collections.Dictionary();
                 if (http.HasResponse()) {
-                    responseHeaders = http.GetResponseHeadersAsDictionary();
-
-                    while (http.GetStatus() == HTTPClient.Status.Body) {
+                    while (http.GetStatus() == Status.Body) {
                         http.Poll();
                         byte[] chunk = http.ReadResponseBodyChunk();
                         
-                        if (chunk.Length == 0) OS.DelayUsec(100);
+                        if (chunk.Length == 0) http.Wait(100);
                         else {
                             responseData.AddRange(chunk);
                             if (async) OnLoading(chunk.Length);
@@ -142,23 +140,50 @@ namespace Illarion.Client.Net
 
                 http.Close();
 
-                if (((string)responseHeaders["Content-Type"]).BeginsWith("application/json")) {
-                    JSONParseResult jsonResponse = JSON.Parse(Encoding.UTF8.GetString(responseData.ToArray()));
-                    
-                    if (jsonResponse.Error != Error.Ok) 
-                    {
-                        Response.Error = jsonResponse.Error;
-                        return;
-                    }
-
-                    Response.IsDictionary = jsonResponse.Result is Godot.Collections.Dictionary? true : false;
-                    Response.IsArray = jsonResponse.Result is Godot.Collections.Array? true : false;
-                    Response.Data = jsonResponse.Result;
-                }
-                else
+                if (http.IsResponseJson())
                 {
-                    Response.Data = responseData;
+                    var jsonString = Encoding.UTF8.GetString(responseData.ToArray());
+                    var jsonSerializer = new JavaScriptSerializer();
+
+                    if (jsonString.StartsWith("{"))
+                    {
+                        Dictionary<string, string> jsonDictionary;
+        
+                        try
+                        {
+                            jsonDictionary = jsonSerializer.Deserialize<Dictionary<string, string>>(jsonString);
+                            Response.IsDictionary = true;
+                            Response.Dictionary = jsonDictionary;
+                        }
+                        catch (MissingMethodException)
+                        {
+                            Game.Logger.LogWarning("Received multi-layered dictionary via REST.");
+                        }
+                    }
+                    else if (jsonString.StartsWith("["))
+                    {
+                        string[] jsonArray;
+
+                        try
+                        {
+                            jsonArray = jsonSerializer.Deserialize<string[]>(jsonString);
+                            Response.IsArray = true;
+                            Response.Array = jsonArray;
+                        }
+                        catch (MissingMethodException)
+                        {
+                            Game.Logger.LogWarning("Received multi-layered array via REST.");
+                        }
+                    }
                 }
+
+                if (!Response.IsDictionary && !Response.IsArray) 
+                {    
+                    Response.IsByteArray = true;
+                    Response.ByteArray = responseData.ToArray();
+                }
+
+                Response.IsSuccessful = true;
 
                 if (async) OnLoaded();
             }

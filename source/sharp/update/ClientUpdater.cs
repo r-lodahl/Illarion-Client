@@ -88,13 +88,13 @@ namespace Illarion.Client.Update
                 Constants.Server.UpdateServerPort,
                 true);
 
-            if (response.Error != Error.Ok || !response.IsDictionary)
+            if (!response.IsSuccessful || !response.IsDictionary)
             {
-                GD.PrintErr($"Getting map version has failed [{response.Error}]!");
+                GD.PrintErr($"Getting map version has failed [{response.Status}]!");
                 return "";
             }
 
-            return (string)((Godot.Collections.Dictionary)response.Data)["version"];
+            return response.Dictionary["version"];
 		}
 		
 		private bool DownloadMapFiles()
@@ -105,13 +105,13 @@ namespace Illarion.Client.Update
                 Constants.Server.UpdateServerPort,
                 true);
 
-            if (response.Error != Error.Ok)
+            if (!response.IsSuccessful || !response.IsByteArray)
             {
-                GD.PrintErr($"Downloading map files has failed! [{response.Error}]");
+                GD.PrintErr($"Downloading map files has failed! [{response.Status}]");
                 return false;
             }
 
-            using (Stream stream = new MemoryStream(((List<byte>)response.Data).ToArray()))
+            using (Stream stream = new MemoryStream((response.ByteArray)))
             {
                 using (Unzip unzip = new Unzip(stream))
                 {

@@ -1,6 +1,6 @@
-using Godot;
 using System.Collections.Generic;
 using Illarion.Client.Map;
+using Illarion.Client.Common;
 
 namespace Illarion.Client.Update
 {
@@ -14,7 +14,7 @@ namespace Illarion.Client.Update
 
         public int[,] MapArray {get;set;}
 
-        public Dictionary<Vector2, MapObject[]> Items {get;set;}
-        public Dictionary<Vector2, Vector3> Warps {get;set;}
+        public Dictionary<Vector2i, MapObject[]> Items {get;set;}
+        public Dictionary<Vector2i, Vector3i> Warps {get;set;}
     }
 }

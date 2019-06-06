@@ -1,10 +1,10 @@
 using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using Godot;
-using File = System.IO.File;
 using System.Collections.Generic;
 using System.Linq;
+using System.Drawing;
+using Illarion.Client.EngineBinding.Interface;
 using Illarion.Client.Common;
 using Illarion.Client.Map;
 
@@ -75,7 +75,7 @@ namespace Illarion.Client.Update
             }
 
             BinaryFormatter binaryFormatter = new BinaryFormatter();
-            FileInfo worldFileInfo = new FileInfo(String.Concat(OS.GetUserDataDir(),"/map/worldInfo.bin"));
+            FileInfo worldFileInfo = new FileInfo(String.Concat(Game.FileSystem.GetUserDirectory(),"/map/worldInfo.bin"));
 
             using(var file = worldFileInfo.Create()) 
             {
@@ -95,10 +95,11 @@ namespace Illarion.Client.Update
             {
                 foreach (var singleMap in layerMaps.Value)
                 {
-                    Rect2 mapRect = new Rect2(singleMap.StartX, singleMap.StartY, singleMap.Width, singleMap.Height);
-                    Rect2 chunkRect = new Rect2(baseX, baseY, Constants.Map.Chunksize, Constants.Map.Chunksize);
+                    bool overlaps = CheckOverlap(singleMap.StartX, singleMap.StartY,
+                        singleMap.StartX + singleMap.Width, singleMap.StartY + singleMap.Height,
+                        baseX, baseY, baseX + Constants.Map.Chunksize, baseY + Constants.Map.Chunksize);
 
-                    if (chunkRect.Intersects(mapRect))
+                    if (overlaps)
                     {
                         if (!usedLayers.Contains(singleMap.Layer)) usedLayers.Add(singleMap.Layer);
                         usedMaps.Add(singleMap);
@@ -133,14 +134,14 @@ namespace Illarion.Client.Update
 
                             layerValue = map.MapArray[x,y];
 
-                            Vector2 mapPosition = new Vector2(x,y);
+                            Vector2i mapPosition = new Vector2i(x,y);
 
                             if (map.Items.ContainsKey(mapPosition))
                             {
 								var absolutePosition = new Vector3i(ix, iy, layer);
 								if (usedItems.ContainsKey(absolutePosition))
 								{
-                                    GD.PrintErr("Adding an item-array to an tile already having items!");
+                                    Game.Logger.LogError("Adding an item-array to an tile already having items!");
 									var joinedItems = usedItems[absolutePosition].ToList();
 									joinedItems.AddRange(map.Items[mapPosition]);
 									usedItems[absolutePosition] = joinedItems.ToArray();
@@ -153,12 +154,12 @@ namespace Illarion.Client.Update
 
                             if (map.Warps.ContainsKey(mapPosition))
                             {
-                                Vector3 warpTarget = map.Warps[mapPosition];
+                                Vector3i warpTarget = map.Warps[mapPosition];
                                 Vector3i absolutePosition = new Vector3i(ix, iy, layer);
 
                                 if (usedWarps.ContainsKey(absolutePosition))
                                 {
-                                    GD.PrintErr("Tried adding a warp to a location that already contains a warp!");
+                                    Game.Logger.LogError("Tried adding a warp to a location that already contains a warp!");
                                 }
                                 else 
                                 {
@@ -185,13 +186,20 @@ namespace Illarion.Client.Update
             Chunk chunk = new Chunk(chunkMapData, usedLayers.ToArray(), new int[]{baseX,baseY}, usedItems, usedWarps);
 
             BinaryFormatter binaryFormatter = new BinaryFormatter();
-            FileInfo chunkFileInfo = new FileInfo(String.Concat(OS.GetUserDataDir(),"/map/chunk_",baseX/Constants.Map.Chunksize,"_",baseY/Constants.Map.Chunksize,".bin"));
+            FileInfo chunkFileInfo = new FileInfo(String.Concat(Game.FileSystem.GetUserDirectory(),"/map/chunk_",baseX/Constants.Map.Chunksize,"_",baseY/Constants.Map.Chunksize,".bin"));
 
             using(var file = chunkFileInfo.Create()) 
             {
                 binaryFormatter.Serialize(file, chunk);
                 file.Flush();
             }
+        }
+
+        private bool CheckOverlap(int topLeftX1, int topLeftY1, int bottomRightX1, int bottomRightY1, int topLeftX2, int topLeftY2, int bottomRightX2, int bottomRightY2) 
+        {
+            if (topLeftX1 > bottomRightX2 || topLeftX2 > bottomRightX1) return false;
+            if (topLeftY1 < bottomRightY2 || topLeftY2 < bottomRightY1) return false;
+            return true;
         }
 
         private int GetBaseIdFromServerBaseId(int serverBaseId)
@@ -277,14 +285,14 @@ namespace Illarion.Client.Update
             if (!File.Exists(itemPath)) throw new FileNotFoundException($"{itemPath} not found!");
             fileReader = new StreamReader(itemPath);
 
-            Dictionary<Vector2, List<MapObject>> itemDic = new Dictionary<Vector2, List<MapObject>>();
+            Dictionary<Vector2i, List<MapObject>> itemDic = new Dictionary<Vector2i, List<MapObject>>();
             while ((line = fileReader.ReadLine()) != null)
             {
                 if (line.StartsWith("#") || line.Equals("")) continue;
 
                 string[] rowValues = line.Split(new string[]{";"}, StringSplitOptions.RemoveEmptyEntries);
 
-                Vector2 position = new Vector2(int.Parse(rowValues[0]), int.Parse(rowValues[1]));
+                Vector2i position = new Vector2i(int.Parse(rowValues[0]), int.Parse(rowValues[1]));
 
                 if (!itemDic.ContainsKey(position)) itemDic.Add(position, new List<MapObject>());
 
@@ -312,7 +320,7 @@ namespace Illarion.Client.Update
 
             fileReader.Close();
             
-            Dictionary<Vector2, MapObject[]> arrayItemDic = new Dictionary<Vector2, MapObject[]>(itemDic.Count);
+            Dictionary<Vector2i, MapObject[]> arrayItemDic = new Dictionary<Vector2i, MapObject[]>(itemDic.Count);
             foreach(var item in itemDic) arrayItemDic.Add(item.Key, item.Value.ToArray());
             map.Items = arrayItemDic;    
 
@@ -320,17 +328,17 @@ namespace Illarion.Client.Update
             if (!File.Exists(warpPath)) throw new FileNotFoundException($"{warpPath} not found!");
             fileReader = new StreamReader(warpPath); 
 
-            Dictionary<Vector2, Vector3> warpDic = new Dictionary<Vector2, Vector3>();
+            Dictionary<Vector2i, Vector3i> warpDic = new Dictionary<Vector2i, Vector3i>();
             while ((line = fileReader.ReadLine()) != null)
             {
                 if (line.StartsWith("#") || line.Equals("")) continue;
 
                 string[] rowValues = line.Split(new string[]{";"}, StringSplitOptions.RemoveEmptyEntries);
 
-                warpDic.Add(new Vector2(
+                warpDic.Add(new Vector2i(
                         int.Parse(rowValues[0]),
                         int.Parse(rowValues[1])
-                    ), new Vector3(
+                    ), new Vector3i(
                         int.Parse(rowValues[2]),
                         int.Parse(rowValues[3]),
                         int.Parse(rowValues[4])
