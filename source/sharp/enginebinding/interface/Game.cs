@@ -70,12 +70,16 @@ namespace Illarion.Client.EngineBinding.Interface
 
         public static void Initialize(IFileSystem fileSystem, ILogging logger, IMath math, IGraphics graphics, IHttpFactory httpFactory, IUserConfig userConfig)
         {
+            if (initialized) throw new InvalidOperationException("Game was already initialized!");
+
             _fileSystem = fileSystem;
             _logger = logger;
             _math = math;
             _graphics = graphics;
             _httpFactory = httpFactory;
             _userConfig = userConfig;
+
+            initialized = true;
         }
     }
 }

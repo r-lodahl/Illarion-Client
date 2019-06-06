@@ -267,8 +267,8 @@ namespace Illarion.Client.Map
 			
 			if (data.tileId == 0) return;
 
-			tile[0].Appearance = data.tileId;
-			tile[1].Appearance = data.overlayId;
+			Game.Graphics.SetTileAppearance(tile[0], data.tileId);
+			Game.Graphics.SetTileAppearance(tile[1], data.overlayId);
 
 			int zScore = GetZScore(tileIndex.x, tileIndex.y, data.layer);
 			tile[0].ZScore = zScore;

@@ -301,7 +301,7 @@ namespace Illarion.Client.Update
 
                 string name = null;
                 string description = null;
-                if (Game.UserConfig.Instance.Language == Language.German)
+                if (Game.UserConfig.Language == Language.German)
                 {
                     name = rowValues.FirstOrDefault(x => x.StartsWith("nameDe"));
                     description = rowValues.FirstOrDefault(x => x.StartsWith("descriptionDe"));
