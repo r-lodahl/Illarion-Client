@@ -60,7 +60,7 @@ namespace Illarion.Client.Map
 			List<TileIndex> topTiles = new List<TileIndex>();
 			List<TileIndex> leftTiles = new List<TileIndex>();
 			List<TileIndex> rightTiles = new List<TileIndex>();
-
+			
 			for (int ix = x-mapSizeHalfX; ix <= x+mapSizeHalfX; ix++) {
 				for (int iy = y-mapSizeHalfY; iy <= y+mapSizeHalfY; iy++) {
 					int tileX = x-y+ix-iy;
