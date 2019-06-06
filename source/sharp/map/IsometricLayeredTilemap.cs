@@ -67,7 +67,7 @@ namespace Illarion.Client.Map
 					int tileY = x+y+ix+iy;
 
 					float sx = ix * Constants.Tile.SizeX;
-					float sy = iy * Constants.Tile.SizeY + 1;
+					float sy = iy * (Constants.Tile.SizeY + 1);
 
 					map.Add(
 						new TileIndex(tileX, tileY),
